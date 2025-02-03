@@ -25,18 +25,18 @@ $-btn-disclosure-left-padding: rem(26px);
 $-btn-base-styles: (
   accent: (
     default: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-purple-500),
       border-color: var(--pine-color-purple-500),
       ring-color: var(--pine-color-purple-300),
     ),
     hover: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-purple-600),
       border-color: var(--pine-color-purple-600),
     ),
     focus: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-purple-500),
       border-color: var(--pine-color-purple-500),
     ),
@@ -48,18 +48,18 @@ $-btn-base-styles: (
   ),
   primary: (
     default: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-grey-900),
       border-color: var(--pine-color-grey-900),
       ring-color: var(--pine-color-purple-300),
     ),
     hover: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-grey-950),
       border-color: var(--pine-color-grey-950),
     ),
     focus: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-grey-900),
       border-color: var(--pine-color-grey-900),
     ),
@@ -72,7 +72,7 @@ $-btn-base-styles: (
   secondary: (
     default: (
       color: var(--pine-color-grey-800),
-      background-color: sage-color(white),
+      background-color: var(--pine-color-white),
       ring-color: var(--pine-color-purple-300),
     ),
     hover: (
@@ -81,7 +81,7 @@ $-btn-base-styles: (
     ),
     focus: (
       color: var(--pine-color-grey-900),
-      background-color: sage-color(white),
+      background-color: var(--pine-color-white),
     ),
     disabled: (
       color: var(--pine-color-grey-600),
@@ -90,18 +90,18 @@ $-btn-base-styles: (
   ),
   danger: (
     default: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-red-500),
       border-color: var(--pine-color-red-500),
       ring-color: var(--pine-color-red-300),
     ),
     hover: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-red-600),
       border-color: var(--pine-color-red-600),
     ),
     focus: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-red-500),
       border-color: var(--pine-color-red-500),
     ),
@@ -115,12 +115,12 @@ $-btn-base-styles: (
 
 $-btn-subtle-styles: (
   accent: (
-    default: var(--pine-color-primary-300),
-    hover: var(--pine-color-primary-300),
-    hover-background: var(--pine-color-primary-100),
-    focus: var(--pine-color-primary-300),
+    default: var(--pine-color-blue-300),
+    hover: var(--pine-color-blue-300),
+    hover-background: var(--pine-color-blue-100),
+    focus: var(--pine-color-blue-300),
     focus-outline: var(--pine-color-purple-300),
-    disabled: var(--pine-color-primary-200),
+    disabled: var(--pine-color-blue-200),
   ),
   primary: (
     default: var(--pine-color-grey-900),
@@ -153,12 +153,12 @@ $-btn-subtle-styles: (
 $-alert-close-btn-background-colors: (
   default: var(--pine-color-grey-300),
   draft: var(--pine-color-grey-300),
-  info: var(--pine-color-primary-200),
-  published: var(--pine-color-sage-200),
-  success: var(--pine-color-sage-200),
+  info: var(--pine-color-blue-200),
+  published: var(--pine-color-green-200),
+  success: var(--pine-color-green-200),
   warning: var(--pine-color-yellow-300),
   approaching: var(--pine-color-yellow-300),
-  reached: var(--pine-color-orange-200),
+  reached: var(--pine-color-mercury-200),
   exceeded: var(--pine-color-red-300),
   danger: var(--pine-color-red-300),
 );
@@ -217,7 +217,7 @@ $-btn-loading-min-height: rem(36px);
     border-radius: inherit;
 
     &:hover {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-white);
     }
   }
 
@@ -325,7 +325,7 @@ $-btn-loading-min-height: rem(36px);
     inset-inline-end: rem(1px);
     bottom: rem(1px);
     height: rem(38px);
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
     box-shadow: rem(-1px) 0 0 0 var(--pine-color-grey-300);
     border-color: transparent;
 
@@ -485,11 +485,11 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &.sage-btn--selected {
-      color: sage-color(white);
+      color: var(--pine-color-white);
       background-color: var(--pine-color-grey-900);
 
       &::after {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
     }
 
@@ -599,7 +599,7 @@ a.sage-btn {
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
   color: var(--pine-color-grey-800);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border: 1px solid var(--pine-color-grey-200);
 
   &:hover {
@@ -610,14 +610,14 @@ a.sage-btn {
 
   &:focus-visible,
   &:active {
-    background-color: sage-color(white);
-    border-color: sage-color(grey);
+    background-color: var(--pine-color-white);
+    border-color: var(--pine-color-grey-500);
   }
 
   &:disabled,
   &[aria-disabled="true"] {
     color: var(--pine-color-grey-400);
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
     border-color: var(--pine-color-grey-150);
   }
 }
@@ -695,17 +695,17 @@ a.sage-btn {
         }
 
         &.sage-toast__button {
-          color: sage-color(white);
+          color: var(--pine-color-white);
         }
       }
 
       &.sage-toast__button {
-        color: sage-color(white);
+        color: var(--pine-color-white);
 
         &:focus,
         &:active {
           &::after {
-            border-color: sage-color(white);
+            border-color: var(--pine-color-white);
           }
         }
       }
@@ -756,17 +756,17 @@ a.sage-btn {
   }
 
   .sage-assistant & {
-    @include sage-focus-outline--update-color(sage-color(white));
+    @include sage-focus-outline--update-color(var(--pine-color-white));
 
     color: var(--pine-color-grey-150);
     border-color: transparent;
 
     &:hover {
-      color: sage-color(white);
+      color: var(--pine-color-white);
     }
 
     &:focus-visible {
-      color: sage-color(white);
+      color: var(--pine-color-white);
     }
   }
 

@@ -26,7 +26,7 @@ $-table-heading-type-spec: "%t-sage-body-med";
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
 $-table-overflow-indicator-color-start: rgba(255, 255, 255, 0);
-$-table-overflow-indicator-color-end: sage-color(white);
+$-table-overflow-indicator-color-end: var(--pine-color-white);
 $-table-overflow-indicator-opacity: 0.95;
 $-table-overflow-indicator-gradient: linear-gradient(
   90deg,

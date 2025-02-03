@@ -250,7 +250,7 @@
 ///
 /// @param {color} $focus-within-background-color Hex color to be used for the background-color
 ///
-@mixin sage-focus-outline--focus-within($focus-within-background-color: var(--pine-color-primary-100)) {
+@mixin sage-focus-outline--focus-within($focus-within-background-color: var(--pine-color-blue-100)) {
   &:focus-within:not(:disabled):not([aria-disabled="true"]) {
     background-color: $focus-within-background-color;
   }
@@ -416,7 +416,7 @@
   box-shadow: sage-border-interactive(default);
   border: 0;
   border-radius: sage-border(radius-medium);
-  background: sage-color(white);
+  background: var(--pine-color-white);
   transition: map-get($sage-transitions, input);
   transition-property: border, box-shadow, color;
 
@@ -657,7 +657,7 @@
 ///
 @mixin sage-panel() {
   padding: sage-spacing(panel);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
 }

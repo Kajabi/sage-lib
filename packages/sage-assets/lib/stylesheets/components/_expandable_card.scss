@@ -5,7 +5,7 @@
 ////
 
 
-$-expandable-card-bg-color: sage-color(white);
+$-expandable-card-bg-color: var(--pine-color-white);
 $-expandable-card-border-color: var(--pine-color-grey-300);
 $-expandable-card-border-radius: sage-border(radius);
 $-expandable-card-padding: sage-spacing(sm);

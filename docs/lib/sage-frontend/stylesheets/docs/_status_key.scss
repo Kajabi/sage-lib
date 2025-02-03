@@ -22,7 +22,7 @@
     width: $status-key-icon-size;
     height: $status-key-icon-size;
     margin: 0 auto;
-    border: 2px solid sage-color(grey);
+    border: 2px solid var(--pine-color-grey-500);
     border-radius: $status-key-icon-size;
 
     &--done {
@@ -35,11 +35,11 @@
     }
 
     &--todo {
-      border-color: var(--pine-color-primary-300);
+      border-color: var(--pine-color-blue-300);
     }
 
     &--no {
-      background: sage-color(grey);
+      background: var(--pine-color-grey-500);
     }
 
     &--stop {

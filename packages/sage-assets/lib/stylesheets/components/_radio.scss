@@ -121,7 +121,7 @@ $-radio-focus-outline-color: currentColor;
   margin: 0;
   color: $-radio-color-default;
   outline: none;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border: rem(1px) solid $-radio-color-default;
   border-radius: sage-border(radius-round);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
@@ -258,7 +258,7 @@ $-radio-focus-outline-color: currentColor;
       border-color: $-radio-color-focus-outline-error;
     }
     &::after {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-white);
     }
     &:hover {
       border-color: $-radio-color-error;

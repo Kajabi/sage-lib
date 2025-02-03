@@ -4,21 +4,21 @@
 /// @group sage
 ////
 
-$-link-color: var(--pine-color-primary-300);
-$-link-color-hover: var(--pine-color-primary-400);
+$-link-color: var(--pine-color-blue-300);
+$-link-color-hover: var(--pine-color-blue-400);
 $-link-subtext-color: var(--pine-color-grey-700);
 $-link-subtext-color-hover: var(--pine-color-grey-900);
 
 $-link-base-styles: (
   primary:(
     default: (
-      color: var(--pine-color-primary-300),
+      color: var(--pine-color-blue-300),
     ),
     hover: (
-      color: var(--pine-color-primary-400),
+      color: var(--pine-color-blue-400),
     ),
     focus-visible: (
-      color: var(--pine-color-primary-300),
+      color: var(--pine-color-blue-300),
     ),
   ),
   secondary:(
@@ -26,7 +26,7 @@ $-link-base-styles: (
       color: var(--pine-color-grey-900),
     ),
     hover: (
-      color: sage-color(black),
+      color: var(--pine-color-black),
     ),
     focus-visible: (
       color: var(--pine-color-grey-900),
@@ -34,13 +34,13 @@ $-link-base-styles: (
   ),
   neutral:(
     default: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
     ),
     hover: (
       color: var(--pine-color-grey-100),
     ),
     focus-visible: (
-      color: sage-color(white),
+      color: var(--pine-color-white),
     ),
   ),
   danger:(
@@ -70,12 +70,12 @@ $-link-base-styles: (
   @include sage-focus-outline($outline-offset-inline: 4px);
 
   &:hover {
-    color: var(--pine-color-primary-400);
+    color: var(--pine-color-blue-400);
     cursor: pointer;
   }
 
   &:focus-visible {
-    color: var(--pine-color-primary-300);
+    color: var(--pine-color-blue-300);
 
     @include sage-focus-outline--update-color(var(--pine-color-purple-300));
   }

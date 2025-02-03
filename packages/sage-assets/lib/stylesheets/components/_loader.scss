@@ -75,12 +75,12 @@ $-loader-lower-opacity: 0.4;
   }
 
   &::before {
-    background-color: var(--pine-color-primary-300);
+    background-color: var(--pine-color-blue-300);
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
   &::after {
-    background-color: var(--pine-color-primary-300);
+    background-color: var(--pine-color-blue-300);
     animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear
       infinite;
   }
@@ -127,7 +127,7 @@ $-loader-lower-opacity: 0.4;
 .sage-loader__success-path {
   stroke-dasharray: 150, 200;
   stroke-linecap: round;
-  stroke: var(--pine-color-sage-300);
+  stroke: var(--pine-color-green-300);
 }
 
 .sage-loader__success-check {
@@ -135,7 +135,7 @@ $-loader-lower-opacity: 0.4;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  stroke: var(--pine-color-sage-300);
+  stroke: var(--pine-color-green-300);
 }
 
 .sage-loader__text {

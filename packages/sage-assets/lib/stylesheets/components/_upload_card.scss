@@ -14,7 +14,7 @@ $-upload-card-preview-border-radius: sage-border(radius-medium);
 $-upload-card-preview-width: rem(32px);
 $-upload-card-preview-max-width: rem(190px);
 $-upload-card-preview-max-width-stack: rem(292px);
-$-upload-card-background: sage-color(white);
+$-upload-card-background: var(--pine-color-white);
 $-upload-card-mobile-breakpoint: 609px;
 
 :root {

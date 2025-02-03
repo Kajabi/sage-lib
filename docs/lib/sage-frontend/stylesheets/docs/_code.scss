@@ -9,7 +9,7 @@
 
   display: block;
   padding: sage-spacing();
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(normal);
   white-space: pre-wrap;
@@ -32,41 +32,41 @@ pre .nocode {
   background-color: none;
 }
 pre .str { /* string */
-  color: var(--pine-color-orange-100);
+  color: var(--pine-color-mercury-100);
 }
 pre .kwd {
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
   font-weight: bold;
 }
 pre .com { /* comment */
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
   opacity: 0.4;
 }
 pre .typ { /* typen */
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
 }
 pre .lit { /* literal */
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
 }
 pre .pun { /* punctuation */
   color: var(--pine-color-purple-150);
 }
 pre .pln { /* plaintext */
-  color: var(--pine-color-primary-100);
+  color: var(--pine-color-blue-100);
 }
 pre .tag { /* html/xml tag */
   color: var(--pine-color-purple-150);
   font-weight: bold;
 }
 pre .atn { /* attribute name */
-  color: var(--pine-color-primary-100);
+  color: var(--pine-color-blue-100);
 }
 pre .atv { /* attribute value */
-  color: var(--pine-color-primary-100);
+  color: var(--pine-color-blue-100);
   font-weight: bold;
 }
 pre .dec { /* decimal */
-  color: var(--pine-color-sage-100);
+  color: var(--pine-color-green-100);
 }
 
 @media print {

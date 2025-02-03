@@ -21,16 +21,16 @@ $-avatar-ring-colors: (
     bg: var(--pine-color-purple-150)
   ),
   sage: (
-    main: var(--pine-color-sage-300),
-    bg: var(--pine-color-sage-100)
+    main: var(--pine-color-green-300),
+    bg: var(--pine-color-green-100)
   ),
   yellow: (
     main: var(--pine-color-yellow-400),
     bg: var(--pine-color-yellow-150)
   ),
   orange: (
-    main: var(--pine-color-orange-300),
-    bg: var(--pine-color-orange-100)
+    main: var(--pine-color-mercury-300),
+    bg: var(--pine-color-mercury-100)
   ),
   red: (
     main: var(--pine-color-red-500),
@@ -64,7 +64,7 @@ $-avatar-group-item-sizes: (
   width: $-avatar-min-size;
   height: $-avatar-min-size;
   border-radius: sage-border(radius-round);
-  background-color: var(--pine-color-primary-100);
+  background-color: var(--pine-color-blue-100);
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
@@ -156,9 +156,9 @@ $-avatar-group-item-sizes: (
   z-index: sage-z-index(default, 3);
   inset-block-end: rem(-4px);
   inset-inline-end: rem(-4px);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border-radius: sage-border(radius-round);
-  border: rem(2px) solid sage-color(white);
+  border: rem(2px) solid var(--pine-color-white);
 
   &.sage-avatar__badge--custom-bg {
     background-color: var(--badge-custom-bg-color);
@@ -178,8 +178,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: var(--pine-color-primary-400);
-  fill: var(--pine-color-primary-400);
+  color: var(--pine-color-blue-400);
+  fill: var(--pine-color-blue-400);
 
   @extend %t-sage-body-xsmall-bold;
 

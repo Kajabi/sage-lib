@@ -19,7 +19,7 @@ $-transaction-card-price-max-width: rem(100px);
 
   position: relative;
   width: 100%;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   box-shadow: sage-shadow(100);
 
   > * {
@@ -63,7 +63,7 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__amount--sage {
-  color: var(--pine-color-sage-300);
+  color: var(--pine-color-green-300);
 }
 
 .sage-transaction-card__amount--red {
@@ -96,7 +96,7 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__state--sage {
-  color: var(--pine-color-sage-300);
+  color: var(--pine-color-green-300);
 }
 
 .sage-transaction-card__time {

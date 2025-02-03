@@ -8,9 +8,9 @@
 $-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
-    background: var(--pine-color-primary-300),
-    text: sage-color(white),
-    text-hover: var(--pine-color-primary-100),
+    background: var(--pine-color-blue-300),
+    text: var(--pine-color-white),
+    text-hover: var(--pine-color-blue-100),
     icon: "flag",
   ),
   secondary: (
@@ -27,7 +27,7 @@ $-banner-colors: (
   ),
   danger: (
     background: var(--pine-color-red-500),
-    text: sage-color(white),
+    text: var(--pine-color-white),
     text-hover: var(--pine-color-red-150),
     icon: "danger",
   ),

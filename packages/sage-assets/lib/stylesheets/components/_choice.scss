@@ -41,7 +41,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   padding: sage-spacing();
   text-decoration: none;
   color: $-choice-color-default;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border: sage-border();
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
@@ -134,7 +134,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   &:active,
   &.sage-choice--active {
     &::#{$-choice-el-arrow} {
-      color: var(--pine-color-primary-500);
+      color: var(--pine-color-blue-500);
     }
   }
 }
@@ -224,10 +224,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice__link-text {
   font-style: normal;
-  color: var(--pine-color-primary-500);
+  color: var(--pine-color-blue-500);
 
   .sage-choice:hover & {
-    color: var(--pine-color-primary-400);
+    color: var(--pine-color-blue-400);
   }
 
   .sage-choice[aria-disabled="true"] &,

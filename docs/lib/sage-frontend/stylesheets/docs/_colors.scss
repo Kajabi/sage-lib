@@ -61,13 +61,13 @@
       background: $hex;
 
       @if ($name == grey and $value > 400) {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
       @else if ($name == white or $name == grey) {
         color: var(--pine-color-grey-950);
       }
       @else if ($name == black or $name == charcoal) {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
       @else if ($name == blue and $value > 400) {
         color: var(--pine-color-blue-200);
@@ -76,19 +76,19 @@
         color: var(--pine-color-blue-950);
       }
       @else if ($name == mercury and $value > 200) {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
       @else if ($name == mercury) {
         color: var(--pine-color-mercury-500);
       }
       @else if ($name == green and $value > 200) {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
       @else if ($name == green) {
         color: var(--pine-color-green-600);
       }
       @else if ($name == yellow and $value > 300) {
-        color: sage-color(white);
+        color: var(--pine-color-white);
       }
       @else if (lightness($hex) < 65) {
         color: var(--pine-color-$name-100);
@@ -118,5 +118,5 @@
 }
 
 .color-black-100 {
-  color: sage-color(white);
+  color: var(--pine-color-white);
 }

@@ -11,12 +11,12 @@
 $-alert-background-colors: (
   default: var(--pine-color-grey-200),
   draft: var(--pine-color-grey-200),
-  info: var(--pine-color-primary-100),
-  published: var(--pine-color-sage-100),
-  success: var(--pine-color-sage-100),
+  info: var(--pine-color-blue-100),
+  published: var(--pine-color-green-100),
+  success: var(--pine-color-green-100),
   warning: var(--pine-color-yellow-150),
   approaching: var(--pine-color-yellow-150),
-  reached: var(--pine-color-orange-100),
+  reached: var(--pine-color-mercury-100),
   exceeded: var(--pine-color-red-150),
   danger: var(--pine-color-red-150),
 );
@@ -24,12 +24,12 @@ $-alert-background-colors: (
 $-alert-icon-colors: (
   default: var(--pine-color-grey-700),
   draft: var(--pine-color-grey-700),
-  info: var(--pine-color-primary-300),
-  published: var(--pine-color-sage-300),
-  success: var(--pine-color-sage-300),
+  info: var(--pine-color-blue-300),
+  published: var(--pine-color-green-300),
+  success: var(--pine-color-green-300),
   warning: var(--pine-color-yellow-600),
   approaching: var(--pine-color-yellow-600),
-  reached: var(--pine-color-orange-400),
+  reached: var(--pine-color-mercury-400),
   exceeded: var(--pine-color-red-500),
   danger: var(--pine-color-red-500),
 );

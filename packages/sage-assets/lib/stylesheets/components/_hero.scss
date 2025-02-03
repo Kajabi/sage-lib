@@ -8,7 +8,7 @@ $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
 $-hero-margin-y: rem(24px);
 $-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
-$-hero-play-icon-background-color: sage-color(white);
+$-hero-play-icon-background-color: var(--pine-color-white);
 
 .sage-hero {
   display: grid;
@@ -18,7 +18,7 @@ $-hero-play-icon-background-color: sage-color(white);
     "content";
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(sm);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border: sage-border();
   border-start-start-radius: sage-border(radius-large);
   border-start-end-radius: sage-border(radius-large);

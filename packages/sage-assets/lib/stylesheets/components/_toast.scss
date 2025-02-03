@@ -70,7 +70,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   padding-block-start: sage-spacing(xs);
   padding-block-end: sage-spacing(xs);
   padding: 0 sage-spacing(md);
-  color: sage-color(white);
+  color: var(--pine-color-white);
   border-radius: sage-border(radius-medium);
   box-shadow: sage-shadow(lg);
   background-color: var(--pine-color-grey-900);
@@ -106,7 +106,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 .sage-toast__icon {
   display: inline-flex;
   margin-inline-end: sage-spacing(xs);
-  color: sage-color(white);
+  color: var(--pine-color-white);
 }
 
 .sage-toast__loader {
@@ -121,7 +121,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
   padding: 0;
   margin-inline-end: auto;
-  color: sage-color(white);
+  color: var(--pine-color-white);
 
   @extend %t-sage-body-small-semi;
 }
@@ -134,12 +134,12 @@ $-toast-bottom-spacing: sage-spacing(xs);
   align-items: center;
   margin-inline-start: sage-spacing(sm);
   white-space: nowrap;
-  color: sage-color(white);
+  color: var(--pine-color-white);
   border-radius: sage-border(radius-large);
 
   &:hover,
   &:focus {
-    color: sage-color(white);
+    color: var(--pine-color-white);
   }
 
   &:disabled,

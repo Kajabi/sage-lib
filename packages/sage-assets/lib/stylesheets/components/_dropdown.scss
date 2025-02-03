@@ -45,7 +45,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      background-color: sage-color(white);
+      background-color: var(--pine-color-white);
     }
 
     &:focus-visible,
@@ -235,11 +235,11 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__item-control--primary {
-  color: var(--pine-color-primary-300);
+  color: var(--pine-color-blue-300);
 
   &:hover {
-    color: var(--pine-color-primary-300);
-    background-color: var(--pine-color-primary-100);
+    color: var(--pine-color-blue-300);
+    background-color: var(--pine-color-blue-100);
   }
 }
 
@@ -345,7 +345,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   min-width: $-dropdown-width;
   width: auto;
   border-radius: sage-border(radius-medium);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   box-shadow: sage-shadow(md);
   transition: map-get($sage-transitions, default);
   transition-property: transform, z-index;

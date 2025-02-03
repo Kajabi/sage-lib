@@ -83,7 +83,7 @@ $-modal-inner-size: sage-container(md);
   max-width: $-modal-inner-size + (2 * $-modal-padding-x);
   margin: 0;
   border-radius: sage-border(radius-large);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   box-shadow: sage-shadow(modal);
   transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
@@ -201,7 +201,7 @@ $-modal-inner-size: sage-container(md);
   display: grid;
   align-items: baseline;
   margin: $-modal-padding-y $-modal-padding-x;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
 
   .sage-modal--fullscreen & {
     position: fixed;
@@ -210,7 +210,7 @@ $-modal-inner-size: sage-container(md);
     inset-inline-end: 0;
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
   }
 }
 

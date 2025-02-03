@@ -24,7 +24,7 @@ $-typeahead-item-width: rem(240px);
   padding: 0;
   list-style: none;
   border: sage-border();
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(md);
 }

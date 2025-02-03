@@ -19,7 +19,7 @@ $-sortable-image-height: rem(48px);
   gap: sage-spacing(card);
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(panel);
-  background: sage-color(white);
+  background: var(--pine-color-white);
   cursor: grab;
 
   &::before {
@@ -33,7 +33,7 @@ $-sortable-image-height: rem(48px);
     background-color: var(--pine-color-grey-150);
 
     &::before {
-      color: var(--pine-color-primary-300);
+      color: var(--pine-color-blue-300);
     }
   }
 

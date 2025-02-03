@@ -81,6 +81,6 @@
   position: relative;
 
   .sage-tab--active {
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
   }
 }

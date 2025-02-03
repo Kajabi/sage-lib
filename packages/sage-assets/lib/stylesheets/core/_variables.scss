@@ -56,8 +56,8 @@ $sage-field-colors: (
   disabled: var(--pine-color-grey-500),
   disabled-background: var(--pine-color-grey-150),
   error: var(--pine-color-red-500),
-  label-background: sage-color(white),
-  success: var(--pine-color-primary-300),
+  label-background: var(--pine-color-white),
+  success: var(--pine-color-blue-300),
 );
 
 // $sage-field
@@ -69,7 +69,7 @@ $sage-radio-colors: (
   checked: var(--pine-color-grey-900),
   checked-disabled: var(--pine-color-grey-200),
   checked-hover: var(--pine-color-grey-950),
-  checked-inner: sage-color(white),
+  checked-inner: var(--pine-color-white),
   default: var(--pine-color-grey-300),
   disabled: var(--pine-color-grey-150),
   error: var(--pine-color-red-500),
@@ -106,7 +106,7 @@ $sage-toolbar-button-borders: (
   focus: 0 0 0 2px var(--pine-color-purple-300),
   hover: 0 0 0 1px var(--pine-color-charcoal-100),
   hover-large: 0 0 0 2px var(--pine-color-charcoal-100),
-  active-hover: 0 0 0 4px var(--pine-color-primary-200),
+  active-hover: 0 0 0 4px var(--pine-color-blue-200),
 );
 
 ///

@@ -8,10 +8,10 @@ $-example-link-color: inherit;
 $-example-link-color-hover: var(--pine-color-grey-600);
 
 $-example-code-preview-height: 13rem;
-$-example-code-preview-button-color: sage-color(white);
-$-example-code-preview-button-color-hover: var(--pine-color-sage-100);
+$-example-code-preview-button-color: var(--pine-color-white);
+$-example-code-preview-button-color-hover: var(--pine-color-green-100);
 $-example-code-preview-button-blur: blur(2px);
-$-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
+$-example-code-preview-button-bg: rgba(var(--pine-color-blue-300), 0.75);
 
 .example__title {
   color: var(--pine-color-grey-950);
@@ -52,7 +52,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
   padding: sage-spacing(xs) sage-spacing();
   color: var(--pine-color-grey-950);
   text-align: center;
-  background: sage-color(white);
+  background: var(--pine-color-white);
   box-shadow: sage-shadow();
   border-radius: rem(20px);
 }
@@ -117,7 +117,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
 
   @supports (backdrop-filter: blur(2px)) {
     backdrop-filter: $-example-code-preview-button-blur;
-    background-color: rgba(var(--pine-color-primary-300), 0.15);
+    background-color: rgba(var(--pine-color-blue-300), 0.15);
 
     .example__code--expanded & {
       backdrop-filter: none;

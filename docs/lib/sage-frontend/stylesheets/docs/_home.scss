@@ -10,8 +10,8 @@
 .docs-hero {
   position: relative;
   padding: sage-spacing() sage-spacing() rem(100px);
-  color: sage-color(white);
-  background-color: var(--pine-color-primary-500);
+  color: var(--pine-color-white);
+  background-color: var(--pine-color-blue-500);
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding-block-end: sage-spacing(xl);

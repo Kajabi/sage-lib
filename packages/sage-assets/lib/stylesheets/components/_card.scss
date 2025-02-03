@@ -13,7 +13,7 @@ $-sage-card-background: transparent;
 
   position: relative;
   width: 100%;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   box-shadow: sage-shadow(100);
 
   .sage-card,
@@ -24,7 +24,7 @@ $-sage-card-background: transparent;
 }
 
 .sage-card--border-dashed {
-  border-color: sage-color(white);
+  border-color: var(--pine-color-white);
   @include sage-dashed-border(
     $border-radius: sage-border(radius),
     $color: var(--pine-color-grey-300),
@@ -113,7 +113,7 @@ $-sage-card-background: transparent;
     padding: 0 sage-spacing(sm);
     color: var(--pine-color-grey-600);
     font-size: sage-font-size(body-xs);
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
   }
 }
 

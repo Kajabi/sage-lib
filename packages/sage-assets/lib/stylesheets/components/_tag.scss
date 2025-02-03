@@ -65,7 +65,7 @@ $-tag-button-icon-mobile-size: rem(24px);
 
   &:focus-visible {
     color: $-tag-button-color;
-    border-color: var(--pine-color-primary-200);
+    border-color: var(--pine-color-blue-200);
   }
 
   &.sage-btn--subtle[class*=icon-only]:focus::after {

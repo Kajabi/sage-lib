@@ -67,7 +67,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &.sage-tab--active {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      color: sage-color(white);
+      color: var(--pine-color-white);
       background: var(--pine-color-grey-900);
       &::after {
         display: none;
@@ -128,7 +128,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   .sage-tabs--with-background &.sage-tab--active {
-    background-color: sage-color(white);
+    background-color: var(--pine-color-white);
     border-end-end-radius: 0;
     border-end-start-radius: 0;
 

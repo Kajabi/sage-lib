@@ -6,7 +6,7 @@
 
 
 $-input-group-border-radius: map-get($sage-field-configs, border-radius);
-$-input-group-pw-field-button-color-text-hover: sage-color(black);
+$-input-group-pw-field-button-color-text-hover: var(--pine-color-black);
 
 
 .sage-input-group {

@@ -28,7 +28,7 @@
 }
 
 .sage-list__item--sortable-active {
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
 
   .sage-list--draggable-by-row & {
     cursor: grabbing;
@@ -36,7 +36,7 @@
 }
 
 .sage-list__item--sortable-drag {
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   box-shadow: sage-shadow(lg);
   // NOTE: !important is added and lint-ignored here so that it can override
   // inline opacity that the SortableJS utility we're using adds during sorting.

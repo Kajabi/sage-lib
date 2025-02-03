@@ -14,7 +14,7 @@ $-popover-panel-offset: sage-spacing(sm);
 $-popover-tooltip-width: rem(7px);
 $-popover-tooltip-offset: sage-spacing(lg);
 $-popover-tooltip-horizontal-offset: -1.5rem;
-$-popover-tooltip-active: $-popover-tooltip-width solid sage-color(white);
+$-popover-tooltip-active: $-popover-tooltip-width solid var(--pine-color-white);
 $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 
 
@@ -49,7 +49,7 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   width: auto;
   min-width: $-popover-panel-min-size;
   padding: $-popover-panel-padding;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   background-clip: padding-box;
   box-shadow: sage-shadow(md);
   border-radius: sage-border(radius-large);

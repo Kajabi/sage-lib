@@ -15,7 +15,7 @@ $-search-icon: "::before";
   display: flex;
   align-items: center;
   position: relative;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
 
   &#{$-search-icon} {
     @include sage-icon-base(search-small, sm, pine);
@@ -165,7 +165,7 @@ $-search-icon: "::before";
 
   .sage-search--contained & {
     &:hover:not(:disabled) {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-white);
     }
     &:disabled {
       padding-inline-start: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
@@ -212,7 +212,7 @@ $-search-icon: "::before";
 
     ~ .sage-search__label {
       @include sage-form-field-floating-label();
-      color: var(--pine-color-primary-300);
+      color: var(--pine-color-blue-300);
     }
 
     /* stylelint-disable max-nesting-depth */

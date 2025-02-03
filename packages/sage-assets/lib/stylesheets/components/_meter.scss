@@ -9,9 +9,9 @@ $-meter-bar-height: rem(4px);
 $-meter-color-bg: var(--pine-color-grey-200);
 $-meter-bar-low: rgba(var(--pine-color-red-950), 0.9);
 $-meter-bar-med: rgba(sage-color(orange), 0.9);
-$-meter-bar-success: rgba(var(--pine-color-sage-200), 0.9);
-$-meter-bar-max: rgba(var(--pine-color-sage-300), 0.9);
-$-meter-bar-divider-color: sage-color(white);
+$-meter-bar-success: rgba(var(--pine-color-green-200), 0.9);
+$-meter-bar-max: rgba(var(--pine-color-green-300), 0.9);
+$-meter-bar-divider-color: var(--pine-color-white);
 
 
 //
