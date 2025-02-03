@@ -18,7 +18,7 @@ export default {
     ...selectArgs({
       icon: SageTokens.ICONS,
       iconPosition: Link.ICON_POSITIONS,
-      style: Link.COLORS
+      style: Link.COLORS,
     })
   }
 };
@@ -27,7 +27,7 @@ const Template = (args) => <Link {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Standard link',
-  href: '#',
+  href: '#'
 };
 
 export const Plain = Template.bind({});

@@ -88,5 +88,6 @@ KitchenSink.args = {
     backgroundColor: SageTokens.COLOR_PALETTE.GREEN_150,
     padded: true,
   },
+  kjbElementId: 'kitchenSinkTile',
   tileLink: null,
 };

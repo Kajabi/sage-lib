@@ -27,6 +27,7 @@ export default {
   args: {
     id: 'field-2',
     label: 'First name',
+    kjbElementId: 'exampleInput',
   }
 };
 
@@ -51,6 +52,7 @@ export const Default = (args) => {
       required={false}
       standalone={args.standalone}
       suffix={args.suffix}
+      kjbElementId={args.test}
       type={args.inputType}
       value={value}
     />

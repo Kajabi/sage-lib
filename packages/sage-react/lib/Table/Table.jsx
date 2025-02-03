@@ -52,6 +52,7 @@ export const Table = ({
   selectedRows,
   showSelectAll,
   tableAttributes,
+  kjbElementId,
 }) => {
   const [selfSelectedRows, setSelfSelectedRows] = useState([]);
   const [selfHeaders, setSelfHeaders] = useState([]);
@@ -282,13 +283,14 @@ export const Table = ({
         selected={selfSelectedRows === SELECTION_TYPES.ALL || selfSelectedRows.includes(rowId)}
         selectable={selectable}
         onSelect={onSelectRow}
+        kjbElementId="tableRowListItem"
       />
     );
   };
 
   // Renders the table itself
   const renderTable = () => (
-    <table className={tableClassNames} {...tableAttributes}>
+    <table className={tableClassNames} data-kjb-element={kjbElementId} {...tableAttributes}>
       {caption && (
         <caption className={`sage-table__caption--${captionSide || CAPTION_SIDE.BOTTOM}`}>
           {caption}
@@ -352,6 +354,7 @@ Table.defaultProps = {
   selectedRows: [],
   showSelectAll: false,
   tableAttributes: null,
+  kjbElementId: null,
 };
 
 Table.propTypes = {
@@ -446,4 +449,7 @@ Table.propTypes = {
 
   /** Allows you to provide additional HTML attributes. */
   tableAttributes: PropTypes.shape({}),
+
+  /** * Adds a data-kjb-element that uniquely idenfies the table */
+  kjbElementId: PropTypes.string,
 };
