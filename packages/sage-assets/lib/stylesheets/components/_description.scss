@@ -7,12 +7,12 @@
 $-description-size: 1fr;
 $-description-action-var: var(--sage-description-action-width, #{$-description-size});
 $-description-title-var: var(--sage-description-title-width, #{$-description-size});
-$-description-spacing: sage-spacing(sm);
+$-description-spacing: var(--pine-dimension-200);
 
 .sage-description {
   display: flex;
   flex-direction: column;
-  gap: sage-spacing(md);
+  gap: var(--pine-dimension-300);
   width: 100%;
 }
 
@@ -28,7 +28,7 @@ $-description-spacing: sage-spacing(sm);
   width: 100%;
 
   &:not(:last-child) {
-    padding-block-end: sage-spacing(md);
+    padding-block-end: var(--pine-dimension-300);
     border-block-end: sage-border();
 
     .sage-description--no-dividers & {

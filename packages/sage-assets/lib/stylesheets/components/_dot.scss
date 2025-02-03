@@ -6,7 +6,7 @@
 
 $-sage-dot-size: rem(6px);
 $-sage-dot-color: sage-color(black);
-$-sage-dot-gap: sage-spacing(2xs);
+$-sage-dot-gap: var(--pine-dimension-050);
 $-sage-dot-size--badge: rem(6px);
 
 .sage-dot {
@@ -31,7 +31,7 @@ $-sage-dot-size--badge: rem(6px);
   }
 
   .sage-badge & {
-    margin-inline-start: sage-spacing(xs);
+    margin-inline-start: var(--pine-dimension-100);
   }
 
   .sage-badge--large & {

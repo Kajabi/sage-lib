@@ -17,10 +17,10 @@ $-next-best-action-colors: (
 
 .sage-next-best-action {
   display: flex;
-  gap: sage-spacing(md);
+  gap: var(--pine-dimension-300);
   flex-direction: row;
   align-items: center;
-  padding: sage-spacing(md);
+  padding: var(--pine-dimension-300);
   border-radius: sage-border(radius-large);
 }
 
@@ -52,11 +52,11 @@ $-next-best-action-colors: (
 }
 
 .sage-next-best-action__title {
-  margin-block-end: sage-spacing(xs);
+  margin-block-end: var(--pine-dimension-100);
 }
 
 .sage-next-best-action__description {
-  margin-block-end: sage-spacing(sm);
+  margin-block-end: var(--pine-dimension-200);
 }
 
 .sage-next-best-action__close {

@@ -14,7 +14,7 @@
     inset-inline-end: 0;
     inset-block-start: 0;
     height: 100%;
-    width: sage-spacing(lg);
+    width: var(--pine-dimension-400);
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0) 0%,

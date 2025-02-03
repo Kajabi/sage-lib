@@ -42,7 +42,7 @@ $-checkbox-focus-outline-color: var(--pine-color-purple-300);
   }
 
   .sage-list & {
-    margin-block-end: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(#{var(--pine-dimension-300)} / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -55,7 +55,7 @@ $-checkbox-focus-outline-color: var(--pine-color-purple-300);
     align-items: center;
     position: relative;
     z-index: sage-z-index(default);
-    padding: sage-spacing(xs) sage-spacing(sm);
+    padding: var(--pine-dimension-100) var(--pine-dimension-200);
     border: 0;
 
     .sage-panel-controls & {
@@ -125,7 +125,7 @@ $-checkbox-focus-outline-color: var(--pine-color-purple-300);
 
   .sage-panel-controls__bulk-actions--checked & {
     display: unset;
-    padding-inline-end: sage-spacing(sm);
+    padding-inline-end: var(--pine-dimension-200);
   }
 }
 

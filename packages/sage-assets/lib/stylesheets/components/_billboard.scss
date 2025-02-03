@@ -7,8 +7,8 @@
 
 $-billboard-background-color: var(--pine-color-primary-300);
 $-billboard-text-color: #fff;
-$-billboard-spacing: sage-spacing(lg);
-$-billboard-title-spacing: sage-spacing(sm);
+$-billboard-spacing: var(--pine-dimension-400);
+$-billboard-title-spacing: var(--pine-dimension-200);
 
 
 .sage-billboard {

@@ -12,14 +12,14 @@ $-catalogue-item-image-height-mobile: rem(120px);
 
 .sage-catalog-item {
   display: grid;
-  grid-column-gap: sage-spacing(md);
-  grid-row-gap: sage-spacing(xs);
+  grid-column-gap: var(--pine-dimension-300);
+  grid-row-gap: var(--pine-dimension-100);
   grid-template-columns: 1fr min-content;
   grid-template-rows: auto auto;
   grid-template-areas:
     "title aside"
     "content aside";
-  padding: sage-spacing() sage-spacing();
+  padding: var(--pine-dimension-300) var(--pine-dimension-300);
   margin-block-end: rem(-1px);
   border-block-start: sage-border(default);
   border-block-end: sage-border(default);
@@ -115,7 +115,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
   flex-flow: row wrap;
 
   > :not(:last-child) {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-300);
   }
 }
 
@@ -123,5 +123,5 @@ $-catalogue-item-image-height-mobile: rem(120px);
   display: flex;
   grid-area: aside;
   align-items: center;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
 }

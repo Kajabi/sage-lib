@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  padding: sage-spacing(lg);
+  padding: var(--pine-dimension-400);
   border-radius: sage-border(radius);
   background-color: var(--background-color, inherit);
 

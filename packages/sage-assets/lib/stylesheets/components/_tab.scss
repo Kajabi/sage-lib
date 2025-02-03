@@ -20,7 +20,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   align-items: center;
   overflow: hidden;
   margin: 0;
-  padding: 0 0 sage-spacing(sm);
+  padding: 0 0 var(--pine-dimension-200);
   white-space: nowrap;
   color: $-tab-color-default;
   text-decoration: none;
@@ -89,7 +89,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   @include sage-tab-underline;
 
   .sage-tabs--with-background & {
-    padding: sage-spacing(xs) sage-spacing(sm) sage-spacing(md);
+    padding: var(--pine-dimension-100) var(--pine-dimension-200) var(--pine-dimension-300);
     border-start-start-radius: sage-border(radius-large);
     border-start-end-radius: sage-border(radius-large);
     background-clip: padding-box;
@@ -97,9 +97,9 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     @extend %t-sage-body-xsmall-med;
 
     &::after {
-      left: sage-spacing(sm);
-      right: sage-spacing(sm);
-      bottom: sage-spacing(sm);
+      left: var(--pine-dimension-200);
+      right: var(--pine-dimension-200);
+      bottom: var(--pine-dimension-200);
       opacity: 0;
     }
 

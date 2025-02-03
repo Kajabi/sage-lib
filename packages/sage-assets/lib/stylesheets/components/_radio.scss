@@ -42,7 +42,7 @@ $-radio-focus-outline-color: currentColor;
   grid-template-columns: min-content 1fr;
 
   .sage-list & {
-    margin-block-end: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(#{var(--pine-dimension-300)} / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -68,8 +68,8 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--has-border:not(.sage-radio--standalone) {
   align-items: center;
-  column-gap: sage-spacing();
-  padding: sage-spacing(card);
+  column-gap: var(--pine-dimension-300);
+  padding: var(--pine-dimension-300);
   box-shadow: sage-border-interactive();
   border-radius: sage-border(radius);
 

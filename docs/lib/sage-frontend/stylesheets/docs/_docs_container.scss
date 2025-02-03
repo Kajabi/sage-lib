@@ -5,8 +5,8 @@
 ================================================== */
 
 .docs-container {
-  margin-block-start: sage-spacing();
-  margin-block-end: sage-spacing();
+  margin-block-start: var(--pine-dimension-300);
+  margin-block-end: var(--pine-dimension-300);
 
   @include sage-panel;
 }

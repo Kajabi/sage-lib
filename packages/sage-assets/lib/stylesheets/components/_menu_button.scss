@@ -9,7 +9,7 @@ $-menubtn-toggle-size: rem(24px);
 $-menubtn-toggle-line-color: var(--pine-color-grey-150);
 $-menubtn-toggle-line-height: rem(2px);
 $-menubtn-toggle-radius: rem(2px);
-$-menubtn-focus-outline-size: sage-spacing(xs);
+$-menubtn-focus-outline-size: var(--pine-dimension-100);
 $-menubtn-focus-outline-width: 1;
 $-menubtn-focus-outline-color: currentColor;
 
@@ -45,7 +45,7 @@ $-menubtn-focus-outline-color: currentColor;
     position: relative;
     height: $-menubtn-toggle-size;
     width: $-menubtn-toggle-size;
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-300);
     margin-block-end: 0;
     cursor: pointer;
 

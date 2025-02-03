@@ -6,7 +6,7 @@
 
 .sage-table {
   .example__preview & {
-    margin-block-end: sage-spacing();
+    margin-block-end: var(--pine-dimension-300);
   }
 
   table {

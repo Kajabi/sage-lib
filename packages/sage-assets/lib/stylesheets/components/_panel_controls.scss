@@ -9,7 +9,7 @@
   --icon-block-padding: #{rem(4px)};
 
   display: grid;
-  gap: sage-spacing(panel);
+  gap: var(--pine-dimension-400);
   grid-template-rows: min-content;
   position: relative;
 
@@ -17,8 +17,8 @@
     content: "";
     display: block;
     height: 0;
-    margin-inline-end: -1 * sage-spacing(panel);
-    margin-inline-start: -1 * sage-spacing(panel);
+    margin-inline-end: -1 * var(--pine-dimension-400);
+    margin-inline-start: -1 * var(--pine-dimension-400);
     border-block-start: 1px solid var(--pine-color-grey-300);
   }
 
@@ -38,7 +38,7 @@
 .sage-panel-controls__default-controls {
   display: flex;
   flex-flow: row wrap;
-  row-gap: sage-spacing(xs);
+  row-gap: var(--pine-dimension-100);
   align-items: center;
   justify-content: space-between;
 
@@ -59,7 +59,7 @@
   flex: 1;
 
   &:not(:last-child) {
-    margin-inline-end: sage-spacing(panel);
+    margin-inline-end: var(--pine-dimension-400);
   }
 
   .sage-panel-controls--show-pagination .sage-panel-controls__toolbar &:last-child {
@@ -73,7 +73,7 @@
   flex-grow: 1;
 
   &:not(:last-child) {
-    margin-inline-end: sage-spacing(panel);
+    margin-inline-end: var(--pine-dimension-400);
   }
 
   .sage-panel-controls--show-pagination .sage-panel-controls__default-controls & {
@@ -87,7 +87,7 @@
   align-items: center;
 
   &:not(:last-child) {
-    margin-inline-end: sage-spacing(panel);
+    margin-inline-end: var(--pine-dimension-400);
 
     .sage-panel-controls--show-pagination & {
       margin-inline-end: 0;

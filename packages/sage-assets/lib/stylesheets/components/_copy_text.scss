@@ -38,7 +38,7 @@ $-copy-text-color-hover: var(--pine-color-grey-950);
   @include sage-copy-text;
 
   width: 100%;
-  padding: sage-spacing(card);
+  padding: var(--pine-dimension-300);
 }
 
 .sage-copy-text-card--truncate-contents {
@@ -60,12 +60,12 @@ $-copy-text-color-hover: var(--pine-color-grey-950);
   flex-flow: row-reverse;
   align-items: center;
   max-width: 100%;
-  padding-inline-end: sage-spacing(2xs);
+  padding-inline-end: var(--pine-dimension-050);
 
   &::before {
     @include sage-icon-base(copy, md, pine);
 
-    margin-inline-start: sage-spacing(sm);
+    margin-inline-start: var(--pine-dimension-200);
     color: $-copy-text-color;
   }
 

@@ -13,8 +13,8 @@
 .sage-list__item {
   display: flex;
   align-items: center;
-  gap: sage-spacing(sm);
-  padding: sage-spacing(xs) rem(12px);
+  gap: var(--pine-dimension-200);
+  padding: var(--pine-dimension-100) rem(12px);
   list-style: none;
   border-radius: sage-border(radius-medium);
 
@@ -37,7 +37,7 @@
 
 .sage-list__item--sortable-drag {
   background-color: sage-color(white);
-  box-shadow: sage-shadow(lg);
+  box-shadow: var(--pine-box-shadow-400);
   // NOTE: !important is added and lint-ignored here so that it can override
   // inline opacity that the SortableJS utility we're using adds during sorting.
   opacity: 1 !important; /* stylelint-disable-line declaration-no-important */

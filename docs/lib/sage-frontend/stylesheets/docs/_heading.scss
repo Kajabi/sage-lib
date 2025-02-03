@@ -15,12 +15,12 @@
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  gap: sage-spacing(lg);
+  gap: var(--pine-dimension-400);
 }
 
 .docs-heading__meta-primary,
 .docs-heading__meta-secondary {
   display: flex;
   flex-flow: row wrap;
-  gap: sage-spacing();
+  gap: var(--pine-dimension-300);
 }

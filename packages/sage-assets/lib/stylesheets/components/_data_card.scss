@@ -22,7 +22,7 @@ $-data-card-colors: (
 $-data-card-transition: 0.2s linear;
 $-data-card-border-radius: sage-border(radius);
 $-data-card-background-color: sage-color(white);
-$-data-card-padding: sage-spacing(xs);
+$-data-card-padding: var(--pine-dimension-100);
 
 
 .sage-data-card {
@@ -115,17 +115,17 @@ $-data-card-padding: sage-spacing(xs);
   @include sage-grid-stack();
 
   .sage-data-card-scroll-container & {
-    gap: sage-spacing(sm);
-    padding-block-end: sage-spacing(sm);
+    gap: var(--pine-dimension-200);
+    padding-block-end: var(--pine-dimension-200);
   }
 
   .sage-data-card-scroll-container &:not(:last-child) {
-    padding-inline-end: sage-spacing(md);
+    padding-inline-end: var(--pine-dimension-300);
     border-inline-end: 1px solid var(--pine-color-grey-300);
   }
 
   .sage-data-card-scroll-container &:not(:first-child) {
-    padding-inline-start: sage-spacing(md);
+    padding-inline-start: var(--pine-dimension-300);
   }
 }
 

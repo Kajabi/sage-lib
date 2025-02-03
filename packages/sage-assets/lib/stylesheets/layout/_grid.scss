@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-grid-gap: sage-spacing();
+$-grid-gap: var(--pine-dimension-300);
 $-grid-num-columns: 12;
 
 // Breakpoint assignments
@@ -17,13 +17,13 @@ $-grid-breakpoint-lg-max: sage-breakpoint(lg-max);
 $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
 // Row and column spacing assignments
-$-grid-row-stage-inline-margin: calc(#{sage-spacing(stage)} / -2);
-$-grid-row-stage-inline-padding: calc(#{sage-spacing(stage)} / 2);
+$-grid-row-stage-inline-margin: calc(#{var(--pine-dimension-600)} / -2);
+$-grid-row-stage-inline-padding: calc(#{var(--pine-dimension-600)} / 2);
 
-$-grid-row-panel-inline-margin: calc(#{sage-spacing(panel)} / -2);
+$-grid-row-panel-inline-margin: calc(#{var(--pine-dimension-400)} / -2);
 
-$-grid-row-card-inline-margin: calc(#{sage-spacing(card)} / -2);
-$-grid-row-card-inline-padding: calc(#{sage-spacing(card)} / 2);
+$-grid-row-card-inline-margin: calc(#{var(--pine-dimension-300)} / -2);
+$-grid-row-card-inline-padding: calc(#{var(--pine-dimension-300)} / 2);
 
 $-grid-col-gap-inline-margin: calc(#{$-grid-gap} / -2);
 $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
@@ -53,7 +53,7 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
   margin-inline-end: $-grid-row-stage-inline-margin;
 
   &:not(:last-child) {
-    margin-block-end: sage-spacing(stage);
+    margin-block-end: var(--pine-dimension-600);
   }
 }
 
@@ -62,7 +62,7 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
   margin-inline-end: $-grid-row-panel-inline-margin;
 
   &:not(:last-child) {
-    margin-block-end: sage-spacing(panel);
+    margin-block-end: var(--pine-dimension-400);
   }
 }
 
@@ -71,7 +71,7 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
   margin-inline-end: $-grid-row-card-inline-margin;
 
   &:not(:last-child) {
-    margin-block-end: sage-spacing(card);
+    margin-block-end: var(--pine-dimension-300);
   }
 }
 

@@ -75,7 +75,7 @@ $-icon-beside-type: (
 
   .sage-tab--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name, md, pine);
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
   }
 
   .sage-choice--icon-#{$icon-name}::before {
@@ -84,7 +84,7 @@ $-icon-beside-type: (
 
   .sage-dropdown__item-control--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name, md, pine);
-    margin: 0 sage-spacing(xs) 0 0;
+    margin: 0 var(--pine-dimension-100) 0 0;
   }
 
   .sage-input__icon .sage-icon-#{$icon-name} {
@@ -96,7 +96,7 @@ $-icon-beside-type: (
     @include sage-icon-base($icon-name, md, pine);
     align-self: center;
     position: relative;
-    margin: 0 sage-spacing(xs) 0 0;
+    margin: 0 var(--pine-dimension-100) 0 0;
   }
 
   .sage-label--icon--custom-color .sage-label__value::before {
@@ -115,7 +115,7 @@ $-icon-beside-type: (
     white-space: nowrap;
 
     &::before {
-      margin-inline-end: sage-spacing(xs);
+      margin-inline-end: var(--pine-dimension-100);
 
       @include sage-icon-base($icon-name, md, pine);
     }
@@ -158,8 +158,8 @@ $-icon-beside-type: (
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  width: sage-spacing(xl);
-  height: sage-spacing(xl);
+  width: var(--pine-dimension-600);
+  height: var(--pine-dimension-600);
   background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
@@ -172,7 +172,7 @@ $-icon-beside-type: (
   }
 
   @media screen and (max-width: sage-breakpoint(md-max)) {
-    max-width: sage-spacing(xl);
+    max-width: var(--pine-dimension-600);
   }
 }
 
@@ -193,8 +193,8 @@ $-icon-beside-type: (
 }
 
 .sage-icon-background--custom-size {
-  --sage-icon-background-height: sage-spacing(xl);
-  --sage-icon-background-width: sage-spacing(xl);
+  --sage-icon-background-height: var(--pine-dimension-600);
+  --sage-icon-background-width: var(--pine-dimension-600);
 
   width: var(--sage-icon-background-width);
   height: var(--sage-icon-background-height);

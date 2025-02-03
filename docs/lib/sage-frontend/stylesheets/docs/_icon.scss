@@ -9,8 +9,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-block-end: sage-spacing();
-  padding: sage-spacing(lg) sage-spacing(sm);
+  margin-block-end: var(--pine-dimension-300);
+  padding: var(--pine-dimension-400) var(--pine-dimension-200);
   text-align: center;
   background: var(--pine-color-grey-150);
   border-radius: sage-border(radius);
@@ -18,7 +18,7 @@
 }
 
 .docs-icon-block__label {
-  margin-block-start: sage-spacing(xs);
+  margin-block-start: var(--pine-dimension-100);
   margin-block-end: 0;
   font-size: sage-font-size(body-xs);
   font-weight: sage-font-weight(semibold);
@@ -26,8 +26,8 @@
 
 
 .docs-icon-inline {
-  margin-block-end: sage-spacing(sm);
-  padding: sage-spacing(sm);
+  margin-block-end: var(--pine-dimension-200);
+  padding: var(--pine-dimension-200);
   text-align: right;
   background: var(--pine-color-grey-150);
   border-radius: sage-border(radius);

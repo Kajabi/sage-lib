@@ -3,7 +3,7 @@
   align-items: center;
 
   > * {
-    padding-inline: sage-spacing(3xs);
+    padding-inline: var(--pine-dimension-025);
 
     + * {
       border-inline-start: sage-border(interactive);

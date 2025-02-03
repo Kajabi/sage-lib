@@ -73,11 +73,11 @@ $-nav-subitem-border-width: rem(2px);
   display: inline-block;
 
   &:first-child {
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
   }
 
   &:not(:first-child) {
-    margin-inline-start: sage-spacing(xs);
+    margin-inline-start: var(--pine-dimension-100);
   }
 }
 
@@ -106,16 +106,16 @@ $-nav-subitem-border-width: rem(2px);
 .sage-nav__list--sub-with-icon,
 .sage-nav__list--sub {
   > li:not(:last-child) {
-    margin-block-end: sage-spacing(2xs);
+    margin-block-end: var(--pine-dimension-050);
   }
 }
 
 .sage-nav__list--sub {
-  margin-inline-start: sage-spacing();
+  margin-inline-start: var(--pine-dimension-300);
 }
 
 .sage-nav__list--sub-with-icon {
-  margin-inline-start: calc((#{sage-spacing(sm)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2) - (#{$-nav-icon-spacing} / 2));
-  padding-inline-start: sage-spacing(sm);
+  margin-inline-start: calc((#{var(--pine-dimension-200)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2) - (#{$-nav-icon-spacing} / 2));
+  padding-inline-start: var(--pine-dimension-200);
   border-inline-start: $-nav-subitem-border-width solid var(--pine-color-grey-300);
 }

@@ -14,23 +14,23 @@
   list-style: none;
 
   &:not(:last-child) {
-    margin-block-end: sage-spacing();
+    margin-block-end: var(--pine-dimension-300);
   }
 }
 
 .sage-icon-list-item__bullet {
   min-width: rem(20px);
-  margin-inline-end: sage-spacing(sm);
+  margin-inline-end: var(--pine-dimension-200);
   padding-block-start: rem(3px);
   text-align: center;
 }
 
 .sage-icon-list-item__bullet--checkbox {
-  padding-block-start: sage-spacing(2xs);
+  padding-block-start: var(--pine-dimension-050);
 }
 
 .sage-icon-list-item__bullet--radio {
-  padding-block-start: sage-spacing(2xs);
+  padding-block-start: var(--pine-dimension-050);
 }
 
 .sage-icon-list-item__body {
@@ -41,13 +41,13 @@
   }
 
   > p:not(:last-child) {
-    margin-block-end: sage-spacing(xs);
+    margin-block-end: var(--pine-dimension-100);
   }
 }
 
 .sage-icon-list-item__label {
   @extend %t-sage-heading-6;
-  margin-block-end: sage-spacing(2xs);
+  margin-block-end: var(--pine-dimension-050);
 }
 
 .sage-icon-list-item__label-subtext {
@@ -57,6 +57,6 @@
 
 .sage-icon-list-item__title {
   @extend %t-sage-heading-6;
-  margin-block-end: sage-spacing(2xs);
+  margin-block-end: var(--pine-dimension-050);
 }
 

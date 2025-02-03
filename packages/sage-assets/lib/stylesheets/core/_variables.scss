@@ -41,10 +41,10 @@ $sage-field-configs: (
   box-shadow-size: 0 0 0 rem(1px),
   // Sizing
   height: rem(40px),
-  padding: sage-spacing(sm),
-  padding-label: sage-spacing(2xs),
+  padding: var(--pine-dimension-200),
+  padding-label: var(--pine-dimension-050),
   // Outer spacing
-  bottom-gap: sage-spacing(),
+  bottom-gap: var(--pine-dimension-300),
 );
 
 ///

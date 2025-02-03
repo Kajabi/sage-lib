@@ -6,9 +6,9 @@
 
 // Borders and sizing
 $-table-header-border: rem(1px) solid var(--pine-color-grey-200);
-$-table-cell-padding-xs: sage-spacing(xs);
-$-table-cell-padding-card: sage-spacing();
-$-table-cell-padding-panel: sage-spacing();
+$-table-cell-padding-xs: var(--pine-dimension-100);
+$-table-cell-padding-card: var(--pine-dimension-300);
+$-table-cell-padding-panel: var(--pine-dimension-300);
 $-table-padding: rem(22px) rem(12px);
 $-table-padding-heading: rem(14px) rem(12px);
 $-table-max-width: none;
@@ -24,7 +24,7 @@ $-table-heading-font-color: var(--pine-color-grey-950);
 $-table-heading-type-spec: "%t-sage-body-med";
 
 // Overflow gradient
-$-table-overflow-indicator-width: sage-spacing(sm);
+$-table-overflow-indicator-width: var(--pine-dimension-200);
 $-table-overflow-indicator-color-start: rgba(255, 255, 255, 0);
 $-table-overflow-indicator-color-end: sage-color(white);
 $-table-overflow-indicator-opacity: 0.95;
@@ -151,7 +151,7 @@ $-table-avatar-width: rem(32px);
       transform-origin: center center;
       height: 0;
       width: 0;
-      margin-inline-start: sage-spacing(2xs);
+      margin-inline-start: var(--pine-dimension-050);
       border-inline-start: $-table-sort-indicator-width solid transparent;
       border-inline-end: $-table-sort-indicator-width solid transparent;
       transition: 0.15s ease-out;
@@ -222,27 +222,27 @@ $-table-avatar-width: rem(32px);
   .sage-panel & {
     @include overflow-scroll();
     overflow-y: visible;
-    max-width: calc(100% + #{2 * sage-spacing(md)});
+    max-width: calc(100% + #{2 * var(--pine-dimension-300)});
   }
 }
 
 .sage-table-wrapper--reset-above {
   .sage-panel > & {
-    margin-block-start: -1 * sage-spacing();
+    margin-block-start: -1 * var(--pine-dimension-300);
   }
 
   .sage-card > & {
-    margin-block-start: -1 * sage-spacing(sm);
+    margin-block-start: -1 * var(--pine-dimension-200);
   }
 }
 
 .sage-table-wrapper--reset-below {
   .sage-panel > & {
-    margin-block-end: -1 * sage-spacing();
+    margin-block-end: -1 * var(--pine-dimension-300);
   }
 
   .sage-card > & {
-    margin-block-end: -1 * sage-spacing(sm);
+    margin-block-end: -1 * var(--pine-dimension-200);
   }
 }
 
@@ -308,7 +308,7 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell__body {
-  margin-block-start: sage-spacing(2xs);
+  margin-block-start: var(--pine-dimension-050);
 }
 
 .sage-table-cell__link {

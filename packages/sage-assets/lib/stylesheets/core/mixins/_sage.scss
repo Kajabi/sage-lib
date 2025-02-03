@@ -57,7 +57,7 @@
 
   @include truncate();
 
-  padding: rem(6px) sage-spacing(sm);
+  padding: rem(6px) var(--pine-dimension-200);
   color: var(--pine-color-grey-900);
   background-color: transparent;
   border: $-copy-text-border;
@@ -82,12 +82,12 @@
         @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
-        margin-inline-start: sage-spacing(xs);
+        margin-inline-start: var(--pine-dimension-100);
       }
     }
 
     .sage-link--icon-right-#{$icon-name}::before {
-      margin-inline-start: sage-spacing(2xs);
+      margin-inline-start: var(--pine-dimension-050);
     }
   }
 
@@ -101,13 +101,13 @@
         @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
-        margin-inline-end: sage-spacing(xs);
+        margin-inline-end: var(--pine-dimension-100);
         padding: var(--icon-block-padding) 0;
       }
     }
 
     .sage-link--icon-left-#{$icon-name}::before {
-      margin-inline-end: sage-spacing(2xs);
+      margin-inline-end: var(--pine-dimension-050);
     }
   }
 
@@ -132,20 +132,20 @@
           margin-inline-end: rem(20px);
 
           @media (max-width: sage-breakpoint(sm-max)) {
-            margin-inline-end: sage-spacing(sm);
+            margin-inline-end: var(--pine-dimension-200);
           }
         }
 
         &.sage-btn--small {
-          padding: rem(12px) sage-spacing(sm) rem(12px) rem(12px);
+          padding: rem(12px) var(--pine-dimension-200) rem(12px) rem(12px);
         }
 
         &.sage-btn--rich-text,
         .toolbar-editor &,
         .toolbar-editor__section & {
-          margin-inline-start: sage-spacing(3xs);
-          margin-inline-end: sage-spacing(3xs);
-          padding: sage-spacing(xs) rem(12px) sage-spacing(xs) sage-spacing(xs);
+          margin-inline-start: var(--pine-dimension-025);
+          margin-inline-end: var(--pine-dimension-025);
+          padding: var(--pine-dimension-100) rem(12px) var(--pine-dimension-100) var(--pine-dimension-100);
           border-radius: 6px;
 
           @media (max-width: sage-breakpoint(sm-max)) {
@@ -284,8 +284,8 @@
   @if ($grid) {
     @include sage-grid-card();
   }
-  gap: sage-spacing();
-  padding: sage-spacing(card);
+  gap: var(--pine-dimension-300);
+  padding: var(--pine-dimension-300);
   border-radius: sage-border(radius-large);
 }
 
@@ -309,7 +309,7 @@
 ///
 @mixin sage-grid-card() {
   display: grid;
-  gap: sage-spacing(sm);
+  gap: var(--pine-dimension-200);
   grid-template-rows: min-content;
 }
 
@@ -318,7 +318,7 @@
 ///
 @mixin sage-grid-stack() {
   display: grid;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
   grid-template-columns: 100%;
   grid-template-rows: min-content;
   justify-items: start;
@@ -329,7 +329,7 @@
 ///
 @mixin sage-grid-panel() {
   display: grid;
-  gap: sage-spacing(panel);
+  gap: var(--pine-dimension-400);
   grid-template-columns: 100%;
   grid-template-rows: min-content;
 }
@@ -342,7 +342,7 @@
 @mixin sage-grid-card-row() {
   justify-content: space-between;
   align-items: center;
-  gap: sage-spacing(card);
+  gap: var(--pine-dimension-300);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
@@ -364,7 +364,7 @@
 @mixin sage-grid-panel-row() {
   justify-content: space-between;
   align-items: center;
-  gap: sage-spacing();
+  gap: var(--pine-dimension-300);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
@@ -387,7 +387,7 @@
   flex-direction: column;
 
   &:not(:last-child) {
-    margin-block-end: sage-spacing();
+    margin-block-end: var(--pine-dimension-300);
   }
 
   .sage-frame > &,
@@ -410,7 +410,7 @@
   @extend %t-sage-body-med;
 
   width: 100%;
-  padding: sage-spacing(sm);
+  padding: var(--pine-dimension-200);
   color: var(--pine-color-grey-900);
   appearance: none;
   box-shadow: sage-border-interactive(default);
@@ -527,10 +527,10 @@
 ///
 @mixin sage-form-field-floating-label(
   $textarea: false,
-  $input-text-height: sage-spacing(sm),
-  $input-padding: sage-spacing(2xs),
+  $input-text-height: var(--pine-dimension-200),
+  $input-padding: var(--pine-dimension-050),
   $textarea-label-padding: rem(3px),
-  $textarea-padding: sage-spacing(sm)
+  $textarea-padding: var(--pine-dimension-200)
 ) {
   @if ($textarea == true) {
     transform: translateY($textarea-label-padding - $textarea-padding);
@@ -549,7 +549,7 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-small-med;
 
-  margin-block-start: sage-spacing(xs);
+  margin-block-start: var(--pine-dimension-100);
   color: var(--pine-color-grey-700);
 
   .sage-form-field--error & {
@@ -560,7 +560,7 @@
 
       position: relative;
       inset-block-start: rem(1px);
-      padding-inline-end: sage-spacing(xs);
+      padding-inline-end: var(--pine-dimension-100);
     }
   }
 }
@@ -572,7 +572,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  margin-block-end: sage-spacing(card);
+  margin-block-end: var(--pine-dimension-300);
 }
 
 @mixin sage-form-toggle-parents() {
@@ -656,10 +656,10 @@
 /// Adds the basic default panel setup including grid, spacing, and border treatment
 ///
 @mixin sage-panel() {
-  padding: sage-spacing(panel);
+  padding: var(--pine-dimension-400);
   background-color: sage-color(white);
   border-radius: sage-border(radius-large);
-  box-shadow: sage-shadow(100);
+  box-shadow: var(--pine-box-shadow-100);
 }
 
 ///

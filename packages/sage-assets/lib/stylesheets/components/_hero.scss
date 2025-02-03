@@ -16,8 +16,8 @@ $-hero-play-icon-background-color: sage-color(white);
     "artwork"
     "title"
     "content";
-  grid-column-gap: sage-spacing(md);
-  grid-row-gap: sage-spacing(sm);
+  grid-column-gap: var(--pine-dimension-300);
+  grid-row-gap: var(--pine-dimension-200);
   background-color: sage-color(white);
   border: sage-border();
   border-start-start-radius: sage-border(radius-large);
@@ -30,7 +30,7 @@ $-hero-play-icon-background-color: sage-color(white);
     grid-template-areas:
       "title artwork"
       "content artwork";
-    padding-inline-start: sage-spacing(md);
+    padding-inline-start: var(--pine-dimension-300);
   }
 }
 
@@ -71,12 +71,12 @@ $-hero-play-icon-background-color: sage-color(white);
   grid-area: title;
   padding-block-start: 0;
   padding-block-end: 0;
-  padding-inline-start: sage-spacing(md);
-  padding-inline-end: sage-spacing(md);
+  padding-inline-start: var(--pine-dimension-300);
+  padding-inline-end: var(--pine-dimension-300);
 
   @media (min-width: sage-breakpoint(lg-max)) {
     align-self: self-end;
-    padding-block-start: sage-spacing(md);
+    padding-block-start: var(--pine-dimension-300);
     padding-block-end: 0;
     padding-inline-start: 0;
     padding-inline-end: 0;
@@ -87,8 +87,8 @@ $-hero-play-icon-background-color: sage-color(white);
   grid-area: content;
   padding-block-start: 0;
   padding-block-end: 0;
-  padding-inline-start: sage-spacing(md);
-  padding-inline-end: sage-spacing(md);
+  padding-inline-start: var(--pine-dimension-300);
+  padding-inline-end: var(--pine-dimension-300);
   margin-block-end: $-hero-margin-y;
   font-weight: sage-font-weight(medium);
   color: var(--pine-color-grey-800);
@@ -106,13 +106,13 @@ $-hero-play-icon-background-color: sage-color(white);
   position: relative;
   overflow: hidden;
   outline: none;
-  border-start-end-radius: sage-spacing(sm);
-  border-end-end-radius: sage-spacing(sm);
+  border-start-end-radius: var(--pine-dimension-200);
+  border-end-end-radius: var(--pine-dimension-200);
 
   @media (max-width: sage-breakpoint(lg-max)) {
     height: 0;
     padding-block-start: $-hero-mobile-aspect-ratio;
-    border-start-start-radius: sage-spacing(sm);
+    border-start-start-radius: var(--pine-dimension-200);
     border-end-end-radius: 0;
   }
 
@@ -181,10 +181,10 @@ $-hero-play-icon-background-color: sage-color(white);
       transform: translate(-50%, -50%);
       width: $-hero-artwork-size;
       height: $-hero-artwork-size;
-      padding: sage-spacing(sm);
+      padding: var(--pine-dimension-200);
       border-radius: 50%;
       background-color: $-hero-play-icon-background-color;
-      box-shadow: sage-shadow(lg);
+      box-shadow: var(--pine-box-shadow-400);
     }
   }
 }

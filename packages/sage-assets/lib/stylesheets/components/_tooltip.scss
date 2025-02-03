@@ -17,8 +17,8 @@ $-tooltip-arrow-inactive: $-tooltip-arrow-size solid transparent;
 $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
-$-tooltip-shadow: sage-shadow(lg);
-$-tooltip-padding: sage-spacing(xs) rem(12px);
+$-tooltip-shadow: var(--pine-box-shadow-400);
+$-tooltip-padding: var(--pine-dimension-100) rem(12px);
 $-tooltip-zindex: sage-z_index(modal, 10);
 $-tooltip-maxwidth: rem(200px);
 $-tooltip-large-maxwidth: rem(320px);

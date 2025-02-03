@@ -14,7 +14,7 @@
   inset-inline-start: sage-sidebar();
   height: rem(88px);
   width: calc(100% - #{sage-sidebar()});
-  padding: sage-spacing(md) sage-spacing(xl);
+  padding: var(--pine-dimension-300) var(--pine-dimension-600);
   background-color: sage-color(white);
   border-block-end: sage-border();
 }
@@ -22,7 +22,7 @@
 .sage-topbar__right {
   display: flex;
   align-items: center;
-  gap: sage-spacing();
+  gap: var(--pine-dimension-300);
 }
 
 @media (max-width: sage-breakpoint(md-max)) {

@@ -113,16 +113,16 @@ $-sage-frame-borders: (
 // Generally aligned to border tokens plus a `none` option
 $-sage-frame-box-shadows: (
   none: 0,
-  sm: sage-shadow(sm),
-  md: sage-shadow(md),
-  lg: sage-shadow(lg),
-  modal: sage-shadow(modal),
-  050: sage-shadow(050),
-  100: sage-shadow(100),
-  200: sage-shadow(200),
-  300: sage-shadow(300),
-  400: sage-shadow(400),
-  500: sage-shadow(500),
+  sm: var(--pine-box-shadow-100),
+  md: var(--pine-box-shadow-200),
+  lg: var(--pine-box-shadow-400),
+  modal: var(--pine-box-shadow-500),
+  050: var(--pine-box-shadow-050),
+  100: var(--pine-box-shadow-100),
+  200: var(--pine-box-shadow-200),
+  300: var(--pine-box-shadow-300),
+  400: var(--pine-box-shadow-400),
+  500: var(--pine-box-shadow-500),
 );
 
 // Directions that map to `flex-direction`

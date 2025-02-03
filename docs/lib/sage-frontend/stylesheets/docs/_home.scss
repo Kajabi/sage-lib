@@ -9,12 +9,12 @@
 
 .docs-hero {
   position: relative;
-  padding: sage-spacing() sage-spacing() rem(100px);
+  padding: var(--pine-dimension-300) var(--pine-dimension-300) rem(100px);
   color: sage-color(white);
   background-color: var(--pine-color-primary-500);
 
   @media (max-width: sage-breakpoint(md-min)) {
-    padding-block-end: sage-spacing(xl);
+    padding-block-end: var(--pine-dimension-600);
   }
 
   .sage-btn--subtle.sage-btn--secondary {
@@ -44,40 +44,40 @@
 }
 
 .docs-hero__title {
-  margin-block-end: sage-spacing(sm);
-  margin-block-start: sage-spacing();
+  margin-block-end: var(--pine-dimension-200);
+  margin-block-start: var(--pine-dimension-300);
   font-size: 4rem;
   line-height: 1;
   color: inherit;
 }
 
 .docs-section {
-  padding: sage-spacing(2xl) sage-spacing();
+  padding: var(--pine-dimension-800) var(--pine-dimension-300);
 
   .sage-panel {
     height: 100%;
   }
 
   @media (max-width: sage-breakpoint(md-min)) {
-    padding: sage-spacing();
+    padding: var(--pine-dimension-300);
   }
 }
 
 .docs-section__title {
-  margin-block-end: sage-spacing(2xl);
+  margin-block-end: var(--pine-dimension-800);
 
   @media (max-width: sage-breakpoint(md-min)) {
-    margin-block-end: sage-spacing();
+    margin-block-end: var(--pine-dimension-300);
   }
 }
 
 .docs-section__icon {
-  margin-block-end: sage-spacing();
+  margin-block-end: var(--pine-dimension-300);
 }
 
 .docs-section__platform-icon {
   width: rem(48px);
-  margin-block-end: sage-spacing();
+  margin-block-end: var(--pine-dimension-300);
 }
 
 .docs-iframe {

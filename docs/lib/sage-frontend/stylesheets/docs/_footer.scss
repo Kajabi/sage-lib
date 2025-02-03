@@ -5,11 +5,11 @@
 ================================================== */
 
 .docs-footer {
-  padding: sage-spacing(2xl) sage-spacing();
+  padding: var(--pine-dimension-800) var(--pine-dimension-300);
   background: var(--pine-color-grey-200);
 
   .sage-stage & {
-    padding: sage-spacing(2xl) 0;
+    padding: var(--pine-dimension-800) 0;
     background: none;
   }
 }

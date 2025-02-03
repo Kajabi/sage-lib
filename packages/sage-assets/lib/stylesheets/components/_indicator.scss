@@ -30,7 +30,7 @@ $-indicator-size: rem(6px);
 
 .sage-indicator-text {
   .sage-modal & {
-    margin-block-start: sage-spacing(2xs);
+    margin-block-start: var(--pine-dimension-050);
   }
 }
 

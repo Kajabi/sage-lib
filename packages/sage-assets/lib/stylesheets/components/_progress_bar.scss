@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-progress-bar-height: sage-spacing(xs);
+$-progress-bar-height: var(--pine-dimension-100);
 
 @keyframes sage-progress-bar--slide {
   from {

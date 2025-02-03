@@ -11,7 +11,7 @@
 
   display: flex;
   flex-flow: row wrap;
-  row-gap: sage-spacing(xs);
+  row-gap: var(--pine-dimension-100);
   align-items: center;
 
   /* stylelint-disable selector-max-compound-selectors */
@@ -32,6 +32,6 @@
   }
 
   &:not(:last-child) {
-    margin-inline-end: sage-spacing(panel);
+    margin-inline-end: var(--pine-dimension-400);
   }
 }

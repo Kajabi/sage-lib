@@ -3,7 +3,7 @@
 ///
 /// @group sage
 ////
-$-transaction-card-item-gap: sage-spacing(xs);
+$-transaction-card-item-gap: var(--pine-dimension-100);
 $-transaction-card-time-max-width: rem(96px);
 $-transaction-card-state-max-width: rem(80px);
 $-transaction-card-price-max-width: rem(100px);
@@ -20,7 +20,7 @@ $-transaction-card-price-max-width: rem(100px);
   position: relative;
   width: 100%;
   background-color: sage-color(white);
-  box-shadow: sage-shadow(100);
+  box-shadow: var(--pine-box-shadow-100);
 
   > * {
     min-width: 0;

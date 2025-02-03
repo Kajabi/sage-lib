@@ -5,10 +5,10 @@
 ================================================== */
 
 $-status-table-border: rem(2px) solid sage-color(grey);
-$-status-table-cell-padding: sage-spacing(xs) sage-spacing(sm);
+$-status-table-cell-padding: var(--pine-dimension-100) var(--pine-dimension-200);
 $-status-table-heading-color: var(--pine-color-grey-600);
 $-status-table-heading-font-size: sage-font-size(body-sm);
-$-status-table-heading-padding: sage-spacing(xs) sage-spacing(sm);
+$-status-table-heading-padding: var(--pine-dimension-100) var(--pine-dimension-200);
 
 .sage-table--status {
   width: 100%;

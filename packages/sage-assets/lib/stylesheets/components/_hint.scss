@@ -11,13 +11,13 @@ $-hint-background-color: var(--pine-color-grey-200);
 .sage-hint {
   display: flex;
   align-items: center;
-  padding: sage-spacing(xs) rem(12px);
+  padding: var(--pine-dimension-100) rem(12px);
   background-color: $-hint-background-color;
 }
 
 .sage-hint__icon {
   display: flex;
-  margin-inline-end: sage-spacing(xs);
+  margin-inline-end: var(--pine-dimension-100);
 }
 
 .sage-hint__content {

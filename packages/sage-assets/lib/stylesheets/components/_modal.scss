@@ -5,8 +5,8 @@
 ////
 
 
-$-modal-padding-x: sage-spacing(md);
-$-modal-padding-y: sage-spacing(md);
+$-modal-padding-x: var(--pine-dimension-300);
+$-modal-padding-y: var(--pine-dimension-300);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
@@ -23,7 +23,7 @@ $-modal-inner-size: sage-container(md);
   justify-content: center;
   overflow-y: scroll;
   z-index: sage-z-index(negative);
-  padding: sage-spacing(md);
+  padding: var(--pine-dimension-300);
   background-color: rgba(var(--pine-color-grey-950), 0.4);
   background-image: linear-gradient(
     rgba(var(--pine-color-grey-700), 0.35) 0%,
@@ -79,12 +79,12 @@ $-modal-inner-size: sage-container(md);
 .sage-modal__container {
   visibility: hidden;
   z-index: sage-z-index(modal);
-  width: calc(100vw - #{sage-spacing(md)});
+  width: calc(100vw - #{var(--pine-dimension-300)});
   max-width: $-modal-inner-size + (2 * $-modal-padding-x);
   margin: 0;
   border-radius: sage-border(radius-large);
   background-color: sage-color(white);
-  box-shadow: sage-shadow(modal);
+  box-shadow: var(--pine-box-shadow-500);
   transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
   opacity: 0;
@@ -108,7 +108,7 @@ $-modal-inner-size: sage-container(md);
     height: calc(100vh - 97px);
     max-width: var(--sage-drawer-compact-width, rem(400px));
     margin-block-start: rem(79px);
-    margin-inline-end: sage-spacing(sm);
+    margin-inline-end: var(--pine-dimension-200);
     border-radius: sage-border(radius-large);
   }
 
@@ -133,7 +133,7 @@ $-modal-inner-size: sage-container(md);
   }
 
   [data-sage-animate] & {
-    transform: translateY(-#{sage-spacing(md)});
+    transform: translateY(-#{var(--pine-dimension-300)});
     transition: opacity 0.1s ease-in, transform 0.15s ease-out;
     transition-delay: 0.1s, 0.15s;
   }
@@ -147,13 +147,13 @@ $-modal-inner-size: sage-container(md);
   }
 
   [data-sage-animate-direction="top"] & {
-    transform: translateY(#{sage-spacing(lg)});
+    transform: translateY(#{var(--pine-dimension-400)});
   }
   [data-sage-animate-direction="left"] & {
-    transform: translateX(#{sage-spacing(lg)});
+    transform: translateX(#{var(--pine-dimension-400)});
   }
   [data-sage-animate-direction="right"] & {
-    transform: translateX(-#{sage-spacing(lg)});
+    transform: translateX(-#{var(--pine-dimension-400)});
   }
 
   .sage-modal--active & {
@@ -186,7 +186,7 @@ $-modal-inner-size: sage-container(md);
 
   .sage-modal--scrollable & > .simple_form {
     @include overflow-scroll(y);
-    padding: sage-spacing(xs) sage-spacing(3xs);
+    padding: var(--pine-dimension-100) var(--pine-dimension-025);
   }
 
   @each $-key, $-value in $sage-modal-sizes {
@@ -209,7 +209,7 @@ $-modal-inner-size: sage-container(md);
     inset-inline-start: 0;
     inset-inline-end: 0;
     margin: 0;
-    padding: sage-spacing(sm) $-modal-padding-x;
+    padding: var(--pine-dimension-200) $-modal-padding-x;
     background-color: sage-color(white);
   }
 }
@@ -222,7 +222,7 @@ $-modal-inner-size: sage-container(md);
 
 .sage-modal__header-text {
   .sage-card__row {
-    gap: sage-spacing(xs);
+    gap: var(--pine-dimension-100);
 
     .sage-modal--fullscreen & {
       display: flex;
@@ -254,7 +254,7 @@ $-modal-inner-size: sage-container(md);
 
 .sage-modal__header-actions {
   display: flex;
-  gap: sage-spacing(md);
+  gap: var(--pine-dimension-300);
 }
 
 .sage-modal__content {
@@ -262,26 +262,26 @@ $-modal-inner-size: sage-container(md);
 
   .sage-modal--fullscreen & {
     max-width: $-modal-fullscreen-max-width;
-    margin: $-modal-fullscreen-top-spacing auto sage-spacing() auto;
+    margin: $-modal-fullscreen-top-spacing auto var(--pine-dimension-300) auto;
   }
 
   .sage-modal--scrollable & {
     @include overflow-scroll(y);
 
-    padding: sage-spacing(xs) sage-spacing(md) sage-spacing(md);
+    padding: var(--pine-dimension-100) var(--pine-dimension-300) var(--pine-dimension-300);
     margin: 0;
 
     > :first-child {
-      margin-block-start: sage-spacing(xs);
+      margin-block-start: var(--pine-dimension-100);
     }
   }
 
   .sage-drawer & {
     overflow-y: auto;
     align-content: start;
-    height: calc(100% - var(--sage-drawer-header-height, 24px) - #{3 * sage-spacing(md)}); // a customizable height value for the header area minus top and bottom padding and one gap between header and content (sage-spacing(md))
-    padding: 0 calc(#{sage-spacing(card)} / 2);
-    margin: 0 calc(#{sage-spacing(card)} / 2);
+    height: calc(100% - var(--sage-drawer-header-height, 24px) - #{3 * var(--pine-dimension-300)}); // a customizable height value for the header area minus top and bottom padding and one gap between header and content (var(--pine-dimension-300))
+    padding: 0 calc(#{var(--pine-dimension-300)} / 2);
+    margin: 0 calc(#{var(--pine-dimension-300)} / 2);
   }
 
   .sage-drawer--compact & {
@@ -289,7 +289,7 @@ $-modal-inner-size: sage-container(md);
     margin-inline-end: 0;
     padding-inline-start: rem(20px);
     padding-inline-end: rem(20px);
-    padding-block-end: sage-spacing();
+    padding-block-end: var(--pine-dimension-300);
     border-block-end: sage-border(default);
   }
 
@@ -298,7 +298,7 @@ $-modal-inner-size: sage-container(md);
   }
 
   &:not([class*="sage-modal__content--spacing-"]) p + p {
-    margin-block-start: sage-spacing();
+    margin-block-start: var(--pine-dimension-300);
   }
 
   @include clearfix;
@@ -326,7 +326,7 @@ $-modal-inner-size: sage-container(md);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: sage-spacing(sm);
+  gap: var(--pine-dimension-200);
   margin: $-modal-padding-y $-modal-padding-x;
 }
 

@@ -8,7 +8,7 @@
   @include overflow-scroll(x);
 
   display: block;
-  padding: sage-spacing();
+  padding: var(--pine-dimension-300);
   color: var(--pine-color-sage-100);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(normal);
@@ -17,7 +17,7 @@
   border-radius: sage-border(radius);
 
   &.prettyprinted {
-    padding: sage-spacing();
+    padding: var(--pine-dimension-300);
   }
 
   code {

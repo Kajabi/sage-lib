@@ -7,7 +7,7 @@
 
 $-label-interactive-icon-size: rem(24px);
 $-label-interactive-icon-size-decor: rem(28px);
-$-label-padding: 0 sage-spacing(xs);
+$-label-padding: 0 var(--pine-dimension-100);
 $-label-border-radius: sage-border(radius-x-large);
 $-label-inset-border: 0 0 0 1px inset;
 $-label-statuses: (
@@ -152,7 +152,7 @@ $-label-statuses: (
 
     &.sage-label--interactive-right-cta-affordance .sage-label__decor-icon::before {
       @media (max-width: sage-breakpoint(sm-max)) {
-        width: sage-spacing(md);
+        width: var(--pine-dimension-300);
       }
     }
   }
@@ -163,7 +163,7 @@ $-label-statuses: (
 .sage-label-group {
   display: flex;
   flex-flow: row wrap;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
 }
 
 .sage-label-group--align-center {

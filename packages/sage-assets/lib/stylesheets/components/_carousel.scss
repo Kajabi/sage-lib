@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-sage-carousel-arrow-width: sage-spacing(lg);
+$-sage-carousel-arrow-width: var(--pine-dimension-400);
 $-sage-carousel-active-color: var(--pine-color-grey-600);
 $-sage-carousel-inactive-color: var(--pine-color-grey-500);
 
@@ -54,5 +54,5 @@ $-sage-carousel-inactive-color: var(--pine-color-grey-500);
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-block-start: sage-spacing(sm);
+  margin-block-start: var(--pine-dimension-200);
 }

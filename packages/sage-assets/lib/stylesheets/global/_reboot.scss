@@ -380,7 +380,7 @@ a {
 }
 
 hr {
-  margin: sage-spacing() 0;
+  margin: var(--pine-dimension-300) 0;
   border: 0;
   border-block-start: sage-border();
 }

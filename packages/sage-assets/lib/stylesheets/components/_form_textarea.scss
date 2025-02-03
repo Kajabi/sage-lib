@@ -8,11 +8,11 @@
 $-textarea-border-width: rem(1px);
 
 // Margin
-$-textarea-label-margin: sage-spacing(xs);
+$-textarea-label-margin: var(--pine-dimension-100);
 
 // Padding
 $-textarea-label-padding: rem(3px);
-$-textarea-padding: sage-spacing(sm);
+$-textarea-padding: var(--pine-dimension-200);
 
 // Sizing
 $-textarea-height: 100%;

@@ -19,7 +19,7 @@ $-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15
   align-items: center;
   z-index: sage-z-index(nav);
   height: $-assistant-height;
-  padding: sage-spacing(xs) sage-spacing();
+  padding: var(--pine-dimension-100) var(--pine-dimension-300);
   background: var(--pine-color-primary-500);
 }
 
@@ -44,7 +44,7 @@ $-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15
 
   width: 100%;
   height: $-assistant-search-height;
-  padding: sage-spacing(xs);
+  padding: var(--pine-dimension-100);
   color: $-assistant-search-placeholder-color;
   background: rgba($-assistant-search-bg-color, $-assistant-search-bg-opacity);
   border: 0;

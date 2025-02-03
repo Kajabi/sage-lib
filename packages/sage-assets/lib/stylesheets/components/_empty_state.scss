@@ -15,7 +15,7 @@ $-empty-state-icon-compact-size: rem(56px);
 .sage-empty-state {
   @include sage-grid-panel();
 
-  gap: sage-spacing(sm);
+  gap: var(--pine-dimension-200);
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: sage-container(md);
@@ -28,7 +28,7 @@ $-empty-state-icon-compact-size: rem(56px);
   inset-inline-start: 50%;
   inset-block-start: 50%;
   transform: translate(-50%, -50%);
-  padding: sage-spacing();
+  padding: var(--pine-dimension-300);
 
   [rtl] & {
     transform: translate(50%, -50%);
@@ -38,7 +38,7 @@ $-empty-state-icon-compact-size: rem(56px);
 .sage-empty-state__actions,
 .sage-empty-state__custom-content,
 .sage-empty-state__video {
-  margin-block-start: sage-spacing();
+  margin-block-start: var(--pine-dimension-300);
 }
 
 .sage-empty-state__graphic {
@@ -64,12 +64,12 @@ $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state__icon-container {
   display: flex;
-  padding: sage-spacing(lg);
+  padding: var(--pine-dimension-400);
   background-color: $-empty-state-icon-background-color;
   border-radius: sage-border(radius-round);
 
   .sage-empty-state--compact & {
-    padding: sage-spacing(sm);
+    padding: var(--pine-dimension-200);
   }
 }
 
@@ -86,7 +86,7 @@ $-empty-state-icon-compact-size: rem(56px);
   word-wrap: break-word;
 
   &:not(:only-child) {
-    margin-block-end: sage-spacing(sm);
+    margin-block-end: var(--pine-dimension-200);
   }
 }
 

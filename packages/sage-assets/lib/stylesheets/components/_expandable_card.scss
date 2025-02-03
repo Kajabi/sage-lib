@@ -8,8 +8,8 @@
 $-expandable-card-bg-color: sage-color(white);
 $-expandable-card-border-color: var(--pine-color-grey-300);
 $-expandable-card-border-radius: sage-border(radius);
-$-expandable-card-padding: sage-spacing(sm);
-$-expandable-card-padding-xs: sage-spacing(xs);
+$-expandable-card-padding: var(--pine-dimension-200);
+$-expandable-card-padding-xs: var(--pine-dimension-100);
 
 .sage-expandable-card {
   .sage-accordion & {
@@ -17,13 +17,13 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     border: 1px solid $-expandable-card-border-color;
 
     &:not(:last-child) {
-      margin-block-end: sage-spacing();
+      margin-block-end: var(--pine-dimension-300);
     }
 
     .sage-expandable-card__header {
-      padding: sage-spacing();
+      padding: var(--pine-dimension-300);
       padding-block-end: 0;
-      margin-block-end: -#{sage-spacing(xs)};
+      margin-block-end: -#{var(--pine-dimension-100)};
     }
   }
 }
@@ -40,11 +40,11 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     visibility: visible;
     overflow: initial;
     height: auto;
-    margin-block-start: sage-spacing(xs);
+    margin-block-start: var(--pine-dimension-100);
   }
 
   .sage-accordion & {
-    padding: sage-spacing(xs) sage-spacing(card) sage-spacing(card);
+    padding: var(--pine-dimension-100) var(--pine-dimension-300) var(--pine-dimension-300);
   }
 
   .sage-accordion [aria-expanded="false"] + & {
@@ -83,7 +83,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   }
 
   .sage-accordion & {
-    padding: sage-spacing(card);
+    padding: var(--pine-dimension-300);
     border-width: 0;
     border-radius: sage-border(radius-large);
 

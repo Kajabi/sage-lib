@@ -6,13 +6,13 @@
 
 
 $-popover-overlay-z-index: sage-z-index(modal);
-$-popover-panel-padding: sage-spacing();
+$-popover-panel-padding: var(--pine-dimension-300);
 $-popover-panel-min-size: sage-container(sm);
 $-popover-panel-contentmin-size: $-popover-panel-min-size - $-popover-panel-padding;
 $-popover-panel-max-size: rem(350px);
-$-popover-panel-offset: sage-spacing(sm);
+$-popover-panel-offset: var(--pine-dimension-200);
 $-popover-tooltip-width: rem(7px);
-$-popover-tooltip-offset: sage-spacing(lg);
+$-popover-tooltip-offset: var(--pine-dimension-400);
 $-popover-tooltip-horizontal-offset: -1.5rem;
 $-popover-tooltip-active: $-popover-tooltip-width solid sage-color(white);
 $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
@@ -51,7 +51,7 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   padding: $-popover-panel-padding;
   background-color: sage-color(white);
   background-clip: padding-box;
-  box-shadow: sage-shadow(md);
+  box-shadow: var(--pine-box-shadow-200);
   border-radius: sage-border(radius-large);
 
   &::after {

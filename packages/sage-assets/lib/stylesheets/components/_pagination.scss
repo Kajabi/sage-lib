@@ -23,7 +23,7 @@ $-pagination-focus-ring-color: var(--pine-color-purple-300);
   flex-grow: 1;
 
   .sage-panel-controls__default-controls & {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-300);
   }
 }
 
@@ -42,7 +42,7 @@ $-pagination-focus-ring-color: var(--pine-color-purple-300);
 .sage-pagination__pages {
   display: flex;
   flex-flow: row wrap;
-  gap: sage-spacing(2xs);
+  gap: var(--pine-dimension-050);
   padding-inline-start: 0;
   list-style-type: none;
   border-radius: $-pagination-radius;
@@ -143,13 +143,13 @@ $-pagination-focus-ring-color: var(--pine-color-purple-300);
   pointer-events: none;
 
   [class*="sage-icon"] {
-    margin-block-start: sage-spacing(xs);
+    margin-block-start: var(--pine-dimension-100);
   }
 }
 
 .sage-pagination__count {
   @extend %t-sage-body;
-  padding-inline-end: sage-spacing();
+  padding-inline-end: var(--pine-dimension-300);
 
   /* stylelint-disable selector-max-compound-selectors */
   .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions--checked + .sage-panel-controls__toolbar .sage-pagination & {

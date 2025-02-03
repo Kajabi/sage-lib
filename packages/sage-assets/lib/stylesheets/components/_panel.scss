@@ -53,7 +53,7 @@
     content: attr(data-divider-label);
     display: inline-block;
     position: relative;
-    padding: 0 sage-spacing(sm);
+    padding: 0 var(--pine-dimension-200);
     color: var(--pine-color-grey-600);
     font-size: sage-font-size(body-xs);
     background-color: sage-color(white);
@@ -61,9 +61,9 @@
 }
 
 .sage-panel__divider--full-bleed {
-  width: calc(100% + #{sage-spacing(panel) * 2});
+  width: calc(100% + #{var(--pine-dimension-400) * 2});
   padding: 0;
-  margin: 0 -#{sage-spacing(panel)};
+  margin: 0 -#{var(--pine-dimension-400)};
 }
 
 .sage-panel__footer {
@@ -80,7 +80,7 @@
 }
 
 .sage-panel__header {
-  row-gap: sage-spacing(xs);
+  row-gap: var(--pine-dimension-100);
 }
 
 .sage-panel__header--custom,
@@ -89,11 +89,11 @@
   align-items: start;
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
-  column-gap: sage-spacing();
+  column-gap: var(--pine-dimension-300);
 }
 
 .sage-panel__subheader {
-  row-gap: sage-spacing(2xs);
+  row-gap: var(--pine-dimension-050);
 }
 
 .sage-panel__title {
@@ -101,7 +101,7 @@
   color: var(--pine-color-grey-950);
 
   + .sage-panel__subtext {
-    margin-block-start: sage-spacing(xs);
+    margin-block-start: var(--pine-dimension-100);
   }
 }
 
@@ -124,26 +124,26 @@
 
 .sage-panel__list {
   padding: 0;
-  margin: 0 -#{sage-spacing(panel)};
+  margin: 0 -#{var(--pine-dimension-400)};
   list-style: none;
 }
 
 .sage-panel__list-item {
   margin-block-end: rem(-1px);
-  padding: sage-spacing(sm) sage-spacing();
+  padding: var(--pine-dimension-200) var(--pine-dimension-300);
   border-block-start: sage-border(default);
   border-block-end: sage-border(default);
 
   @include sage-grid-card-row;
 
   .sage-panel__list--block-space-xs & {
-    padding-block-start: sage-spacing(xs);
-    padding-block-end: sage-spacing(xs);
+    padding-block-start: var(--pine-dimension-100);
+    padding-block-end: var(--pine-dimension-100);
   }
 
   .sage-panel__list--block-space-md & {
-    padding-block-start: sage-spacing();
-    padding-block-end: sage-spacing();
+    padding-block-start: var(--pine-dimension-300);
+    padding-block-end: var(--pine-dimension-300);
   }
 
   &:first-child {
@@ -173,7 +173,7 @@
 
 .sage-panel__stack--spacing-form {
   justify-items: stretch;
-  gap: sage-spacing(card);
+  gap: var(--pine-dimension-300);
 }
 
 .sage-panel__tile {
@@ -181,7 +181,7 @@
 }
 
 .sage-panel__tiles {
-  --sage-panel-tiles-gap: #{sage-spacing()};
+  --sage-panel-tiles-gap: #{var(--pine-dimension-300)};
 
   display: grid;
   grid-gap: var(--sage-panel-tiles-gap);
@@ -209,7 +209,7 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: min-content;
-  grid-gap: sage-spacing(stage);
+  grid-gap: var(--pine-dimension-600);
 }
 
 .sage-panel,

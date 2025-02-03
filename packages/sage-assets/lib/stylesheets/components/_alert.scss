@@ -51,9 +51,9 @@ $-alert-border-colors: (
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas: "icon copy";
-  gap: sage-spacing(sm);
-  padding: sage-spacing();
-  margin-block-end: sage-spacing();
+  gap: var(--pine-dimension-200);
+  padding: var(--pine-dimension-300);
+  margin-block-end: var(--pine-dimension-300);
   border: 1px solid var(--pine-color-grey-300);
   border-radius: sage-border(radius-large);
 
@@ -96,7 +96,7 @@ $-alert-border-colors: (
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "icon copy actions";
   align-items: center;
-  padding: sage-spacing(sm);
+  padding: var(--pine-dimension-200);
   border-radius: sage-border(radius-medium);
 
   &.sage-alert--dismissable {
@@ -154,7 +154,7 @@ $-alert-border-colors: (
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: sage-spacing();
+  gap: var(--pine-dimension-300);
   grid-area: actions;
 
   // Mimics sage-link "plain link" styling
@@ -178,7 +178,7 @@ $-alert-border-colors: (
   }
 
   .sage-alert--small & {
-    gap: sage-spacing(sm);
+    gap: var(--pine-dimension-200);
   }
 }
 

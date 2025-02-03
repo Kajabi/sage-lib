@@ -11,11 +11,11 @@ $-toast-height-mobile: rem(36px);
 $-toast-breakpoint-default: "screen and (min-width: #{sage-breakpoint(md-min)})";
 $-toast-breakpoint-mobile: "screen and (max-width: #{sage-breakpoint(sm-max)})";
 
-$-toast-viewport-spacing-default: sage-spacing(sm);
-$-toast-viewport-spacing-mobile: sage-spacing(sm);
+$-toast-viewport-spacing-default: var(--pine-dimension-200);
+$-toast-viewport-spacing-mobile: var(--pine-dimension-200);
 
 $-toast-max-width: 90vw;
-$-toast-bottom-spacing: sage-spacing(xs);
+$-toast-bottom-spacing: var(--pine-dimension-100);
 
 @keyframes sage-toast--animate-in-default {
   from {
@@ -67,12 +67,12 @@ $-toast-bottom-spacing: sage-spacing(xs);
   align-items: center;
   max-width: $-toast-max-width;
   margin-block-end: $-toast-bottom-spacing;
-  padding-block-start: sage-spacing(xs);
-  padding-block-end: sage-spacing(xs);
-  padding: 0 sage-spacing(md);
+  padding-block-start: var(--pine-dimension-100);
+  padding-block-end: var(--pine-dimension-100);
+  padding: 0 var(--pine-dimension-300);
   color: sage-color(white);
   border-radius: sage-border(radius-medium);
-  box-shadow: sage-shadow(lg);
+  box-shadow: var(--pine-box-shadow-400);
   background-color: var(--pine-color-grey-900);
   animation: 0.5s ease;
 
@@ -80,16 +80,16 @@ $-toast-bottom-spacing: sage-spacing(xs);
     min-height: $-toast-height-default;
     width: auto;
     min-width: rem(350px);
-    padding-inline-start: sage-spacing(lg);
-    padding-inline-end: sage-spacing(lg);
+    padding-inline-start: var(--pine-dimension-400);
+    padding-inline-end: var(--pine-dimension-400);
     animation-name: sage-toast--animate-in-default;
   }
 
   @media #{$-toast-breakpoint-mobile} {
     min-height: $-toast-height-mobile;
     width: fit-content;
-    padding-inline-start: sage-spacing(xs);
-    padding-inline-end: sage-spacing(xs);
+    padding-inline-start: var(--pine-dimension-100);
+    padding-inline-end: var(--pine-dimension-100);
     animation-name: sage-toast--animate-in-mobile;
   }
 
@@ -105,7 +105,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
 .sage-toast__icon {
   display: inline-flex;
-  margin-inline-end: sage-spacing(xs);
+  margin-inline-end: var(--pine-dimension-100);
   color: sage-color(white);
 }
 
@@ -132,7 +132,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
   display: inline-flex;
   align-items: center;
-  margin-inline-start: sage-spacing(sm);
+  margin-inline-start: var(--pine-dimension-200);
   white-space: nowrap;
   color: sage-color(white);
   border-radius: sage-border(radius-large);

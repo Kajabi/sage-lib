@@ -13,12 +13,12 @@
   color: var(--pine-color-grey-800);
 
   .sage-property-group &:not(:last-child) {
-    margin-inline-end: sage-spacing(md);
+    margin-inline-end: var(--pine-dimension-300);
   }
 }
 
 .sage-property__icon {
-  margin-inline-end: sage-spacing(xs);
+  margin-inline-end: var(--pine-dimension-100);
 
   &::before {
     vertical-align: top;

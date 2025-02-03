@@ -11,12 +11,12 @@
 
   // TODO: These styles interfered with the new List component and should be deprecated.
   &:not(.sage-list--inline-compact):not(.sage-list--inline-fit-compact):not(.sage-list__item) {
-    margin-inline-end: -1 * sage-spacing(sm);
-    margin-inline-start: -1 * sage-spacing(sm);
+    margin-inline-end: -1 * var(--pine-dimension-200);
+    margin-inline-start: -1 * var(--pine-dimension-200);
 
     > li {
-      margin-inline-end: sage-spacing(sm);
-      margin-inline-start: sage-spacing(sm);
+      margin-inline-end: var(--pine-dimension-200);
+      margin-inline-start: var(--pine-dimension-200);
     }
   }
 }

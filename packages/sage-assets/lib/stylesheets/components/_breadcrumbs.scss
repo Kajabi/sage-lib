@@ -21,7 +21,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-300);
   align-items: center;
 
   .sage-breadcrumbs__link & {
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
   }
 }
 
@@ -40,7 +40,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-300);
       content: "";
     }
     .sage-breadcrumbs--progressbar pds-icon {
-      margin: 0 sage-spacing(xs) sage-spacing(2xs);
+      margin: 0 var(--pine-dimension-100) var(--pine-dimension-050);
       @include sage-icon-base(right-small, xl, pine);
     }
   }
@@ -55,7 +55,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-300);
 .sage-breadcrumbs__link {
   display: inline-flex;
   align-items: center;
-  padding: sage-spacing(3xs) sage-spacing(xs);
+  padding: var(--pine-dimension-025) var(--pine-dimension-100);
   color: var(--pine-color-grey-800);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(semibold);
@@ -76,7 +76,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-300);
 
   .sage-breadcrumbs--progressbar & {
     position: relative;
-    padding-block-end: sage-spacing(2xs);
+    padding-block-end: var(--pine-dimension-050);
 
     &:active {
       color: $-breadcrumb-interactive-color;

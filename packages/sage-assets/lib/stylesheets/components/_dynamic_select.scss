@@ -1,15 +1,15 @@
 $-dynamic-select-default-height: rem(45px);
-$-dynamic-select-default-padding: rem(4px) sage-spacing(sm) 0;
+$-dynamic-select-default-padding: rem(4px) var(--pine-dimension-200) 0;
 $-dynamic-select-border-color: var(--pine-color-grey-400);
 $-dynamic-select-placeholder-color: var(--pine-color-grey-400);
 $-dynamic-select-color-success: map-get($sage-field-colors, success);
 $-dynamic-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-dynamic-select-selected-height: rem(54px);
-$-dynamic-select-selected-padding: rem(12px) sage-spacing(sm) 0;
+$-dynamic-select-selected-padding: rem(12px) var(--pine-dimension-200) 0;
 $-dynamic-select-selected-tag-color: var(--pine-color-primary-200);
 $-dynamic-select-selected-tag-background-color: var(--pine-color-primary-100);
 $-dynamic-select-selected-tag-border-radius: sage-border(radius-x-large);
-$-dynamic-select-selected-tag-padding: 0 sage-spacing(xs);
+$-dynamic-select-selected-tag-padding: 0 var(--pine-dimension-100);
 $-dynamic-select-selected-tag-height: rem(30px);
 $-dynamic-select-clear-font-weight: sage-font-weight(regular);
 $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
@@ -17,7 +17,7 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 /* stylelint-disable selector-max-compound-selectors */
 
 .sage-dynamic-select .sage-dynamic-select__data {
-  inset-block-end: sage-spacing(xs);
+  inset-block-end: var(--pine-dimension-100);
   inset-inline-start: 50%;
 }
 
@@ -29,7 +29,7 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
   }
 
   .select2-container--sage .select2-dropdown--below {
-    margin-block-start: sage-spacing(xs);
+    margin-block-start: var(--pine-dimension-100);
   }
 
   .select2-container--sage .select2-selection--single.sage-select__field {

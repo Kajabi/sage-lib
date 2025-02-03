@@ -9,9 +9,9 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box {
   // Styles here
   @include sage-card($grid: false);
-  padding: rem(18px) sage-spacing(sm);
+  padding: rem(18px) var(--pine-dimension-200);
   border-radius: sage-border(radius-large);
-  box-shadow: sage-shadow(100);
+  box-shadow: var(--pine-box-shadow-100);
   background-color: sage-color(white);
 
   .sage-card &,
@@ -21,14 +21,14 @@ $-stat-box-image-max-width: rem(48px);
   }
 
   &.sage-stat-box--raised {
-    box-shadow: sage-shadow(sm);
+    box-shadow: var(--pine-box-shadow-100);
     border: 0;
   }
 
   &.sage-stat-box--with-img,
   &.sage-stat-box--with-icon {
     display: grid;
-    grid-column-gap: sage-spacing();
+    grid-column-gap: var(--pine-dimension-300);
 
     grid-template-areas:
       "image header header"
@@ -85,7 +85,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
-  margin-inline-end: sage-spacing(xs);
+  margin-inline-end: var(--pine-dimension-100);
 }
 
 [class*="sage-stat-box__title--legend"] {
@@ -94,7 +94,7 @@ $-stat-box-image-max-width: rem(48px);
     display: block;
     width: rem(8px);
     height: rem(8px);
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
     border-radius: sage-border(radius);
     background-color: var(--legend-color);
   }
@@ -126,11 +126,11 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
-  margin-inline-start: sage-spacing(xs);
+  margin-inline-start: var(--pine-dimension-100);
   color: var(--pine-color-grey-600);
 }
 
 .sage-stat-box__link {
   @extend %t-sage-body-med;
-  margin-block-start: sage-spacing(xs);
+  margin-block-start: var(--pine-dimension-100);
 }

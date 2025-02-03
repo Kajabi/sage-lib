@@ -21,7 +21,7 @@ $-sidebar-top-offset: $sage-assistant-height;
   height: calc(100% - #{$-sidebar-top-offset});
   width: sage-sidebar(xl);
   background: $-sidebar-color-background;
-  box-shadow: sage-shadow();
+  box-shadow: var(--pine-box-shadow-200);
   overscroll-behavior-y: contain;
   transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;
   opacity: 0;
@@ -54,21 +54,21 @@ $-sidebar-top-offset: $sage-assistant-height;
 .sage-sidebar__body {
   @include overflow-scroll();
   flex: 1;
-  padding: sage-spacing(sm);
+  padding: var(--pine-dimension-200);
 }
 
 .sage-sidebar__footer::before {
   content: "";
   display: block;
   position: absolute;
-  top: calc(-1 * #{sage-spacing(sm)});
+  top: calc(-1 * #{var(--pine-dimension-200)});
   left: 0;
   inset-inline-end: 0;
-  height: sage-spacing(sm);
+  height: var(--pine-dimension-200);
   background: linear-gradient(to top, #{$-sidebar-color-background} 0%, rgba(255, 255, 255, 0) 60%);
 }
 
 .sage-sidebar__footer {
   position: relative;
-  padding: sage-spacing(sm);
+  padding: var(--pine-dimension-200);
 }

@@ -48,42 +48,42 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
 .example__label {
   display: inline-block;
   min-width: rem(100px);
-  margin: sage-spacing() 0;
-  padding: sage-spacing(xs) sage-spacing();
+  margin: var(--pine-dimension-300) 0;
+  padding: var(--pine-dimension-100) var(--pine-dimension-300);
   color: var(--pine-color-grey-950);
   text-align: center;
   background: sage-color(white);
-  box-shadow: sage-shadow();
+  box-shadow: var(--pine-box-shadow-200);
   border-radius: rem(20px);
 }
 
 .example__preview {
-  margin: sage-spacing() 0;
+  margin: var(--pine-dimension-300) 0;
 }
 
 .example__block {
-  margin-block-start: sage-spacing(sm);
-  margin-block-end: sage-spacing(sm);
+  margin-block-start: var(--pine-dimension-200);
+  margin-block-end: var(--pine-dimension-200);
 }
 
 .example__block--md {
-  margin-block-start: sage-spacing(md);
-  margin-block-end: sage-spacing(md);
+  margin-block-start: var(--pine-dimension-300);
+  margin-block-end: var(--pine-dimension-300);
 }
 
 .example__block--lg {
-  margin-block-start: sage-spacing(lg);
-  margin-block-end: sage-spacing(lg);
+  margin-block-start: var(--pine-dimension-400);
+  margin-block-end: var(--pine-dimension-400);
 }
 
 .example__expand-btn {
   @include sage-button-style-reset();
   position: absolute;
   z-index: sage-z_index(raised);
-  inset-block-end: sage-spacing(xs);
+  inset-block-end: var(--pine-dimension-100);
   inset-inline-start: 0;
   width: 100%;
-  padding: sage-spacing(xs);
+  padding: var(--pine-dimension-100);
   color: $-example-code-preview-button-color;
   background-color: $-example-code-preview-button-bg;
   transition: map-get($sage-transitions, default);
@@ -132,7 +132,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
 
   .prettyprint {
     margin-block-end: 0;
-    padding-block-end: sage-spacing(xl);
+    padding-block-end: var(--pine-dimension-600);
   }
 
   &::before {
@@ -167,8 +167,8 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
     background: var(--pine-color-grey-100);
   }
   .sage-card__header {
-    padding: sage-spacing();
-    padding-block-end: sage-spacing(xs);
+    padding: var(--pine-dimension-300);
+    padding-block-end: var(--pine-dimension-100);
     code {
       background: var(--pine-color-grey-300);
     }
@@ -177,7 +177,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-primary-300), 0.75);
 
 .demo-custom-class {
   display: flex;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
 }
 
 .demo-custom-popover-panel {

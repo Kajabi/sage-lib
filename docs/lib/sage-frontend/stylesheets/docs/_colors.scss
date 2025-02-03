@@ -11,8 +11,8 @@
 // color block groupings
 .colors {
   overflow: hidden;
-  margin-block-start: sage-spacing();
-  margin-block-end: sage-spacing();
+  margin-block-start: var(--pine-dimension-300);
+  margin-block-end: var(--pine-dimension-300);
   border-radius: sage-border(radius);
 }
 
@@ -56,7 +56,7 @@
     }
 
     #{$classname} {
-      padding: sage-spacing(sm) sage-spacing();
+      padding: var(--pine-dimension-200) var(--pine-dimension-300);
       font-size: sage-font-size(body);
       background: $hex;
 
@@ -99,7 +99,7 @@
 
       &::after {
         content: "#{$hex}";
-        padding-inline-start: sage-spacing(xs);
+        padding-inline-start: var(--pine-dimension-100);
         font-weight: sage-font-weight(semibold);
         text-transform: uppercase;
       }

@@ -8,8 +8,8 @@
 $-badge-min-height: rem(20px);
 $-badge-interactive-icon-size: rem(24px);
 $-badge-interactive-icon-size-decor: rem(28px);
-$-badge-padding: 1px sage-spacing(xs);
-$-badge-padding-lg: sage-spacing(2xs) rem(12px);
+$-badge-padding: 1px var(--pine-dimension-100);
+$-badge-padding-lg: var(--pine-dimension-050) rem(12px);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-statuses: (
   danger,
@@ -55,7 +55,7 @@ $-badge-statuses: (
   }
 
   .sage-dot ~ & {
-    padding-inline-start: sage-spacing(2xs);
+    padding-inline-start: var(--pine-dimension-050);
   }
 
   .sage-badge--large & {
@@ -151,7 +151,7 @@ $-badge-statuses: (
 .sage-badge-group {
   display: flex;
   flex-flow: row wrap;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
 }
 
 @each $-key, $-value in $sage-spacings {

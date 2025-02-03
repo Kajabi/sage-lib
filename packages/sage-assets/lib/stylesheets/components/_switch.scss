@@ -34,15 +34,15 @@ $-switch-toggle-size: rem(16px);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-block-start: calc(#{sage-spacing(card)} / -2);
+    margin-block-start: calc(#{var(--pine-dimension-300)} / -2);
   }
 
   &.sage-switch--has-border {
     align-items: center;
-    padding: sage-spacing(card);
+    padding: var(--pine-dimension-300);
     border: sage-border();
     border-radius: sage-border(radius);
-    box-shadow: sage-shadow(100);
+    box-shadow: var(--pine-box-shadow-100);
     background-color: sage-color(white);
 
     .sage-card &,
@@ -58,7 +58,7 @@ $-switch-toggle-size: rem(16px);
 
   .sage-list & {
     margin-block-start: 0;
-    margin-block-end: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(#{var(--pine-dimension-300)} / 2);
   }
 
   @include sage-form-toggle-parents {
@@ -146,7 +146,7 @@ $-switch-toggle-size: rem(16px);
     width: $-switch-toggle-size;
     background: sage-color(white);
     border-radius: sage-border(radius-round);
-    box-shadow: sage-shadow(sm);
+    box-shadow: var(--pine-box-shadow-100);
     transition: transform 0.2s ease-in-out;
   }
 

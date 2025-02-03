@@ -24,7 +24,7 @@ $-media-tile-breakpoints: (
 
 .sage-media-tile--interactive {
   &:hover {
-    box-shadow: sage-shadow(md);
+    box-shadow: var(--pine-box-shadow-200);
     transition: map-get($sage-transitions, default);
     transition-property: box-shadow;
   }
@@ -99,7 +99,7 @@ $-media-tile-breakpoints: (
   @include sage-grid-panel;
 
   justify-content: center;
-  gap: sage-spacing(stage);
+  gap: var(--pine-dimension-600);
 
   @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
     grid-template-columns: repeat(1, 1fr);

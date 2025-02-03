@@ -21,8 +21,8 @@ $-search-icon: "::before";
     @include sage-icon-base(search-small, sm, pine);
 
     z-index: sage-z-index(default, 2);
-    margin-inline-start: sage-spacing(sm);
-    margin-inline-end: -1 * sage-spacing(lg);
+    margin-inline-start: var(--pine-dimension-200);
+    margin-inline-end: -1 * var(--pine-dimension-400);
     color: var(--pine-color-grey-700);
     transition: map-get($sage-transitions, default);
     transition-property: color;
@@ -80,7 +80,7 @@ $-search-icon: "::before";
   }
 
   .sage-panel-controls__toolbar > &:not(:last-child) {
-    margin-inline-end: sage-spacing(panel);
+    margin-inline-end: var(--pine-dimension-400);
   }
 
   .sage-panel-controls__toolbar .sage-search--contained & {
@@ -125,7 +125,7 @@ $-search-icon: "::before";
 .sage-search__label {
   @include sage-form-field-label;
 
-  margin-block-end: sage-spacing(2xs);
+  margin-block-end: var(--pine-dimension-050);
 
   .sage-panel-controls__toolbar & {
     margin-block-end: 0;
@@ -138,7 +138,7 @@ $-search-icon: "::before";
   position: relative;
   z-index: 1;
   flex: 1;
-  padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(xs);
+  padding: rem(6px) var(--pine-dimension-200) rem(6px) var(--pine-dimension-100);
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -168,16 +168,16 @@ $-search-icon: "::before";
       background-color: sage-color(white);
     }
     &:disabled {
-      padding-inline-start: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
-      margin-inline-start: calc(#{sage-spacing(lg)} * -1);
+      padding-inline-start: calc(#{var(--pine-dimension-600)} - #{var(--pine-dimension-100)});
+      margin-inline-start: calc(#{var(--pine-dimension-400)} * -1);
     }
   }
 
   .sage-panel-controls__toolbar &,
   .sage-toolbar__group &,
   .sage-search--contained & {
-    padding-block-start: sage-spacing(xs);
-    padding-block-end: sage-spacing(xs);
+    padding-block-start: var(--pine-dimension-100);
+    padding-block-end: var(--pine-dimension-100);
     border-radius: inherit;
   }
 
@@ -185,8 +185,8 @@ $-search-icon: "::before";
   .sage-toolbar__group &,
   .sage-toolbar &,
   .sage-toolbar__group & {
-    padding-inline-start: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
-    margin-inline-start: calc(#{sage-spacing(lg)} * -1);
+    padding-inline-start: calc(#{var(--pine-dimension-600)} - #{var(--pine-dimension-100)});
+    margin-inline-start: calc(#{var(--pine-dimension-400)} * -1);
     box-shadow: map-get($sage-toolbar-button-borders, default);
 
     &:hover {
@@ -252,7 +252,7 @@ $-search-icon: "::before";
   z-index: sage-z-index(default, 1);
 
   :not(.sage-search--contained) & {
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
   }
 
   .sage-search--has-text & {

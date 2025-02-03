@@ -47,7 +47,7 @@ $-banner-el-icon: "before";
   z-index: sage-z-index(negative);
   transform: translateY(-100px);
   width: 100%;
-  padding: sage-spacing(sm) sage-spacing(md);
+  padding: var(--pine-dimension-200) var(--pine-dimension-300);
   color: map-get(map-get($-banner-colors, default), text);
   background: map-get(map-get($-banner-colors, default), background);
   transition: 0.3s ease-in-out;
@@ -64,7 +64,7 @@ $-banner-el-icon: "before";
 
   &::#{$-banner-el-icon} {
     @include sage-icon-base(map-get(map-get($-banner-colors, default), icon, pine));
-    margin-inline-end: sage-spacing(sm);
+    margin-inline-end: var(--pine-dimension-200);
   }
 }
 
@@ -98,7 +98,7 @@ $-banner-el-icon: "before";
 .sage-banner__icon {
   display: inline-flex;
   align-self: center;
-  margin-inline-end: sage-spacing(sm);
+  margin-inline-end: var(--pine-dimension-200);
 }
 
 .sage-banner__link {
@@ -111,7 +111,7 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__close {
-  margin-inline-start: sage-spacing(sm);
+  margin-inline-start: var(--pine-dimension-200);
 }
 
 .sage-banner__close,

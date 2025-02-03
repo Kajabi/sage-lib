@@ -6,20 +6,20 @@
 
 
 .sage-form-section {
-  margin-block-end: sage-spacing();
+  margin-block-end: var(--pine-dimension-300);
 }
 
 // TODO: refactor extends following final design of form section
 .sage-form-section__info {
 
   @media (max-width: sage-breakpoint(md-max)) {
-    margin-block-end: sage-spacing(md);
+    margin-block-end: var(--pine-dimension-300);
   }
 }
 
 .sage-form-section__title {
   margin-block-start: rem(12px);
-  margin-block-end: sage-spacing(md);
+  margin-block-end: var(--pine-dimension-300);
 }
 
 .sage-form-section__subtitle {
@@ -27,7 +27,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: sage-spacing(sm);
+  gap: var(--pine-dimension-200);
   color: var(--pine-color-grey-700);
 }
 

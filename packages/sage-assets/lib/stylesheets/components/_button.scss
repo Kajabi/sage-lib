@@ -10,11 +10,11 @@
 // Base style variables
 //
 $-btn-transition: map-get($sage-transitions, default);
-$-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
-$-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
+$-btn-base-padding-block: var(--pine-dimension-100); // vertical (y) axis
+$-btn-base-padding-inline: var(--pine-dimension-200); // horizontal (x) axis
 $-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
 $-btn-border-radius: 9999px;
-$-btn-shadow-base: sage-shadow(050);
+$-btn-shadow-base: var(--pine-box-shadow-050);
 $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
 $-btn-icon-only-hover-size: rem(24px);
@@ -298,7 +298,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:first-child:not(:last-child) {
-      margin-inline-end: sage-spacing(xs);
+      margin-inline-end: var(--pine-dimension-100);
     }
 
     + & {
@@ -315,7 +315,7 @@ $-btn-loading-min-height: rem(36px);
   }
   .sage-sortable__item-actions & {
     &:not(:last-child) {
-      margin-inline-end: sage-spacing(sm);
+      margin-inline-end: var(--pine-dimension-200);
     }
   }
 
@@ -412,7 +412,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__pagination > & {
     &:not(:last-child) {
-      margin-inline-end: sage-spacing(card);
+      margin-inline-end: var(--pine-dimension-300);
     }
   }
 
@@ -462,7 +462,7 @@ $-btn-loading-min-height: rem(36px);
   .toolbar-editor & {
     $-btn-rte-padding: rem(6px);
 
-    padding: $-btn-base-padding-block sage-spacing(lg) $-btn-base-padding-block sage-spacing(xs);
+    padding: $-btn-base-padding-block var(--pine-dimension-400) $-btn-base-padding-block var(--pine-dimension-100);
     border-radius: 6px;
     border-width: 0;
 
@@ -494,7 +494,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:not(.sage-btn--subtle):not(.sage-btn--disclosure) {
-      padding: sage-spacing(xs);
+      padding: var(--pine-dimension-100);
 
       @media (max-width: sage-breakpoint(sm-max)) {
         padding: $-btn-rte-padding;
@@ -731,7 +731,7 @@ a.sage-btn {
         // Remove class when Sage Label is fully deprecated in Products
         .sage-label & {
           position: absolute;
-          inset-inline-end: sage-spacing(xs);
+          inset-inline-end: var(--pine-dimension-100);
         }
       }
     }
@@ -865,6 +865,6 @@ a.sage-btn {
 }
 
 .sage-btn-group--border-top {
-  padding-block-start: sage-spacing(lg);
+  padding-block-start: var(--pine-dimension-400);
   border-block-start: 1px solid var(--pine-color-grey-300);
 }

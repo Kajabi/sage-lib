@@ -6,8 +6,8 @@
 
 .grid-item {
   width: 100%;
-  margin-block-end: sage-spacing(md);
-  padding: sage-spacing(xs) sage-spacing(md);
+  margin-block-end: var(--pine-dimension-300);
+  padding: var(--pine-dimension-100) var(--pine-dimension-300);
   text-align: center;
   background: var(--pine-color-grey-200);
   border-radius: sage-border(radius);
@@ -18,5 +18,5 @@
 }
 
 .grid-item--small {
-  padding: sage-spacing(2xs);
+  padding: var(--pine-dimension-050);
 }

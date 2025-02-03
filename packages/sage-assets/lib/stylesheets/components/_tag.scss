@@ -14,7 +14,7 @@ $-tag-button-icon-mobile-size: rem(24px);
 
   display: inline-flex;
   align-items: center;
-  padding: sage-spacing(3xs) sage-spacing(xs) sage-spacing(3xs) sage-spacing(xs);
+  padding: var(--pine-dimension-025) var(--pine-dimension-100) var(--pine-dimension-025) var(--pine-dimension-100);
   background-color: var(--pine-color-grey-200);
   border-radius: sage-border(radius-x-large);
 
@@ -29,13 +29,13 @@ $-tag-button-icon-mobile-size: rem(24px);
 }
 
 .sage-tag--has-image {
-  padding-inline-start: sage-spacing(2xs);
+  padding-inline-start: var(--pine-dimension-050);
 }
 
 .sage-tag__image {
   width: $-tag-image-size;
   height: $-tag-image-size;
-  margin: sage-spacing(2xs) sage-spacing(xs) sage-spacing(2xs) sage-spacing(2xs);
+  margin: var(--pine-dimension-050) var(--pine-dimension-100) var(--pine-dimension-050) var(--pine-dimension-050);
   border-radius: sage-border(radius-round);
 }
 
@@ -44,7 +44,7 @@ $-tag-button-icon-mobile-size: rem(24px);
   width: auto;
   height: auto;
   margin-inline-start: rem(6px);
-  margin-inline-end: calc(#{sage-spacing(2xs)} * -1);
+  margin-inline-end: calc(#{var(--pine-dimension-050)} * -1);
   color: $-tag-button-color;
 
   &::before {

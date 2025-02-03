@@ -8,8 +8,8 @@
 // Font definitions
 $-heading-font: "Greet Standard", "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
 $-body-font-stack: "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
-$-body-margin-block-end: sage-spacing(xs);
-$-headings-margin-block-end: sage-spacing(sm);
+$-body-margin-block-end: var(--pine-dimension-100);
+$-headings-margin-block-end: var(--pine-dimension-200);
 
 ///
 /// Sage responsive font sizes and line heights custom props
@@ -135,19 +135,19 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-2;
 
     &:not(:first-child) {
-      margin-block-start: sage-spacing(lg);
+      margin-block-start: var(--pine-dimension-400);
     }
   }
 
   > .t-sage-heading-2:not(:first-child) {
-    margin-block-start: sage-spacing(lg);
+    margin-block-start: var(--pine-dimension-400);
   }
 
   > h3:not([class]) {
     @extend %t-sage-heading-3;
 
     &:not(:first-child) {
-      margin-block-start: sage-spacing();
+      margin-block-start: var(--pine-dimension-300);
     }
   }
 
@@ -155,7 +155,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-4;
 
     &:not(:first-child) {
-      margin-block-start: sage-spacing();
+      margin-block-start: var(--pine-dimension-300);
     }
   }
 
@@ -163,7 +163,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-5;
 
     &:not(:first-child) {
-      margin-block-start: sage-spacing();
+      margin-block-start: var(--pine-dimension-300);
     }
   }
 
@@ -171,7 +171,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-6;
 
     &:not(:first-child) {
-      margin-block-start: sage-spacing();
+      margin-block-start: var(--pine-dimension-300);
     }
   }
 
@@ -180,7 +180,7 @@ body:not(.sage-excluded),
   > .t-sage-heading-5,
   > .t-sage-heading-6 {
     &:not(:first-child) {
-      margin-block-start: sage-spacing();
+      margin-block-start: var(--pine-dimension-300);
     }
   }
 
@@ -201,8 +201,8 @@ body:not(.sage-excluded),
   }
 
   > table:not(:last-child) {
-    margin-block-start: sage-spacing();
-    margin-block-end: sage-spacing();
+    margin-block-start: var(--pine-dimension-300);
+    margin-block-end: var(--pine-dimension-300);
   }
 }
 

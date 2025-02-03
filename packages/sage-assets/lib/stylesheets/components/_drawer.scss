@@ -62,10 +62,10 @@
   .sage-btn {
     flex-shrink: 0;
     position: absolute;
-    inset-inline-end: sage-spacing(sm);
+    inset-inline-end: var(--pine-dimension-200);
 
     &:not(.sage-btn--subtle) {
-      padding: sage-spacing(xs);
+      padding: var(--pine-dimension-100);
     }
   }
 }

@@ -12,14 +12,14 @@
   .sage-btn-group {
 
     @media screen and (min-width: sage-breakpoint(md-min)) {
-      padding: 0 sage-spacing(2xl);
+      padding: 0 var(--pine-dimension-800);
     }
   }
 }
 
 .sage-assistant__actions {
   display: none;
-  gap: sage-spacing(sm);
+  gap: var(--pine-dimension-200);
 
   @media screen and (min-width: sage-breakpoint(md-min)) {
     display: inline-flex;

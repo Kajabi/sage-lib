@@ -13,7 +13,7 @@
     flex-direction: column;
 
     @media (max-width: sage-breakpoint(sm-max)) {
-      margin-block-end: sage-spacing(sm);
+      margin-block-end: var(--pine-dimension-200);
     }
 
     @media (min-width: sage-breakpoint(md-min)) {
@@ -35,9 +35,9 @@
 }
 
 .sage-tabs--with-background {
-  padding-block-start: sage-spacing(sm);
-  padding-inline-start: sage-spacing(xs);
-  padding-inline-end: sage-spacing(xs);
+  padding-block-start: var(--pine-dimension-200);
+  padding-inline-start: var(--pine-dimension-100);
+  padding-inline-end: var(--pine-dimension-100);
   background-color: var(--pine-color-grey-200);
 }
 

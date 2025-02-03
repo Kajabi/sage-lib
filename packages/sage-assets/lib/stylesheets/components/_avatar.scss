@@ -68,12 +68,12 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-300);
   }
 
   .sage-table td > & {
-    margin-block-start: -1 * sage-spacing(2xs);
-    margin-block-end: -1 * sage-spacing(2xs);
+    margin-block-start: -1 * var(--pine-dimension-050);
+    margin-block-end: -1 * var(--pine-dimension-050);
   }
 
   // Items inside avatar group should be 100% to start
@@ -133,11 +133,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-block-end: sage-spacing();
+  margin-block-end: var(--pine-dimension-300);
 }
 
 .sage-avatar--tile {
-  padding: sage-spacing(md);
+  padding: var(--pine-dimension-300);
   border-radius: initial;
 
   @include avatar-scaling;
@@ -228,6 +228,6 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper & {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-300);
   }
 }

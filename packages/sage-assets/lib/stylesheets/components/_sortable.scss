@@ -16,9 +16,9 @@ $-sortable-image-height: rem(48px);
 .sage-sortable__item {
   display: grid;
   grid-template-columns: min-content min-content minmax(0, 1fr) auto auto;
-  gap: sage-spacing(card);
+  gap: var(--pine-dimension-300);
   align-items: center;
-  padding: sage-spacing(xs) sage-spacing(panel);
+  padding: var(--pine-dimension-100) var(--pine-dimension-400);
   background: sage-color(white);
   cursor: grab;
 
@@ -38,7 +38,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--card {
-    padding: sage-spacing(xs) sage-spacing(card);
+    padding: var(--pine-dimension-100) var(--pine-dimension-300);
     border-block-end: sage-border();
     border-inline-start: sage-border();
     border-inline-end: sage-border();
@@ -63,7 +63,7 @@ $-sortable-image-height: rem(48px);
     @include target-safari {
       /* stylelint-disable max-nesting-depth */
       .sage-card__row {
-        margin-inline-start: sage-spacing(sm);
+        margin-inline-start: var(--pine-dimension-200);
       }
       /* stylelint-enable max-nesting-depth */
     }

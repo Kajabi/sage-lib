@@ -60,7 +60,7 @@ $-link-base-styles: (
 .sage-link {
   @extend %t-sage-body-semi;
   display: inline-flex;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-100);
   align-items: center;
   position: relative;
   max-width: 100%;
@@ -157,8 +157,8 @@ $-link-base-styles: (
 .sage-link--launch .t-sage--truncate,
 .sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
   &::after {
-    margin-inline-start: sage-spacing(2xs);
-    margin-inline-end: sage-spacing(2xs);
+    margin-inline-start: var(--pine-dimension-050);
+    margin-inline-end: var(--pine-dimension-050);
     @include sage-icon-base(launch, sm, pine);
   }
 }
@@ -196,7 +196,7 @@ $-link-base-styles: (
   }
 
   .sage-page-heading__title & {
-    margin-inline-start: sage-spacing(xs);
+    margin-inline-start: var(--pine-dimension-100);
   }
 }
 
@@ -205,14 +205,14 @@ $-link-base-styles: (
   align-items: center;
 
   &::before {
-    margin-inline-end: sage-spacing(xs);
+    margin-inline-end: var(--pine-dimension-100);
   }
 }
 
 .sage-link--help-icon-only {
   display: inline-flex;
   align-items: center;
-  margin-inline-start: sage-spacing(2xs);
+  margin-inline-start: var(--pine-dimension-050);
   @include sage-focus-outline(
     $outline-offset-inline: 4px,
     $outline-offset-block: 4px,
@@ -234,7 +234,7 @@ $-link-base-styles: (
 
   display: inline-block;
   position: relative;
-  padding: 0 sage-spacing(2xs);
+  padding: 0 var(--pine-dimension-050);
   color: $-link-subtext-color;
   border-radius: sage-border(radius-small);
 
