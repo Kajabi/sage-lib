@@ -35,7 +35,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-blue-300), 0.75);
 }
 
 .example__link--breakout {
-  color: sage-color(sage);
+  color: var(--pine-color-green-600);
 
   &:hover,
   &:focus,
@@ -112,7 +112,7 @@ $-example-code-preview-button-bg: rgba(var(--pine-color-blue-300), 0.75);
 
   &:focus,
   &:active {
-    outline: 1px dotted sage-color(sage);
+    outline: 1px dotted var(--pine-color-green-600);
   }
 
   @supports (backdrop-filter: blur(2px)) {

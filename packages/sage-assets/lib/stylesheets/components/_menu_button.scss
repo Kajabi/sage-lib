@@ -69,7 +69,7 @@ $-menubtn-focus-outline-color: currentColor;
 
     &[aria-expanded="true"]::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: sage-color(sage);
+      border-color: var(--pine-color-green-600);
       opacity: 1;
     }
   }

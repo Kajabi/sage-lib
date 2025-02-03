@@ -26,12 +26,12 @@
     border-radius: $status-key-icon-size;
 
     &--done {
-      border-color: sage-color(sage);
-      background: sage-color(sage);
+      border-color: var(--pine-color-green-600);
+      background: var(--pine-color-green-600);
     }
 
     &--doing {
-      border-color: sage-color(orange);
+      border-color: var(--pine-color-mercury-300);
     }
 
     &--todo {
