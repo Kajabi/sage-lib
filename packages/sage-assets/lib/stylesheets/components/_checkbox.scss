@@ -241,6 +241,7 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
       box-shadow: none;
       opacity: 1;
 
+      /* stylelint-disable-next-line max-nesting-depth */
       &::after {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill-rule='evenodd' fill='#{encodecolor($-checkbox-color-disabled-checked)}' d='M15.138 3.529c.26.26.26.682 0 .942l-8.667 8.667a.667.667 0 0 1-.942 0L.862 8.471a.667.667 0 0 1 .943-.942L6 11.724l8.195-8.195c.26-.26.683-.26.943 0Z'%3E%3C/path%3E%3C/svg%3E");
         opacity: 0.3;
