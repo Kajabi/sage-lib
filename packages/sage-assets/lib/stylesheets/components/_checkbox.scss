@@ -73,7 +73,7 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
 
     &:hover {
       z-index: calc(var(--pine-dimension-none) + 1);
-      border-color: var(--pine-color-neutral-hover)
+      border-color: var(--pine-color-neutral-hover);
     }
 
     &:focus-within {
@@ -151,8 +151,8 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
   // focus outline
   &::before {
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-checkbox-focus-outline-width}px + (var(--pine-dimension-2xs) * 0.75 * 2)));
-    height: calc(100% + (#{$-checkbox-focus-outline-width}px + (var(--pine-dimension-2xs) * 0.75 * 2)));
+    width: calc(100% + ($-checkbox-focus-outline-width * 1px + (var(--pine-dimension-2xs) * 0.75 * 2)));
+    height: calc(100% + ($-checkbox-focus-outline-width * 1px + (var(--pine-dimension-2xs) * 0.75 * 2)));
     border: ($-checkbox-focus-outline-width * 1px) solid $-checkbox-focus-outline-color;
     border-radius: $-checkbox-border-radius-outer;
     pointer-events: none;
@@ -181,8 +181,6 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
       width: 12px;
       height: 12px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill='%23ffffff' d='M14.667 7.333H1.333c-.4 0-.666.267-.666.667s.266.667.666.667h13.334c.4 0 .666-.267.666-.667s-.266-.667-.666-.667Z'%3E%3C/path%3E%3C/svg%3E");
-      width: 12px;
-      height: 12px;
     }
   }
 
@@ -260,7 +258,7 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
     border-color: $-checkbox-color-error;
 
     &::after {
-      color: var(--pine-color-secondary)
+      color: var(--pine-color-secondary);
     }
 
     &:checked {
