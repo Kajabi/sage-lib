@@ -5,21 +5,17 @@
 ////
 
 // Border
-$-textarea-border-width: rem(1px);
+$-textarea-border-width: var(--pine-border-width);
 
 // Margin
-$-textarea-label-margin: sage-spacing(xs);
+$-textarea-label-margin: var(--pine-dimension-xs);
 
 // Padding
-$-textarea-label-padding: rem(3px);
-$-textarea-padding: sage-spacing(sm);
+$-textarea-padding: var(--pine-dimension-sm);
 
 // Sizing
 $-textarea-height: 100%;
-$-textarea-min-height: rem(90px);
-
-// Colors
-$-textarea-color-default: sage-color(grey, 800);
+$-textarea-min-height: calc(var(--pine-dimension-2xl) + var(--pine-dimension-xl) + 2px); // 48px + 40px + 2px = 90px
 
 .sage-textarea {
   @include sage-form-field-group;
