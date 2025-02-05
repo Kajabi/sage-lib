@@ -6,11 +6,11 @@
 
 
 $-input-border-width: rem(1px);
-$-input-height: rem(40px);
-$-input-label-offset: rem(12px);
-$-input-padding-offset: sage-spacing(sm) - $-input-border-width;
-$-input-popover-size: rem(40px);
-$-input-text-height: sage-font-size(body);
+$-input-height: var(--pine-dimension-450);
+$-input-label-offset: var(--pine-dimension-150);
+$-input-padding-offset: var(--pine-dimension-md) - $-input-border-width;
+$-input-popover-size: var(--pine-dimension-xl);
+$-input-text-height: var(--pine-font-size-body);
 
 .sage-input {
   @include sage-form-field-group;
@@ -59,7 +59,7 @@ $-input-text-height: sage-font-size(body);
 
 .sage-form-field--error {
   .sage-upload-card & {
-    margin-block-start: sage-spacing(sm);
+    margin-block-start: var(--pine-dimension-sm);
   }
 }
 
@@ -82,30 +82,30 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix-value {
-  color: sage-color(grey, 600);
+  color: var(--pine-color-text-placeholder);
 }
 
 .sage-input__affix--prefix {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   top: 0;
-  inset-inline-start: sage-spacing(sm);
-  padding-inline-end: sage-spacing(2xs);
+  inset-inline-start: var(--pine-dimension-sm);
+  padding-inline-end: var(--pine-dimension-2xs);
 }
 
 .sage-input__affix--suffix {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
   top: 0;
-  inset-inline-end: sage-spacing(sm);
-  padding-inline-start: sage-spacing(2xs);
+  inset-inline-end: var(--pine-dimension-sm);
+  padding-inline-start: var(--pine-dimension-2xs);
 }
 
 .sage-input__label {
   @include sage-form-field-label;
 
   grid-area: label;
-  margin-block-end: sage-spacing(xs);
+  margin-block-end: var(--pine-dimension-xs);
 
   // input labels within toolbar groups are visually hidden to maintain alignment
   .sage-toolbar__group & {
@@ -122,7 +122,7 @@ $-input-text-height: sage-font-size(body);
 
   grid-area: input;
   height: $-input-height;
-  padding: sage-spacing(xs) sage-spacing(sm);
+  padding: var(--pine-dimension-xs) var(--pine-dimension-150);
 
   .sage-input--has-icon & {
     padding-inline-end: $-input-popover-size;
@@ -160,7 +160,7 @@ $-input-text-height: sage-font-size(body);
   }
 
   .sage-form-field--error & i {
-    color: sage-color(red, 500);
+    color: var(--pine-color-red-500);
   }
 }
 

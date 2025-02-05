@@ -179,9 +179,9 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(purple, 300),
-  $focus-width-inner: 1px,
-  $focus-width-outter: 3px
+  $focus-shadow: var(--pine-color-focus-ring),
+  $focus-width-inner: 2px,
+  $focus-width-outter: 4px
 ) {
   &:focus-visible {
     z-index: sage-z-index(default, 1);
@@ -407,25 +407,24 @@
 /// Adds the basic default form spacing, and border treatment
 ///
 @mixin sage-form-field() {
-  @extend %t-sage-body-med;
-
+  font: var(--pine-typography-body);
   width: 100%;
-  padding: sage-spacing(sm);
-  color: sage-color(grey, 900);
+  padding: var(--pine-dimension-sm);
+  color: var(--pine-color-text);
   appearance: none;
   box-shadow: sage-border-interactive(default);
   border: 0;
   border-radius: sage-border(radius-medium);
-  background: sage-color(white);
+  background: var(--pine-color-background);
   transition: map-get($sage-transitions, input);
   transition-property: border, box-shadow, color;
 
   @include placeholder {
-    color: sage-color(grey, 700);
+    color: var(--pine-color-text-placeholder);
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(grey, 900);
+    color: var(--pine-color-text);
     box-shadow: sage-border-interactive(hover);
 
     .sage-form-field--error & {
@@ -447,14 +446,14 @@
   }
 
   &:disabled {
-    color: sage-color(grey, 500);
-    background-color: sage-color(grey, 100);
+    color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-container-disabled);
     box-shadow: sage-border-interactive(disabled);
     cursor: not-allowed;
     resize: none;
 
     @include placeholder {
-      color: sage-color(grey, 700);
+      color: var(--pine-color-text-placeholder);
     }
 
     .sage-form-field--showplaceholder & ~ label {
@@ -474,12 +473,12 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
-    @include sage-focus-ring(sage-color(red, 300));
+    @include sage-focus-ring(var(--pine-color-red-300));
 
     box-shadow: sage-border-interactive(error);
 
     ~ label {
-      color: sage-color(grey, 900);
+      color: var(--pine-color-text);
     }
 
     &:hover:not(:disabled) {
@@ -518,7 +517,7 @@
 /// Adds the basic default form label spacing, and border treatment
 ///
 @mixin sage-form-field-label() {
-  @extend %t-sage-body-semi;
+  font: var(--pine-typography-body-medium);
   white-space: nowrap;
 }
 
