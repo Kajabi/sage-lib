@@ -82,7 +82,7 @@ export const Loader = ({
         </svg>
       )}
       {(type === LOADER_TYPES.SUCCESS) && (
-        <svg className="sage-loader__success" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21" fill="#0072EF" /><path fillRule="evenodd" clipRule="evenodd" d="M34.707 17.293a1 1 0 0 1 0 1.414l-13 13a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 1.414-1.414L21 29.586l12.293-12.293a1 1 0 0 1 1.414 0Z" fill="#fff" /></svg>
+        <svg className="sage-loader__success" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="21" fill="#6b62f2" /><path fillRule="evenodd" clipRule="evenodd" d="M34.707 17.293a1 1 0 0 1 0 1.414l-13 13a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 1.414-1.414L21 29.586l12.293-12.293a1 1 0 0 1 1.414 0Z" fill="#fff" /></svg>
       )}
       {(type === LOADER_TYPES.TYPING) && (
         <div className="sage-loader__typing">
