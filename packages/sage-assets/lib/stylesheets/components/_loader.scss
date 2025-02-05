@@ -65,7 +65,7 @@ $-loader-lower-opacity: 0.4;
   &::before,
   &::after {
     content: "";
-    z-index: calc(var(--pine-dimension-none) + 2); // 0 + 2 = 2
+    z-index: sage-z-index(default, 2);
     position: absolute;
     top: 0;
     left: 0;
