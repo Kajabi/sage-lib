@@ -9,19 +9,19 @@ $-avatar-min-size: rem(32px);
 $-avatar-max-size: rem(128px);
 $-avatar-ring-colors: (
   charcoal: (
-    main: var(--pine-color-grey-950),
+    main: var(--pine-color-primary-hover),
     bg: var(--pine-color-grey-200)
   ),
   grey: (
-    main: var(--pine-color-grey-950),
+    main: var(--pine-color-primary-hover),
     bg: var(--pine-color-grey-200)
   ),
   purple: (
-    main: var(--pine-color-purple-600),
+    main: var(--pine-color-accent-hover),
     bg: var(--pine-color-purple-150)
   ),
   sage: (
-    main: var(--pine-color-green-600),
+    main: var(--pine-color-success-hover),
     bg: var(--pine-color-green-150)
   ),
   yellow: (
@@ -29,21 +29,21 @@ $-avatar-ring-colors: (
     bg: var(--pine-color-yellow-150)
   ),
   orange: (
-    main: var(--pine-color-mercury-500),
+    main: var(--pine-color-brand),
     bg: var(--pine-color-mercury-150)
   ),
   red: (
-    main: var(--pine-color-red-500),
+    main: var(--pine-color-danger),
     bg: var(--pine-color-red-150)
   )
 );
 $-avatar-tile-size: rem(216px);
 $-avatar-group-size: rem(80px);
 $-avatar-group-item-sizes: (
-  1: rem(48px),
-  2: rem(32px),
-  3: rem(24px),
-  4: rem(16px),
+  1: var(--pine-dimension-2xl),
+  2: var(--pine-dimension-lg),
+  3: var(--pine-dimension-md),
+  4: var(--pine-dimension-sm),
 );
 
 
@@ -68,7 +68,7 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
-    margin-inline-end: var(--pine-dimension-300);
+    margin-inline-end: var(--pine-dimension-md);
   }
 
   .sage-table td > & {
@@ -108,18 +108,18 @@ $-avatar-group-item-sizes: (
   .sage-avatar-group--3-up &,
   .sage-avatar-group--4-up & {
     &:nth-child(2) {
-      inset-block-end: rem(16px);
+      inset-block-end: var(--pine-dimension-sm);
       inset-inline-end: 0;
     }
 
     &:nth-child(3) {
       inset-block-end: 0;
-      inset-inline-start: rem(16px);
+      inset-inline-start: var(--pine-dimension-sm);
     }
 
     &:nth-child(4) {
-      inset-block-start: rem(8px);
-      inset-inline-end: rem(8px);
+      inset-block-start: var(--pine-dimension-xs);
+      inset-inline-end: var(--pine-dimension-xs);
     }
   }
 }
@@ -133,11 +133,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-block-end: var(--pine-dimension-300);
+  margin-block-end: var(--pine-dimension-md);
 }
 
 .sage-avatar--tile {
-  padding: var(--pine-dimension-300);
+  padding: var(--pine-dimension-md);
   border-radius: initial;
 
   @include avatar-scaling;
@@ -154,11 +154,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  inset-block-end: rem(-4px);
-  inset-inline-end: rem(-4px);
-  background-color: var(--pine-color-white);
+  inset-block-end: calc(var(--pine-dimension-2xs) * -1);
+  inset-inline-end: calc(var(--pine-dimension-2xs) * -1);
+  background-color: var(--pine-color-secondary);
   border-radius: var(--pine-border-radius-full);
-  border: rem(2px) solid var(--pine-color-white);
+  border: var(--pine-dimension-025) solid var(--pine-color-secondary);
 
   &.sage-avatar__badge--custom-bg {
     background-color: var(--badge-custom-bg-color);
@@ -178,8 +178,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: var(--pine-color-mercury-500);
-  fill: var(--pine-color-mercury-500);
+  color: var(--pine-color-brand);
+  fill: var(--pine-color-brand);
 
   @extend %t-sage-body-xsmall-bold;
 
@@ -228,6 +228,6 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper & {
-    margin-inline-end: var(--pine-dimension-300);
+    margin-inline-end: var(--pine-dimension-md);
   }
 }
