@@ -47,7 +47,7 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
   .sage-panel-controls__bulk-actions > & {
     align-items: center;
     position: relative;
-    z-index: var(--pine-dimension-none);
+    z-index: sage-z-index(default);
     padding: var(--pine-dimension-xs) var(--pine-dimension-sm);
     border: 0;
 
@@ -72,12 +72,12 @@ $-checkbox-focus-outline-color: var(--pine-color-focus-ring);
     }
 
     &:hover {
-      z-index: calc(var(--pine-dimension-none) + 1);
+      z-index: sage-z-index(default, 1);
       border-color: var(--pine-color-neutral-hover);
     }
 
     &:focus-within {
-      z-index: calc(var(--pine-dimension-none) + 2);
+      z-index: sage-z-index(default, 2);
       box-shadow: 0 0 0 2px var(--pine-color-text-accent-disabled);
     }
   }
