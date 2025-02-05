@@ -14,13 +14,13 @@ $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
-$-radio-color-text-disabled: sage-color(grey, 500);
-$-radio-color-focus-outline: sage-color(purple, 300);
-$-radio-color-focus-outline-error: sage-color(red, 300);
+$-radio-color-text-disabled: var(--pine-color-text-disabled);
+$-radio-color-focus-outline: var(--pine-color-focus-ring);
+$-radio-color-focus-outline-error: var(--pine-color-red-500);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-gap-spacing: rem(12px);
+$-radio-gap-spacing: var(--pine-dimension-xs);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(6px);
 
@@ -42,7 +42,7 @@ $-radio-focus-outline-color: currentColor;
   grid-template-columns: min-content 1fr;
 
   .sage-list & {
-    margin-block-end: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(var(--pine-dimension-md) / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -68,8 +68,8 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--has-border:not(.sage-radio--standalone) {
   align-items: center;
-  column-gap: sage-spacing();
-  padding: sage-spacing(card);
+  column-gap: var(--pine-dimension-xs);
+  padding: var(--pine-dimension-md);
   box-shadow: sage-border-interactive();
   border-radius: sage-border(radius);
 
@@ -95,8 +95,8 @@ $-radio-focus-outline-color: currentColor;
   margin-inline-start: 0;
 
   .sage-radio--has-border & {
-    color: sage-color(grey, 900);
-    font-weight: sage-font-weight(semibold);
+    color: var(--pine-color-text);
+    font-weight: var(--pine-font-weight-semi-bold);
 
     &::after {
       content: "" ;
@@ -121,9 +121,9 @@ $-radio-focus-outline-color: currentColor;
   margin: 0;
   color: $-radio-color-default;
   outline: none;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-white);
   border: rem(1px) solid $-radio-color-default;
-  border-radius: sage-border(radius-round);
+  border-radius: var(--pine-border-radius-full);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
 
   &::before,
@@ -143,8 +143,10 @@ $-radio-focus-outline-color: currentColor;
   // focus outline
   &::before {
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    // width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    // height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    width: 19px;
+    height: 19px;
     border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-focus-outline;
     pointer-events: none;
     opacity: 0;
@@ -172,7 +174,7 @@ $-radio-focus-outline-color: currentColor;
   &:hover {
     &:not(:checked):not(:disabled) {
       border-color: $-radio-color-hover;
-      background-color: sage-color(grey, 100);
+      background-color: var(--pine-color-background-disabled);
     }
   }
 
@@ -258,7 +260,7 @@ $-radio-focus-outline-color: currentColor;
       border-color: $-radio-color-focus-outline-error;
     }
     &::after {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-white);
     }
     &:hover {
       border-color: $-radio-color-error;
