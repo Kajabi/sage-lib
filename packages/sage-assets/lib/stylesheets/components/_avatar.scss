@@ -5,8 +5,8 @@
 ////
 
 
-$-avatar-min-size: rem(32px);
-$-avatar-max-size: rem(128px);
+$-avatar-min-size: var(--pine-dimension-lg);
+$-avatar-max-size: calc(2 * var(--pine-dimension-800));
 $-avatar-ring-colors: (
   charcoal: (
     main: var(--pine-color-primary-hover),
@@ -38,7 +38,7 @@ $-avatar-ring-colors: (
   )
 );
 $-avatar-tile-size: rem(216px);
-$-avatar-group-size: rem(80px);
+$-avatar-group-size: calc(2 * var(--pine-dimension-xl));
 $-avatar-group-item-sizes: (
   1: var(--pine-dimension-2xl),
   2: var(--pine-dimension-lg),
@@ -95,8 +95,8 @@ $-avatar-group-item-sizes: (
 
     // Positioning is same for first item is same in all configs
     &:nth-child(1) {
-      inset-block-start: 0;
-      inset-inline-start: 0;
+      inset-block-start: var(--pine-dimension-none);
+      inset-inline-start: var(--pine-dimension-none);
     }
   }
 
@@ -109,11 +109,11 @@ $-avatar-group-item-sizes: (
   .sage-avatar-group--4-up & {
     &:nth-child(2) {
       inset-block-end: var(--pine-dimension-sm);
-      inset-inline-end: 0;
+      inset-inline-end: var(--pine-dimension-none);
     }
 
     &:nth-child(3) {
-      inset-block-end: 0;
+      inset-block-end: var(--pine-dimension-none);
       inset-inline-start: var(--pine-dimension-sm);
     }
 
@@ -154,8 +154,8 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  inset-block-end: calc(var(--pine-dimension-2xs) * -1);
-  inset-inline-end: calc(var(--pine-dimension-2xs) * -1);
+  inset-block-end: calc(-1 * var(--pine-dimension-2xs));
+  inset-inline-end: calc(-1 * var(--pine-dimension-2xs));
   background-color: var(--pine-color-secondary);
   border-radius: var(--pine-border-radius-full);
   border: var(--pine-dimension-025) solid var(--pine-color-secondary);
@@ -170,7 +170,7 @@ $-avatar-group-item-sizes: (
   }
 
   .sage-avatar--custom-badge & {
-    border: 0;
+    border: var(--pine-dimension-none);
   }
 }
 
