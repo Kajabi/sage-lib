@@ -6,26 +6,26 @@
 
 
 // Colors
-$-switch-color-default: sage-color(grey, 300);
-$-switch-color-default-hover: sage-color(grey, 500);
-$-switch-color-default-text: sage-color(grey, 800);
-$-switch-color-checked: sage-color(grey, 900);
-$-switch-color-checked-hover: sage-color(grey, 950);
-$-switch-color-disabled: sage-color(grey, 200);
-$-switch-color-disabled-text: sage-color(grey, 800);
-$-switch-color-disabled-checked: sage-color(grey, 200);
-$-switch-color-disabled-checked-text: sage-color(grey, 600);
-$-switch-color-error: sage-color(red, 500);
-$-switch-focus-outline-error-color: sage-color(red, 300);
+$-switch-color-default: var(--pine-color-border);
+$-switch-color-default-hover: var(--pine-color-neutral);
+$-switch-color-default-text: var(--pine-color-text-message);
+$-switch-color-checked: var(--pine-color-accent);
+$-switch-color-checked-hover: var(--pine-color-accent-hover);
+$-switch-color-disabled: var(--pine-color-border-disabled);
+$-switch-color-disabled-text: var(--pine-color-text-message);
+$-switch-color-disabled-checked: var(--pine-color-border-disabled);
+$-switch-color-disabled-checked-text: var(--pine-color-neutral-hover);
+$-switch-color-error: var(--pine-color-red-500);
+$-switch-focus-outline-error-color: var(--pine-color-danger-disabled);
 
 // Switch
-$-switch-label-left-spacing: rem(12px);
-$-switch-border-radius: rem(16px);
-$-switch-height: rem(20px);
-$-switch-width: rem(36px);
+$-switch-label-left-spacing: var(--pine-dimension-150);
+$-switch-border-radius: var(--pine-dimension-sm);
+$-switch-height: var(--pine-dimension-250);
+$-switch-width: var(--pine-dimension-450);
 
 // Toggle
-$-switch-toggle-size: rem(16px);
+$-switch-toggle-size: var(--pine-dimension-sm);
 
 
 .sage-switch {
@@ -34,21 +34,21 @@ $-switch-toggle-size: rem(16px);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-block-start: calc(#{sage-spacing(card)} / -2);
+    margin-block-start: calc(0px - var(--pine-dimension-md) / 2);
   }
 
   &.sage-switch--has-border {
     align-items: center;
-    padding: sage-spacing(card);
-    border: sage-border();
-    border-radius: sage-border(radius);
-    box-shadow: sage-shadow(100);
-    background-color: sage-color(white);
+    padding: var(--pine-dimension-md);
+    border: var(--pine-border);
+    border-radius: var(--pine-dimension-xs);
+    box-shadow: var(--pine-box-shadow);
+    background-color: var(--pine-color-white);
 
     .sage-card &,
     .sage-panel & {
       box-shadow: none;
-      border: sage-border();
+      border: var(--pine-border);
     }
   }
 
@@ -58,7 +58,7 @@ $-switch-toggle-size: rem(16px);
 
   .sage-list & {
     margin-block-start: 0;
-    margin-block-end: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(var(--pine-dimension-md) / 2);
   }
 
   @include sage-form-toggle-parents {
@@ -87,7 +87,6 @@ $-switch-toggle-size: rem(16px);
   @include sage-focus-ring;
 
   z-index: sage-z-index(default, 1);
-  transform: translateY(2px);
   height: $-switch-height;
   width: $-switch-width;
   color: $-switch-color-default;
@@ -119,8 +118,8 @@ $-switch-toggle-size: rem(16px);
 
     .sage-switch--has-border & {
       margin-inline-start: ($-switch-width + $-switch-label-left-spacing);
-      color: sage-color(grey, 900);
-      font-weight: sage-font-weight(semibold);
+      color: var(--pine-color-neutral);
+      font-weight: var(--pine-font-weight-semi-bold);
     }
 
     .sage-switch--toggle-right & {
@@ -144,9 +143,9 @@ $-switch-toggle-size: rem(16px);
     transform: translate3d(-100%, -50%, 0);
     height: $-switch-toggle-size;
     width: $-switch-toggle-size;
-    background: sage-color(white);
-    border-radius: sage-border(radius-round);
-    box-shadow: sage-shadow(sm);
+    background: var(--pine-color-white);
+    border-radius: var(--pine-border-radius-full);
+    box-shadow: var(--pine-box-shadow);
     transition: transform 0.2s ease-in-out;
   }
 

@@ -572,7 +572,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  margin-block-end: sage-spacing(card);
+  margin-block-end: var(--pine-dimension-md);
 }
 
 @mixin sage-form-toggle-parents() {
@@ -603,7 +603,7 @@
 
   display: inline-block;
   flex: 1;
-  margin-inline-start: rem(12px);
+  margin-inline-start: var(--pine-dimension-xs);
   vertical-align: top;
   cursor: pointer;
 }
@@ -614,7 +614,7 @@
   position: relative;
   z-index: sage-z-index(default);
   width: 100%;
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-label-readonly);
 }
 
 ///
