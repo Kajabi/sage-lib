@@ -5,28 +5,27 @@
 ////
 
 // Borders and sizing
-$-table-header-border: rem(1px) solid sage-color(grey, 200);
-$-table-cell-padding-xs: sage-spacing(xs);
-$-table-cell-padding-card: sage-spacing();
-$-table-cell-padding-panel: sage-spacing();
-$-table-padding: rem(22px) rem(12px);
-$-table-padding-heading: rem(14px) rem(12px);
+$-table-header-border: var(--pine-border);
+$-table-cell-padding-xs: var(--pine-dimension-xs);
+$-table-cell-padding-card: var(--pine-dimension-md);
+$-table-padding: calc(var(--pine-dimension-md) - var(--pine-dimension-2xs)) calc(var(--pine-dimension-xs) * 1.5);
+$-table-padding-heading: calc(var(--pine-dimension-xs) * 1.75) calc(var(--pine-dimension-xs) * 1.5);
 $-table-max-width: none;
 
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(grey, 700);
-$-table-cell-font-color-strong: sage-color(grey, 900);
+$-table-cell-font-color: var(--pine-color-text-readonly);
+$-table-cell-font-color-strong: var(--pine-color-text);
 $-table-cell-type-spec: "%t-sage-body-med";
 $-table-cell-type-spec-strong: "%t-sage-body-semi";
-$-table-heading-font-color: sage-color(grey, 950);
+$-table-heading-font-color: var(--pine-color-text-hover);
 $-table-heading-type-spec: "%t-sage-body-med";
 
 // Overflow gradient
-$-table-overflow-indicator-width: sage-spacing(sm);
+$-table-overflow-indicator-width: var(--pine-dimension-sm);
 $-table-overflow-indicator-color-start: rgba(255, 255, 255, 0);
-$-table-overflow-indicator-color-end: sage-color(white);
+$-table-overflow-indicator-color-end: var(--pine-color-secondary);
 $-table-overflow-indicator-opacity: 0.95;
 $-table-overflow-indicator-gradient: linear-gradient(
   90deg,
@@ -36,13 +35,13 @@ $-table-overflow-indicator-gradient: linear-gradient(
 );
 
 // Other
-$-table-row-color-hover: sage-color(grey, 100);
-$-table-cell-focus: sage-color(grey, 800);
+$-table-row-color-hover: var(--pine-color-primary-disabled);
+$-table-cell-focus: var(--pine-color-text-secondary);
 $-table-cell-truncate-width: 6.5em;
-$-table-sort-indicator-width: rem(5px);
-$-table-sort-indicator-direction: rem(7px);
-$-table-checkbox-width: rem(20px);
-$-table-avatar-width: rem(32px);
+$-table-sort-indicator-width: calc(var(--pine-dimension-2xs) * 1.25); // 4px * 1.25 = 5px
+$-table-sort-indicator-direction: calc(var(--pine-dimension-2xs) * 1.75); // 4px * 1.75 = 7px
+$-table-checkbox-width: calc(var(--pine-dimension-xs) * 2.5); // 8px * 2.5 = 20px
+$-table-avatar-width: var(--pine-dimension-lg);
 
 // stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-no-qualifying-type
 
@@ -70,7 +69,7 @@ $-table-avatar-width: rem(32px);
 
     th {
       padding: $-table-padding-heading;
-      font-weight: sage-font-weight(semibold);
+      font-weight: var(--pine-font-weight-semi-bold);
     }
   }
 
@@ -207,13 +206,13 @@ $-table-avatar-width: rem(32px);
   position: relative;
 
   .sage-panel & {
-    margin-inline-start: -1 * $-table-cell-padding-panel;
-    margin-inline-end: -1 * $-table-cell-padding-panel;
+    margin-inline-start: calc(-1 * var(--pine-dimension-md));
+    margin-inline-end: calc(-1 * var(--pine-dimension-md));
   }
 
   .sage-card & {
-    margin-inline-start: -1 * $-table-cell-padding-card;
-    margin-inline-end: -1 * $-table-cell-padding-card;
+    margin-inline-start: calc(-1 * var(--pine-dimension-md));
+    margin-inline-end: calc(-1 * var(--pine-dimension-md));
   }
 }
 
@@ -222,27 +221,27 @@ $-table-avatar-width: rem(32px);
   .sage-panel & {
     @include overflow-scroll();
     overflow-y: visible;
-    max-width: calc(100% + #{2 * sage-spacing(md)});
+    max-width: calc(100% + (var(--pine-dimension-md) * 2));
   }
 }
 
 .sage-table-wrapper--reset-above {
   .sage-panel > & {
-    margin-block-start: -1 * sage-spacing();
+    margin-block-start: calc(-1 * var(--pine-dimension-md));
   }
 
   .sage-card > & {
-    margin-block-start: -1 * sage-spacing(sm);
+    margin-block-start: calc(-1 * var(--pine-dimension-sm));
   }
 }
 
 .sage-table-wrapper--reset-below {
   .sage-panel > & {
-    margin-block-end: -1 * sage-spacing();
+    margin-block-end: calc(-1 * var(--pine-dimension-md));
   }
 
   .sage-card > & {
-    margin-block-end: -1 * sage-spacing(sm);
+    margin-block-end: calc(-1 * var(--pine-dimension-sm));
   }
 }
 
@@ -304,11 +303,11 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell__title {
-  font-weight: sage-font-weight(semibold);
+  font-weight: var(--pine-font-weight-semi-bold);
 }
 
 .sage-table-cell__body {
-  margin-block-start: sage-spacing(2xs);
+  margin-block-start: var(--pine-dimension-2xs);
 }
 
 .sage-table-cell__link {
@@ -332,7 +331,7 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell--borders {
-  border-block-end: sage-border();
+  border-block-end: var(--pine-border);
 
   tr:last-child & {
     border-block-end: 0;
