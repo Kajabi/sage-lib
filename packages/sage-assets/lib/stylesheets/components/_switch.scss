@@ -6,16 +6,17 @@
 
 
 // Colors
-$-switch-color-default: var(--pine-color-border);
-$-switch-color-default-hover: var(--pine-color-neutral);
-$-switch-color-default-text: var(--pine-color-text-message);
+$-switch-color-default: var(--pine-color-neutral);
+$-switch-color-default-hover: var(--pine-color-neutral-hover);
+$-switch-color-default-text: var(--pine-color-text-label);
 $-switch-color-checked: var(--pine-color-accent);
 $-switch-color-checked-hover: var(--pine-color-accent-hover);
 $-switch-color-disabled: var(--pine-color-border-disabled);
 $-switch-color-disabled-text: var(--pine-color-text-message);
 $-switch-color-disabled-checked: var(--pine-color-border-disabled);
 $-switch-color-disabled-checked-text: var(--pine-color-neutral-hover);
-$-switch-color-error: var(--pine-color-red-500);
+$-switch-color-error: var(--pine-color-danger);
+$-switch-color-error-hover: var(--pine-color-danger-hover);
 $-switch-focus-outline-error-color: var(--pine-color-danger-disabled);
 
 // Switch
@@ -159,13 +160,13 @@ $-switch-toggle-size: var(--pine-dimension-sm);
       color: $-switch-color-error;
     }
     &:hover:not(:checked):not(:disabled) {
-      background-color: $-switch-color-error;
+      background-color: $-switch-color-error-hover;
     }
     &:checked {
       background-color: $-switch-color-error;
     }
     &:checked:hover {
-      background-color: $-switch-color-error;
+      background-color: $-switch-color-error-hover;
     }
   }
 
