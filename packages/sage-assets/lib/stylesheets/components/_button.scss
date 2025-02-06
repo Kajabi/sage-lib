@@ -324,10 +324,11 @@ $-btn-loading-min-height: rem(36px);
     z-index: sage-z-index(default, 1);
     inset-inline-end: rem(1px);
     bottom: rem(1px);
-    height: rem(38px);
+    height: rem(34px);
+    background-color: sage-color(white);
     background-color: var(--pine-color-secondary);
-    box-shadow: rem(-1px) 0 0 0 var(--pine-color-grey-300);
     border-color: transparent;
+    border-radius: 10px;
 
     @include sage-focus-outline--update-color(transparent);
 

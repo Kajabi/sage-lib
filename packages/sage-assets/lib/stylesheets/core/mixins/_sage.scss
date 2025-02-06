@@ -412,8 +412,7 @@
   padding: var(--pine-dimension-sm);
   color: var(--pine-color-text);
   appearance: none;
-  box-shadow: sage-border-interactive(default);
-  border: 0;
+  border: var(--pine-border);
   border-radius: sage-border(radius-medium);
   background: var(--pine-color-background);
   transition: map-get($sage-transitions, input);
@@ -425,10 +424,10 @@
 
   &:hover:not(:disabled) {
     color: var(--pine-color-text);
-    box-shadow: sage-border-interactive(hover);
+    border-color: var(--pine-color-border-hover);
 
     .sage-form-field--error & {
-      box-shadow: sage-border-interactive(error);
+      border-color: var(--pine-color-border-danger);
     }
   }
 
@@ -448,7 +447,7 @@
   &:disabled {
     color: var(--pine-color-text-disabled);
     background-color: var(--pine-color-background-container-disabled);
-    box-shadow: sage-border-interactive(disabled);
+    border-color: var(--pine-color-border-disabled);
     cursor: not-allowed;
     resize: none;
 
@@ -475,14 +474,14 @@
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     @include sage-focus-ring(var(--pine-color-red-300));
 
-    box-shadow: sage-border-interactive(error);
+    border-color: var(--pine-color-border-danger);
 
     ~ label {
       color: var(--pine-color-text);
     }
 
     &:hover:not(:disabled) {
-      box-shadow: sage-border-interactive(error);
+      border-color: var(--pine-color-border-danger);
     }
   }
 
