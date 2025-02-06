@@ -28,7 +28,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--filter & {
     padding: calc(var(--pine-dimension-2xs) * 1.5) calc(var(--pine-dimension-xs) * 1.75); // 4px * 1.5 = 6px, 8px * 1.75 = 14px
-    background-color: var(--pine-color-border-disabled);
+    background-color: var(--pine-color-background-container-disabled);
     border-radius: calc(var(--pine-dimension-2xl) * 2.0833); // 48px * 2.0833 = 100px
     @extend %t-sage-body-small-semi;
 
