@@ -55,10 +55,10 @@
 @mixin sage-copy-text() {
   @include truncate();
 
-  font: var(--pine-typography-body-medium);
-  letter-spacing: var(--pine-letter-spacing);
   padding: var(--pine-dimension-xs) var(--pine-dimension-sm);
+  font: var(--pine-typography-body-medium);
   color: var(--pine-color-text-secondary);
+  letter-spacing: var(--pine-letter-spacing);
   background-color: transparent;
   border: $-copy-text-border;
   border-radius: var(--pine-border-radius-full);
