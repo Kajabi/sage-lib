@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-progress-bar-height: sage-spacing(xs);
+$-progress-bar-height: var(--pine-dimension-xs);
 
 @keyframes sage-progress-bar--slide {
   from {
@@ -33,8 +33,8 @@ $-progress-bar-height: sage-spacing(xs);
 .sage-progress-bar__background {
   height: $-progress-bar-height;
   width: 100%;
-  border-radius: sage-border(radius-small);
-  background-color: var(--sage-progress-bar-background-color, sage-color(grey, 200));
+  border-radius: var(--pine-dimension-2xs);
+  background-color: var(--sage-progress-bar-background-color, var(--pine-color-background-container-disabled));
 
   .sage-modal__header & {
     border-radius: 0;
@@ -44,8 +44,8 @@ $-progress-bar-height: sage-spacing(xs);
 .sage-progress-bar__value {
   transform-origin: center left;
   height: 100%;
-  background-color: var(--progress-bar-value-color, sage-color(mercury, 500));
-  border-radius: sage-border(radius-small);
+  background-color: var(--progress-bar-value-color, var(--pine-color-brand));
+  border-radius: var(--pine-dimension-2xs);
 
   [dir="rtl"] & {
     transform-origin: center right;
@@ -67,8 +67,7 @@ $-progress-bar-height: sage-spacing(xs);
 }
 
 .sage-progress-bar__percent {
-  @extend %t-sage-body-small-semi;
-
-  margin-inline-start: rem(12px);
+  font-weight: var(---pine-font-weight-medium);
+  margin-inline-start: calc(var(--pine-dimension-md) / 2);
 }
 
