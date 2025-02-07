@@ -13,8 +13,8 @@ $sage-borders-interactive: (
   hover: 0 0 0 1px var(--pine-color-neutral),
   focus: 0 0 0 4px  var(--pine-color-focus-ring),
   selected: 0 0 0 2px var(--pine-color-primary-hover),
-  error: 0 0 0 1px var(--pine-color-red-500),
-  error-focus: 0 0 0 2px var(--pine-color-red-500),
+  error: 0 0 0 1px var(--pine-color-danger),
+  error-focus: 0 0 0 2px var(--pine-color-danger),
   disabled: 0 0 0 1px var(--pine-color-border-disabled),
 );
 

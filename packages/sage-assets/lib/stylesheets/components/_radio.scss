@@ -16,7 +16,7 @@ $-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
 $-radio-color-text-disabled: var(--pine-color-text-disabled);
 $-radio-color-focus-outline: var(--pine-color-focus-ring);
-$-radio-color-focus-outline-error: var(--pine-color-red-500);
+$-radio-color-focus-outline-error: var(--pine-color-danger);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
@@ -143,10 +143,8 @@ $-radio-focus-outline-color: currentColor;
   // focus outline
   &::before {
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    // width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    // height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    width: 19px;
-    height: 19px;
+    width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
     border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-focus-outline;
     pointer-events: none;
     opacity: 0;

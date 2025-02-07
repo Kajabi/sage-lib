@@ -67,12 +67,12 @@ $sage-field-colors: (
 ///
 $sage-radio-colors: (
   checked: var(--pine-color-accent),
-  checked-disabled: var(--pine-color-text-accent-disabled),
+  checked-disabled: var(--pine-color-accent-disabled),
   checked-hover: var(--pine-color-accent-hover),
   checked-inner: var(--pine-color-white),
   default: var(--pine-color-border),
   disabled: var(--pine-color-border-disabled),
-  error: var(--pine-color-red-500),
+  error: var(--pine-color-danger),
   hover: var(--pine-color-neutral),
 );
 
