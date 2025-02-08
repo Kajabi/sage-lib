@@ -92,7 +92,7 @@ export const Loader = ({
         </div>
       )}
       {label ? (
-        <p className="sage-loader__text t-sage-body-small">{label}</p>
+        <p className="sage-loader__text t-sage-body-small-med">{label}</p>
       ) : (
         <span className="visually-hidden">{label}</span>
       )}
