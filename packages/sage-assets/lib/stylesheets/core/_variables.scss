@@ -102,11 +102,11 @@ $sage-text-colors: (
 /// Toolbar border styles
 ///
 $sage-toolbar-button-borders: (
-  default: 0 0 0 1px sage-color(grey, 500),
-  focus: 0 0 0 2px sage-color(purple, 300),
-  hover: 0 0 0 1px sage-color(charcoal, 100),
-  hover-large: 0 0 0 2px sage-color(charcoal, 100),
-  active-hover: 0 0 0 4px sage-color(primary, 200),
+  default: 0 0 0 1px var(--pine-color-border),
+  focus: 0 0 0 2px var(--pine-color-focus-ring),
+  hover: 0 0 0 1px var(--pine-color-border-hover),
+  hover-large: 0 0 0 2px var(--pine-color-border-hover),
+  active-hover: 0 0 0 4px var(--pine-color-focus-ring),
 );
 
 ///
