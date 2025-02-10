@@ -8,8 +8,8 @@
 $-table-header-border: var(--pine-border);
 $-table-cell-padding-xs: var(--pine-dimension-xs);
 $-table-cell-padding-card: var(--pine-dimension-md);
-$-table-padding: calc(var(--pine-dimension-md) - var(--pine-dimension-2xs)) calc(var(--pine-dimension-xs) * 1.5);
-$-table-padding-heading: calc(var(--pine-dimension-xs) * 1.75) calc(var(--pine-dimension-xs) * 1.5);
+$-table-padding: calc(var(--pine-dimension-md) - var(--pine-dimension-2xs)) calc(var(--pine-dimension-xs) * 1.5); // (24px - 4px = 22px) (8px * 1.5 = 12px)
+$-table-padding-heading: calc(var(--pine-dimension-xs) * 1.75) calc(var(--pine-dimension-xs) * 1.5); // (8px * 1.75 = 14px) (8px * 1.5 = 12px)
 $-table-max-width: none;
 
 // Text
