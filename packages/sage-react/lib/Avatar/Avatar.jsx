@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { PdsIcon } from '@pine-ds/react';
 import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { AVATAR_COLORS } from './configs';
@@ -83,7 +82,7 @@ export const Avatar = ({
         <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} id={image.id} />
       )}
       {(!image.src || useFallbackGraphic) && (
-        <PdsIcon name="user-filled" color="var(--pine-color-mercury-500)" className="sage-avatar__graphic" />
+        <pds-icon name="user-filled" color="var(--pine-color-mercury-500)" className="sage-avatar__graphic" />
       )}
     </div>
   );
