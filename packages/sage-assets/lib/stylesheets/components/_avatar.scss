@@ -5,45 +5,45 @@
 ////
 
 
-$-avatar-min-size: rem(32px);
-$-avatar-max-size: rem(128px);
+$-avatar-min-size: var(--pine-dimension-lg);
+$-avatar-max-size: calc(2 * var(--pine-dimension-800));
 $-avatar-ring-colors: (
   charcoal: (
-    main: sage-color(grey, 950),
-    bg: sage-color(grey, 200)
+    main: var(--pine-color-primary-hover),
+    bg: var(--pine-color-grey-200)
   ),
   grey: (
-    main: sage-color(grey, 950),
-    bg: sage-color(grey, 200)
+    main: var(--pine-color-primary-hover),
+    bg: var(--pine-color-grey-200)
   ),
   purple: (
-    main: sage-color(purple, 600),
-    bg: sage-color(purple, 150)
+    main: var(--pine-color-accent-hover),
+    bg: var(--pine-color-purple-150)
   ),
   sage: (
-    main: sage-color(sage, 300),
-    bg: sage-color(sage, 100)
+    main: var(--pine-color-success-hover),
+    bg: var(--pine-color-green-150)
   ),
   yellow: (
-    main: sage-color(yellow, 400),
-    bg: sage-color(yellow, 150)
+    main: var(--pine-color-yellow-400),
+    bg: var(--pine-color-yellow-150)
   ),
   orange: (
-    main: sage-color(orange, 300),
-    bg: sage-color(orange, 100)
+    main: var(--pine-color-brand),
+    bg: var(--pine-color-mercury-150)
   ),
   red: (
-    main: sage-color(red, 500),
-    bg: sage-color(red, 150)
+    main: var(--pine-color-danger),
+    bg: var(--pine-color-red-150)
   )
 );
 $-avatar-tile-size: rem(216px);
-$-avatar-group-size: rem(80px);
+$-avatar-group-size: calc(2 * var(--pine-dimension-xl));
 $-avatar-group-item-sizes: (
-  1: rem(48px),
-  2: rem(32px),
-  3: rem(24px),
-  4: rem(16px),
+  1: var(--pine-dimension-2xl),
+  2: var(--pine-dimension-lg),
+  3: var(--pine-dimension-md),
+  4: var(--pine-dimension-sm),
 );
 
 
@@ -63,17 +63,17 @@ $-avatar-group-item-sizes: (
   position: relative;
   width: $-avatar-min-size;
   height: $-avatar-min-size;
-  border-radius: sage-border(radius-round);
-  background-color: sage-color(primary, 100);
+  border-radius: var(--pine-border-radius-full);
+  background-color: var(--pine-color-mercury-050);
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-md);
   }
 
   .sage-table td > & {
-    margin-block-start: -1 * sage-spacing(2xs);
-    margin-block-end: -1 * sage-spacing(2xs);
+    margin-block-start: calc(-1 * var(--pine-dimension-050));
+    margin-block-end: calc(-1 * var(--pine-dimension-050));
   }
 
   // Items inside avatar group should be 100% to start
@@ -95,8 +95,8 @@ $-avatar-group-item-sizes: (
 
     // Positioning is same for first item is same in all configs
     &:nth-child(1) {
-      inset-block-start: 0;
-      inset-inline-start: 0;
+      inset-block-start: var(--pine-dimension-none);
+      inset-inline-start: var(--pine-dimension-none);
     }
   }
 
@@ -108,18 +108,18 @@ $-avatar-group-item-sizes: (
   .sage-avatar-group--3-up &,
   .sage-avatar-group--4-up & {
     &:nth-child(2) {
-      inset-block-end: rem(16px);
-      inset-inline-end: 0;
+      inset-block-end: var(--pine-dimension-sm);
+      inset-inline-end: var(--pine-dimension-none);
     }
 
     &:nth-child(3) {
-      inset-block-end: 0;
-      inset-inline-start: rem(16px);
+      inset-block-end: var(--pine-dimension-none);
+      inset-inline-start: var(--pine-dimension-sm);
     }
 
     &:nth-child(4) {
-      inset-block-start: rem(8px);
-      inset-inline-end: rem(8px);
+      inset-block-start: var(--pine-dimension-xs);
+      inset-inline-end: var(--pine-dimension-xs);
     }
   }
 }
@@ -133,11 +133,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-block-end: sage-spacing();
+  margin-block-end: var(--pine-dimension-md);
 }
 
 .sage-avatar--tile {
-  padding: sage-spacing(md);
+  padding: var(--pine-dimension-md);
   border-radius: initial;
 
   @include avatar-scaling;
@@ -154,11 +154,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  inset-block-end: rem(-4px);
-  inset-inline-end: rem(-4px);
-  background-color: sage-color(white);
-  border-radius: sage-border(radius-round);
-  border: rem(2px) solid sage-color(white);
+  inset-block-end: calc(-1 * var(--pine-dimension-2xs));
+  inset-inline-end: calc(-1 * var(--pine-dimension-2xs));
+  background-color: var(--pine-color-secondary);
+  border-radius: var(--pine-border-radius-full);
+  border: var(--pine-dimension-025) solid var(--pine-color-secondary);
 
   &.sage-avatar__badge--custom-bg {
     background-color: var(--badge-custom-bg-color);
@@ -170,7 +170,7 @@ $-avatar-group-item-sizes: (
   }
 
   .sage-avatar--custom-badge & {
-    border: 0;
+    border: var(--pine-dimension-none);
   }
 }
 
@@ -178,8 +178,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: sage-color(primary, 400);
-  fill: sage-color(primary, 400);
+  color: var(--pine-color-brand);
+  fill: var(--pine-color-brand);
 
   @extend %t-sage-body-xsmall-bold;
 
@@ -205,7 +205,7 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   height: 100%;
   width: 100%;
-  border-radius: sage-border(radius-round);
+  border-radius: var(--pine-border-radius-full);
   object-fit: cover;
 
   .sage-avatar--tile & {
@@ -228,6 +228,6 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper & {
-    margin-inline-end: sage-spacing();
+    margin-inline-end: var(--pine-dimension-md);
   }
 }
