@@ -53,8 +53,8 @@ $-select-arrow-position-inverse-with-message: calc(100% - (var(--pine-dimension-
 }
 
 .sage-select__arrow {
-  color: var(--pine-color-text-readonly);
   display: flex;
+  color: var(--pine-color-text-readonly);
   align-items: center;
   grid-column: -1 / -2;
   grid-row: 2 / 3;
@@ -174,6 +174,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - (var(--pine-dimension-
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
-    color: var(--pine-color-primary)
+    color: var(--pine-color-primary);
   }
 }
