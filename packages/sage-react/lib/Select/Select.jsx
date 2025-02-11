@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames, SageTokens } from '../configs';
+import { SageClassnames } from '../configs';
 
 export const Select = ({
   className,

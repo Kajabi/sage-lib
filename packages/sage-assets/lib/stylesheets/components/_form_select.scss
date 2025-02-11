@@ -54,13 +54,13 @@ $-select-arrow-position-inverse-with-message: calc(100% - (var(--pine-dimension-
 
 .sage-select__arrow {
   display: flex;
-  color: var(--pine-color-text-readonly);
   align-items: center;
   grid-column: -1 / -2;
   grid-row: 2 / 3;
   position: relative;
   z-index: sage-z-index(default, 1);
   height: $-select-height;
+  color: var(--pine-color-text-readonly);
   pointer-events: none;
 }
 
