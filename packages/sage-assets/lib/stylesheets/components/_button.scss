@@ -272,11 +272,6 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-input-group & {
-    border-start-start-radius: var(--pine-dimension-none);
-    border-end-start-radius: var(--pine-dimension-none);
-  }
-
   .sage-badge & {
     display: flex;
     justify-content: center;
@@ -328,7 +323,10 @@ $-btn-loading-min-height: rem(36px);
     background-color: sage-color(white);
     background-color: var(--pine-color-secondary);
     border-color: transparent;
-    border-radius: 10px;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
 
     @include sage-focus-outline--update-color(transparent);
 

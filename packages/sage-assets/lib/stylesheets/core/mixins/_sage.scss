@@ -410,7 +410,7 @@
   font: var(--pine-typography-body);
   width: 100%;
   padding: var(--pine-dimension-sm);
-  color: var(--pine-color-text);
+  color: var(--pine-color-text-active);
   appearance: none;
   border: var(--pine-border);
   border-radius: sage-border(radius-medium);
@@ -423,7 +423,7 @@
   }
 
   &:hover:not(:disabled) {
-    color: var(--pine-color-text);
+    color: var(--pine-color-text-active);
     border-color: var(--pine-color-border-hover);
 
     .sage-form-field--error & {
@@ -460,6 +460,13 @@
     }
   }
 
+  &[readonly] {
+    color: var(--pine-color-text-readonly);
+    background-color: var(--pine-color-background-container-disabled);
+    cursor: not-allowed;
+    resize: none;
+  }
+
   ~ label {
     @extend %t-sage-body-semi;
 
@@ -474,6 +481,7 @@
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     @include sage-focus-ring(var(--pine-color-red-300));
 
+    background-color: var(--pine-color-red-050);
     border-color: var(--pine-color-border-danger);
 
     ~ label {
