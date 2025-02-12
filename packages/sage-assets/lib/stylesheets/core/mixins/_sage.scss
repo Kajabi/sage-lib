@@ -407,9 +407,9 @@
 /// Adds the basic default form spacing, and border treatment
 ///
 @mixin sage-form-field() {
-  font: var(--pine-typography-body);
   width: 100%;
   padding: var(--pine-dimension-sm);
+  font: var(--pine-typography-body);
   color: var(--pine-color-text-active);
   appearance: none;
   border: var(--pine-border);
