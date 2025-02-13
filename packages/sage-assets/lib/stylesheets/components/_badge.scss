@@ -5,27 +5,47 @@
 ////
 
 
-$-badge-min-height: rem(20px);
-$-badge-interactive-icon-size: rem(24px);
+$-badge-interactive-icon-size: var(--pine-dimension-md);
 $-badge-interactive-icon-size-decor: rem(28px);
-$-badge-padding: 1px sage-spacing(xs);
-$-badge-padding-lg: sage-spacing(2xs) rem(12px);
-$-badge-border-radius: sage-border(radius-x-large);
-$-badge-statuses: (
-  danger,
-  draft,
-  info,
-  locked,
-  published,
-  warning,
+$-badge-padding: 1px var(--pine-dimension-xs);
+$-badge-padding-lg: var(--pine-dimension-2xs) rem(12px);
+$-badge-border-radius: var(--pine-border-radius-full);
+// Replaces old badge color list to better map with Pine tokens within loop below
+$badge-sentiments: (
+  danger: danger,
+  draft: neutral,
+  info: info,
+  locked: accent,
+  published: success,
+  warning: warning,
 );
 
 .sage-badge {
+  // Added component-level variables from Pine
+  --pine-chip-color-warning-dot: var(--pine-color-yellow-600);
+  --pine-chip-color-warning-hover: var(--pine-color-yellow-300);
+  --pine-chip-color-warning: var(--pine-color-yellow-100);
+  --pine-chip-color-success-dot: var(--pine-color-green-600);
+  --pine-chip-color-success-hover: var(--pine-color-green-300);
+  --pine-chip-color-success: var(--pine-color-green-100);
+  --pine-chip-color-neutral-dot: var(--pine-color-grey-600);
+  --pine-chip-color-neutral-hover: var(--pine-color-grey-300);
+  --pine-chip-color-neutral: var(--pine-color-grey-100);
+  --pine-chip-color-info-dot: var(--pine-color-blue-600);
+  --pine-chip-color-info-hover: var(--pine-color-blue-300);
+  --pine-chip-color-info: var(--pine-color-blue-100);
+  --pine-chip-color-danger-dot: var(--pine-color-red-600);
+  --pine-chip-color-danger-hover: var(--pine-color-red-300);
+  --pine-chip-color-danger: var(--pine-color-red-100);
+  --pine-chip-color-accent-dot: var(--pine-color-purple-600);
+  --pine-chip-color-accent-hover: var(--pine-color-purple-300);
+  --pine-chip-color-accent: var(--pine-color-purple-100);
+
   display: inline-flex;
   align-items: center;
   position: relative;
   border-radius: $-badge-border-radius;
-  border-width: 1px;
+  border-width: var(--pine-border-width);
   border-style: solid;
 
   &[class*="sage-badge--icon-only"] {
@@ -34,14 +54,13 @@ $-badge-statuses: (
 }
 
 .sage-badge__value {
-  @extend %t-sage-body-med;
+  font: var(--pine-typography-body-medium);
+  letter-spacing: var(--pine-letter-spacing);
   appearance: none;
   display: flex;
   align-items: center;
   max-width: 100%;
-  min-height: $-badge-min-height;
   padding: $-badge-padding;
-  letter-spacing: sage-letter-spacing(md);
   white-space: nowrap;
   background-color: transparent;
   border-radius: $-badge-border-radius;
@@ -55,18 +74,14 @@ $-badge-statuses: (
   }
 
   .sage-dot ~ & {
-    padding-inline-start: sage-spacing(2xs);
+    padding-inline-start: var(--pine-dimension-2xs);
   }
 
   .sage-badge--large & {
-    @extend %t-sage-heading-6;
+    // @extend %t-sage-heading-6;
+    font: var(--pine-typography-heading-6);
+    letter-spacing: var(--pine-letter-spacing-heading-6);
     padding: $-badge-padding-lg;
-    font-family: $-heading-font;
-
-    .sage-badge__value-text {
-      font-size: sage-font-size(lg, false);
-      letter-spacing: sage-letter-spacing(sm);
-    }
   }
 }
 
@@ -86,30 +101,41 @@ $-badge-statuses: (
   pointer-events: none;
 }
 
-@each $-color-name in $-badge-statuses {
+@each $-color-name, $-color-value in $badge-sentiments {
   $-color-modifier: ".sage-badge--#{$-color-name}";
 
-  #{$-color-modifier} {
-    color: sage-color-combo($-color-name, default, foreground-accent);
-    background-color: sage-color-combo($-color-name, default, background);
-    border-color: sage-color-combo($-color-name, default, background-accent);
+  :is(
+    #{$-color-modifier},
+    #{$-color-modifier} .sage-dot,
+    #{$-color-modifier}.sage-badge--interactive,
+    #{$-color-modifier}.sage-badge--interactive.sage-badge--large
+  ) {
+    background-color: var(--pine-chip-color-#{$-color-value});
+    border-color: var(--pine-chip-color-#{$-color-value}-hover);
+
+    .sage-badge__value-text,
+    .sage-badge__decor-icon {
+      color: var(--pine-color-text-#{$-color-value});
+    }
   }
 
   #{$-color-modifier} .sage-dot {
-    --sage-dot-color: #{sage-color-combo($-color-name, default, icon-background-accent)};
+    --sage-dot-color: var(--pine-chip-color-#{$-color-value}-dot);
   }
 
   #{$-color-modifier}.sage-badge--interactive {
-    &:hover {
-      background-color: sage-color-combo($-color-name, default, background-accent);
+
+    &:hover,
+    &:hover .sage-dot {
+      background-color: var(--pine-chip-color-#{$-color-value}-hover);
     }
 
     .sage-badge__value {
       @include sage-focus-outline($outline-offset-block: -1, $outline-offset-inline: -1);
-      @include sage-focus-outline--update-color(sage-color(purple, 300));
+      @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
 
       position: static;
-      padding-inline-end: rem(24px);
+      padding-inline-end: var(--pine-dimension-md);
 
       &::after {
         border-radius: $-badge-border-radius;
@@ -129,18 +155,18 @@ $-badge-statuses: (
       justify-content: center;
       align-items: center;
       position: absolute;
-      inset-inline-end: rem(8px);
+      inset-inline-end: var(--pine-dimension-xs);
       margin-block-start: rem(1px);
-      border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
+      border-radius: var(--pine-dimension-none) $-badge-border-radius $-badge-border-radius var(--pine-dimension-none);
 
       &::after {
         width: $-badge-interactive-icon-size;
         height: $-badge-interactive-icon-size;
-        border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
+        border-radius: var(--pine-dimension-none) $-badge-border-radius $-badge-border-radius var(--pine-dimension-none);
       }
 
       &.sage-btn--tag::before {
-        font-size: sage-font-size(md, false);
+        font-size: var(--pine-font-size-body-md);
       }
     }
   }
@@ -151,12 +177,12 @@ $-badge-statuses: (
 .sage-badge-group {
   display: flex;
   flex-flow: row wrap;
-  gap: sage-spacing(xs);
+  gap: var(--pine-dimension-xs);
 }
 
 @each $-key, $-value in $sage-spacings {
   .sage-badge-group--gap-#{$-key} {
-    gap: sage-spacing($-key);
+    gap: var(--pine-dimension-#{$-key});
   }
 }
 
