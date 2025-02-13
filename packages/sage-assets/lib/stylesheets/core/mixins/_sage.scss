@@ -179,9 +179,9 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(purple, 300),
-  $focus-width-inner: 1px,
-  $focus-width-outter: 3px
+  $focus-shadow: var(--pine-color-focus-ring),
+  $focus-width-inner: 2px,
+  $focus-width-outter: 4px
 ) {
   &:focus-visible {
     z-index: sage-z-index(default, 1);
@@ -407,29 +407,27 @@
 /// Adds the basic default form spacing, and border treatment
 ///
 @mixin sage-form-field() {
-  @extend %t-sage-body-med;
-
   width: 100%;
-  padding: sage-spacing(sm);
-  color: sage-color(grey, 900);
+  padding: var(--pine-dimension-sm);
+  font: var(--pine-typography-body);
+  color: var(--pine-color-text-active);
   appearance: none;
-  box-shadow: sage-border-interactive(default);
-  border: 0;
+  border: var(--pine-border);
   border-radius: sage-border(radius-medium);
-  background: sage-color(white);
+  background: var(--pine-color-background);
   transition: map-get($sage-transitions, input);
   transition-property: border, box-shadow, color;
 
   @include placeholder {
-    color: sage-color(grey, 700);
+    color: var(--pine-color-text-placeholder);
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(grey, 900);
-    box-shadow: sage-border-interactive(hover);
+    color: var(--pine-color-text-active);
+    border-color: var(--pine-color-border-hover);
 
     .sage-form-field--error & {
-      box-shadow: sage-border-interactive(error);
+      border-color: var(--pine-color-border-danger);
     }
   }
 
@@ -447,19 +445,26 @@
   }
 
   &:disabled {
-    color: sage-color(grey, 500);
-    background-color: sage-color(grey, 100);
-    box-shadow: sage-border-interactive(disabled);
+    color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-container-disabled);
+    border-color: var(--pine-color-border-disabled);
     cursor: not-allowed;
     resize: none;
 
     @include placeholder {
-      color: sage-color(grey, 700);
+      color: var(--pine-color-text-placeholder);
     }
 
     .sage-form-field--showplaceholder & ~ label {
       opacity: 0.5;
     }
+  }
+
+  &[readonly] {
+    color: var(--pine-color-text-readonly);
+    background-color: var(--pine-color-background-container-disabled);
+    cursor: not-allowed;
+    resize: none;
   }
 
   ~ label {
@@ -474,16 +479,17 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
-    @include sage-focus-ring(sage-color(red, 300));
+    @include sage-focus-ring(var(--pine-color-red-300));
 
-    box-shadow: sage-border-interactive(error);
+    background-color: var(--pine-color-red-050);
+    border-color: var(--pine-color-border-danger);
 
     ~ label {
-      color: sage-color(grey, 900);
+      color: var(--pine-color-text);
     }
 
     &:hover:not(:disabled) {
-      box-shadow: sage-border-interactive(error);
+      border-color: var(--pine-color-border-danger);
     }
   }
 
@@ -518,7 +524,7 @@
 /// Adds the basic default form label spacing, and border treatment
 ///
 @mixin sage-form-field-label() {
-  @extend %t-sage-body-semi;
+  font: var(--pine-typography-body-medium);
   white-space: nowrap;
 }
 
@@ -547,20 +553,19 @@
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
-  @extend %t-sage-body-small-med;
-
-  margin-block-start: sage-spacing(xs);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-message);
+  font: var(--pine-typography-body);
+  margin-block-start: var(--pine-dimension-xs);
 
   .sage-form-field--error & {
-    color: sage-color(red, 500);
+    color: var(--pine-color-text-danger);
 
     &::before {
       @include sage-icon-base(danger, md, pine);
 
       position: relative;
       inset-block-start: rem(1px);
-      padding-inline-end: sage-spacing(xs);
+      padding-inline-end: var(--pine-dimension-xs);
     }
   }
 }
