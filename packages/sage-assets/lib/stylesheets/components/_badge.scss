@@ -54,13 +54,13 @@ $badge-sentiments: (
 }
 
 .sage-badge__value {
-  font: var(--pine-typography-body-medium);
-  letter-spacing: var(--pine-letter-spacing);
   appearance: none;
   display: flex;
   align-items: center;
   max-width: 100%;
   padding: $-badge-padding;
+  font: var(--pine-typography-body-medium);
+  letter-spacing: var(--pine-letter-spacing);
   white-space: nowrap;
   background-color: transparent;
   border-radius: $-badge-border-radius;
@@ -78,10 +78,9 @@ $badge-sentiments: (
   }
 
   .sage-badge--large & {
-    // @extend %t-sage-heading-6;
+    padding: $-badge-padding-lg;
     font: var(--pine-typography-heading-6);
     letter-spacing: var(--pine-letter-spacing-heading-6);
-    padding: $-badge-padding-lg;
   }
 }
 
@@ -105,11 +104,11 @@ $badge-sentiments: (
   $-color-modifier: ".sage-badge--#{$-color-name}";
 
   :is(
-    #{$-color-modifier},
-    #{$-color-modifier} .sage-dot,
-    #{$-color-modifier}.sage-badge--interactive,
-    #{$-color-modifier}.sage-badge--interactive.sage-badge--large
-  ) {
+  #{$-color-modifier},
+  #{$-color-modifier} .sage-dot,
+  #{$-color-modifier}.sage-badge--interactive,
+  #{$-color-modifier}.sage-badge--interactive.sage-badge--large
+) {
     background-color: var(--pine-chip-color-#{$-color-value});
     border-color: var(--pine-chip-color-#{$-color-value}-hover);
 
