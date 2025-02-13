@@ -119,7 +119,7 @@ $-switch-toggle-size: var(--pine-dimension-sm);
 
     .sage-switch--has-border & {
       margin-inline-start: ($-switch-width + $-switch-label-left-spacing);
-      color: var(--pine-color-neutral);
+      color: var(--pine-color-text-label);
       font-weight: var(--pine-font-weight-semi-bold);
     }
 
