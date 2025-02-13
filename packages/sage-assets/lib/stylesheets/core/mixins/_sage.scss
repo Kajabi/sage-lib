@@ -553,20 +553,19 @@
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
-  @extend %t-sage-body-small-med;
-
-  margin-block-start: sage-spacing(xs);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-message);
+  font: var(--pine-typography-body);
+  margin-block-start: var(--pine-dimension-xs);
 
   .sage-form-field--error & {
-    color: sage-color(red, 500);
+    color: var(--pine-color-text-danger);
 
     &::before {
       @include sage-icon-base(danger, md, pine);
 
       position: relative;
       inset-block-start: rem(1px);
-      padding-inline-end: sage-spacing(xs);
+      padding-inline-end: var(--pine-dimension-xs);
     }
   }
 }
