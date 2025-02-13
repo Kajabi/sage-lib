@@ -6,15 +6,15 @@
 
 
 $-popover-overlay-z-index: sage-z-index(modal);
-$-popover-panel-padding: sage-spacing();
-$-popover-panel-min-size: sage-container(sm);
+$-popover-panel-padding: var(--pine-dimension-md);
+$-popover-panel-min-size: 340px;
 $-popover-panel-contentmin-size: $-popover-panel-min-size - $-popover-panel-padding;
-$-popover-panel-max-size: rem(350px);
-$-popover-panel-offset: sage-spacing(sm);
-$-popover-tooltip-width: rem(7px);
-$-popover-tooltip-offset: sage-spacing(lg);
+$-popover-panel-max-size: 350px;
+$-popover-panel-offset: var(--pine-dimension-sm);
+$-popover-tooltip-width: calc(var(--pine-dimension-2xs) * 1.75); // (4px * 1.75 = 7px)
+$-popover-tooltip-offset: var(--pine-dimension-lg);
 $-popover-tooltip-horizontal-offset: -1.5rem;
-$-popover-tooltip-active: $-popover-tooltip-width solid sage-color(white);
+$-popover-tooltip-active: $-popover-tooltip-width solid var(--pine-color-secondary);
 $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 
 
@@ -44,15 +44,15 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   visibility: hidden;
   z-index: sage-z-index(modal);
   grid-template-columns: minmax(auto, $-popover-panel-max-size);
-  gap: rem(20px);
+  gap: calc(var(--pine-dimension-xs) * 2.5); // (8px * 2.5 = 20px)
   position: absolute;
   width: auto;
   min-width: $-popover-panel-min-size;
   padding: $-popover-panel-padding;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   background-clip: padding-box;
-  box-shadow: sage-shadow(md);
-  border-radius: sage-border(radius-large);
+  box-shadow: var(--pine-box-shadow);
+  border-radius: var(--pine-dimension-sm);
 
   &::after {
     content: "";
@@ -93,10 +93,10 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 
   .sage-popover--right & {
     inset-block-start: $-popover-tooltip-horizontal-offset;
-    inset-inline-start: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-inline-start: calc(100% + #{$-popover-panel-offset} + calc(var(--pine-dimension-2xs) * 1.75)); // 100% + 16px + (4px * 1.75 = 7px)
 
     &::after {
-      left: -($-popover-tooltip-width);
+      left: calc(-1 * var(--pine-dimension-2xs) * 1.75); // -1 * (4px * 1.75 = 7px)
       top: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
       border-inline-end: $-popover-tooltip-active;
@@ -135,10 +135,10 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 
   .sage-popover--left & {
     inset-block-start: $-popover-tooltip-horizontal-offset;
-    inset-inline-end: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-inline-end: calc(100% + #{$-popover-panel-offset} + calc(var(--pine-dimension-2xs) * 1.75));
 
     &::after {
-      right: -($-popover-tooltip-width);
+      right: calc(-1 * var(--pine-dimension-2xs) * 1.75); // -1 * (4px * 1.75 = 7px)
       top: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
       border-inline-start: $-popover-tooltip-active;
@@ -156,14 +156,14 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   @extend %t-sage-body-small;
   @include sage-grid-stack();
 
-  gap: rem(20px);
-  color: sage-color(grey, 800);
+  gap: calc(var(--pine-dimension-xs) * 2.5); // (8px * 2.5 = 20px)
+  color: var(--pine-color-text-secondary);
 }
 
 .sage-popover__media {
   overflow: hidden;
   width: 100%;
-  border-radius: sage-border(radius-small);
+  border-radius: var(--pine-dimension-sm);
 
   img {
     max-width: 100%;
@@ -185,5 +185,5 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 .sage-popover__title {
   @extend %t-sage-heading-5;
 
-  color: sage-color(grey, 950);
+  color: var(--pine-color-primary-hover);
 }
