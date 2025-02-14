@@ -5,24 +5,25 @@
 ////
 
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
-$-select-color-border: sage-color(grey, 500);
-$-select-color-border-hover: sage-color(grey, 600);
-$-select-color-border-selected: sage-color(primary, 200);
-$-select-color-default: sage-color(grey, 700);
-$-select-color-default-hover: sage-color(grey, 900);
-$-select-color-error: sage-color(red, 500);
-$-select-color-label-background: sage-color(white);
-$-select-color-success: sage-color(primary, 200);
-$-select-filled-top-padding: rem(4.4px);
-$-select-height: rem(40px);
-$-select-padding-x: sage-spacing(sm);
-$-select-margin-label: sage-spacing(xs);
-$-select-arrow-font-size: rem(16px);
+$-select-color-border: var(--pine-color-border);
+$-select-color-border-hover: var(--pine-color-border-hover);
+$-select-color-border-selected: var(--pine-color-border-selected);
+$-select-color-default: var(--pine-color-text-secondary);
+$-select-color-default-hover: var(--pine-color-primary-hover);
+$-select-color-error: var(--pine-color-danger);
+$-select-color-background-error: var(--pine-color-red-050);
+$-select-color-label-background: var(--pine-color-background-container);
+$-select-color-success: var(--pine-color-text-info-disabled);
+$-select-filled-top-padding: calc(var(--pine-dimension-3xs) * 1.1);
+$-select-height: 40px;
+$-select-padding-x: var(--pine-dimension-sm);
+$-select-margin-label: var(--pine-dimension-2xs);
+$-select-arrow-font-size: var(--pine-dimension-md);
 $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
 $-select-arrow-position: calc(100% - #{$-select-height});
 $-select-arrow-position-inverse: calc(100% - #{$-select-arrow-font-size + $-select-margin-label});
 $-select-arrow-position-with-message: calc(100% - #{$-select-height + $-select-arrow-font-size});
-$-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-select-margin-label * 2});
+$-select-arrow-position-inverse-with-message: calc(100% - (var(--pine-dimension-md) * 1.25 + var(--pine-dimension-2xs) + var(--pine-dimension-2xs))); // 100% - ((16px * 1.25) + 8px + 8px) = 100% - (20px + 16px) = 100% - 36px
 
 .sage-select {
   @include sage-form-field-group;
@@ -32,7 +33,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     "label label"
     "field field"
     "message message";
-  grid-template-columns: 1fr minmax(sage-spacing(lg), min-content);
+  grid-template-columns: 1fr minmax(var(--pine-dimension-lg), min-content);
   grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
 }
 
@@ -41,7 +42,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     "label helpcontent helpcontent"
     "field field field"
     "message message message";
-  grid-template-columns: 1fr auto minmax(sage-spacing(lg), min-content);
+  grid-template-columns: 1fr auto minmax(var(--pine-dimension-lg), min-content);
 }
 
 .sage-select__label {
@@ -59,16 +60,17 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   position: relative;
   z-index: sage-z-index(default, 1);
   height: $-select-height;
+  color: var(--pine-color-text-readonly);
   pointer-events: none;
 }
 
 .sage-select__arrow::before {
-  @include sage-icon-base(caret-down, md, pine);
+  @include sage-icon-base(enlarge, md, pine);
 
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
-  color: sage-color(grey, 600);
+  color: var(--pine-color-text-placeholder);
   transition: 0.2s color ease;
 }
 
@@ -84,8 +86,10 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   grid-area: field;
   position: relative;
   height: $-select-height;
-  padding-block: 0;
-  padding-inline: $-select-padding-x ($-select-padding-x + $-select-arrow-icon-width + rem(4px));
+  padding-left: var(--pine-dimension-sm);
+  padding-right: calc(var(--pine-dimension-sm) + var(--pine-dimension-md) + var(--pine-dimension-3xs));
+  padding-top: 0;
+  padding-bottom: 0;
   outline: none;
   transition: border map-get($sage-transitions, default);
   cursor: pointer;
@@ -105,6 +109,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   .sage-form-field--error & {
+    background-color: $-select-color-background-error;
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
   }
@@ -133,16 +138,15 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &:disabled {
-    color: sage-color(grey, 700);
-    background-color: sage-color(grey, 100);
+    color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-container-disabled);
 
-    ~ .sage-select__arrow::before {
-      color: sage-color(grey, 700);
-      opacity: 0.5;
+    ~ .sage-select__arrow {
+      color: var(--pine-color-text-primary-disabled);
     }
 
     @include placeholder {
-      color: sage-color(grey, 700);
+      color: var(--pine-color-text-primary-disabled);
     }
   }
 }
@@ -170,6 +174,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
-    color: sage-color(grey, 900);
+    color: var(--pine-color-primary);
   }
 }
