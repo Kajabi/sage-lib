@@ -73,6 +73,7 @@ $sage-radio-colors: (
   default: var(--pine-color-border),
   disabled: var(--pine-color-border-disabled),
   error: var(--pine-color-danger),
+  error-hover: var(--pine-color-border-danger-hover),
   hover: var(--pine-color-neutral),
 );
 

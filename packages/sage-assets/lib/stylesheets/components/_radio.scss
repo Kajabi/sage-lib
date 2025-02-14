@@ -14,6 +14,7 @@ $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
+$-radio-color-error-hover: map-get($sage-radio-colors, error-hover);
 $-radio-color-text-disabled: var(--pine-color-text-disabled);
 $-radio-color-focus-outline: var(--pine-color-focus-ring);
 $-radio-color-focus-outline-error: var(--pine-color-danger);
@@ -163,6 +164,10 @@ $-radio-focus-outline-color: currentColor;
     background: $-radio-color-checked;
     border-color: transparent;
 
+    &:hover {
+      color: $-radio-color-checked-hover;
+    }
+
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
@@ -250,23 +255,28 @@ $-radio-focus-outline-color: currentColor;
 
   .sage-radio__input {
     border-color: $-radio-color-error;
+
     &:checked {
       color: $-radio-color-error;
       background-color: $-radio-color-error;
     }
     &::before {
-      border-color: $-radio-color-focus-outline-error;
-    }
-    &::after {
-      background-color: var(--pine-color-white);
-    }
-    &:hover {
       border-color: $-radio-color-error;
+    }
+
+    &:focus-visible:not(:disabled)::before,
+    &:active:not(:disabled)::before {
+      border-color: var(--pine-color-focus-ring-danger);
+    }
+
+    &:hover {
+      border-color: $-radio-color-error-hover;
+      background-color: $-radio-color-error-hover;
     }
   }
 
   :hover:not(:checked):not(:disabled) {
-    border-color: $-radio-color-error;
+    border-color: $-radio-color-error-hover;
   }
 }
 
