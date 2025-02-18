@@ -29,10 +29,10 @@ export const Tooltip = ({
       setActive(false);
     };
 
-    window.addEventListener("pageshow", handlePageShow);
+    window.addEventListener('pageshow', handlePageShow);
 
     return () => {
-      window.removeEventListener("pageshow", handlePageShow);
+      window.removeEventListener('pageshow', handlePageShow);
     };
   }, []);
 
@@ -47,8 +47,8 @@ export const Tooltip = ({
           ...rest,
         })
       )}
-      {active &&
-        ReactDOM.createPortal(
+      {active
+        && ReactDOM.createPortal(
           <TooltipElement
             content={content}
             parentDomRect={parentDomRect}
