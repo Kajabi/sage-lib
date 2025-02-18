@@ -15,3 +15,7 @@ spec:
   owner: user-experience
   system: sage
   subcomponentOf: sage-lib
+  dependsOn:
+    - sage-assets
+    - sage-react
+    - sage-system

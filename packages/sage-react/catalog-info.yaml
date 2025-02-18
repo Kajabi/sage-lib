@@ -7,8 +7,11 @@ metadata:
     - react
     - javascript
   links:
-    - url: https://sage-lib-storybook.herokuapp.com/
-      title: Storybook Site
+    - url: https://sage-lib-storybook.production.kajabi.farm/
+      title: Storybook Production Site
+      icon: dashboard
+    - url: https://sage-lib-storybook.staging.kajabi.farm/
+      title: Storybook Staging Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
@@ -30,8 +33,11 @@ metadata:
     - javascript
     - storybook
   links:
-    - url: https://sage-lib-storybook.herokuapp.com/
-      title: Storybook Site
+    - url: https://sage-lib-storybook.production.kajabi.farm/
+      title: Storybook Production Site
+      icon: dashboard
+    - url: https://sage-lib-storybook.staging.kajabi.farm/
+      title: Storybook Staging Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
