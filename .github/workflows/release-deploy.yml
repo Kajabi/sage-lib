@@ -138,7 +138,7 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
   
       - name: Report sage-docs-site production deployment to GetDX
-        if: ${{ env.POSTFIX == 'production' && always() }}
+        if: ${{ env.POSTFIX == 'production' }}
         uses: Kajabi/getdx-deployment-identifier-action@main
         env:
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -198,7 +198,7 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
       - name: Report sage-storybook-site production deployment to GetDX
-        if: ${{ env.POSTFIX == 'production' && always() }}
+        if: ${{ env.POSTFIX == 'production' }}
         uses: Kajabi/getdx-deployment-identifier-action@main
         env:
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -251,7 +251,7 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
       - name: Report sage-storybook-site production deployment to GetDX
-        if: ${{ env.POSTFIX == 'production' && always() }}
+        if: ${{ env.POSTFIX == 'production' }}
         uses: Kajabi/getdx-deployment-identifier-action@main
         env:
           POSTFIX: ${{ needs.setup.outputs.postfix }}
