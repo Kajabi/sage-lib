@@ -6,9 +6,9 @@
 
 
 // Colors
-$-tooltip-bg-color: sage-color(grey, 900);
+$-tooltip-bg-color: var(--pine-color-primary);
 $-tooltip-light-bg-color: $-tooltip-bg-color;
-$-tooltip-font-color: sage-color(white);
+$-tooltip-font-color: var(--pine-color-text-primary);
 $-tooltip-light-font-color: $-tooltip-font-color;
 
 // Indicator arrow
@@ -17,8 +17,8 @@ $-tooltip-arrow-inactive: $-tooltip-arrow-size solid transparent;
 $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
-$-tooltip-shadow: sage-shadow(lg);
-$-tooltip-padding: sage-spacing(xs) rem(12px);
+$-tooltip-shadow: var(--pine-box-shadow-400);
+$-tooltip-padding: var(--pine-dimension-xs) var(--pine-dimension-150);
 $-tooltip-zindex: sage-z_index(modal, 10);
 $-tooltip-maxwidth: rem(200px);
 $-tooltip-large-maxwidth: rem(320px);
@@ -33,11 +33,11 @@ $-tooltip-large-maxwidth: rem(320px);
   text-align: center;
   color: $-tooltip-font-color;
   white-space: normal;
-  border-radius: sage-border(radius);
+  font: var(--pine-typography-body-medium);
+  letter-spacing: var(--pine-letter-spacing);
+  border-radius: var(--pine-dimension-xs);
   background-color: $-tooltip-bg-color;
   box-shadow: $-tooltip-shadow;
-
-  @extend %t-sage-body-xsmall;
 
   &::after {
     content: "";
