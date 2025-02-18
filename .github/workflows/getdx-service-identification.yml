@@ -6,6 +6,7 @@ on:
       - closed
     branches:
       - 'main'
+      - 'develop'
 
 jobs:
   identify-services:
