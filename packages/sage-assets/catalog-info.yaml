@@ -9,11 +9,8 @@ metadata:
     - scss
     - icons
   links:
-    - url: https://sage-lib-sassdocs.production.kajabi.farm/
-      title: SassDocs Production Site
-      icon: dashboard
-    - url: https://sage-lib-sassdocs.staging.kajabi.farm/
-      title: SassDocs Staging Site
+    - url: https://sage-lib-sassdocs.herokuapp.com/
+      title: SassDocs Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
@@ -35,11 +32,8 @@ metadata:
     - scss
     - sass
   links:
-    - url: https://sage-lib-sassdocs.production.kajabi.farm/
-      title: SassDocs Production Site
-      icon: dashboard
-    - url: https://sage-lib-sassdocs.staging.kajabi.farm/
-      title: SassDocs Staging Site
+    - url: https://sage-lib-sassdocs.herokuapp.com/
+      title: SassDocs Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
