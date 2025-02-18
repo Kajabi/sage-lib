@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.2.0](https://github.com/Kajabi/sage-lib/compare/v6.1.6...v6.2.0) (2025-02-18)
+
+
+### Bug Fixes
+
+* make sure main/develop on service identification calls ([5689cab](https://github.com/Kajabi/sage-lib/commit/5689cab8b95c177e06f502e3f73f2eeb18ac463a))
+* removing always() calls ([df13095](https://github.com/Kajabi/sage-lib/commit/df13095bdc7b878bbdd7c50dc7479b57458a8d07))
+
+
+### Features
+
+* adding workflows to report deployment/pr info to GetDX ([520a7fb](https://github.com/Kajabi/sage-lib/commit/520a7fb051f5cd5e3332f283a1f18ebde96b88dc))
+
+
+
+
+
 ## [6.1.6](https://github.com/Kajabi/sage-lib/compare/v6.1.5...v6.1.6) (2025-01-31)
 
 **Note:** Version bump only for package root
