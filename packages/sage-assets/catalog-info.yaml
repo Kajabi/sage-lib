@@ -9,8 +9,11 @@ metadata:
     - scss
     - icons
   links:
-    - url: https://sage-lib-sassdocs.herokuapp.com/
-      title: SassDocs Site
+    - url: https://sage-lib-sassdocs.production.kajabi.farm/
+      title: SassDocs Production Site
+      icon: dashboard
+    - url: https://sage-lib-sassdocs.staging.kajabi.farm/
+      title: SassDocs Staging Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
@@ -18,7 +21,7 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-lib
 ---
@@ -32,8 +35,11 @@ metadata:
     - scss
     - sass
   links:
-    - url: https://sage-lib-sassdocs.herokuapp.com/
-      title: SassDocs Site
+    - url: https://sage-lib-sassdocs.production.kajabi.farm/
+      title: SassDocs Production Site
+      icon: dashboard
+    - url: https://sage-lib-sassdocs.staging.kajabi.farm/
+      title: SassDocs Staging Site
       icon: dashboard
   annotations:
     github.com/project-slug: Kajabi/sage-lib
@@ -41,6 +47,6 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-assets
