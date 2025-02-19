@@ -2858,7 +2858,7 @@
     sortablejs "^1.15.0"
     tslib "^2.6.2"
 
-"@pine-ds/icons@*", "@pine-ds/icons@^8.0.0":
+"@pine-ds/icons@*", "@pine-ds/icons@^8.14.0":
   version "8.14.0"
   resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.14.0.tgz#fdcf5b9feb97d4ac262f837dc9e6eba3e48b3624"
   integrity sha512-ZPhc8kqlm3Yh15NzmVETYwQ5upOB8XbVdBaQNXdL9flw5DpkNm72GFF/isEw9qKRIGfeuMIfz1weuPrBmrphsQ==
