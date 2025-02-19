@@ -18,7 +18,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-lib
   dependsOn:
