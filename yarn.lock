@@ -2859,9 +2859,9 @@
     tslib "^2.6.2"
 
 "@pine-ds/icons@*", "@pine-ds/icons@^8.0.0":
-  version "8.13.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.13.0.tgz#918c7f25121d43de061d0e1ef58d3ffc2c678dec"
-  integrity sha512-TVT02Qd2lwykAKtNsPWLxdB1+n0/PCoYTsAwkAtou2gHE193lm5z2vtYQEr+5KQkxcVUlndQV2PsOFduPkwktQ==
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.14.0.tgz#fdcf5b9feb97d4ac262f837dc9e6eba3e48b3624"
+  integrity sha512-ZPhc8kqlm3Yh15NzmVETYwQ5upOB8XbVdBaQNXdL9flw5DpkNm72GFF/isEw9qKRIGfeuMIfz1weuPrBmrphsQ==
   dependencies:
     "@stencil/core" "4.22.2"
 

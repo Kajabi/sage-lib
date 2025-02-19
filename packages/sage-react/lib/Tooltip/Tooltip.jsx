@@ -1,4 +1,4 @@
-import React, { Children, useState, cloneElement } from 'react';
+import React, { Children, useState, useEffect, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { TooltipElement } from './TooltipElement';
@@ -23,24 +23,40 @@ export const Tooltip = ({
     setActive(false);
   }
 
+  // fix for Safari iOS back button issue
+  useEffect(() => {
+    const handlePageShow = () => {
+      setActive(false);
+    };
+
+    window.addEventListener('pageshow', handlePageShow);
+
+    return () => {
+      window.removeEventListener('pageshow', handlePageShow);
+    };
+  }, []);
+
   return (
     <>
-      {Children.map(children, (child) => cloneElement(child, {
-        onMouseEnter: handleActivate,
-        onFocus: handleActivate,
-        onMouseLeave: handleDeactivate,
-        onBlur: handleDeactivate,
-        ...rest,
-      }))}
-      {active && ReactDOM.createPortal(
-        <TooltipElement
-          content={content}
-          parentDomRect={parentDomRect}
-          position={position}
-          tooltipCustomClass={tooltipCustomClass}
-        />,
-        document.body
+      {Children.map(children, (child) =>
+        cloneElement(child, {
+          onMouseEnter: handleActivate,
+          onFocus: handleActivate,
+          onMouseLeave: handleDeactivate,
+          onBlur: handleDeactivate,
+          ...rest,
+        })
       )}
+      {active
+        && ReactDOM.createPortal(
+          <TooltipElement
+            content={content}
+            parentDomRect={parentDomRect}
+            position={position}
+            tooltipCustomClass={tooltipCustomClass}
+          />,
+          document.body
+        )}
     </>
   );
 };
