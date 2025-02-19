@@ -23,7 +23,7 @@ $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
 $-select-arrow-position: calc(100% - #{$-select-height});
 $-select-arrow-position-inverse: calc(100% - #{$-select-arrow-font-size + $-select-margin-label});
 $-select-arrow-position-with-message: calc(100% - #{$-select-height + $-select-arrow-font-size});
-$-select-arrow-position-inverse-with-message: calc(100% - (var(--pine-dimension-md) * 1.25 + var(--pine-dimension-2xs) + var(--pine-dimension-2xs))); // 100% - ((16px * 1.25) + 8px + 8px) = 100% - (20px + 16px) = 100% - 36px
+$-select-arrow-position-inverse-with-message: calc(100% - 36px);
 
 .sage-select {
   @include sage-form-field-group;
