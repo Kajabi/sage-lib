@@ -48,12 +48,14 @@ DefaultWithActions.args = {
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
+        kjbElementId="getUnlimitedPagesButton"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
         suppressDefaultClass
+        kjbElementId="checkUsageLink"
       >
         Check Usage
       </Link>
@@ -66,6 +68,7 @@ DismissableAlert.args = {
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
+  kjbElementId: 'exampleAlert',
   onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
 };
 
@@ -80,11 +83,13 @@ DismissableAlertWithActions.args = {
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
+        kjbElementId="checkUsageButton"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
+        kjbElementId="checkUsage"
         suppressDefaultClass
       >
         Check Usage
@@ -97,17 +102,20 @@ export const NonDismissableAlert = Template.bind({});
 NonDismissableAlert.args = {
   color: Alert.COLORS.APPROACHING,
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
+  kjbElementId: 'nonDismissableAlert',
   actions: (
     <>
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
+        kjbElementId="getUnlimitedPages"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
         suppressDefaultClass
+        kjbElementId="checkUsage"
       >
         Check Usage
       </Link>
@@ -121,11 +129,13 @@ SmallAlert.args = {
   dismissable: true,
   title: null,
   description: 'Body duis rhoncus neque, sed nulla sed quis fames et tu odio.',
+  kjbElementId: 'smallAlert',
   actions: (
     <>
       <Link
         href="//example.com"
         suppressDefaultClass
+        kjbElementId="checkUsage"
       >
         Check Usage
       </Link>

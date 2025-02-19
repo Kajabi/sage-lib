@@ -23,6 +23,7 @@ export const Modal = ({
   large,
   onExit,
   size,
+  kjbElementId,
   ...rest
 }) => {
   const [mouseDownSrc, setMouseDownSrc] = useState(null);
@@ -94,6 +95,7 @@ export const Modal = ({
       <div
         className={`sage-modal__container ${containerClassName || ''}`}
         aria-modal="true"
+        data-kjb-element={kjbElementId}
         {...rest}
       >
         {children}
@@ -126,6 +128,7 @@ Modal.defaultProps = {
   disableBackgroundDismiss: false,
   onExit: (val) => val,
   size: null,
+  kjbElementId: null,
 };
 
 Modal.propTypes = {
@@ -147,5 +150,6 @@ Modal.propTypes = {
   isClosing: PropTypes.bool,
   large: PropTypes.bool,
   onExit: PropTypes.func,
-  size: PropTypes.oneOf(Object.values(Modal.SIZES))
+  size: PropTypes.oneOf(Object.values(Modal.SIZES)),
+  kjbElementId: PropTypes.string,
 };

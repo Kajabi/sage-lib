@@ -8,6 +8,7 @@ export const Tooltip = ({
   children,
   content,
   position,
+  kjbElementId,
   tooltipCustomClass,
   ...rest
 }) => {
@@ -37,6 +38,7 @@ export const Tooltip = ({
           content={content}
           parentDomRect={parentDomRect}
           position={position}
+          kjbElementId={kjbElementId}
           tooltipCustomClass={tooltipCustomClass}
         />,
         document.body
@@ -50,6 +52,7 @@ Tooltip.POSITIONS = TOOLTIP_POSITIONS;
 
 Tooltip.defaultProps = {
   position: TOOLTIP_POSITIONS.DEFAULT,
+  kjbElementId: null,
   tooltipCustomClass: '',
 };
 
@@ -57,5 +60,6 @@ Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
+  kjbElementId: PropTypes.string,
   tooltipCustomClass: PropTypes.string,
 };

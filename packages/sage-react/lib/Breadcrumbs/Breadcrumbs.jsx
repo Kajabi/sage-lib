@@ -11,6 +11,7 @@ export const Breadcrumbs = ({
   icon,
   isProgressbar,
   items,
+  kjbElementId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -38,6 +39,7 @@ export const Breadcrumbs = ({
         className={`sage-breadcrumbs__link ${isCurrent && 'sage-breadcrumbs__link--current'}`}
         suppressDefaultClass={true}
         tag={linkTag}
+        kjbElementId="breadcrumbListItem"
         {...otherProps}
       >
         {(icon && items.length === 1 && i === 0) && (
@@ -59,6 +61,7 @@ export const Breadcrumbs = ({
     <nav
       aria-label="Breadcrumbs"
       className={classNames}
+      data-kjb-element={kjbElementId}
       {...rest}
     >
       {items.length > 1 ? (
@@ -81,6 +84,7 @@ Breadcrumbs.defaultProps = {
   icon: SageTokens.ICONS.CARET_LEFT,
   isProgressbar: false,
   items: [],
+  kjbElementId: null,
 };
 
 Breadcrumbs.propTypes = {
@@ -88,4 +92,5 @@ Breadcrumbs.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isProgressbar: PropTypes.bool,
   items: PropTypes.arrayOf(breadcrumbItemPropTypes),
+  kjbElementId: PropTypes.string,
 };
