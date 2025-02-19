@@ -10,10 +10,10 @@ metadata:
     - documentation
   links:
     - url: https://sage-lib-documentation.production.kajabi.farm/pages/index
-      title: Storybook Production Site
+      title: Public Documentation Production Site
       icon: dashboard
     - url: https://sage-lib-documentation.staging.kajabi.farm/pages/index
-      title: Storybook Production Site
+      title: Public Documentation Staging Site
       icon: dashboard
 spec:
   type: website
