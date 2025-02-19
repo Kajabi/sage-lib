@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.4](https://github.com/Kajabi/sage-lib/compare/v6.2.3...v6.2.4) (2025-02-19)
+
+
+### Bug Fixes
+
+* tooltip visibility issue on ios safari back navigation ([#2068](https://github.com/Kajabi/sage-lib/issues/2068)) ([770a0dc](https://github.com/Kajabi/sage-lib/commit/770a0dca9923b2d609a18e956a1714f03d7a4eeb))
+
+
+
+
+
 ## [6.2.3](https://github.com/Kajabi/sage-lib/compare/v6.2.2...v6.2.3) (2025-02-19)
 
 **Note:** Version bump only for package @kajabi/sage-react
