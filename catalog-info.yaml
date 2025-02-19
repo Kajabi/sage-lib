@@ -21,7 +21,7 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
 ---
 apiVersion: backstage.io/v1alpha1
@@ -38,7 +38,7 @@ metadata:
 spec:
   type: tool
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
 ---
 apiVersion: backstage.io/v1alpha1

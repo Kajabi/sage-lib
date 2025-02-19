@@ -12,6 +12,10 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-lib
+  dependsOn:
+    - sage-assets
+    - sage-react
+    - sage-system

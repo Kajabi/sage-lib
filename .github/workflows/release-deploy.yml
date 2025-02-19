@@ -136,6 +136,16 @@ jobs:
           push: true
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
+  
+      - name: Report sage-docs-site production deployment to GetDX
+        if: ${{ env.POSTFIX == 'production' }}
+        uses: Kajabi/getdx-deployment-identifier-action@main
+        env:
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          getdx-instance-name: 'kajabi'
+          getdx-token: ${{ secrets.GETDX_DEPLOYMENT_TOKEN }}
+          service-name: 'sage-docs-site'
 
   # This is kind of "hacky", but we were having problems with the Dockerfile doing a
   # correct build for Storybook. This will build it on the runner and then just copy
@@ -187,6 +197,16 @@ jobs:
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
+      - name: Report sage-storybook-site production deployment to GetDX
+        if: ${{ env.POSTFIX == 'production' }}
+        uses: Kajabi/getdx-deployment-identifier-action@main
+        env:
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          getdx-instance-name: 'kajabi'
+          getdx-token: ${{ secrets.GETDX_DEPLOYMENT_TOKEN }}
+          service-name: 'sage-storybook-site'
+
   deploy-sassdocs-site:
     needs: [setup, login]
     runs-on: ubuntu-latest
@@ -213,7 +233,6 @@ jobs:
         with:
           mask-password: true
 
-
       # Sassdocs Site
       - name: Build and push sassdocs
         uses: docker/build-push-action@v2
@@ -230,3 +249,13 @@ jobs:
           push: true
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
+
+      - name: Report sage-storybook-site production deployment to GetDX
+        if: ${{ env.POSTFIX == 'production' }}
+        uses: Kajabi/getdx-deployment-identifier-action@main
+        env:
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          getdx-instance-name: 'kajabi'
+          getdx-token: ${{ secrets.GETDX_DEPLOYMENT_TOKEN }}
+          service-name: 'sage-sassdocs-site'
