@@ -84,6 +84,7 @@
   },
   "dependencies": {
     "@kajabi/sage-assets": "^6.2.1",
+    "@pine-ds/react": "^2.14.0",
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "focus-trap": "^6.2.2",

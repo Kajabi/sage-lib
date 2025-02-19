@@ -20,16 +20,16 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   align-items: center;
   overflow: hidden;
   margin: 0;
-  padding: 0 0 sage-spacing(sm);
+  padding: 0 0 var(--pine-dimension-sm);
   white-space: nowrap;
   color: $-tab-color-default;
   text-decoration: none;
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default), box-shadow map-get($sage-transitions, default);
 
   .sage-tabs--filter & {
-    padding: rem(6px) rem(14px);
-    background-color: sage-color(grey, 200);
-    border-radius: sage-border(radius-x-large);
+    padding: calc(var(--pine-dimension-2xs) * 1.5) calc(var(--pine-dimension-xs) * 1.75); // 4px * 1.5 = 6px, 8px * 1.75 = 14px
+    background-color: var(--pine-color-background-container-disabled);
+    border-radius: calc(var(--pine-dimension-2xl) * 2.0833); // 48px * 2.0833 = 100px
     @extend %t-sage-body-small-semi;
 
     &::after {
@@ -42,7 +42,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &:hover {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      background: sage-color(grey, 300);
+      background: var(--pine-color-border);
     }
   }
 
@@ -52,10 +52,10 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   &:focus-visible {
     @include sage-focus-ring();
-    border-radius: sage-border(radius-small);
+    border-radius: var(--pine-dimension-2xs);
 
     .sage-tabs--filter & {
-      border-radius: sage-border(radius-x-large);
+      border-radius: calc(var(--pine-dimension-2xl) * 2.0833); // 48px * 2.0833 = 100px
     }
 
     &::after {
@@ -67,8 +67,8 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &.sage-tab--active {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      color: sage-color(white);
-      background: sage-color(grey, 900);
+      color: var(--pine-color-background-container);
+      background: var(--pine-color-primary);
       &::after {
         display: none;
       }
@@ -89,22 +89,22 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   @include sage-tab-underline;
 
   .sage-tabs--with-background & {
-    padding: sage-spacing(xs) sage-spacing(sm) sage-spacing(md);
-    border-start-start-radius: sage-border(radius-large);
-    border-start-end-radius: sage-border(radius-large);
+    padding: var(--pine-dimension-xs) var(--pine-dimension-sm) var(--pine-dimension-md);
+    border-start-start-radius: var(--pine-dimension-sm);
+    border-start-end-radius: var(--pine-dimension-sm);
     background-clip: padding-box;
 
     @extend %t-sage-body-xsmall-med;
 
     &::after {
-      left: sage-spacing(sm);
-      right: sage-spacing(sm);
-      bottom: sage-spacing(sm);
+      left: var(--pine-dimension-sm);
+      right: var(--pine-dimension-sm);
+      bottom: var(--pine-dimension-sm);
       opacity: 0;
     }
 
     &:focus-visible {
-      border-radius: sage-border(radius-small);
+      border-radius: var(--pine-dimension-2xs);
     }
 
     &:focus-visible::after,
@@ -115,12 +115,12 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--progressbar & {
     overflow: visible;
-    gap: sage-grid-gap-options(sm);
+    gap: var(--pine-dimension-sm);
 
     &:not(:last-child) {
       &::before {
         order: 2;
-        color: sage-color(grey, 600);
+        color: var(--pine-color-neutral-hover);
 
         @include sage-icon-base(right-small, xl, pine);
       }
@@ -128,12 +128,12 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   .sage-tabs--with-background &.sage-tab--active {
-    background-color: sage-color(white);
+    background-color: var(--pine-color-background-container);
     border-end-end-radius: 0;
     border-end-start-radius: 0;
 
     &:focus-visible {
-      border-radius: sage-border(radius-small);
+      border-radius: var(--pine-dimension-2xs);
     }
   }
 }

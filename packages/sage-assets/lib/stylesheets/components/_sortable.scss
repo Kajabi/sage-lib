@@ -5,8 +5,8 @@
 ////
 
 
-$-sortable-image-width: rem(82px);
-$-sortable-image-height: rem(48px);
+$-sortable-image-width: calc(var(--pine-dimension-2xl) + var(--pine-dimension-xl) - var(--pine-dimension-2xs)); // 48px + 40px - 6px = 82px
+$-sortable-image-height: var(--pine-dimension-2xl);
 
 
 .sage-sortable {
@@ -16,44 +16,44 @@ $-sortable-image-height: rem(48px);
 .sage-sortable__item {
   display: grid;
   grid-template-columns: min-content min-content minmax(0, 1fr) auto auto;
-  gap: sage-spacing(card);
+  gap: var(--pine-dimension-md);
   align-items: center;
-  padding: sage-spacing(xs) sage-spacing(panel);
-  background: sage-color(white);
+  padding: var(--pine-dimension-xs) var(--pine-dimension-lg);
+  background: var(--pine-color-background-container);
   cursor: grab;
 
   &::before {
     @include sage-icon-base(handle-2-vertical, md, pine);
     padding: 0;
-    color: sage-color(grey, 600);
+    color: var(--pine-color-primary);
   }
 
   &:focus,
   &:hover {
-    background-color: sage-color(grey, 150);
+    background-color: var(--pine-color-background-container-hover);
 
     &::before {
-      color: sage-color(primary, 300);
+      color: var(--pine-color-accent);
     }
   }
 
   &.sage-sortable__item--card {
-    padding: sage-spacing(xs) sage-spacing(card);
-    border-block-end: sage-border();
-    border-inline-start: sage-border();
-    border-inline-end: sage-border();
+    padding: var(--pine-dimension-xs) var(--pine-dimension-md);
+    border-block-end: var(--pine-border);
+    border-inline-start: var(--pine-border);
+    border-inline-end: var(--pine-border);
     transition: map-get($sage-transitions, default);
     transition-property: border-color, box-shadow;
 
     &:first-child {
-      border-start-start-radius: sage-border(radius);
-      border-start-end-radius: sage-border(radius);
-      border-block-start: sage-border();
+      border-start-start-radius: var(--pine-dimension-xs);
+      border-start-end-radius: var(--pine-dimension-xs);
+      border-block-start: var(--pine-border);
     }
 
     &:last-child {
-      border-end-start-radius: sage-border(radius);
-      border-end-end-radius: sage-border(radius);
+      border-end-start-radius: var(--pine-dimension-xs);
+      border-end-end-radius: var(--pine-dimension-xs);
     }
   }
 
@@ -63,7 +63,7 @@ $-sortable-image-height: rem(48px);
     @include target-safari {
       /* stylelint-disable max-nesting-depth */
       .sage-card__row {
-        margin-inline-start: sage-spacing(sm);
+        margin-inline-start: var(--pine-dimension-sm);
       }
       /* stylelint-enable max-nesting-depth */
     }
@@ -75,7 +75,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--ghost {
-    background: sage-color(grey, 200);
+    background: var(--pine-color-background-container-hover);
   }
 }
 
@@ -84,9 +84,9 @@ $-sortable-image-height: rem(48px);
   overflow: hidden;
   height: $-sortable-image-height;
   width: $-sortable-image-width;
-  background: sage-color(grey, 200);
-  border-radius: sage-border(radius);
-  border: sage-border();
+  background: var(--pine-color-border-disabled);
+  border-radius: var(--pine-dimension-xs);
+  border: var(--pine-border);
 
   img {
     position: absolute;
@@ -115,7 +115,7 @@ $-sortable-image-height: rem(48px);
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
   @include truncate();
-  color: sage-color(grey, 600);
+  color: var(--pine-color-neutral-hover);
 }
 
 .sage-sortable__item-actions {

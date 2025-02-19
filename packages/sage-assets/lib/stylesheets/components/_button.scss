@@ -10,105 +10,105 @@
 // Base style variables
 //
 $-btn-transition: map-get($sage-transitions, default);
-$-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
-$-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
-$-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
-$-btn-border-radius: 9999px;
-$-btn-shadow-base: sage-shadow(050);
-$-btn-icon-only-standard-size: rem(40px);
-$-btn-icon-only-subtle-size: rem(16px);
-$-btn-icon-only-hover-size: rem(24px);
-$-btn-icon-only-focus-size: rem(32px);
-$-btn-toolbar-group-height: rem(40px);
+$-btn-base-padding-block: var(--pine-dimension-xs); // vertical (y) axis
+$-btn-base-padding-inline: var(--pine-dimension-sm); // horizontal (x) axis
+$-btn-base-line-height: var(--pine-line-height-body);
+$-btn-border-radius: var(--pine-border-radius-full);
+$-btn-shadow-base: var(--pine-box-shadow-050);
+$-btn-icon-only-standard-size: var(--pine-dimension-xl);
+$-btn-icon-only-subtle-size: var(--pine-dimension-sm);
+$-btn-icon-only-hover-size: var(--pine-dimension-md);
+$-btn-icon-only-focus-size: var(--pine-dimension-lg);
+$-btn-toolbar-group-height: var(--pine-dimension-xl);
 $-btn-disclosure-left-padding: rem(26px);
 
 $-btn-base-styles: (
   accent: (
     default: (
-      color: sage-color(white),
-      background-color: sage-color(purple, 500),
-      border-color: sage-color(purple, 500),
-      ring-color: sage-color(purple, 300),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-accent),
+      border-color: var(--pine-color-accent),
+      ring-color: var(--pine-color-focus-ring),
     ),
     hover: (
-      color: sage-color(white),
-      background-color: sage-color(purple, 600),
-      border-color: sage-color(purple, 600),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-accent-hover),
+      border-color: var(--pine-color-accent-hover),
     ),
     focus: (
-      color: sage-color(white),
-      background-color: sage-color(purple, 500),
-      border-color: sage-color(purple, 500),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-accent),
+      border-color: var(--pine-color-accent),
     ),
     disabled: (
-      color: sage-color(purple, 300),
-      background-color: sage-color(purple, 150),
-      border-color: sage-color(purple, 150),
+      color: var(--pine-color-text-accent-disabled),
+      background-color: var(--pine-color-accent-disabled),
+      border-color: var(--pine-color-accent-disabled),
     )
   ),
   primary: (
     default: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 900),
-      border-color: sage-color(grey, 900),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-primary),
+      border-color: var(--pine-color-primary),
       ring-color: sage-color(purple, 300),
     ),
     hover: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 950),
-      border-color: sage-color(grey, 950),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-primary-hover),
+      border-color: var(--pine-color-primary-hover),
     ),
     focus: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 900),
-      border-color: sage-color(grey, 900),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-primary),
+      border-color: var(--pine-color-primary),
     ),
     disabled: (
-      color: sage-color(grey, 400),
-      background-color: sage-color(grey, 150),
-      border-color: sage-color(grey, 150),
+      color: var(--pine-color-text-primary-disabled),
+      background-color: var(--pine-color-primary-disabled),
+      border-color: var(--pine-color-primary-disabled),
     )
   ),
   secondary: (
     default: (
-      color: sage-color(grey, 800),
-      background-color: sage-color(white),
-      ring-color: sage-color(purple, 300),
+      color: var(--pine-color-text-secondary),
+      background-color: var(--pine-color-secondary),
+      ring-color: var(--pine-color-focus-ring),
     ),
     hover: (
-      color: sage-color(grey, 950),
-      background-color: sage-color(grey, 100),
+      color: var(--pine-color-text-secondary-hover),
+      background-color: var(--pine-color-secondary-hover),
     ),
     focus: (
-      color: sage-color(grey, 900),
-      background-color: sage-color(white),
+      color: var(--pine-color-text-secondary),
+      background-color: var(--pine-color-secondary),
     ),
     disabled: (
-      color: sage-color(grey, 600),
-      background-color: sage-color(grey, 100),
+      color: var(--pine-color-text-secondary-disabled),
+      background-color: var(--pine-color-secondary-disabled),
     )
   ),
   danger: (
     default: (
-      color: sage-color(white),
-      background-color: sage-color(red, 500),
-      border-color: sage-color(red, 500),
-      ring-color: sage-color(red, 300),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-danger),
+      border-color: var(--pine-color-danger),
+      ring-color: var(--pine-color-focus-ring-danger),
     ),
     hover: (
-      color: sage-color(white),
-      background-color: sage-color(red, 600),
-      border-color: sage-color(red, 600),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-danger-hover),
+      border-color: var(--pine-color-danger-hover),
     ),
     focus: (
-      color: sage-color(white),
-      background-color: sage-color(red, 500),
-      border-color: sage-color(red, 500),
+      color: var(--pine-color-text-primary),
+      background-color: var(--pine-color-danger),
+      border-color: var(--pine-color-danger),
     ),
     disabled: (
-      color: sage-color(red, 300),
-      background-color: sage-color(red, 150),
-      border-color: sage-color(red, 150),
+      color: var(--pine-color-text-danger-disabled),
+      background-color: var(--pine-color-danger-disabled),
+      border-color: var(--pine-color-danger-disabled),
     )
   ),
 );
@@ -166,7 +166,7 @@ $-alert-close-btn-background-colors: (
 //
 // Custom variables
 //
-$-btn-interactive-badge-icon-size: rem(24px);
+$-btn-interactive-badge-icon-size: var(--pine-dimension-md);
 $-btn-loading-min-height: rem(36px);
 
 // stylelint-disable max-nesting-depth
@@ -217,7 +217,7 @@ $-btn-loading-min-height: rem(36px);
     border-radius: inherit;
 
     &:hover {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-secondary);
     }
   }
 
@@ -233,11 +233,11 @@ $-btn-loading-min-height: rem(36px);
     width: 100%;
     padding-block-start: rem(9px);
     padding-block-end: rem(9px);
-    border-radius: 0;
+    border-radius: var(--pine-dimension-none);
   }
 
   .sage-dropdown__trigger > & {
-    line-height: sage-line-height(body);
+    line-height: var(--pine-line-height-body);
   }
 
   .sage-dropdown__trigger--custom-width > & {
@@ -245,10 +245,10 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-dropdown__trigger--select & {
-    min-height: rem(40px);
+    min-height: var(--pine-dimension-xl);
     font-family: $-body-font-stack;
-    font-weight: sage-font-weight(medium);
-    border-width: 0;
+    font-weight: var(--pine-font-weight-medium);
+    border-width: var(--pine-dimension-none);
     box-shadow: sage-border-interactive(default);
     &:hover {
       box-shadow: sage-border-interactive(hover);
@@ -264,7 +264,7 @@ $-btn-loading-min-height: rem(36px);
     width: 100%;
 
     &::before {
-      margin-inline-end: 0;
+      margin-inline-end: var(--pine-dimension-none);
     }
 
     &::after {
@@ -272,41 +272,36 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-input-group & {
-    border-start-start-radius: 0;
-    border-end-start-radius: 0;
-  }
-
   .sage-badge & {
     display: flex;
     justify-content: center;
     position: absolute;
-    inset-inline-end: 0;
+    inset-inline-end: var(--pine-dimension-none);
     width: $-btn-interactive-badge-icon-size;
-    margin: auto 0;
-    border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
+    margin: auto var(--pine-dimension-none);
+    border-radius: var(--pine-dimension-none) sage-border(radius-x-large) sage-border(radius-x-large) var(--pine-dimension-none);
 
     &::before {
       transform: translateY(1px); /* needed as sage-font-size(sm) equates to 13px, not 14px. This 1px is accounting for that 1px */
-      font-size: sage-font-size(sm);
+      font-size: var(--pine-font-size-body-sm);
     }
 
     &::after {
       width: $-btn-interactive-badge-icon-size;
       height: $-btn-interactive-badge-icon-size;
-      border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
+      border-radius: var(--pine-dimension-none) sage-border(radius-x-large) sage-border(radius-x-large) var(--pine-dimension-none);
     }
 
     &:first-child:not(:last-child) {
-      margin-inline-end: sage-spacing(xs);
+      margin-inline-end: var(--pine-dimension-xs);
     }
 
     + & {
-      margin-inline-start: 0;
+      margin-inline-start: var(--pine-dimension-none);
     }
 
     &.sage-btn--tag::before {
-      font-size: sage-font-size(md, false);
+      font-size: var(--pine-font-size-body-md);
     }
   }
 
@@ -315,7 +310,7 @@ $-btn-loading-min-height: rem(36px);
   }
   .sage-sortable__item-actions & {
     &:not(:last-child) {
-      margin-inline-end: sage-spacing(sm);
+      margin-inline-end: var(--pine-dimension-sm);
     }
   }
 
@@ -324,15 +319,19 @@ $-btn-loading-min-height: rem(36px);
     z-index: sage-z-index(default, 1);
     inset-inline-end: rem(1px);
     bottom: rem(1px);
-    height: rem(38px);
+    height: rem(34px);
     background-color: sage-color(white);
-    box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
+    background-color: var(--pine-color-secondary);
     border-color: transparent;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
 
     @include sage-focus-outline--update-color(transparent);
 
     &::before {
-      margin-inline-end: 0;
+      margin-inline-end: var(--pine-dimension-none);
     }
 
     &:focus {
@@ -343,24 +342,24 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar-btn-group > &,
   .sage-toolbar__group > &,
   .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
-    border-radius: 0;
+    border-radius: var(--pine-dimension-none);
   }
 
   .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary) {
     position: absolute;
-    inset-inline-end: 0;
-    inset-block-end: 0;
-    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
+    inset-inline-end: var(--pine-dimension-none);
+    inset-block-end: var(--pine-dimension-none);
+    min-height: calc(#{$-btn-toolbar-group-height} + var(--pine-dimension-025)); /* expand to toolbar group height + border offset */
   }
 
   .sage-toolbar__group > .sage-input ~ &.sage-btn--primary,
   .sage-toolbar__group > .sage-search ~ &.sage-btn--primary {
-    box-shadow: 0 0 0 1px sage-color(grey, 900);
+    box-shadow: 0 0 0 1px var(--pine-color-primary);
     border-color: transparent;
   }
 
   .sage-toolbar__group .sage-dropdown__trigger > & {
-    border-color: sage-color(grey, 500);
+    border-color: var(--pine-color-border);
   }
 
   .sage-panel-controls__toolbar-btn-group &:not(:only-child) {
@@ -368,13 +367,13 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group > &:first-child {
-    border-start-start-radius: sage-border(radius);
-    border-end-start-radius: sage-border(radius);
+    border-start-start-radius: var(--pine-dimension-xs);
+    border-end-start-radius: var(--pine-dimension-xs);
   }
 
   .sage-panel-controls__toolbar-btn-group > &:last-child {
-    border-start-end-radius: sage-border(radius);
-    border-end-end-radius: sage-border(radius);
+    border-start-end-radius: var(--pine-dimension-xs);
+    border-end-end-radius: var(--pine-dimension-xs);
   }
 
   .sage-toolbar__group > &:first-child,
@@ -400,30 +399,30 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
-    border-radius: sage-border(radius);
+    border-radius: var(--pine-dimension-xs);
   }
 
   .sage-panel-controls__toolbar > &,
   .sage-toolbar > &,
   .sage-panel-controls__pagination > & {
-    border-radius: sage-border(radius);
+    border-radius: var(--pine-dimension-xs);
   }
 
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__pagination > & {
     &:not(:last-child) {
-      margin-inline-end: sage-spacing(card);
+      margin-inline-end: var(--pine-dimension-md);
     }
   }
 
   .sage-panel-controls__toolbar &,
   .sage-toolbar & {
-    border-color: sage-color(grey, 500);
+    border-color: var(--pine-color-border);
   }
 
   .sage-upload-card & {
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(sage-color(purple, 300));
+      @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
     }
   }
 
@@ -445,11 +444,11 @@ $-btn-loading-min-height: rem(36px);
       @include sage-icon-base(caret-down, xs, pine);
 
       inset-inline-end: $-btn-disclosure-left-padding;
-      font-weight: sage-font-weight(bold);
+      font-weight: var(--pine-font-weight-bold);
     }
 
     &[class*="icon-only"].sage-btn--small::after {
-      inset-inline-end: rem(12px);
+      inset-inline-end: var(--pine-dimension-150);
     }
 
     &:has(pds-icon) {
@@ -462,7 +461,7 @@ $-btn-loading-min-height: rem(36px);
   .toolbar-editor & {
     $-btn-rte-padding: rem(6px);
 
-    padding: $-btn-base-padding-block sage-spacing(lg) $-btn-base-padding-block sage-spacing(xs);
+    padding: $-btn-base-padding-block var(--pine-dimension-lg) $-btn-base-padding-block var(--pine-dimension-xs);
     border-radius: 6px;
     border-width: 0;
 
@@ -471,30 +470,30 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &::before {
-      font-size: sage-font-size(body-xs);
+      font-size: var(--pine-font-size-body-sm);
     }
 
     &::after {
       right: 7px;
       font-size: 11px;
-      font-weight: sage-font-weight(bold);
+      font-weight: var(--pine-font-weight-bold);
     }
 
     &:hover {
-      background-color: sage-color(grey, 200);
+      background-color: var(--pine-color-grey-200);
     }
 
     &.sage-btn--selected {
-      color: sage-color(white);
-      background-color: sage-color(grey, 900);
+      color: var(--pine-color-text-primary);
+      background-color: var(--pine-color-primary);
 
       &::after {
-        color: sage-color(white);
+        color: var(--pine-color-secondary);
       }
     }
 
     &:not(.sage-btn--subtle):not(.sage-btn--disclosure) {
-      padding: sage-spacing(xs);
+      padding: var(--pine-dimension-xs);
 
       @media (max-width: sage-breakpoint(sm-max)) {
         padding: $-btn-rte-padding;
@@ -598,27 +597,27 @@ a.sage-btn {
 
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
-  color: sage-color(grey, 800);
-  background-color: sage-color(white);
-  border: 1px solid sage-color(grey, 200);
+  color: var(--pine-color-text-secondary);
+  background-color: var(--pine-color-secondary);
+  border: var(--pine-border);
 
   &:hover {
-    color: sage-color(grey, 950);
-    background-color: sage-color(grey, 100);
-    border-color: sage-color(grey, 300);
+    color: var(--pine-color-text-secondary-hover);
+    background-color: var(--pine-color-secondary-hover);
+    border-color: var(--pine-color-border-hover);
   }
 
   &:focus-visible,
   &:active {
-    background-color: sage-color(white);
-    border-color: sage-color(grey);
+    background-color: var(--pine-color-secondary);
+    border-color: var(--pine-color-border);
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: sage-color(grey, 400);
-    background-color: sage-color(white);
-    border-color: sage-color(grey, 150);
+    color: var(--pine-color-text-secondary-disabled);
+    background-color: var(--pine-color-secondary-disabled);
+    border-color: var(--pine-color-border-disabled);
   }
 }
 
@@ -865,6 +864,6 @@ a.sage-btn {
 }
 
 .sage-btn-group--border-top {
-  padding-block-start: sage-spacing(lg);
-  border-block-start: 1px solid sage-color(grey, 300);
+  padding-block-start: var(--pine-dimension-lg);
+  border-block-start: var(--pine-border);
 }
