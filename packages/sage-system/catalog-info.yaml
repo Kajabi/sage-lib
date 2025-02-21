@@ -7,10 +7,10 @@ metadata:
     - javascript
   annotations:
     github.com/project-slug: Kajabi/sage-lib
-    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-react/
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-system/
 spec:
   type: library
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-lib

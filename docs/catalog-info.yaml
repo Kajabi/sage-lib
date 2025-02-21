@@ -10,11 +10,16 @@ metadata:
     - documentation
   links:
     - url: https://sage-lib-documentation.production.kajabi.farm/pages/index
-      title: Public Documentation Site
+      title: Public Documentation Production Site
+      icon: dashboard
+    - url: https://sage-lib-documentation.staging.kajabi.farm/pages/index
+      title: Public Documentation Staging Site
       icon: dashboard
 spec:
   type: website
   lifecycle: production
-  owner: user-experience
+  owner: design-system-services
   system: sage
   subcomponentOf: sage-lib
+  dependsOn:
+    - sage-packs
