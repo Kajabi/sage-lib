@@ -76,7 +76,7 @@ $-copy-text-color-hover: var(--pine-color-text-secondary-hover);
   }
 
   &:hover {
-    background-color: var(--pine-color-grey-200);
+    background-color: inherit;
   }
 
   &:hover::before {
