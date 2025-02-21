@@ -82,7 +82,7 @@ export const Avatar = ({
         <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} id={image.id} />
       )}
       {(!image.src || useFallbackGraphic) && (
-        <pds-icon name="user-filled" color="var(--pine-color-mercury-500)" className="sage-avatar__graphic" />
+        <pds-icon name="user-filled" color="var(--pine-color-mercury-500)" class="sage-avatar__graphic" />
       )}
     </div>
   );
