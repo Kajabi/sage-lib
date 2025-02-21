@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.5](https://github.com/Kajabi/sage-lib/compare/v6.2.4...v6.2.5) (2025-02-21)
+
+
+### Bug Fixes
+
+* title for the docs site links ([2212cd7](https://github.com/Kajabi/sage-lib/commit/2212cd7b9e151ea83b68d4cd085a0a5949db4740))
+* update docs/catalog-info.yaml with correct owner ([01f42dd](https://github.com/Kajabi/sage-lib/commit/01f42dd077651e924669f4177d4cea91605f4f06))
+* updating catalog-infos and adding workflows ([634b183](https://github.com/Kajabi/sage-lib/commit/634b1835f1b32a86a6c072f020edfd97f56533c6))
+
+
+
+
+
 ## [6.2.4](https://github.com/Kajabi/sage-lib/compare/v6.2.3...v6.2.4) (2025-02-19)
 
 **Note:** Version bump only for package @kajabi/sage

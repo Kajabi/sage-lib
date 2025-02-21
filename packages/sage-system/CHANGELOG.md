@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.5](https://github.com/Kajabi/sage-lib/compare/v6.2.4...v6.2.5) (2025-02-21)
+
+
+### Bug Fixes
+
+* updating catalog-infos and adding workflows ([634b183](https://github.com/Kajabi/sage-lib/commit/634b1835f1b32a86a6c072f020edfd97f56533c6))
+
+
+
+
+
 ## [6.1.1](https://github.com/Kajabi/sage-lib/compare/v6.1.0...v6.1.1) (2024-11-01)
 
 
