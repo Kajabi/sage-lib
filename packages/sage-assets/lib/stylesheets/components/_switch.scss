@@ -75,7 +75,7 @@ $-switch-toggle-size: var(--pine-dimension-sm);
 
 .sage-switch__message {
   @include sage-form-toggle-message;
-  margin-inline-start: ($-switch-width + $-switch-label-left-spacing);
+  margin-inline-start: calc($-switch-width + $-switch-label-left-spacing);
 
   .sage-switch--toggle-right & {
     margin-inline-start: 0;
