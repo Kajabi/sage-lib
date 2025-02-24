@@ -608,7 +608,7 @@
 
   display: inline-block;
   flex: 1;
-  margin-inline-start: var(--pine-dimension-xs);
+  margin-inline-start: calc(var(--pine-dimension-md) / 2);
   vertical-align: top;
   cursor: pointer;
 }
