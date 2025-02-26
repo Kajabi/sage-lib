@@ -94,8 +94,8 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__text {
-  font: var(--pine-typography-heading-6);
   display: inline-flex;
+  font: var(--pine-typography-heading-6);
   margin-inline-end: auto;
   color: inherit;
 }
