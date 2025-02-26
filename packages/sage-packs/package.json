@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-packs",
-  "version": "6.2.7",
+  "version": "6.2.8",
   "description": "Sage Packs",
   "keywords": [
     "sage",
@@ -31,8 +31,8 @@
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
   "dependencies": {
-    "@kajabi/sage-assets": "^6.2.7",
-    "@kajabi/sage-react": "^6.2.7",
+    "@kajabi/sage-assets": "^6.2.8",
+    "@kajabi/sage-react": "^6.2.8",
     "@kajabi/sage-system": "^6.2.5"
   },
   "devDependencies": {
