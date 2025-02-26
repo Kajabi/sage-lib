@@ -8,28 +8,32 @@
 $-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
-    background: sage-color(primary, 300),
+    background: sage-color(purple, 600),
     text: sage-color(white),
     text-hover: sage-color(primary, 100),
-    icon: "flag",
+    icon: "info-circle-filled",
+    icon-color: sage-color(purple, 050),
   ),
   secondary: (
     background: sage-color(grey, 200),
     text: sage-color(grey, 950),
     text-hover: sage-color(grey, 800),
-    icon: "info-circle",
+    icon: "info-circle-filled",
+    icon-color: sage-color(grey, 700),
   ),
   warning: (
-    background: sage-color(yellow, 300),
-    text: sage-color(grey, 950),
+    background: sage-color(yellow, 400),
+    text: sage-color(yellow, 950),
     text-hover: sage-color(grey, 800),
-    icon: "warning",
+    icon: "info-circle-filled",
+    icon-color: sage-color(yellow, 950),
   ),
   danger: (
-    background: sage-color(red, 500),
+    background: sage-color(red, 600),
     text: sage-color(white),
     text-hover: sage-color(red, 150),
-    icon: "danger",
+    icon: "warning-filled",
+    icon-color: sage-color(red, 050),
   ),
 );
 $-banner-el-icon: "before";
@@ -90,6 +94,7 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__text {
+  font: var(--pine-typography-heading-6);
   display: inline-flex;
   margin-inline-end: auto;
   color: inherit;
@@ -99,6 +104,13 @@ $-banner-el-icon: "before";
   display: inline-flex;
   align-self: center;
   margin-inline-end: sage-spacing(sm);
+  color: map-get(map-get($-banner-colors, default), icon-color);
+
+  @each $name, $configs in $-banner-colors {
+    .sage-banner--#{$name} & {
+      color: map-get($configs, icon-color);
+    }
+  }
 }
 
 .sage-banner__link {
