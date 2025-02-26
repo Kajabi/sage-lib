@@ -10,7 +10,7 @@ $-banner-colors: (
   default: (
     background: sage-color(purple, 600),
     text: sage-color(white),
-    text-hover: sage-color(primary, 100),
+    text-hover: sage-color(purple, 200),
     icon: "info-circle-filled",
     icon-color: sage-color(purple, 050),
   ),
@@ -24,14 +24,14 @@ $-banner-colors: (
   warning: (
     background: sage-color(yellow, 400),
     text: sage-color(yellow, 950),
-    text-hover: sage-color(grey, 800),
+    text-hover: sage-color(yellow, 800),
     icon: "info-circle-filled",
     icon-color: sage-color(yellow, 950),
   ),
   danger: (
     background: sage-color(red, 600),
-    text: sage-color(white),
-    text-hover: sage-color(red, 150),
+    text: sage-color(red, 050),
+    text-hover: sage-color(red, 200),
     icon: "warning-filled",
     icon-color: sage-color(red, 050),
   ),
