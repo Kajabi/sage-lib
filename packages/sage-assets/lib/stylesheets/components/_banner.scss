@@ -8,40 +8,38 @@
 $-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
-    background: sage-color(purple, 600),
-    text: sage-color(white),
-    text-hover: sage-color(purple, 200),
+    background: var(--pine-color-purple-600),
+    text: var(--pine-color-white),
+    text-hover: var(--pine-color-purple-200),
     icon: "info-circle-filled",
-    icon-color: sage-color(purple, 050),
+    icon-color: var(--pine-color-purple-050),
   ),
   secondary: (
-    background: sage-color(grey, 200),
-    text: sage-color(grey, 950),
-    text-hover: sage-color(grey, 800),
+    background: var(--pine-color-grey-200),
+    text: var(--pine-color-grey-950),
+    text-hover: var(--pine-color-grey-800),
     icon: "info-circle-filled",
-    icon-color: sage-color(grey, 700),
+    icon-color: var(--pine-color-grey-700),
   ),
   warning: (
-    background: sage-color(yellow, 400),
-    text: sage-color(yellow, 950),
-    text-hover: sage-color(yellow, 800),
+    background: var(--pine-color-yellow-400),
+    text: var(--pine-color-yellow-950),
+    text-hover: var(--pine-color-yellow-800),
     icon: "info-circle-filled",
-    icon-color: sage-color(yellow, 950),
+    icon-color: var(--pine-color-yellow-950),
   ),
   danger: (
-    background: sage-color(red, 600),
-    text: sage-color(red, 050),
-    text-hover: sage-color(red, 200),
+    background: var(--pine-color-red-600),
+    text: var(--pine-color-red-050),
+    text-hover: var(--pine-color-red-200),
     icon: "warning-filled",
-    icon-color: sage-color(red, 050),
+    icon-color: var(--pine-color-red-050),
   ),
 );
 $-banner-el-icon: "before";
 
 
 .sage-banner {
-  @extend %t-sage-body-med;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +49,7 @@ $-banner-el-icon: "before";
   z-index: sage-z-index(negative);
   transform: translateY(-100px);
   width: 100%;
-  padding: sage-spacing(sm) sage-spacing(md);
+  padding: var(--pine-dimension-sm) var(--pine-dimension-md);
   color: map-get(map-get($-banner-colors, default), text);
   background: map-get(map-get($-banner-colors, default), background);
   transition: 0.3s ease-in-out;
@@ -68,7 +66,7 @@ $-banner-el-icon: "before";
 
   &::#{$-banner-el-icon} {
     @include sage-icon-base(map-get(map-get($-banner-colors, default), icon, pine));
-    margin-inline-end: sage-spacing(sm);
+    margin-inline-end: var(--pine-dimension-sm);
   }
 }
 
@@ -103,7 +101,7 @@ $-banner-el-icon: "before";
 .sage-banner__icon {
   display: inline-flex;
   align-self: center;
-  margin-inline-end: sage-spacing(sm);
+  margin-inline-end: var(--pine-dimension-sm);
   color: map-get(map-get($-banner-colors, default), icon-color);
 
   @each $name, $configs in $-banner-colors {
@@ -123,7 +121,7 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__close {
-  margin-inline-start: sage-spacing(sm);
+  margin-inline-start: var(--pine-dimension-sm);
 }
 
 .sage-banner__close,
