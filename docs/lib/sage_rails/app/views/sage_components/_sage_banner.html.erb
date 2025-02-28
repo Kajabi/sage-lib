@@ -1,11 +1,11 @@
 <% if component.type == 'secondary' %>
-  <% icon_name = 'info-circle' %>
+  <% icon_name = 'info-circle-filled' %>
 <% elsif component.type == 'warning' %>
-  <% icon_name = 'warning' %>
+  <% icon_name = 'info-circle-filled' %>
 <% elsif component.type == 'danger' %>
-  <% icon_name = 'danger' %>
+  <% icon_name = 'warning-filled' %>
 <% else %>
-  <% icon_name = 'flag' %>
+  <% icon_name = 'info-circle-filled' %>
 <% end %>
 
 <% if component.banner_context.present? %>
