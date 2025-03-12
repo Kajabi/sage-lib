@@ -84,6 +84,7 @@
   },
   "dependencies": {
     "@kajabi/sage-assets": "^6.2.8",
+    "@popperjs/core": "^2.11.8",
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "focus-trap": "^6.2.2",
