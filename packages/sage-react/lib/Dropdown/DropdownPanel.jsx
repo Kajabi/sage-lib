@@ -51,7 +51,7 @@ export const DropdownPanel = ({
       style={{
         maxWidth,
         ...style,
-        transitionProperty: style?.transition ? undefined : 'none',
+        transitionProperty: (style && style.transition) ? undefined : 'none',
         willChange: 'transform, opacity'
       }}
     >
@@ -80,5 +80,12 @@ DropdownPanel.propTypes = {
   modifier: PropTypes.string,
   onClickScreen: PropTypes.func,
   onExit: PropTypes.func,
-  style: PropTypes.object,
+  style: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool,
+      PropTypes.object, // For nested style objects like in spread properties
+    ])
+  ),
 };

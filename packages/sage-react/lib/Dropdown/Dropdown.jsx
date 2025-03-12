@@ -64,9 +64,11 @@ export const Dropdown = ({
       setShowPanel(false);
       setIsPositioned(false);
     }
+    // eslint-disable-next-line consistent-return
   };
 
   // Show panel after positioning is complete
+  /* eslint-disable consistent-return */
   useEffect(() => {
     if (isPositioned) {
       // Increase delay to ensure popper has fully calculated position
@@ -75,8 +77,8 @@ export const Dropdown = ({
 
         // Force a reflow/repaint to ensure visibility changes apply
         if (panelRef.current) {
-          // This forces a browser repaint
-          void panelRef.current.offsetHeight;
+          // eslint-disable-next-line no-unused-expressions
+          panelRef.current.offsetHeight; // Force reflow
 
           // Also force a popper update after panel is visible
           if (popperInstanceRef.current) {
@@ -86,12 +88,14 @@ export const Dropdown = ({
       }, 50);
 
       return () => clearTimeout(timer);
-    } else {
-      setShowPanel(false);
     }
+
+    setShowPanel(false);
   }, [isPositioned]);
+  /* eslint-enable consistent-return */
 
   // Add a fallback to show the panel after a reasonable timeout
+  /* eslint-disable consistent-return */
   useEffect(() => {
     if (isActive && !showPanel) {
       let isMounted = true; // Helps prevent updates if component unmounts
@@ -116,10 +120,11 @@ export const Dropdown = ({
       };
     }
   }, [isActive, showPanel]);
+  /* eslint-enable consistent-return */
 
   // Setup and manage popper instance
   useEffect(() => {
-    if (!isActive || !triggerRef.current || !panelRef.current) return;
+    if (!isActive || !triggerRef.current || !panelRef.current) return undefined;
 
     // Initially position the panel off-screen to prevent flicker
     if (panelRef.current) {
@@ -159,16 +164,13 @@ export const Dropdown = ({
       } else {
         placement = 'top-start'; // Align to the left edge of the trigger (default)
       }
+    } else if (align === DROPDOWN_POSITIONS.RIGHT) {
+      placement = 'bottom-end'; // Align to the right edge of the trigger
+    } else if (align === DROPDOWN_POSITIONS.CENTER) {
+      placement = 'bottom'; // Center align below the trigger
     } else {
-      // Default placement logic for bottom placement
-      if (align === DROPDOWN_POSITIONS.RIGHT) {
-        placement = 'bottom-end'; // Align to the right edge of the trigger
-      } else if (align === DROPDOWN_POSITIONS.CENTER) {
-        placement = 'bottom'; // Center align below the trigger
-      } else {
-        // Default to left alignment (bottom-start) for both DEFAULT and LEFT values
-        placement = 'bottom-start'; // Align to the left edge of the trigger
-      }
+      // Default to left alignment (bottom-start) for both DEFAULT and LEFT values
+      placement = 'bottom-start'; // Align to the left edge of the trigger
     }
 
     // Create popper instance with proper configuration
@@ -276,12 +278,12 @@ export const Dropdown = ({
       while (parent && parent !== document.body) {
         const style = window.getComputedStyle(parent);
         if (
-          style.overflow === 'auto' ||
-          style.overflow === 'scroll' ||
-          style.overflowY === 'auto' ||
-          style.overflowY === 'scroll' ||
-          style.overflow === 'hidden' ||
-          style.overflowY === 'hidden'
+          style.overflow === 'auto'
+          || style.overflow === 'scroll'
+          || style.overflowY === 'auto'
+          || style.overflowY === 'scroll'
+          || style.overflow === 'hidden'
+          || style.overflowY === 'hidden'
         ) {
           overflowParent = parent;
           break;
@@ -347,10 +349,11 @@ export const Dropdown = ({
     // Only trigger if panelStateToken has changed and isn't null
     if (panelStateToken && panelStateToken !== lastPanelStateToken) {
       setLastPanelStateToken(panelStateToken);
-      setActive(prevActive => !prevActive);
+      setActive((prevActive) => !prevActive);
       setShowPanel(false);
       setIsPositioned(false);
     }
+    // eslint-disable-next-line consistent-return
   }, [panelStateToken, lastPanelStateToken]);
 
   const a11yAttrs = {
@@ -431,18 +434,18 @@ export const Dropdown = ({
             // Only apply these styles when panel should be hidden
             ...(showPanel
               ? {
-                  pointerEvents: 'auto',
-                  opacity: 1,
-                  visibility: 'visible',
-                }
+                pointerEvents: 'auto',
+                opacity: 1,
+                visibility: 'visible',
+              }
               : {
-                  pointerEvents: 'none',
-                  opacity: 0,
-                  position: 'absolute',
-                  left: '-9999px',
-                  top: '-9999px',
-                  visibility: 'hidden',
-                }
+                pointerEvents: 'none',
+                opacity: 0,
+                position: 'absolute',
+                left: '-9999px',
+                top: '-9999px',
+                visibility: 'hidden',
+              }
             ),
             // Force no animation
             transition: 'none',
