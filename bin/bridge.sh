@@ -19,6 +19,12 @@ export $(cat $sage_repo_path/.env | xargs)
 if [[ $KAJABI_PRODUCTS_PATH != '' ]]; then
     cd $KAJABI_PRODUCTS_PATH;
     $sage_bin_path/local-link.sh $1
+
+    if [[ $1 == 'true' ]]; then
+      grep -q "^VITE_SAGE_BRIDGE_ENABLED=" "$KAJABI_PRODUCTS_PATH/.env" || echo "VITE_SAGE_BRIDGE_ENABLED=true" >> "$KAJABI_PRODUCTS_PATH/.env"
+    else
+      grep -v "^VITE_SAGE_BRIDGE_ENABLED=" "$KAJABI_PRODUCTS_PATH/.env" > temp.env && mv temp.env "$KAJABI_PRODUCTS_PATH/.env"
+    fi
 else
     echo_custom_error "Please check your .env file for a KAJABI_PRODUCTS_PATH variable."
     exit 1
