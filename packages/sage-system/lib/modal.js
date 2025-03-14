@@ -18,6 +18,7 @@ Sage.modal = (function() {
   const EVENT_ACTIVE = "sage.modal.active";
   const EVENT_OPENING = "sage.modal.opening";
   const EVENT_OPEN = "sage.modal.open";
+  const EVENT_CLOSE = "sage.modal.close";
   let selectorLastFocused;
   let containerInitialContent;
   let mouseDownSrc;
@@ -36,40 +37,88 @@ Sage.modal = (function() {
     el.addEventListener("mousedown", (evt) => mouseDownSrc = evt.target);
 
     el.addEventListener("mouseup", (evt) => {
-      let el = evt.target;
-      
+      let target = evt.target;
+
       // A JS Event is dispatched to call closeModal,
       // this allows Products to hook into that call
       // and perform cleanup actions like removing the modal's content.
-      
-      // Modal Container has been clicked and its not a drag event from within the modal
-      if (el.hasAttribute(SELECTOR_MODAL) && el === mouseDownSrc) {
-        dispatchCloseAll();
-        
-        // Modal Close Button has been clicked
-      } else if (el.hasAttribute(SELECTOR_MODAL_CLOSE) || evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE)) {
-        dispatchCloseAll();
-      }
 
-      // Clear out the mouseDownSrc
-      mouseDownSrc = null;
+      // Modal Container has been clicked and its not a drag event from within the modal
+      if (target.hasAttribute(SELECTOR_MODAL) && target === mouseDownSrc) {
+        // Close only this modal when clicking on the backdrop
+        dispatchClose(el);
+      }
     });
+
+    // Add a separate click event listener for close buttons
+    el.addEventListener("click", (evt) => {
+      let target = evt.target;
+
+      // Check if the clicked element or any of its parents has the close attribute
+      let closeButton = findElementWithAttribute(target, SELECTOR_MODAL_CLOSE);
+
+      if (closeButton) {
+        // Find the parent modal of the close button
+        dispatchClose(el);
+        evt.stopPropagation(); // Prevent event bubbling
+      }
+    });
+  }
+
+  // Helper function to find an element with a specific attribute
+  function findElementWithAttribute(el, attribute) {
+    let currentEl = el;
+
+    while (currentEl) {
+      if (currentEl.hasAttribute(attribute)) {
+        return currentEl;
+      }
+      currentEl = currentEl.parentElement;
+    }
+
+    return null;
+  }
+
+  // Helper function to find the parent modal element
+  function findParentModal(el) {
+    return findElementWithAttribute(el, SELECTOR_MODAL);
   }
 
   function initTrigger(el) {
     el.addEventListener("click", function(evt) {
-      let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER) || evt.target.parentElement.getAttribute(SELECTOR_MODALTRIGGER);
-      openModal(modalId, el);
+      let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER) ||
+                   (evt.target.parentElement ? evt.target.parentElement.getAttribute(SELECTOR_MODALTRIGGER) : null);
+
+      if (modalId) {
+        openModal(modalId, el);
+        evt.preventDefault();
+      }
     });
   }
 
   function onModalKeypress(evt) {
     const keyNum = "which" in evt ? evt.which : evt.keyCode;
-    if (keyNum === 27) dispatchCloseAll();
+    if (keyNum === 27) {
+      // Find the topmost active modal and close only that one
+      const activeModals = document.querySelectorAll(`.${MODAL_ACTIVE_CLASS}`);
+      if (activeModals.length > 0) {
+        // Get the last (topmost) modal in the stack
+        const topmostModal = activeModals[activeModals.length - 1];
+        dispatchClose(topmostModal);
+      } else {
+        // Fallback to closing all if no active modals found
+        dispatchCloseAll();
+      }
+    }
   }
 
   function openModal(modalId, trigger) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
+    if (!modal) {
+      console.error(`Modal with ID "${modalId}" not found`);
+      return;
+    }
+
     let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
 
     dispatchOpenEvents(modal);
@@ -87,10 +136,15 @@ Sage.modal = (function() {
     modal.classList.add(MODAL_ACTIVE_CLASS);
     modal.setAttribute("open", "");
     document.addEventListener("keyup", onModalKeypress);
-    modal.addEventListener("keydown", focusTrap.bind(focusableEls));
+
+    if (focusableEls.length > 0) {
+      modal.addEventListener("keydown", focusTrap.bind(focusableEls));
+    }
   }
 
   function focusTrap(evt) {
+    if (this.length === 0) return;
+
     let firstFocusableEl = this[0];
     let lastFocusableEl = this[this.length - 1];
     let KEYCODE_TAB = 9;
@@ -118,30 +172,61 @@ Sage.modal = (function() {
     document.removeEventListener("keyup", onModalKeypress);
   }
 
+  // Function to dispatch a close event for a specific modal
+  function dispatchClose(modalEl) {
+    if (!modalEl) return;
+
+    modalEl.dispatchEvent(new Event(EVENT_CLOSE));
+    closeModal(modalEl);
+
+    // Only remove the keyup listener if there are no more active modals
+    const activeModals = document.querySelectorAll(`.${MODAL_ACTIVE_CLASS}`);
+    if (activeModals.length === 0) {
+      document.removeEventListener("keyup", onModalKeypress);
+    }
+  }
+
   function dispatchOpenEvents(el) {
     document.dispatchEvent(new Event(EVENT_ACTIVE));
     el.dispatchEvent(new Event(EVENT_OPENING));
 
     if (el.dataset.sageAnimate !== undefined) {
       const modalContainer = el.querySelector(".sage-modal__container");
-      modalContainer.ontransitionend = (e) => {
-        if ((e.propertyName === "transform") && el.classList.contains(MODAL_ACTIVE_CLASS)) {
-          el.dispatchEvent(new Event(EVENT_OPEN));
-        }
-      };
+      if (modalContainer) {
+        modalContainer.ontransitionend = (e) => {
+          if ((e.propertyName === "transform") && el.classList.contains(MODAL_ACTIVE_CLASS)) {
+            el.dispatchEvent(new Event(EVENT_OPEN));
+          }
+        };
+      } else {
+        el.dispatchEvent(new Event(EVENT_OPEN));
+      }
     } else {
       el.dispatchEvent(new Event(EVENT_OPEN));
     }
   }
 
   function closeModal(el) {
+    if (!el) return;
+
     const bodyEl = document.querySelector("body");
 
     el.classList.remove(MODAL_ACTIVE_CLASS);
-    bodyEl.classList.remove(SELECTOR_PAGE_HAS_OPEN_MODAL);
+
+    // Only remove the body class if there are no more active modals
+    const activeModals = document.querySelectorAll(`.${MODAL_ACTIVE_CLASS}`);
+    if (activeModals.length === 0) {
+      bodyEl.classList.remove(SELECTOR_PAGE_HAS_OPEN_MODAL);
+    }
+
     el.removeAttribute("open");
     el.removeEventListener("keydown", focusTrap);
-    selectorLastFocused && selectorLastFocused.focus();
+
+    // Only restore focus if there are no more active modals
+    if (activeModals.length === 0 && selectorLastFocused) {
+      selectorLastFocused.focus();
+    }
+
     removeModalContents(el);
   }
 
@@ -151,6 +236,8 @@ Sage.modal = (function() {
     }
 
     let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
+    if (!elContainer) return;
+
     if (elContainer.innerHTML) {
       containerInitialContent = elContainer.innerHTML;
     }
@@ -158,7 +245,11 @@ Sage.modal = (function() {
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener("load", (evt) => {
-      elContainer.innerHTML = evt.currentTarget.response;
+      if (evt.currentTarget.status >= 200 && evt.currentTarget.status < 300) {
+        elContainer.innerHTML = evt.currentTarget.response;
+      } else {
+        console.error(`Failed to load modal content: ${evt.currentTarget.status}`);
+      }
     }, { once: true });
 
     xhr.open("GET", url, true);
@@ -166,9 +257,11 @@ Sage.modal = (function() {
   }
 
   function removeModalContents(el) {
-    if ( el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE) ) {
+    if (el && el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE)) {
       let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
-      elContainer.innerHTML = containerInitialContent || "";
+      if (elContainer) {
+        elContainer.innerHTML = containerInitialContent || "";
+      }
     }
   }
 
@@ -182,7 +275,8 @@ Sage.modal = (function() {
     initTrigger: initTrigger,
     eventHandlerCloseAll: eventHandlerCloseAll,
     openModal: openModal,
-    closeModal: closeModal
+    closeModal: closeModal,
+    dispatchClose: dispatchClose
   }
 
 })();
