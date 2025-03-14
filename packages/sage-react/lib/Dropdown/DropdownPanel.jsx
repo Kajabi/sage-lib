@@ -6,11 +6,12 @@ import classnames from 'classnames';
 
 export const DropdownPanel = ({
   children,
-  coords,
+  forwardedRef,
   maxWidth,
   modifier,
   onClickScreen,
   onExit,
+  style,
 }) => {
   const menuEl = useRef(null);
   const classNames = classnames(
@@ -26,17 +27,32 @@ export const DropdownPanel = ({
     }
   };
 
-  const positioningCoords = { ...coords };
+  // Combine provided ref with internal ref if needed
+  const refCallback = (element) => {
+    // Keep our internal ref updated
+    menuEl.current = element;
+
+    // Update the forwarded ref if provided
+    if (forwardedRef) {
+      if (typeof forwardedRef === 'function') {
+        forwardedRef(element);
+      } else {
+        forwardedRef.current = element;
+      }
+    }
+  };
 
   return (
     <div
-      ref={menuEl}
+      ref={refCallback}
       className={classNames}
       onClick={handlePanelClick}
       role="dialog"
       style={{
         maxWidth,
-        ...positioningCoords
+        ...style,
+        transitionProperty: (style && style.transition) ? undefined : 'none',
+        willChange: 'transform, opacity'
       }}
     >
       {children && React.cloneElement(children, { onExit })}
@@ -45,29 +61,31 @@ export const DropdownPanel = ({
 };
 
 DropdownPanel.defaultProps = {
-  coords: null,
   children: null,
+  forwardedRef: null,
   maxWidth: null,
   modifier: null,
   onClickScreen: (evt) => evt,
   onExit: (evt) => evt,
+  style: {},
 };
 
 DropdownPanel.propTypes = {
   children: PropTypes.node,
-  coords: PropTypes.shape({
-    top: PropTypes.number,
-    left: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]),
-    right: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]),
-  }),
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
   maxWidth: PropTypes.string,
   modifier: PropTypes.string,
   onClickScreen: PropTypes.func,
   onExit: PropTypes.func,
+  style: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool,
+      PropTypes.object, // For nested style objects like in spread properties
+    ])
+  ),
 };
