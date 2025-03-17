@@ -2849,9 +2849,9 @@
     "@octokit/openapi-types" "^12.11.0"
 
 "@pine-ds/icons@^8.0.0":
-  version "8.16.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.16.0.tgz#854a9f0329f45679043a8c2613d96f6cf54beaa5"
-  integrity sha512-QVqdeWr1HdRTv7mvZ7T0IBVfIBo4jZFrkxpLSEtuwAKDp7NqLWvy/lgDe0ew6G7Qe6YwXWfi2ueK3/3WzuV3kw==
+  version "8.18.1"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.18.1.tgz#8662c0f6d260b784e94bb2273444d3e1e9b6378b"
+  integrity sha512-+s0X6j1owJbYbyPOzFxTJYUw+yXupWxhEgz8IEXgKl4qPd/WkNOK0Hw8lrFgNeMGX/wOTK7wjbVVSbT5ZtczHQ==
   dependencies:
     "@stencil/core" "4.22.2"
 
@@ -2869,6 +2869,11 @@
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
     source-map "^0.7.3"
+
+"@popperjs/core@^2.11.8":
+  version "2.11.8"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@rails/webpacker@5.2.2":
   version "5.2.2"

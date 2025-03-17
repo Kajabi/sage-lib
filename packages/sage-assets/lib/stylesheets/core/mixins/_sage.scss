@@ -414,7 +414,7 @@
   appearance: none;
   border: var(--pine-border);
   border-radius: sage-border(radius-medium);
-  background: var(--pine-color-background);
+  background: var(--pine-color-background-container);
   transition: map-get($sage-transitions, input);
   transition-property: border, box-shadow, color;
 
