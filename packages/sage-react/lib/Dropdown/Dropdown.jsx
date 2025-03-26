@@ -399,22 +399,21 @@ export const Dropdown = ({
       {isActive && (
         <div aria-hidden="true" className="sage-dropdown__screen" onClick={onClickScreen} />
       )}
-      <div ref={triggerRef}>
-        <DropdownTrigger
-          disabled={disabled}
-          disclosure={disclosure}
-          icon={icon}
-          isLabelVisible={isLabelVisible}
-          label={label}
-          modifier={triggerModifier}
-          onClickTrigger={onClickTrigger}
-          subtleButton={triggerButtonSubtle}
-          triggerClassnames={triggerClassnames}
-          width={triggerWidth}
-        >
-          {customTrigger}
-        </DropdownTrigger>
-      </div>
+      <DropdownTrigger
+        disabled={disabled}
+        disclosure={disclosure}
+        icon={icon}
+        isLabelVisible={isLabelVisible}
+        label={label}
+        modifier={triggerModifier}
+        onClickTrigger={onClickTrigger}
+        ref={triggerRef}
+        subtleButton={triggerButtonSubtle}
+        triggerClassnames={triggerClassnames}
+        width={triggerWidth}
+      >
+        {customTrigger}
+      </DropdownTrigger>
       {/* Render dropdown portal directly to document body to escape overflow containers */}
       {isActive && (
         <ForwardedDropdownPanel
