@@ -50,7 +50,6 @@ export const Dropdown = ({
   const [showPanel, setShowPanel] = useState(false);
   const [lastPanelStateToken, setLastPanelStateToken] = useState(panelStateToken);
   const wrapperRef = useRef(null);
-  const triggerRef = useRef(null);
   const panelRef = useRef(null);
   const popperInstanceRef = useRef(null);
 
@@ -122,221 +121,117 @@ export const Dropdown = ({
   }, [isActive, showPanel]);
   /* eslint-enable consistent-return */
 
-  // Setup and manage popper instance
+  // Update the Popper effect with enhanced flip behavior
   useEffect(() => {
-    if (!isActive || !triggerRef.current || !panelRef.current) return undefined;
-
-    // Initially position the panel off-screen to prevent flicker
-    if (panelRef.current) {
-      panelRef.current.style.position = 'absolute';
-      panelRef.current.style.left = '-9999px';
-      panelRef.current.style.top = '-9999px';
-      panelRef.current.style.opacity = '0';
+    // Only create popper when dropdown is active and necessary refs exist
+    if (!isActive || !wrapperRef.current || !panelRef.current) {
+      return undefined;
     }
 
-    // Clean up any existing popper instance
+    // Fix operator line breaks
+    const triggerElement = wrapperRef.current.querySelector('.sage-dropdown__trigger')
+      || wrapperRef.current.querySelector('.sage-btn')
+      || wrapperRef.current.children[1]; // Fallback to second child
+
+    if (!triggerElement) {
+      // Silently return if trigger element can't be found
+      return undefined;
+    }
+
+    // Clean up any existing popper instance before creating a new one
     if (popperInstanceRef.current) {
       popperInstanceRef.current.destroy();
       popperInstanceRef.current = null;
     }
 
-    // Check if we should force a top placement based on viewport position
-    const triggerRect = triggerRef.current.getBoundingClientRect();
+    // Pre-emptively check available space to determine optimal initial placement
+    const triggerRect = triggerElement.getBoundingClientRect();
     const viewportHeight = window.innerHeight;
     const distanceToBottom = viewportHeight - triggerRect.bottom;
+    const estimatedPanelHeight = panelRef.current.offsetHeight || 200;
 
-    // Use a generous estimate for dropdown height (250px should cover most cases)
-    const estimatedDropdownHeight = 250;
-
-    // If there's not enough space below, force top placement
-    const shouldForceTopPlacement = distanceToBottom < estimatedDropdownHeight;
-
-    // Determine initial placement based on align prop and available space
+    // Fix the lonely if in else block
     let placement;
-
-    // Force top placement if there's not enough room below
-    if (shouldForceTopPlacement) {
-      // Handle different alignments for top placement
+    if (distanceToBottom < estimatedPanelHeight && triggerRect.top > estimatedPanelHeight) {
+      // Use top placement when limited space below and sufficient space above
       if (align === DROPDOWN_POSITIONS.RIGHT) {
-        placement = 'top-end'; // Align to the right edge of the trigger
+        placement = 'top-end';
       } else if (align === DROPDOWN_POSITIONS.CENTER) {
-        placement = 'top'; // Center align above the trigger
+        placement = 'top';
       } else {
-        placement = 'top-start'; // Align to the left edge of the trigger (default)
+        placement = 'top-start';
       }
     } else if (align === DROPDOWN_POSITIONS.RIGHT) {
-      placement = 'bottom-end'; // Align to the right edge of the trigger
+      placement = 'bottom-end';
     } else if (align === DROPDOWN_POSITIONS.CENTER) {
-      placement = 'bottom'; // Center align below the trigger
+      placement = 'bottom';
     } else {
-      // Default to left alignment (bottom-start) for both DEFAULT and LEFT values
-      placement = 'bottom-start'; // Align to the left edge of the trigger
+      placement = 'bottom-start';
     }
 
-    // Create popper instance with proper configuration
-    popperInstanceRef.current = createPopper(triggerRef.current, panelRef.current, {
-      placement,
-      strategy: isPinned ? 'fixed' : 'absolute',
+    // Use 'fixed' positioning for isPinned to escape overflow containers
+    // Otherwise use 'absolute' for normal behavior
+    const strategy = isPinned ? 'fixed' : 'absolute';
+
+    // Fix spaces before comments
+    popperInstanceRef.current = createPopper(triggerElement, panelRef.current, {
+      placement, // Initial placement determined above
+      strategy, // Strategy based on isPinned prop
       modifiers: [
+        // Add slight offset for better visual appearance
         {
           name: 'offset',
           options: {
-            offset: [0, 8], // Slight offset from the trigger (x, y)
+            offset: [0, 8], // 8px gap between trigger and panel
           },
         },
+        // Prevent panel from overflowing viewport
         {
           name: 'preventOverflow',
           options: {
-            // Use the closest scrolling ancestor or viewport as boundary
-            // This allows the dropdown to "escape" overflow containers when needed
-            boundary: 'clippingParents',
-            padding: 8, // Keep 8px from boundary edges
-            altAxis: true, // Consider both axes when preventing overflow
-            rootBoundary: 'viewport', // Always respect the viewport boundary
+            boundary: 'viewport',
+            padding: 8, // Keep 8px from viewport edges
+            altAxis: true, // Handle both horizontal and vertical overflow
           },
         },
+        // Configure advanced flipping behavior
         {
           name: 'flip',
           options: {
-            // Set more aggressive flipping with top priority for constrained space
-            fallbackPlacements: placement.startsWith('bottom')
-              ? ['top-start', 'top-end', 'bottom-end', 'bottom-start']
-              : ['bottom-start', 'bottom-end', 'top-end', 'top-start'],
-            padding: 8, // Distance from viewport edges before flipping
-            // Make sure we flip if needed, even in overflow containers
-            flipVariations: true,
-            // Use all available space before deciding to flip
-            fallbackStrategy: 'bestFit',
-            // Lower threshold to make flipping more eager
-            flipVariationsByContent: true,
-            // Always respect viewport constraints
-            rootBoundary: 'viewport',
+            // Comprehensive set of fallback placements
+            fallbackPlacements: [
+              'top-start', 'top', 'top-end',
+              'bottom-start', 'bottom', 'bottom-end'
+            ],
+            padding: 15, // Larger padding to flip sooner when approaching edges
+            flipVariations: true, // Consider alignment variations when flipping
+            allowedAutoPlacements: ['top', 'bottom'], // Restrict to vertical placements
           },
         },
-        // This modifier ensures the dropdown can escape overflow containers
-        {
-          name: 'maxSize',
-          enabled: true,
-          options: {
-            // Allow dropdown to have maximum available size in viewport
-            padding: 8,
-            boundary: 'clippingParents',
-            rootBoundary: 'viewport',
-          },
-        },
+        // Compute styles optimized for performance
         {
           name: 'computeStyles',
           options: {
-            // Minimize inline styles to only the essential ones
-            gpuAcceleration: true,
-            adaptive: false, // Don't add adaptive positioning styles
-            // Only include these specific styles
-            styleProperties: ['transform', 'top', 'left', 'right', 'bottom'],
+            gpuAcceleration: true, // Use GPU acceleration
+            adaptive: true, // Update styles based on panel position
           },
         },
-        // Ensure the dropdown panel stays anchored to the reference element
-        {
-          name: 'arrow',
-          enabled: false,
-        }
       ],
+      // Update state when positioning is complete
       onFirstUpdate: () => {
-        // Mark as positioned after first update
         setIsPositioned(true);
 
-        // Force an additional update to ensure accurate positioning
+        // Force an additional update for more accurate positioning
         setTimeout(() => {
           if (popperInstanceRef.current) {
             popperInstanceRef.current.update();
           }
-        }, 10);
+        }, 0);
       }
     });
 
-    // For tables with overflow, we need to ensure the dropdown is visible
-    if (panelRef.current) {
-      // Set a high z-index to escape overflow containers
-      panelRef.current.style.zIndex = '900';
-      // Make sure the dropdown is allowed to escape overflow
-      panelRef.current.style.overflowY = 'auto';
-      panelRef.current.style.overflowX = 'hidden';
-    }
-
-    // Trigger an immediate update
-    if (popperInstanceRef.current) {
-      popperInstanceRef.current.update();
-    }
-
-    // Special handling for table overflow scenarios
-    const checkParentOverflow = () => {
-      if (!triggerRef.current) return;
-
-      // Find the closest scrollable parent (likely the table with overflow)
-      let parent = triggerRef.current.parentElement;
-      let overflowParent = null;
-
-      while (parent && parent !== document.body) {
-        const style = window.getComputedStyle(parent);
-        if (
-          style.overflow === 'auto'
-          || style.overflow === 'scroll'
-          || style.overflowY === 'auto'
-          || style.overflowY === 'scroll'
-          || style.overflow === 'hidden'
-          || style.overflowY === 'hidden'
-        ) {
-          overflowParent = parent;
-          break;
-        }
-        parent = parent.parentElement;
-      }
-
-      // If we found an overflow parent and we're near the bottom of it,
-      // force the placement to be 'top-start' to avoid being cut off
-      if (overflowParent && popperInstanceRef.current) {
-        const triggerRect = triggerRef.current.getBoundingClientRect();
-        const parentRect = overflowParent.getBoundingClientRect();
-        const distanceToBottom = parentRect.bottom - triggerRect.bottom;
-
-        // When handling overflow constraints, also update for center alignment
-        if (distanceToBottom < 150 || (viewportHeight - triggerRect.bottom) < 200) {
-          // Get the appropriate top placement based on current alignment
-          let newPlacement;
-          if (placement.endsWith('end')) {
-            newPlacement = 'top-end';
-          } else if (placement === 'bottom') {
-            newPlacement = 'top'; // Handle center alignment
-          } else {
-            newPlacement = 'top-start';
-          }
-
-          popperInstanceRef.current.setOptions({
-            placement: newPlacement
-          });
-          // Update immediately with new placement
-          popperInstanceRef.current.update();
-        }
-      }
-    };
-
-    // Check for overflow constraints after a short delay
-    // to ensure all layout calculations are complete
-    setTimeout(checkParentOverflow, 0);
-
-    // Handle window resize and scroll
-    const updatePopper = () => {
-      if (popperInstanceRef.current) {
-        popperInstanceRef.current.update();
-      }
-    };
-
-    window.addEventListener('scroll', updatePopper, { passive: true });
-    window.addEventListener('resize', updatePopper, { passive: true });
-
+    // Clean up the popper instance when component unmounts or dependencies change
     return () => {
-      window.removeEventListener('scroll', updatePopper);
-      window.removeEventListener('resize', updatePopper);
-
       if (popperInstanceRef.current) {
         popperInstanceRef.current.destroy();
         popperInstanceRef.current = null;
@@ -407,7 +302,6 @@ export const Dropdown = ({
         label={label}
         modifier={triggerModifier}
         onClickTrigger={onClickTrigger}
-        ref={triggerRef}
         subtleButton={triggerButtonSubtle}
         triggerClassnames={triggerClassnames}
         width={triggerWidth}
@@ -422,37 +316,6 @@ export const Dropdown = ({
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
-          style={{
-            zIndex: 10000, // Higher z-index to escape overflow containers
-            minWidth: '200px',
-            // CSS needed to escape overflow containers
-            position: 'absolute',
-            maxHeight: '80vh', // Prevent overly tall dropdowns
-            overflowY: 'auto',
-            overflowX: 'hidden',
-            // Only apply these styles when panel should be hidden
-            ...(showPanel
-              ? {
-                pointerEvents: 'auto',
-                opacity: 1,
-                visibility: 'visible',
-              }
-              : {
-                pointerEvents: 'none',
-                opacity: 0,
-                position: 'absolute',
-                left: '-9999px',
-                top: '-9999px',
-                visibility: 'hidden',
-              }
-            ),
-            // Force no animation
-            transition: 'none',
-            animationDuration: '0s',
-            animationDelay: '0s',
-            transitionDuration: '0s',
-            transitionDelay: '0s'
-          }}
         >
           {children}
         </ForwardedDropdownPanel>
