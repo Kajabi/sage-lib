@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.11](https://github.com/Kajabi/sage-lib/compare/v6.2.10...v6.2.11) (2025-03-27)
+
+
+### Bug Fixes
+
+* **dropdown:** remove unnecessary wrapper div ([#2096](https://github.com/Kajabi/sage-lib/issues/2096)) ([8681bbe](https://github.com/Kajabi/sage-lib/commit/8681bbe13c91c527968b34a34105dc2eb8cc3ffd))
+
+
+
+
+
 ## [6.2.10](https://github.com/Kajabi/sage-lib/compare/v6.2.9...v6.2.10) (2025-03-17)
 
 **Note:** Version bump only for package root
