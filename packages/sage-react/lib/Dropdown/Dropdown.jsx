@@ -50,7 +50,6 @@ export const Dropdown = ({
   const [showPanel, setShowPanel] = useState(false);
   const [lastPanelStateToken, setLastPanelStateToken] = useState(panelStateToken);
   const wrapperRef = useRef(null);
-  const triggerRef = useRef(null);
   const panelRef = useRef(null);
   const popperInstanceRef = useRef(null);
 
@@ -129,12 +128,10 @@ export const Dropdown = ({
       return undefined;
     }
 
-    // Find the trigger element using DOM query instead of direct ref
-    // This avoids needing to attach a ref to a function component
-    const triggerElement =
-      wrapperRef.current.querySelector('.sage-dropdown__trigger') ||
-      wrapperRef.current.querySelector('.sage-btn') ||
-      wrapperRef.current.children[1]; // Fallback to second child
+    // Fix operator line breaks
+    const triggerElement = wrapperRef.current.querySelector('.sage-dropdown__trigger')
+      || wrapperRef.current.querySelector('.sage-btn')
+      || wrapperRef.current.children[1]; // Fallback to second child
 
     if (!triggerElement) {
       // Silently return if trigger element can't be found
@@ -153,7 +150,7 @@ export const Dropdown = ({
     const distanceToBottom = viewportHeight - triggerRect.bottom;
     const estimatedPanelHeight = panelRef.current.offsetHeight || 200;
 
-    // Determine initial placement based on available space and alignment
+    // Fix the lonely if in else block
     let placement;
     if (distanceToBottom < estimatedPanelHeight && triggerRect.top > estimatedPanelHeight) {
       // Use top placement when limited space below and sufficient space above
@@ -164,25 +161,22 @@ export const Dropdown = ({
       } else {
         placement = 'top-start';
       }
+    } else if (align === DROPDOWN_POSITIONS.RIGHT) {
+      placement = 'bottom-end';
+    } else if (align === DROPDOWN_POSITIONS.CENTER) {
+      placement = 'bottom';
     } else {
-      // Default to bottom placement
-      if (align === DROPDOWN_POSITIONS.RIGHT) {
-        placement = 'bottom-end';
-      } else if (align === DROPDOWN_POSITIONS.CENTER) {
-        placement = 'bottom';
-      } else {
-        placement = 'bottom-start';
-      }
+      placement = 'bottom-start';
     }
 
     // Use 'fixed' positioning for isPinned to escape overflow containers
     // Otherwise use 'absolute' for normal behavior
     const strategy = isPinned ? 'fixed' : 'absolute';
 
-    // Create the Popper.js instance with full configuration
+    // Fix spaces before comments
     popperInstanceRef.current = createPopper(triggerElement, panelRef.current, {
       placement, // Initial placement determined above
-      strategy,  // Strategy based on isPinned prop
+      strategy, // Strategy based on isPinned prop
       modifiers: [
         // Add slight offset for better visual appearance
         {
@@ -196,8 +190,8 @@ export const Dropdown = ({
           name: 'preventOverflow',
           options: {
             boundary: 'viewport',
-            padding: 8,      // Keep 8px from viewport edges
-            altAxis: true,   // Handle both horizontal and vertical overflow
+            padding: 8, // Keep 8px from viewport edges
+            altAxis: true, // Handle both horizontal and vertical overflow
           },
         },
         // Configure advanced flipping behavior
@@ -209,8 +203,8 @@ export const Dropdown = ({
               'top-start', 'top', 'top-end',
               'bottom-start', 'bottom', 'bottom-end'
             ],
-            padding: 15,           // Larger padding to flip sooner when approaching edges
-            flipVariations: true,  // Consider alignment variations when flipping
+            padding: 15, // Larger padding to flip sooner when approaching edges
+            flipVariations: true, // Consider alignment variations when flipping
             allowedAutoPlacements: ['top', 'bottom'], // Restrict to vertical placements
           },
         },
@@ -219,7 +213,7 @@ export const Dropdown = ({
           name: 'computeStyles',
           options: {
             gpuAcceleration: true, // Use GPU acceleration
-            adaptive: true,        // Update styles based on panel position
+            adaptive: true, // Update styles based on panel position
           },
         },
       ],
