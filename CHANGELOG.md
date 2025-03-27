@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.12](https://github.com/Kajabi/sage-lib/compare/v6.2.11...v6.2.12) (2025-03-27)
+
+
+### Bug Fixes
+
+* **dropdown:** refactor popper positioning logic ([#2097](https://github.com/Kajabi/sage-lib/issues/2097)) ([71488c2](https://github.com/Kajabi/sage-lib/commit/71488c29d00704d4f1cd1b08ad5372188d8bfff9))
+
+
+
+
+
 ## [6.2.11](https://github.com/Kajabi/sage-lib/compare/v6.2.10...v6.2.11) (2025-03-27)
 
 
