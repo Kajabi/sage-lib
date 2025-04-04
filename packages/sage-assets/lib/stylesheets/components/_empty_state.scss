@@ -30,7 +30,7 @@ $-empty-state-icon-compact-size: rem(56px);
   transform: translate(-50%, -50%);
   padding: sage-spacing();
 
-  [rtl] & {
+  [dir="rtl"] & {
     transform: translate(50%, -50%);
   }
 }
