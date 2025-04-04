@@ -470,8 +470,9 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   color: $-dropdown-trigger-label-color-default;
   white-space: nowrap;
   pointer-events: none;
+  inset-inline-start: calc(#{$-dropdown-trigger-padding-x} - #{$-dropdown-trigger-padding-label});
+  inset-block-start: 50%;
 
-  @include position(50%, unset, unset, ($-dropdown-trigger-padding-x - $-dropdown-trigger-padding-label));
   @include truncate();
 
   .sage-dropdown--value-selected & {
