@@ -43,7 +43,7 @@ Basic modals contain a title, a body of content, and a footer with buttons.
 <%= sage_component SageDivider, {} %>
 
 <h3>Destructive</h3>
-<p>Contain a title, a body of content, and a footer with buttons. The call to action button 
+<p>Contain a title, a body of content, and a footer with buttons. The call to action button
 in the footer contain error styling to indicate that the action is destructive.</p>
 <%= sage_component SageButton, {
   style: "primary",
@@ -1004,4 +1004,94 @@ in the footer contain error styling to indicate that the action is destructive.<
       console.info("sage.modal.closeAll global event fired", e);
     });
   })();
+</script>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Stacked Modals</h3>
+<p>By default, clicking a close button or the backdrop will close all modals. To enable stacked modals where only the topmost modal closes:</p>
+
+<ul>
+  <li>Add <code>data-js-modal-close</code> to your close button to enable modal closing</li>
+  <li>Add <code>data-js-modal-stacked</code> to make the button close only its parent modal</li>
+</ul>
+
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Open Stacked Modal Example",
+    attributes: {
+      "data-js-modaltrigger": "stacked-modal-example",
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageModal, { id: "stacked-modal-example" } do %>
+  <%= sage_component SageModalContent, { title: "First Modal" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: {
+          "data-js-modal-close": true,
+          "data-js-modal-stacked": true
+        }
+      } %>
+    <% end %>
+
+    <p>This modal's close button will only close this modal.</p>
+
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Open Second Modal",
+      attributes: {
+        "data-js-modaltrigger": "stacked-modal-example-2",
+      }
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "stacked-modal-example-2", fullscreen: true } do %>
+  <%= sage_component SageModalContent, { title: "Second Modal" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: {
+          "data-js-modal-close": true,
+          "data-js-modal-stacked": true
+        }
+      } %>
+    <% end %>
+
+    <p>This modal will stack on top of the first modal. Clicking its close button will only close this modal, leaving the first modal visible.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Close All Modals",
+        attributes: {
+          "data-js-modal-close": true
+        }
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Close This Modal Only",
+        attributes: {
+          "data-js-modal-close": true,
+          "data-js-modal-stacked": true
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<script>
+  // ... existing script ...
 </script>

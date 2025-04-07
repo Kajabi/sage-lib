@@ -10,6 +10,7 @@ Sage.modal = (function() {
   const SELECTOR_MODAL_REMOTE_URL = "data-js-remote-url";
   const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = "data-js-modal-remove-content-on-close";
   const SELECTOR_MODAL_CLOSE = "data-js-modal-close";
+  const SELECTOR_MODAL_STACKED = "data-js-modal-stacked";
   const SELECTOR_MODALTRIGGER = "data-js-modaltrigger";
   const SELECTOR_PAGE_HAS_OPEN_MODAL = "sage-page--has-open-modal";
   const SELECTOR_FOCUSABLE_ELEMENTS = "a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type='text']:not([disabled]), input[type='radio']:not([disabled]), input[type='checkbox']:not([disabled]), select:not([disabled])";
@@ -58,8 +59,12 @@ Sage.modal = (function() {
       let closeButton = findElementWithAttribute(target, SELECTOR_MODAL_CLOSE);
 
       if (closeButton) {
-        // Find the parent modal of the close button
-        dispatchClose(el);
+        // If stacked attribute exists, close only current modal, otherwise close all
+        if (closeButton.hasAttribute(SELECTOR_MODAL_STACKED)) {
+          dispatchClose(el);
+        } else {
+          dispatchCloseAll();
+        }
         evt.stopPropagation(); // Prevent event bubbling
       }
     });
@@ -172,12 +177,18 @@ Sage.modal = (function() {
     document.removeEventListener("keyup", onModalKeypress);
   }
 
-  // Function to dispatch a close event for a specific modal
   function dispatchClose(modalEl) {
     if (!modalEl) return;
 
-    modalEl.dispatchEvent(new Event(EVENT_CLOSE));
-    closeModal(modalEl);
+    // Check if the close button has the stacked attribute
+    const closeButton = findElementWithAttribute(modalEl, SELECTOR_MODAL_CLOSE);
+    const isStacked = closeButton && closeButton.hasAttribute(SELECTOR_MODAL_STACKED);
+
+    if (isStacked) {
+      dispatchCloseAll();
+    } else {
+      closeModal(modalEl);
+    }
 
     // Only remove the keyup listener if there are no more active modals
     const activeModals = document.querySelectorAll(`.${MODAL_ACTIVE_CLASS}`);
