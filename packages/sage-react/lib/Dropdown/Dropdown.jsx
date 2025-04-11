@@ -203,7 +203,7 @@ export const Dropdown = ({
               'top-start', 'top', 'top-end',
               'bottom-start', 'bottom', 'bottom-end'
             ],
-            padding: 15, // Larger padding to flip sooner when approaching edges
+            padding: 20, // Larger padding to flip sooner when approaching edges
             flipVariations: true, // Consider alignment variations when flipping
             allowedAutoPlacements: ['top', 'bottom'], // Restrict to vertical placements
           },
