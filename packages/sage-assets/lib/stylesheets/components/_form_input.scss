@@ -149,6 +149,13 @@ $-input-text-height: var(--pine-font-size-body);
   }
 }
 
+.sage-input__field[type="tel"],
+.sage-input__field[type="email"],
+.sage-input__field[type="url"] {
+  direction: inherit; /* Inherits from parent context */
+  text-align: start; /* Logical start, so it auto-adjusts */
+}
+
 .sage-input__icon {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
