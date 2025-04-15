@@ -42,6 +42,7 @@
       <%= "checked" if component.checked %>
       <%= "disabled" if component.disabled %>
       <%= "required" if component.required %>
+      <%= component.generated_component_attributes.html_safe %>
     >
     <label for="<%= component.id %>" class="sage-checkbox__label">
       <%= component.label_text %>
