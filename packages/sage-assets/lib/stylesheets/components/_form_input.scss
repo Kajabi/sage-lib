@@ -173,3 +173,17 @@ $-input-text-height: var(--pine-font-size-body);
   display: flex;
   align-items: center;
 }
+
+// Ensures proper text direction for email/tel inputs - LTR for content, inherits direction for placeholder
+.sage-input__field[type="tel"],
+.sage-input__field[type="email"] {
+  text-align: start;
+
+  &:placeholder-shown {
+    direction: inherit;
+  }
+
+  &:not(:placeholder-shown) {
+    direction: ltr;
+  }
+}
