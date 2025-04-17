@@ -25,6 +25,21 @@ $sage-sprig-font-path: "#{$sage-font-cdn-root}/sprig" !default; // pathname of f
 $sprig-file-name: "FAIRE-Sprig";
 $sprig-font-family-name: "FAIRE Sprig";
 
+/* stylelint-disable-next-line annotation-no-unknown */
+$sage-noto-arabic-font-path: "#{$sage-font-cdn-root}/noto" !default; // pathname of font directory
+$noto-arabic-file-name: "Noto-Sans-Arabic";
+$noto-arabic-font-family-name: "Noto Sans Arabic";
+
+/* stylelint-disable-next-line annotation-no-unknown */
+$sage-noto-hebrew-font-path: "#{$sage-font-cdn-root}/noto" !default; // pathname of font directory
+$noto-hebrew-file-name: "Noto-Sans-Hebrew";
+$noto-hebrew-font-family-name: "Noto Sans Hebrew";
+
+/* stylelint-disable-next-line annotation-no-unknown */
+$sage-noto-devanagari-font-path: "#{$sage-font-cdn-root}/noto" !default; // pathname of font directory
+$noto-devanagari-file-name: "Noto-Sans-Devanagari";
+$noto-devanagari-font-family-name: "Noto Sans Devanagari";
+
 // Light
 @font-face {
   font-display: swap;
@@ -591,4 +606,31 @@ $sprig-font-family-name: "FAIRE Sprig";
   font-weight: 900;
   src: local("#{$sprig-file-name}-SuperItalic"),
     url("#{$sage-sprig-font-path}/#{$sprig-file-name}-SuperItalic.woff2?v=#{$body-font-version}") format("woff2");
+}
+
+// Arabic font (Noto Sans Arabic)
+@font-face {
+  font-family: '#{$noto-arabic-font-family-name}';
+  src: local("#{$noto-arabic-file-name}"),
+    url("#{$sage-noto-arabic-font-path}/#{$noto-arabic-file-name}.woff2?v=#{$body-font-version}") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Hebrew font (Noto Sans Hebrew)
+@font-face {
+  font-family: '#{$noto-hebrew-font-family-name}';
+  src: local("#{$noto-hebrew-file-name}"),
+    url("#{$sage-noto-hebrew-font-path}/#{$noto-hebrew-file-name}.woff2?v=#{$body-font-version}") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Devanagari font (Noto Sans Devanagari)
+@font-face {
+  font-family: '#{$noto-devanagari-font-family-name}';
+  src: local("#{$noto-devanagari-file-name}"),
+    url("#{$sage-noto-devanagari-font-path}/#{$noto-devanagari-file-name}.woff2?v=#{$body-font-version}") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
