@@ -42,6 +42,10 @@ $-headings-margin-block-end: sage-spacing(sm);
   --sage-line-height-h3: #{map-get($sage-line-heights, 3xl)};
   --sage-line-height-h2: #{map-get($sage-line-heights, 4xl)};
   --sage-line-height-h1: #{map-get($sage-line-heights, 5xl)};
+
+  // Font family
+  --sage-font-family: #{$-body-font-stack};
+  --sage-font-family-heading: #{$-heading-font};
 }
 
 // Responsive adjustments are currently TBD
@@ -206,6 +210,10 @@ body:not(.sage-excluded),
   }
 }
 
+h1, h2, h3, h4, h5, h6,
+[class*="t-sage-heading-"] {
+  font-family: var(--sage-font-family-heading);
+}
 
 // Generate text color modifiers
 @each $color-name, $color-slider in $sage-colors {
@@ -288,4 +296,20 @@ body:not(.sage-excluded),
   text-decoration-thickness: 12%;
   text-underline-offset: 0.3rem;
   text-underline-position: under;
+}
+
+// Language-specific font-family rules for internationalization
+html[lang="he"], [lang="he"] {
+  --sage-font-family: 'Noto Sans Hebrew', 'Rubik', 'Arial Hebrew', 'Frank Ruehl', Tahoma, sans-serif;
+  --sage-font-family-heading: 'Noto Sans Hebrew', 'Rubik', 'Arial Hebrew', 'Frank Ruehl', Tahoma, sans-serif;
+}
+
+html[lang="ar"], [lang="ar"] {
+  --sage-font-family: 'Noto Sans Arabic', 'Cairo', 'Amiri', Tahoma, Arial, sans-serif;
+  --sage-font-family-heading: 'Noto Sans Arabic', 'Cairo', 'Amiri', Tahoma, Arial, sans-serif;
+}
+
+html[lang="hi"], [lang="hi"] {
+  --sage-font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Lohit Devanagari', 'Sahadeva', sans-serif;
+  --sage-font-family-heading: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Lohit Devanagari', 'Sahadeva', sans-serif;
 }
