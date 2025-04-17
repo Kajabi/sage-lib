@@ -2848,12 +2848,12 @@
   dependencies:
     "@octokit/openapi-types" "^12.11.0"
 
-"@pine-ds/icons@^8.0.0":
-  version "8.18.1"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.18.1.tgz#8662c0f6d260b784e94bb2273444d3e1e9b6378b"
-  integrity sha512-+s0X6j1owJbYbyPOzFxTJYUw+yXupWxhEgz8IEXgKl4qPd/WkNOK0Hw8lrFgNeMGX/wOTK7wjbVVSbT5ZtczHQ==
+"@pine-ds/icons@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-9.1.0.tgz#0278d6361bfcc5d6f54e4cdd48033fed333f595d"
+  integrity sha512-jthPTU0MLjXhHYUG3wlRZi6cUGmQk9RkcybW8La4G6nGckHDOYbWuPPh+mqejnpJaCwmw16Sl/jasaXAf75tPg==
   dependencies:
-    "@stencil/core" "4.22.2"
+    "@stencil/core" "4.28.2"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.7"
@@ -2929,6 +2929,46 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@rollup/rollup-darwin-arm64@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.34.9.tgz#363467bc49fd0b1e17075798ac8e9ad1e1e29535"
+  integrity sha512-0CY3/K54slrzLDjOA7TOjN1NuLKERBgk9nY5V34mhmuu673YNb+7ghaDUs6N0ujXR7fz5XaS5Aa6d2TNxZd0OQ==
+
+"@rollup/rollup-darwin-x64@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.34.9.tgz#c2fe3d85fffe47f0ed0f076b3563ada22c8af19c"
+  integrity sha512-eOojSEAi/acnsJVYRxnMkPFqcxSMFfrw7r2iD9Q32SGkb/Q9FpUY1UlAu1DH9T7j++gZ0lHjnm4OyH2vCI7l7Q==
+
+"@rollup/rollup-linux-arm64-gnu@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.34.9.tgz#1015c9d07a99005025d13b8622b7600029d0b52f"
+  integrity sha512-6TZjPHjKZUQKmVKMUowF3ewHxctrRR09eYyvT5eFv8w/fXarEra83A2mHTVJLA5xU91aCNOUnM+DWFMSbQ0Nxw==
+
+"@rollup/rollup-linux-arm64-musl@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.34.9.tgz#8f895eb5577748fc75af21beae32439626e0a14c"
+  integrity sha512-LD2fytxZJZ6xzOKnMbIpgzFOuIKlxVOpiMAXawsAZ2mHBPEYOnLRK5TTEsID6z4eM23DuO88X0Tq1mErHMVq0A==
+
+"@rollup/rollup-linux-x64-gnu@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.34.9.tgz#7193cbd8d128212b8acda37e01b39d9e96259ef8"
+  integrity sha512-FwBHNSOjUTQLP4MG7y6rR6qbGw4MFeQnIBrMe161QGaQoBQLqSUEKlHIiVgF3g/mb3lxlxzJOpIBhaP+C+KP2A==
+
+"@rollup/rollup-linux-x64-musl@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.34.9.tgz#29a6867278ca0420b891574cfab98ecad70c59d1"
+  integrity sha512-cYRpV4650z2I3/s6+5/LONkjIz8MBeqrk+vPXV10ORBnshpn8S32bPqQ2Utv39jCiDcO2eJTuSlPXpnvmaIgRA==
+
+"@rollup/rollup-win32-arm64-msvc@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.34.9.tgz#89427dcac0c8e3a6d32b13a03a296a275d0de9a9"
+  integrity sha512-z4mQK9dAN6byRA/vsSgQiPeuO63wdiDxZ9yg9iyX2QTzKuQM7T4xlBoeUP/J8uiFkqxkcWndWi+W7bXdPbt27Q==
+
+"@rollup/rollup-win32-x64-msvc@4.34.9":
+  version "4.34.9"
+  resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.34.9.tgz#1973871850856ae72bc678aeb066ab952330e923"
+  integrity sha512-AyleYRPU7+rgkMWbEh71fQlrzRfeP6SyMnRf9XX4fCdDPAJumdSBqYEcWPMzVQ4ScAl7E4oFfK0GUVn77xSwbw==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.28"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.28.tgz"
@@ -2958,10 +2998,19 @@
   resolved "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@stencil/core@4.22.2":
-  version "4.22.2"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.22.2.tgz#5fb00b85b5e3e595341f2b5d91960533a9736bc5"
-  integrity sha512-eq2pYrrnzcLyBRANk0X/VVOfCtD0nCxWnEZ0AVdscuqfDkOjxa6SSZOfEhR9FAvrmESHp8y5jRCVPnf4n5CC4A==
+"@stencil/core@4.28.2":
+  version "4.28.2"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.28.2.tgz#8aa4598803c98fef97d445f0b17b30687b1f904d"
+  integrity sha512-sHwBNionxzHfmjQ93ffaQOBNvd5HrSn8e5KSsiBBaODgC/g9squZoARYHHJ0VFfUpOXkEoZQ+ASixpUBafG9bA==
+  optionalDependencies:
+    "@rollup/rollup-darwin-arm64" "4.34.9"
+    "@rollup/rollup-darwin-x64" "4.34.9"
+    "@rollup/rollup-linux-arm64-gnu" "4.34.9"
+    "@rollup/rollup-linux-arm64-musl" "4.34.9"
+    "@rollup/rollup-linux-x64-gnu" "4.34.9"
+    "@rollup/rollup-linux-x64-musl" "4.34.9"
+    "@rollup/rollup-win32-arm64-msvc" "4.34.9"
+    "@rollup/rollup-win32-x64-msvc" "4.34.9"
 
 "@storybook/addon-a11y@^6.5.9":
   version "6.5.10"
