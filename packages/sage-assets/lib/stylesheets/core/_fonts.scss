@@ -610,6 +610,7 @@ $noto-devanagari-font-family-name: "Noto Sans Devanagari";
 
 // Arabic font (Noto Sans Arabic)
 @font-face {
+  font-display: swap;
   font-family: "#{$noto-arabic-font-family-name}";
   src: local("#{$noto-arabic-file-name}"),
     url("#{$sage-noto-arabic-font-path}/#{$noto-arabic-file-name}.woff2?v=#{$body-font-version}") format("woff2");
@@ -619,6 +620,7 @@ $noto-devanagari-font-family-name: "Noto Sans Devanagari";
 
 // Hebrew font (Noto Sans Hebrew)
 @font-face {
+  font-display: swap;
   font-family: "#{$noto-hebrew-font-family-name}";
   src: local("#{$noto-hebrew-file-name}"),
     url("#{$sage-noto-hebrew-font-path}/#{$noto-hebrew-file-name}.woff2?v=#{$body-font-version}") format("woff2");
@@ -628,6 +630,7 @@ $noto-devanagari-font-family-name: "Noto Sans Devanagari";
 
 // Devanagari font (Noto Sans Devanagari)
 @font-face {
+  font-display: swap;
   font-family: "#{$noto-devanagari-font-family-name}";
   src: local("#{$noto-devanagari-file-name}"),
     url("#{$sage-noto-devanagari-font-path}/#{$noto-devanagari-file-name}.woff2?v=#{$body-font-version}") format("woff2");
