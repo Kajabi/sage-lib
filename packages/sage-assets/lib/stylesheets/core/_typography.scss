@@ -210,7 +210,12 @@ body:not(.sage-excluded),
   }
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 [class*="t-sage-heading-"] {
   font-family: var(--sage-font-family-heading);
 }
@@ -299,17 +304,20 @@ h1, h2, h3, h4, h5, h6,
 }
 
 // Language-specific font-family rules for internationalization
-html[lang="he"], [lang="he"] {
-  --sage-font-family: 'Noto Sans Hebrew', 'Rubik', 'Arial Hebrew', 'Frank Ruehl', Tahoma, sans-serif;
-  --sage-font-family-heading: 'Noto Sans Hebrew', 'Rubik', 'Arial Hebrew', 'Frank Ruehl', Tahoma, sans-serif;
+html[lang="he"],
+[lang="he"] {
+  --sage-font-family: "Noto Sans Hebrew", "Rubik", "Arial Hebrew", "Frank Ruehl", "tahoma", sans-serif;
+  --sage-font-family-heading: "Noto Sans Hebrew", "Rubik", "Arial Hebrew", "Frank Ruehl", "tahoma", sans-serif;
 }
 
-html[lang="ar"], [lang="ar"] {
-  --sage-font-family: 'Noto Sans Arabic', 'Cairo', 'Amiri', Tahoma, Arial, sans-serif;
-  --sage-font-family-heading: 'Noto Sans Arabic', 'Cairo', 'Amiri', Tahoma, Arial, sans-serif;
+html[lang="ar"],
+[lang="ar"] {
+  --sage-font-family: "Noto Sans Arabic", "Cairo", "Amiri", "tahoma", "arial", sans-serif;
+  --sage-font-family-heading: "Noto Sans Arabic", "Cairo", "Amiri", "tahoma", "arial", sans-serif;
 }
 
-html[lang="hi"], [lang="hi"] {
-  --sage-font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Lohit Devanagari', 'Sahadeva', sans-serif;
-  --sage-font-family-heading: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Lohit Devanagari', 'Sahadeva', sans-serif;
+html[lang="hi"],
+[lang="hi"] {
+  --sage-font-family: "Noto Sans Devanagari", "Mangal", "Kokila", "Lohit Devanagari", "Sahadeva", sans-serif;
+  --sage-font-family-heading: "Noto Sans Devanagari", "Mangal", "Kokila", "Lohit Devanagari", "Sahadeva", sans-serif;
 }
