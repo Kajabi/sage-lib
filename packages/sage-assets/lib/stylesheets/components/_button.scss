@@ -181,7 +181,7 @@ $-btn-loading-min-height: rem(36px);
   align-items: center;
   justify-self: flex-start;
   padding: $-btn-base-padding-block $-btn-base-padding-inline;
-  font-family: $-heading-font;
+  font-family: var(--sage-font-family-heading);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border-width: 1px;
   border-style: solid;
@@ -246,7 +246,7 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-dropdown__trigger--select & {
     min-height: var(--pine-dimension-xl);
-    font-family: $-body-font-stack;
+    font-family: var(--sage-font-family);
     font-weight: var(--pine-font-weight-medium);
     border-width: var(--pine-dimension-none);
     box-shadow: sage-border-interactive(default);

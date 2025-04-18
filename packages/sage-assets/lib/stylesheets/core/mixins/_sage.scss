@@ -707,7 +707,7 @@
 /// Adds the default font family
 ///
 @mixin sage-font-family() {
-  font-family: $-body-font-stack;
+  font-family: var(--sage-font-family);
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
 }
 

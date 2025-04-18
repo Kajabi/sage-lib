@@ -439,7 +439,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__trigger--select {
-  font-family: $-body-font-stack;
+  font-family: var(--sage-font-family);
 }
 
 .sage-dropdown__trigger--select,
@@ -496,4 +496,3 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown-combo {
   width: 100%;
 }
-
