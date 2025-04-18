@@ -210,16 +210,6 @@ body:not(.sage-excluded),
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-[class*="t-sage-heading-"] {
-  font-family: var(--sage-font-family-heading);
-}
-
 // Generate text color modifiers
 @each $color-name, $color-slider in $sage-colors {
   $color-value: "";
