@@ -33,8 +33,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--sage-font-family);
   font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   font-size: 1rem;
   font-weight: 400;
@@ -62,16 +61,11 @@ h3,
 h4,
 h5,
 h6,
-.t-sage-heading-1,
-.t-sage-heading-2,
-.t-sage-heading-3,
-.t-sage-heading-4,
-.t-sage-heading-5,
-.t-sage-heading-6 {
+[class*="t-sage-heading-"] {
   margin-block-start: 0;
   margin-block-end: 0;
   color: sage-color(grey, 950);
-  font-family: "Greet Standard", "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif ;
+  font-family: var(--sage-font-family-heading);
 }
 
 p {
