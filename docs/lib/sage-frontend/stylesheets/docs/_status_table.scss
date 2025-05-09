@@ -35,8 +35,7 @@ $-status-table-heading-padding: sage-spacing(xs) sage-spacing(sm);
 
     &:first-child {
       padding-inline-start: 0;
-      text-align: left;
-      text-align: inline-start;
+      text-align: start;
     }
   }
 
@@ -48,7 +47,7 @@ $-status-table-heading-padding: sage-spacing(xs) sage-spacing(sm);
 
     &:first-child {
       font-weight: sage-font-weight(semibold);
-      text-align: left;
+      text-align: start;
     }
   }
 }

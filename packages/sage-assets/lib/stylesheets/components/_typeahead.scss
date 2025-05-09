@@ -73,7 +73,7 @@ $-typeahead-item-width: rem(240px);
   column-gap: sage-spacing(sm);
   align-items: center;
   padding: sage-spacing(md) sage-spacing(sm);
-  text-align: left;
+  text-align: start;
 
   @media (hover: none) {
     gap: 0;

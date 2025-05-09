@@ -38,10 +38,10 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5; /* NOTE: line-height must be '1.5' to avoid conflicts with Ladera */
-  text-align: left;
+  text-align: start;
 
   [dir="rtl"] & {
-    text-align: right;
+    text-align: end;
   }
 }
 
@@ -210,7 +210,7 @@ caption {
   padding-block-start: 0.75rem;
   padding-block-end: 0.75rem;
   color: #6c757d;
-  text-align: left;
+  text-align: start;
 }
 
 th {
