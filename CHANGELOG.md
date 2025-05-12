@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.17](https://github.com/Kajabi/sage-lib/compare/v6.2.16...v6.2.17) (2025-05-12)
+
+
+### Bug Fixes
+
+* remove pine core from consumables ([#2114](https://github.com/Kajabi/sage-lib/issues/2114)) ([bc8bd89](https://github.com/Kajabi/sage-lib/commit/bc8bd8957d070ea00d7ff304b3f556a1dfd61b4a))
+
+
+### Reverts
+
+* Revert "docs: remove link to pine stylesheets from the header" ([f69c458](https://github.com/Kajabi/sage-lib/commit/f69c458f8f65afa7e342875bca99e725b9cc2143))
+
+
+
+
+
 ## [6.2.16](https://github.com/Kajabi/sage-lib/compare/v6.2.15...v6.2.16) (2025-05-09)
 
 **Note:** Version bump only for package root
