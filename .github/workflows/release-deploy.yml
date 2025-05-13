@@ -2,6 +2,15 @@ name: Release-Deploy
 on:
   # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
   workflow_dispatch:
+    inputs:
+      release_to:
+        description: "Which environment do you want to release to?"
+        required: true
+        type: choice
+        options:
+          - production
+          - staging
+
   workflow_call:
   release:
     types: [published]
@@ -57,7 +66,7 @@ jobs:
         shell: bash
         run: |
           echo "Running on branch "
-          if [[ "${{ github.ref }}" == *"refs/tags"* ]]; then
+          if [[ "${{ github.ref }}" == *"refs/tags"* ]] || [[ "${{ inputs.release_to }}" == "production" ]]; then
             echo "postfix=production" >> $GITHUB_ENV
           else
             echo "postfix=staging" >> $GITHUB_ENV
@@ -136,7 +145,7 @@ jobs:
           push: true
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
-  
+
       - name: Report sage-docs-site production deployment to GetDX
         if: ${{ env.POSTFIX == 'production' }}
         uses: Kajabi/getdx-deployment-identifier-action@main
