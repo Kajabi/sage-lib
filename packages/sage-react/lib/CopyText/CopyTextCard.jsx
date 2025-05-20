@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export const CopyTextCard = ({ children, className, semibold }) => {
+export const CopyTextCard = ({ children, className, semibold, ...rest }) => {
   const classNames = classnames(
     'sage-copy-text-card',
     className,
@@ -12,7 +12,7 @@ export const CopyTextCard = ({ children, className, semibold }) => {
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} {...rest}>
       {children}
     </div>
   );

@@ -12,6 +12,7 @@ export const TooltipElement = ({
   parentDomRect,
   position,
   tooltipCustomClass,
+  ...rest
 }) => {
   const tooltipRef = useRef(null);
   const [coordinates, setCoordinates] = useState({ top: null, left: null });
