@@ -76,6 +76,7 @@ export const TooltipElement = ({
       ref={tooltipRef}
       className={classNames}
       style={parentDomRect ? coordinates : {}}
+      {...rest}
     >
       {content}
     </div>
