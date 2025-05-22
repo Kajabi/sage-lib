@@ -15,6 +15,7 @@ export const DropdownTrigger = ({
   subtleButton,
   triggerClassnames,
   width,
+  ...rest
 }) => {
   const onClick = () => {
     onClickTrigger();
@@ -47,6 +48,7 @@ export const DropdownTrigger = ({
             label={label}
             onClick={onClickTrigger}
             subtle={subtleButton}
+            {...rest}
           />
         )}
     </div>

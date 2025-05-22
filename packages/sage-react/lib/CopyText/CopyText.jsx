@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames } from '../configs';
 
-export const CopyText = ({ children, className, semibold }) => {
+export const CopyText = ({ children, className, semibold, ...rest }) => {
   const classNames = classnames(
     'sage-copy-text',
     className,
@@ -14,7 +14,7 @@ export const CopyText = ({ children, className, semibold }) => {
 
   return (
     <>
-      <span className={classNames}>
+      <span className={classNames} {...rest}>
         {children}
       </span>
       <pds-icon name="copy" class={SageClassnames.SPACERS.SM_LEFT} />

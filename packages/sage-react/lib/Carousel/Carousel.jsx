@@ -8,6 +8,7 @@ import { Indicator } from '../Indicator';
 export const Carousel = ({
   children,
   options,
+  ...rest
 }) => {
   const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
@@ -78,7 +79,7 @@ export const Carousel = ({
   }, [mySlider]);
 
   return (
-    <div className="sage-carousel" aria-roledescription="carousel">
+    <div className="sage-carousel" aria-roledescription="carousel" {...rest}>
       <div className="sage-carousel__container">
         <CarouselArrow
           disabled={arrowPrevDisabled}

@@ -22,6 +22,7 @@ export const StatBox = ({
   raised,
   timeframe,
   title,
+  ...rest
 }) => {
   const statBoxContainer = classnames(
     'sage-stat-box',
@@ -67,6 +68,7 @@ export const StatBox = ({
   return (
     <article
       className={statBoxContainer}
+      {...rest}
     >
       {icon && (
         <div className="sage-stat-box__icon">

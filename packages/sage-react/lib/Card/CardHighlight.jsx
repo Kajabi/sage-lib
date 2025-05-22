@@ -9,7 +9,8 @@ export const CardHighlight = ({
   color,
   customColor,
   position,
-  value
+  value,
+  ...rest
 }) => {
   const hasContent = value || children;
   const classNames = classnames(
@@ -29,6 +30,7 @@ export const CardHighlight = ({
       style={(customColor && customColor !== '') && ({
         '--color': customColor,
       })}
+      {...rest}
     >
       {children && (
         <span className="visually-hidden">{children}</span>

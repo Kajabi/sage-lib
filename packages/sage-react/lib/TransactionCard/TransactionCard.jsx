@@ -21,6 +21,7 @@ export const TransactionCard = ({
   transactionState,
   transactionStateColor,
   transactionTime,
+  ...rest
 }) => {
   const NameTag = nameTag;
   const amountClassNames = classnames(
@@ -36,7 +37,7 @@ export const TransactionCard = ({
     }
   );
   return (
-    <article className="sage-transaction-card">
+    <article className="sage-transaction-card" {...rest}>
       <div className="sage-transaction-card__header">
         <Badge className="sage-transaction-card__label" value={labelText} color={labelColor} />
         <div className={stateClassNames}>
