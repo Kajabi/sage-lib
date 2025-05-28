@@ -123,6 +123,7 @@ $-upload-card-mobile-breakpoint: 609px;
   border-radius: $-upload-card-preview-border-radius;
   aspect-ratio: var(--sage-upload-card-aspect-ratio-stack);
   object-fit: cover;
+  overflow: hidden; /* DSS-748: Fix Safari image overflow issues */
 
   @media (min-width: 610px) {
     max-width: $-upload-card-preview-max-width;
