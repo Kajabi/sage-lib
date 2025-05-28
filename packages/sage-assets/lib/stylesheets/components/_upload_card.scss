@@ -119,8 +119,8 @@ $-upload-card-mobile-breakpoint: 609px;
 .sage-upload-card__preview {
   width: 100%;
   margin-inline-end: 0;
-  text-align: center;
   overflow: hidden; /* DSS-748: Fix Safari image overflow issues */
+  text-align: center;
   border-radius: $-upload-card-preview-border-radius;
   aspect-ratio: var(--sage-upload-card-aspect-ratio-stack);
   object-fit: cover;
