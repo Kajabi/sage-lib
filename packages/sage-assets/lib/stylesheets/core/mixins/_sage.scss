@@ -524,8 +524,11 @@
 /// Adds the basic default form label spacing, and border treatment
 ///
 @mixin sage-form-field-label() {
+  overflow: hidden;
+  max-width: 100%;
   font: var(--pine-typography-body-medium);
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 ///
