@@ -10,7 +10,8 @@ export const CopyButton = ({
   children,
   className,
   fillContainer,
-  semibold
+  semibold,
+  ...rest
 }) => {
   const classNames = classnames(
     'sage-copy-btn',
@@ -38,6 +39,7 @@ export const CopyButton = ({
         subtle={true}
         type="button"
         onClick={onClick}
+        {...rest}
       >
         {borderless ? (
           children

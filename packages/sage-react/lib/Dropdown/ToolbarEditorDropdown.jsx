@@ -17,6 +17,7 @@ export const ToolbarEditorDropdown = ({
   options,
   triggerClassnames,
   triggerButtonSubtle,
+  ...rest
 }) => (
   <Dropdown
     align={align}
@@ -33,6 +34,7 @@ export const ToolbarEditorDropdown = ({
     triggerModifier="options"
     triggerButtonSubtle={triggerButtonSubtle}
     triggerClassnames={triggerClassnames}
+    {...rest}
   >
     <ul className="sage-dropdown__menu">
       {options.map((item) => (

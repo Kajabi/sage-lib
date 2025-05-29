@@ -19,6 +19,7 @@ export const TableRow = ({
   selectable,
   selected,
   typeRenderers,
+  ...rest
 }) => {
   const [selfSelected, setSelfSelected] = useState(false);
   const [selfCells, setSelfCells] = useState([]);
@@ -86,7 +87,7 @@ export const TableRow = ({
   };
 
   return (
-    <tr className={classNames} data-table-row-id={id}>
+    <tr className={classNames} data-table-row-id={id} {...rest}>
       {selectable && (
         <td className={selectableClassNames}>
           <Checkbox

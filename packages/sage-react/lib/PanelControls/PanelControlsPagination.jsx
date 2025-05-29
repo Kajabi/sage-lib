@@ -7,8 +7,9 @@ export const PanelControlsPagination = ({
   currentPage,
   onClickPagination,
   totalPages,
+  ...rest
 }) => (
-  <div className="sage-panel-controls__pagination">
+  <div className="sage-panel-controls__pagination" {...rest}>
     <Button
       className="sage-panel-controls__pagination-prev"
       color={Button.COLORS.SECONDARY}

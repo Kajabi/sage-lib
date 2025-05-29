@@ -12,6 +12,7 @@ export const DropdownTriggerDefault = ({
   label,
   onClick,
   subtle,
+  ...rest
 }) => (
   <Button
     className={className}
@@ -23,6 +24,7 @@ export const DropdownTriggerDefault = ({
     onClick={onClick}
     type="button"
     subtle={subtle}
+    {...rest}
   >
     {label}
   </Button>

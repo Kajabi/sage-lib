@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Legend = ({ payload }) => (
-  <ul className="sage-chart-legend">
+export const Legend = ({ payload, ...rest }) => (
+  <ul className="sage-chart-legend" {...rest}>
     {
       payload.map(({ value, color }) => (
         <li

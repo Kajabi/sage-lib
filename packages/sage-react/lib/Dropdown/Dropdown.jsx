@@ -44,6 +44,7 @@ export const Dropdown = ({
   triggerClassnames,
   triggerModifier,
   triggerWidth,
+  ...rest
 }) => {
   const [isActive, setActive] = useState(false);
   const [isPositioned, setIsPositioned] = useState(false);
@@ -290,7 +291,7 @@ export const Dropdown = ({
   );
 
   return (
-    <div ref={wrapperRef} className={classNames} {...a11yAttrs}>
+    <div ref={wrapperRef} className={classNames} {...a11yAttrs} {...rest}>
       {isActive && (
         <div aria-hidden="true" className="sage-dropdown__screen" onClick={onClickScreen} />
       )}

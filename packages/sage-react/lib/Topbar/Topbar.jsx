@@ -7,11 +7,12 @@ export const Topbar = ({
   contentLeftDesktop,
   contentLeftMobile,
   contentRight,
+  ...rest
 }) => {
   const classNames = classnames('sage-topbar', className);
 
   return (
-    <div className={classNames}>
+    <div className={classNames} {...rest}>
       <div className="sage-topbar__left">
         <div className="sage-topbar__left-mobile">
           {contentLeftMobile}

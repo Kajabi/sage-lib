@@ -28,6 +28,7 @@ export const Pagination = ({
   pageCountSuffix,
   pageSize,
   pageURLFn,
+  ...rest
 }) => {
   // Get a safe page count:
   let localPageCount;
@@ -194,7 +195,7 @@ export const Pagination = ({
   };
 
   return (
-    <Tagname className={classNames}>
+    <Tagname className={classNames} {...rest}>
       {renderPageCount()}
       <ul className="sage-pagination__pages">
         <PaginationItem

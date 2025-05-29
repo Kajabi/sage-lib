@@ -12,6 +12,7 @@ export const DropdownPanel = ({
   onClickScreen,
   onExit,
   style,
+  ...rest
 }) => {
   const menuEl = useRef(null);
   const classNames = classnames(
@@ -54,6 +55,7 @@ export const DropdownPanel = ({
         transitionProperty: (style && style.transition) ? undefined : 'none',
         willChange: 'transform, opacity'
       }}
+      {...rest}
     >
       {children && React.cloneElement(children, { onExit })}
     </div>

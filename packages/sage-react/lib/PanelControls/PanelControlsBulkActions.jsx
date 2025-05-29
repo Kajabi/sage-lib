@@ -18,6 +18,7 @@ export const PanelControlsBulkActions = ({
   rowNoun,
   selectionType,
   totalItems,
+  ...rest
 }) => {
   const selectionCount = selectionType === SELECTION_TYPES.ALL
     ? totalItems
@@ -46,7 +47,7 @@ export const PanelControlsBulkActions = ({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} {...rest}>
       <Checkbox
         className={checkboxClassNames}
         id={uuid()}

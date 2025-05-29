@@ -5,12 +5,14 @@ export const CarouselSlide = ({
   content,
   index,
   length,
+  ...rest
 }) => (
   <div
     aria-label={`${index + 1} of ${length}`}
     aria-roledescription="slide"
     className="sage-carousel__slide"
     role="group"
+    {...rest}
   >
     {content}
   </div>

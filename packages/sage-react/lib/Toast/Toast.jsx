@@ -18,6 +18,7 @@ export const Toast = ({
   link,
   type,
   title,
+  ...rest
 }) => {
   const [isDismissed, setDismissed] = useState(!isActive);
 
@@ -79,7 +80,7 @@ export const Toast = ({
 
   return !isDismissed && (
     <div className="sage-toast-container">
-      <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
+      <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`} {...rest}>
         {renderAsset()}
 
         <output

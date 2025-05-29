@@ -31,6 +31,7 @@ export const Drawer = ({
   showClose,
   size,
   title,
+  ...rest
 }) => {
   useEffect(() => {
     if (onExpandChange) {
@@ -76,6 +77,7 @@ export const Drawer = ({
       style={{
         '--sage-drawer-compact-width': `${customWidth}px`
       }}
+      {...rest}
     >
       {(customHeader || title || showClose) && (
         <Modal.Header

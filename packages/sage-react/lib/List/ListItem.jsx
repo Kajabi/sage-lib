@@ -10,6 +10,7 @@ export const ListItem = ({
   id,
   moreActions,
   sortable,
+  ...rest
 }) => {
   const classNames = classnames(
     'sage-list__item',
@@ -20,7 +21,7 @@ export const ListItem = ({
   );
 
   return (
-    <li className={classNames} id={id}>
+    <li className={classNames} id={id} {...rest}>
       {sortable && (
         <div className="sage-list__item-sortable-handle">
           <Icon icon={Icon.ICONS.HANDLE_2_VERTICAL} label="Drag to sort" />

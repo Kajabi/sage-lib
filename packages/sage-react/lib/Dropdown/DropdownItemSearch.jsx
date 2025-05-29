@@ -7,6 +7,7 @@ export const DropdownItemSearch = ({
   onEnter,
   placeholder,
   selectedValue,
+  ...rest
 }) => {
   const [value, updateValue] = useState('');
 
@@ -34,6 +35,7 @@ export const DropdownItemSearch = ({
       onKeyUp={onKeyUp}
       placeholder={placeholder}
       role="none"
+      {...rest}
     />
   );
 };

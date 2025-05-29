@@ -17,6 +17,7 @@ export const PanelControls = ({
   className,
   controlSettings,
   onRequestChange,
+  ...rest
 }) => {
   const [selfConfigs, setSelfConfigs] = useState({
     // Set locally
@@ -150,7 +151,7 @@ export const PanelControls = ({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} {...rest}>
       {children}
       {selfConfigs.showDefaultToolbar && (
         <div className="sage-panel-controls__default-controls">

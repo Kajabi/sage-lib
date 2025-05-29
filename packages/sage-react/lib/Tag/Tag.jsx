@@ -9,7 +9,8 @@ export const Tag = ({
   dismissAttributes,
   image,
   showDismiss,
-  value
+  value,
+  ...rest
 }) => {
   const classNames = classnames(
     'sage-tag',
@@ -22,6 +23,7 @@ export const Tag = ({
   return (
     <span
       className={classNames}
+      {...rest}
     >
       {image && (
         <img className="sage-tag__image" src={image} alt="" role="presentation" />

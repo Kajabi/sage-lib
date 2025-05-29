@@ -13,6 +13,7 @@ export const NextBestAction = ({
   graphic,
   onClickDismiss,
   title,
+  ...rest
 }) => {
   const baseClass = 'sage-next-best-action';
 
@@ -26,7 +27,7 @@ export const NextBestAction = ({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} {...rest}>
       {graphic.element && (
         <div className="sage-next-best-action__graphic">
           {graphic.element}

@@ -9,6 +9,7 @@ export const Indicator = ({
   numItems,
   preposition,
   showText,
+  ...rest
 }) => {
   let classNames;
   const baseClass = 'sage-indicator';
@@ -42,6 +43,7 @@ export const Indicator = ({
         <ul
           className={`sage-indicator-list ${className}`}
           aria-label={`Showing ${label} ${currentItem} ${preposition} ${numItems}`}
+          {...rest}
         >
           {items}
         </ul>
