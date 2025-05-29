@@ -117,7 +117,7 @@ $-upload-card-mobile-breakpoint: 609px;
 }
 
 .sage-upload-card__preview {
-  overflow: hidden; /* DSS-748: Fix Safari image overflow issues */
+  overflow: hidden; /* Fix Safari image overflow issues */
   width: 100%;
   margin-inline-end: 0;
   text-align: center;
