@@ -155,6 +155,11 @@
 
 .sage-panel__row {
   @include sage-grid-panel-row();
+  
+  // Only apply default gap when no gap utility class is present
+  &:not([class*="sage-grid-gap"]) {
+    gap: sage-spacing();
+  }
 }
 
 .sage-panel__row--media {
