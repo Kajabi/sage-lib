@@ -11,4 +11,9 @@
   .sage-grid-gap#{$suffix} {
     gap: $-value;
   }
+  
+  // Higher specificity for panel rows to ensure gap utilities override the default
+  .sage-panel__row.sage-grid-gap#{$suffix} {
+    gap: $-value;
+  }
 }
