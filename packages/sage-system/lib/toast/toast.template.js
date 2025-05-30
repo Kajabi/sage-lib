@@ -33,7 +33,7 @@ export const toastTemplate = ({id, type, icon, text, link, testId = null}) => (`
       type="button"
       ${DATA_ATTR_CLOSE_BUTTON}
     >
-      <pds-icon name="remove" size="16"></pds-icon>
+      <pds-icon name="remove" size="16px"></pds-icon>
       <span class="visually-hidden">Close</span>
     </button>
   </dialog>
