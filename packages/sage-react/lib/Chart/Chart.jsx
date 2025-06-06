@@ -14,6 +14,7 @@ export const Chart = ({
   loading,
   containerStyles,
   type,
+  ...rest
 }) => {
   const renderChart = () => {
     if (!data) {
@@ -42,7 +43,7 @@ export const Chart = ({
   };
 
   return (
-    <div className="sage-chart-container" style={containerStyles}>
+    <div className="sage-chart-container" style={containerStyles} {...rest}>
       {loading ? (
         <Loader loading={true} type={Loader.TYPES.SPINNER} />
       ) : renderChart()}

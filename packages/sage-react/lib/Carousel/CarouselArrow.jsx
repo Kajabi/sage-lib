@@ -8,6 +8,7 @@ export const CarouselArrow = ({
   icon,
   id,
   onClickCallback,
+  ...rest
 }) => {
   const baseClass = 'sage-carousel__arrow';
   const classNames = classnames(
@@ -24,6 +25,7 @@ export const CarouselArrow = ({
       onClick={onClickCallback}
       role="button"
       tabIndex={-1}
+      {...rest}
     >
       <Icon icon={icon} size="lg" />
     </div>

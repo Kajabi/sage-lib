@@ -12,7 +12,8 @@ export const DropdownTriggerSelect = ({
   icon,
   onClick,
   selectedValue,
-  triggerClassnames
+  triggerClassnames,
+  ...rest
 }) => {
   const classNames = classnames(
     'sage-dropdown__trigger-selected-value',
@@ -29,6 +30,7 @@ export const DropdownTriggerSelect = ({
         iconPosition={Button.ICON_POSITIONS.RIGHT}
         type="button"
         onClick={onClick}
+        {...rest}
       >
         {icon && (<Icon icon={icon} className={SageClassnames.SPACERS.XS_RIGHT} />)}
         {selectedValue}

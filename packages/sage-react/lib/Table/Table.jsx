@@ -52,6 +52,7 @@ export const Table = ({
   selectedRows,
   showSelectAll,
   tableAttributes,
+  ...rest
 }) => {
   const [selfSelectedRows, setSelfSelectedRows] = useState([]);
   const [selfHeaders, setSelfHeaders] = useState([]);
@@ -288,7 +289,7 @@ export const Table = ({
 
   // Renders the table itself
   const renderTable = () => (
-    <table className={tableClassNames} {...tableAttributes}>
+    <table className={tableClassNames} {...tableAttributes} {...rest}>
       {caption && (
         <caption className={`sage-table__caption--${captionSide || CAPTION_SIDE.BOTTOM}`}>
           {caption}

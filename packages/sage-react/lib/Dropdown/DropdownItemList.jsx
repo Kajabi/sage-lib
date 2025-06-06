@@ -15,6 +15,7 @@ export const DropdownItemList = ({
   onSearch,
   searchable,
   searchPlaceholder,
+  ...rest
 }) => {
   const [searchTerms, updateSearchTerms] = useState('');
   const [filteredItems, updateFilteredItem] = useState(items);
@@ -54,7 +55,7 @@ export const DropdownItemList = ({
           onChangeSearchTerms={onChangeSearchTerms}
         />
       )}
-      <ul className="sage-dropdown__menu" role="menu">
+      <ul className="sage-dropdown__menu" role="menu" {...rest}>
         {localSelectedItems.length > 0 && localSelectedItems.map((item, i) => (
           <DropdownItem
             borderAfter={i === localSelectedItems.length - 1}

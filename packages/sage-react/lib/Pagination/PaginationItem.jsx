@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export const PaginationItem = ({ children, current, disabled, onClick, url, }) => {
+export const PaginationItem = ({ children, current, disabled, onClick, url, ...rest }) => {
   const classNames = classnames(
     'sage-pagination__page',
     {
@@ -18,7 +18,7 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
     }
   };
 
-  const attrs = {};
+  const attrs = { ...rest };
   if (!url) {
     attrs.role = 'button';
   }

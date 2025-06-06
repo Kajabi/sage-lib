@@ -8,6 +8,7 @@ export const Tooltip = ({
   active,
   payload,
   contentFormatterFn,
+  ...rest
 }) => ((active && payload && payload.length > 0) ? (
   <TooltipElement
     content={(
@@ -21,6 +22,7 @@ export const Tooltip = ({
     )}
     position={null}
     theme={TooltipElement.THEMES.LIGHT}
+    {...rest}
   />
 ) : null);
 
