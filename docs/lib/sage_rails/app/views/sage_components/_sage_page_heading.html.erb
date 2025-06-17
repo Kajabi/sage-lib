@@ -17,7 +17,7 @@
   <% end %>
   <div class="sage-page-heading__title-wrapper">
     <h1 class="sage-page-heading__title">
-      <%= component.title %>
+      <%= component.title_html.present? ? component.title_html.html_safe : component.title %>
     </h1>
     <% if component.help_link.present? && component.help_html.blank? %>
       <a href="<%= component.help_link[:href] %>"
