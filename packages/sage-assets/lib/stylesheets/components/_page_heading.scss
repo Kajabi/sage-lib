@@ -71,6 +71,21 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__title {
   @extend %t-sage-heading-2;
   @include truncate;
+  
+  // Support for multi-element title content
+  display: flex;
+  align-items: center;
+  gap: sage-spacing(xs);
+  
+  // Ensure child elements don't break the truncation
+  > * {
+    flex-shrink: 0;
+    
+    &:last-child {
+      flex-shrink: 1;
+      min-width: 0;
+    }
+  }
 }
 
 .sage-page-heading__intro {

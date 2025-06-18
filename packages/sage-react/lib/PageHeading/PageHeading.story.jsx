@@ -2,6 +2,8 @@ import React from 'react';
 import { HelpLink } from '../HelpLink';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
+import { Badge } from '../Badge';
+import { Icon } from '../Icon';
 import { PageHeading } from './PageHeading';
 
 export default {
@@ -104,6 +106,41 @@ PageHeadingWithToolbarAndSecondaryText.args = {
       </Button>
     </>
   ),
+};
+
+export const PageHeadingWithRichTitleContent = Template.bind({});
+PageHeadingWithRichTitleContent.args = {
+  titleContent: (
+    <>
+      <Icon icon={SageTokens.ICONS.CART} />
+      Products Dashboard
+      <Badge color={Badge.COLORS.PUBLISHED}>Live</Badge>
+    </>
+  ),
+  introText: 'Example of rich title content with icon and badge',
+};
+
+export const PageHeadingWithStyledTitleContent = Template.bind({});
+PageHeadingWithStyledTitleContent.args = {
+  titleContent: (
+    <>
+      <span style={{ color: '#6366f1' }}>Premium</span>
+      <span>Course Builder</span>
+      <Badge color={Badge.COLORS.DRAFT}>Beta</Badge>
+    </>
+  ),
+  introText: 'Example with styled text segments and status badge',
+};
+
+export const PageHeadingWithIconOnly = Template.bind({});
+PageHeadingWithIconOnly.args = {
+  titleContent: (
+    <>
+      <Icon icon={SageTokens.ICONS.GEAR} />
+      Settings
+    </>
+  ),
+  introText: 'Simple example with just an icon',
 };
 
 export const AllItems = Template.bind({});

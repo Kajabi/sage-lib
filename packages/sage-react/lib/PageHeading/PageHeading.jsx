@@ -11,6 +11,7 @@ export const PageHeading = ({
   help,
   image,
   introText,
+  titleContent,
   toolbar,
   secondaryText,
   ...rest
@@ -38,7 +39,7 @@ export const PageHeading = ({
     )}
     <div className="sage-page-heading__title-wrapper">
       <h1 className="sage-page-heading__title">
-        {children}
+        {titleContent || children}
       </h1>
       {help && (
         <>
@@ -78,6 +79,7 @@ PageHeading.defaultProps = {
   help: null,
   image: {},
   introText: null,
+  titleContent: null,
   toolbar: null,
   secondaryText: null,
 };
@@ -94,5 +96,6 @@ PageHeading.propTypes = {
   }),
   introText: PropTypes.string,
   secondaryText: PropTypes.string,
+  titleContent: PropTypes.node,
   toolbar: PropTypes.node,
 };
