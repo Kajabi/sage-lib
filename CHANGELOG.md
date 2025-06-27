@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.19](https://github.com/Kajabi/sage-lib/compare/v6.2.18...v6.2.19) (2025-06-27)
+
+
+### Bug Fixes
+
+* adjust footer ([ba0888a](https://github.com/Kajabi/sage-lib/commit/ba0888a855bc584244277fe5c569cd3a0e66869f))
+
+
+
+
+
 ## [6.2.18](https://github.com/Kajabi/sage-lib/compare/v6.2.17...v6.2.18) (2025-06-06)
 
 **Note:** Version bump only for package root
