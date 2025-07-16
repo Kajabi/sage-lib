@@ -11,7 +11,7 @@ export const BUTTON_ICON_POSITIONS = {
 };
 
 export const BUTTON_GROUP_GAP_OPTIONS = {
-  XS: null,
+  XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',
