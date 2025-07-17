@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.21](https://github.com/Kajabi/sage-lib/compare/v6.2.20...v6.2.21) (2025-07-17)
+
+
+### Bug Fixes
+
+* **button:** update comment for empty string handling in button component ([9fcff38](https://github.com/Kajabi/sage-lib/commit/9fcff38388baa74bd366a9cd8c822a82d1f09c7f))
+
+
+
+
+
 ## [6.2.20](https://github.com/Kajabi/sage-lib/compare/v6.2.19...v6.2.20) (2025-07-17)
 
 **Note:** Version bump only for package root
