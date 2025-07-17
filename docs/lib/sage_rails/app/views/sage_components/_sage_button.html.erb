@@ -44,7 +44,7 @@
         </pds-icon>
       <% end %>
       <span class="sage-btn__truncate-text">
-        <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
+        <%# if the component.value is an empty string, add `&nbsp;` to prevent height collapse %>
         <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
       </span>
     <% elsif component.content %>
