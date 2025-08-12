@@ -346,7 +346,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   width: auto;
   border-radius: sage-border(radius-medium);
   background-color: sage-color(white);
-  box-shadow: sage-shadow(md);
+  box-shadow: sage-shadow(100);
   transition: map-get($sage-transitions, default);
   transition-property: transform, z-index;
 
