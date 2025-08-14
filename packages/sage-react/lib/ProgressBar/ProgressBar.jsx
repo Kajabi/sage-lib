@@ -5,18 +5,19 @@ import { Tooltip } from '../Tooltip';
 import { SageTokens } from '../configs';
 import { PROGRESSBAR_TOOLTIP_POSITIONS } from './configs';
 
-export const ProgressBar = ({
-  animate,
-  backgroundColor,
-  className,
-  color,
-  disableTooltip,
-  displayPercent,
-  label,
-  percent,
-  tooltipPosition,
-  ...rest
-}) => {
+export const ProgressBar = (props) => {
+  const {
+    animate,
+    backgroundColor,
+    className,
+    color,
+    disableTooltip,
+    displayPercent,
+    label,
+    percent,
+    tooltipPosition,
+    ...rest
+  } = props;
   const classNames = classnames(
     'sage-progress-bar',
     className,
@@ -46,7 +47,7 @@ export const ProgressBar = ({
           {displayText}
         </progress>
         <div
-          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${color !== ProgressBar.COLORS.MERCURY_500 ? 'sage-progress-bar__value--custom' : ''}`}
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${props.hasOwnProperty('color') ? 'sage-progress-bar__value--custom' : ''}`}
           style={{
             width: `${percent}%`,
             '--progress-bar-value-color': color,

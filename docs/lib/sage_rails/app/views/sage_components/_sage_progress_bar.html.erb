@@ -31,7 +31,7 @@ color = component.color || SageTokens::COLOR_PALETTE[:MERCURY_500]
     >
       <%= content %>
     </progress>
-    <div class="sage-progress-bar__value <%= "sage-progress-bar__animate" if animate %> <%= "sage-progress-bar__value--custom" if color != SageTokens::COLOR_PALETTE[:MERCURY_500] %>" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
+    <div class="sage-progress-bar__value <%= "sage-progress-bar__animate" if animate %> <%= "sage-progress-bar__value--custom" if component.color %>" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
   </div>
   <% if component.display_percent %>
     <span class="sage-progress-bar__percent"><%= component.percent %>%</span>
