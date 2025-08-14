@@ -10,7 +10,7 @@ export const ProgressBar = (props) => {
     animate,
     backgroundColor,
     className,
-    color = ProgressBar.COLORS.MERCURY_500,
+    color,
     disableTooltip,
     displayPercent,
     label,
@@ -47,7 +47,7 @@ export const ProgressBar = (props) => {
           {displayText}
         </progress>
         <div
-          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${Object.prototype.hasOwnProperty.call(props, 'color') ? 'sage-progress-bar__value--custom' : ''}`}
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${props.color && props.color !== ProgressBar.COLORS.MERCURY_500 ? 'sage-progress-bar__value--custom' : ''}`}
           style={{
             width: `${percent}%`,
             '--progress-bar-value-color': color,
@@ -82,6 +82,7 @@ ProgressBar.defaultProps = {
   animate: true,
   backgroundColor: null,
   className: null,
+  color: ProgressBar.COLORS.MERCURY_500,
   disableTooltip: false,
   displayPercent: false,
   label: null,
