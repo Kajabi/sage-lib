@@ -5,7 +5,12 @@ import { Tooltip } from '../Tooltip';
 import { SageTokens } from '../configs';
 import { PROGRESSBAR_TOOLTIP_POSITIONS } from './configs';
 
-export const ProgressBar = (props) => {
+export const ProgressBar = (originalProps) => {
+  const props = {
+    ...ProgressBar.defaultProps,
+    ...originalProps,
+    color: originalProps.color || ProgressBar.COLORS.MERCURY_500
+  };
   const {
     animate,
     backgroundColor,
@@ -47,7 +52,7 @@ export const ProgressBar = (props) => {
           {displayText}
         </progress>
         <div
-          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${Object.prototype.hasOwnProperty.call(props, 'color') ? 'sage-progress-bar__value--custom' : ''}`}
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${Object.prototype.hasOwnProperty.call(originalProps, 'color') ? 'sage-progress-bar__value--custom' : ''}`}
           style={{
             width: `${percent}%`,
             '--progress-bar-value-color': color,
