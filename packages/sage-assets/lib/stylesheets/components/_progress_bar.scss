@@ -57,7 +57,7 @@ $-progress-bar-gradient-end: var(--pine-color-brand);
     border-radius: 0;
   }
 
-  &[style*="--progress-bar-value-color"] {
+  &.sage-progress-bar__value--custom {
     background: var(--progress-bar-value-color);
   }
 }

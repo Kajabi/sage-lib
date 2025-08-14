@@ -46,7 +46,7 @@ export const ProgressBar = ({
           {displayText}
         </progress>
         <div
-          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'}`}
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${color !== ProgressBar.COLORS.MERCURY_500 ? 'sage-progress-bar__value--custom' : ''}`}
           style={{
             width: `${percent}%`,
             '--progress-bar-value-color': color,
