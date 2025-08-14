@@ -46,7 +46,7 @@ $-progress-bar-gradient-end: #ff3e14;
 .sage-progress-bar__value {
   transform-origin: center left;
   height: 100%;
-  background: var(--progress-bar-value-color, linear-gradient(to right, $-progress-bar-gradient-start, $-progress-bar-gradient-end));
+  background: linear-gradient(to right, $-progress-bar-gradient-start, $-progress-bar-gradient-end);
   border-radius: var(--pine-dimension-2xs);
 
   [dir="rtl"] & {
@@ -55,6 +55,10 @@ $-progress-bar-gradient-end: #ff3e14;
 
   .sage-modal__header & {
     border-radius: 0;
+  }
+
+  &[style*="--progress-bar-value-color"] {
+    background: var(--progress-bar-value-color);
   }
 }
 
