@@ -57,7 +57,7 @@ $-progress-bar-gradient-end: var(--pine-color-brand);
     border-radius: 0;
   }
 
-  &[style*="--progress-bar-value-color"] {
+  &[style*="--progress-bar-value-color"]:not([style*="--progress-bar-value-color: #ff3e15"]) {
     background: var(--progress-bar-value-color);
   }
 }
