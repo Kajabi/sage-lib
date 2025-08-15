@@ -5,8 +5,6 @@
 ////
 
 $-progress-bar-height: var(--pine-dimension-xs);
-$-progress-bar-gradient-start: var(--pine-color-red-300);
-$-progress-bar-gradient-end: var(--pine-color-brand);
 
 @keyframes sage-progress-bar--slide {
   from {
@@ -57,7 +55,7 @@ $-progress-bar-gradient-end: var(--pine-color-brand);
   }
 
   &:not(.sage-progress-bar__value--custom) {
-    background: linear-gradient(to right, $-progress-bar-gradient-start, $-progress-bar-gradient-end);
+    background: #{$sd-sage-visual-gradient-progress-default-css};
   }
 
   &.sage-progress-bar__value--custom {

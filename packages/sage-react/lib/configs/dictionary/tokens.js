@@ -1707,3 +1707,57 @@ export const CONTENT_GRID_TEMPLATE = {
     CLASSNAME: CONTENT_GRID_TEMPLATE_SOS_CLASSNAME,
   },
 };
+
+// ----------
+//
+// Category: VISUAL
+//
+// ----------
+
+//
+// Type: GRADIENT
+//
+
+//
+// Static vars for VISUAL GRADIENT
+//
+export const VISUAL_GRADIENT_PROGRESS_DEFAULT_START = '#fda5a5';
+export const VISUAL_GRADIENT_PROGRESS_DEFAULT_END = '#ff3e15';
+export const VISUAL_GRADIENT_PROGRESS_DEFAULT_DIRECTION = 'to right';
+export const VISUAL_GRADIENT_PROGRESS_DEFAULT_CSS = 'linear-gradient(to right, #fda5a5, #ff3e15)';
+export const VISUAL_GRADIENT_PROGRESS_CUSTOM_START = 'var(--custom-gradient-start, #fda5a5)';
+export const VISUAL_GRADIENT_PROGRESS_CUSTOM_END = 'var(--custom-gradient-end, #ff3e15)';
+export const VISUAL_GRADIENT_PROGRESS_CUSTOM_DIRECTION = 'var(--custom-gradient-direction, to right)';
+export const VISUAL_GRADIENT_PROGRESS_CUSTOM_CSS = 'linear-gradient(var(--custom-gradient-direction, to right), var(--custom-gradient-start, #fda5a5), var(--custom-gradient-end, #ff3e15))';
+export const VISUAL_GRADIENT_BUTTON_PRIMARY_START = '#2463eb';
+export const VISUAL_GRADIENT_BUTTON_PRIMARY_END = '#1c4ed8';
+export const VISUAL_GRADIENT_BUTTON_PRIMARY_DIRECTION = 'to right';
+export const VISUAL_GRADIENT_BUTTON_PRIMARY_CSS = 'linear-gradient(to right, #2463eb, #1c4ed8)';
+
+//
+// Map for VISUAL GRADIENT
+//
+export const VISUAL_GRADIENT = {
+  PROGRESS: {
+    DEFAULT: {
+      START: VISUAL_GRADIENT_PROGRESS_DEFAULT_START,
+      END: VISUAL_GRADIENT_PROGRESS_DEFAULT_END,
+      DIRECTION: VISUAL_GRADIENT_PROGRESS_DEFAULT_DIRECTION,
+      CSS: VISUAL_GRADIENT_PROGRESS_DEFAULT_CSS,
+    },
+    CUSTOM: {
+      START: VISUAL_GRADIENT_PROGRESS_CUSTOM_START,
+      END: VISUAL_GRADIENT_PROGRESS_CUSTOM_END,
+      DIRECTION: VISUAL_GRADIENT_PROGRESS_CUSTOM_DIRECTION,
+      CSS: VISUAL_GRADIENT_PROGRESS_CUSTOM_CSS,
+    },
+  },
+  BUTTON: {
+    PRIMARY: {
+      START: VISUAL_GRADIENT_BUTTON_PRIMARY_START,
+      END: VISUAL_GRADIENT_BUTTON_PRIMARY_END,
+      DIRECTION: VISUAL_GRADIENT_BUTTON_PRIMARY_DIRECTION,
+      CSS: VISUAL_GRADIENT_BUTTON_PRIMARY_CSS,
+    },
+  },
+};
