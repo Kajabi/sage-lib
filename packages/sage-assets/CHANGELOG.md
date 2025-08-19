@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.22](https://github.com/Kajabi/sage-lib/compare/v6.2.21...v6.2.22) (2025-08-19)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
 ## [6.2.18](https://github.com/Kajabi/sage-lib/compare/v6.2.17...v6.2.18) (2025-06-06)
 
 **Note:** Version bump only for package @kajabi/sage-assets
