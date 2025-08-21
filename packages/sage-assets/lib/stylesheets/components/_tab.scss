@@ -42,7 +42,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &:hover {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      background: var(--pine-color-border-disabled);
+      background-color: var(--pine-color-border-disabled);
     }
   }
 
