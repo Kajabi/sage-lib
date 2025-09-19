@@ -93,6 +93,10 @@ $-modal-inner-size: sage-container(md);
     height: 100vh;
     border-radius: 0;
 
+    @supports (height: 100dvh) {
+      height: 100dvh;
+    }
+
     @media (max-width: sage-breakpoint(sm-max)) {
       max-width: var(--sage-drawer-size);
     }
@@ -110,6 +114,10 @@ $-modal-inner-size: sage-container(md);
     margin-block-start: rem(79px);
     margin-inline-end: sage-spacing(sm);
     border-radius: sage-border(radius-large);
+
+    @supports (height: 100dvh) {
+      height: calc(100dvh - 97px);
+    }
   }
 
   .sage-drawer--expanded & {
@@ -182,6 +190,10 @@ $-modal-inner-size: sage-container(md);
     display: grid;
     grid-template-rows: auto 1fr auto;
     max-height: 85vh;
+
+    @supports (height: 100dvh) {
+      max-height: 85dvh;
+    }
   }
 
   .sage-modal--scrollable & > .simple_form {
