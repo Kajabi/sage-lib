@@ -90,8 +90,8 @@ $-modal-inner-size: sage-container(md);
   opacity: 0;
 
   .sage-drawer & {
-    border-radius: 0;
     height: 100vh;
+    border-radius: 0;
 
     @supports (height: 100dvh) {
       height: 100dvh;
