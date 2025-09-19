@@ -5,18 +5,23 @@ import { Tooltip } from '../Tooltip';
 import { SageTokens } from '../configs';
 import { PROGRESSBAR_TOOLTIP_POSITIONS } from './configs';
 
-export const ProgressBar = ({
-  animate,
-  backgroundColor,
-  className,
-  color,
-  disableTooltip,
-  displayPercent,
-  label,
-  percent,
-  tooltipPosition,
-  ...rest
-}) => {
+export const ProgressBar = (originalProps) => {
+  const props = {
+    ...ProgressBar.defaultProps,
+    ...originalProps,
+  };
+  const {
+    animate,
+    backgroundColor,
+    className,
+    color,
+    disableTooltip,
+    displayPercent,
+    label,
+    percent,
+    tooltipPosition,
+    ...rest
+  } = props;
   const classNames = classnames(
     'sage-progress-bar',
     className,
@@ -46,10 +51,10 @@ export const ProgressBar = ({
           {displayText}
         </progress>
         <div
-          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'}`}
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'} ${originalProps.color ? 'sage-progress-bar__value--custom' : ''}`}
           style={{
             width: `${percent}%`,
-            '--progress-bar-value-color': color,
+            ...(originalProps.color && { '--progress-bar-value-color': color }),
           }}
         />
       </div>
@@ -81,7 +86,7 @@ ProgressBar.defaultProps = {
   animate: true,
   backgroundColor: null,
   className: null,
-  color: ProgressBar.COLORS.MERCURY_500,
+  color: null,
   disableTooltip: false,
   displayPercent: false,
   label: null,
@@ -93,7 +98,7 @@ ProgressBar.propTypes = {
   animate: PropTypes.bool,
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(ProgressBar.COLORS)),
+  color: PropTypes.oneOf([null, ...Object.values(ProgressBar.COLORS)]),
   disableTooltip: PropTypes.bool,
   displayPercent: PropTypes.bool,
   label: PropTypes.string,
