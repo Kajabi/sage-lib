@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.24](https://github.com/Kajabi/sage-lib/compare/v6.2.23...v6.2.24) (2025-09-19)
+
+
+### Bug Fixes
+
+* **sage-modal:** fix scrollable modal height issue on Safari ([#2147](https://github.com/Kajabi/sage-lib/issues/2147)) ([#2148](https://github.com/Kajabi/sage-lib/issues/2148)) ([567f1ed](https://github.com/Kajabi/sage-lib/commit/567f1edf39a89190a91cbcdfaaa7f691ad18b255))
+
+
+
+
+
 ## [6.2.23](https://github.com/Kajabi/sage-lib/compare/v6.2.22...v6.2.23) (2025-09-05)
 
 **Note:** Version bump only for package @kajabi/sage-assets
