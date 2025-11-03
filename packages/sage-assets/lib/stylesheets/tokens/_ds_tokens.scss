@@ -1,0 +1,32 @@
+////
+/// Design System Tokens (ds-tokens)
+///
+/// @group sage
+////
+
+///
+/// Import ds-tokens for kajabi_products theme
+/// This provides all core and semantic tokens as CSS variables
+///
+/// Usage in SCSS:
+/// ```scss
+/// .my-component {
+///   background-color: var(--pine-color-background-container);
+///   color: var(--pine-color-text-primary);
+/// }
+/// ```
+///
+/// Note: Semantic tokens are REQUIRED for dark mode support.
+/// Use semantic tokens (--pine-color-primary, --pine-color-background-*, etc.)
+/// instead of core tokens (--pine-color-blue-600, etc.) for theme-aware colors.
+///
+
+// Import ds-tokens CSS (provides all CSS variables in :root)
+// Note: ds-tokens outputs CSS files, not SCSS
+@import '~@kajabi-ui/styles/dist/kajabi_products/kajabi_products.css';
+
+// Import dark mode color token overrides
+// This provides dark mode support via @media (prefers-color-scheme: dark)
+// and [data-theme="dark"] attribute selector
+@import "ds_tokens_dark_mode";
+
