@@ -23,7 +23,8 @@
 
 // Import ds-tokens CSS (provides all CSS variables in :root)
 // Note: ds-tokens outputs CSS files, not SCSS
-@import '~@kajabi-ui/styles/dist/kajabi_products/kajabi_products.css';
+// Using relative path from node_modules (compatible with both sass-loader and postcss-loader)
+@import '@kajabi-ui/styles/dist/kajabi_products/kajabi_products.css';
 
 // Import dark mode color token overrides
 // This provides dark mode support via @media (prefers-color-scheme: dark)
