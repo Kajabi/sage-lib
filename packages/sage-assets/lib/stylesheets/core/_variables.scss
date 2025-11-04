@@ -15,7 +15,7 @@ $sage-greet-font-path: "#{$sage-font-cdn-root}/greet";
 ///
 $sage-active-underline-configs: (
   height: rem(3px),
-  color: sage-color(mercury, 500),
+  color: var(--pine-color-mercury-500),
 );
 
 ///
@@ -51,13 +51,13 @@ $sage-field-configs: (
 /// Field coloring
 ///
 $sage-field-colors: (
-  border: sage-color(grey, 300),
-  default: sage-color(grey, 800),
-  disabled: sage-color(grey, 500),
-  disabled-background: sage-color(grey, 150),
-  error: sage-color(red, 500),
-  label-background: sage-color(white),
-  success: sage-color(primary, 300),
+  border: var(--pine-color-border),
+  default: var(--pine-color-text-active),
+  disabled: var(--pine-color-text-disabled),
+  disabled-background: var(--pine-color-primary-disabled),
+  error: var(--pine-color-danger),
+  label-background: var(--pine-color-background-container),
+  success: var(--pine-color-primary),
 );
 
 // $sage-field
@@ -86,17 +86,17 @@ $sage-radio-size: rem(16px);
 /// Tab colors shared by components such as tabs and choices
 ///
 $sage-tab-colors: (
-  default: sage-color(grey, 800),
-  active: sage-color(grey, 900),
-  disabled: sage-color(grey, 600),
+  default: var(--pine-color-text),
+  active: var(--pine-color-text-hover),
+  disabled: var(--pine-color-text-disabled),
 );
 
 ///
 /// Standard text colors
 ///
 $sage-text-colors: (
-  body: sage-color(grey, 900),
-  heading: sage-color(grey, 950),
+  body: var(--pine-color-text),
+  heading: var(--pine-color-text-active),
 );
 
 ///

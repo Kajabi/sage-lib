@@ -9,42 +9,42 @@
 // `_button.scss`, `sage_alert.rb`, `_sage_alert.html.erb`, and `Alert.jsx`
 //
 $-alert-background-colors: (
-  default: sage-color(grey, 200),
-  draft: sage-color(grey, 200),
-  info: sage-color(primary, 100),
-  published: sage-color(sage, 100),
-  success: sage-color(sage, 100),
-  warning: sage-color(yellow, 150),
-  approaching: sage-color(yellow, 150),
-  reached: sage-color(orange, 100),
-  exceeded: sage-color(red, 150),
-  danger: sage-color(red, 150),
+  default: var(--pine-color-grey-200),
+  draft: var(--pine-color-grey-200),
+  info: var(--pine-color-blue-150),
+  published: var(--pine-color-green-150),
+  success: var(--pine-color-green-150),
+  warning: var(--pine-color-yellow-150),
+  approaching: var(--pine-color-yellow-150),
+  reached: var(--pine-color-mercury-150),
+  exceeded: var(--pine-color-red-150),
+  danger: var(--pine-color-red-150),
 );
 
 $-alert-icon-colors: (
-  default: sage-color(grey, 700),
-  draft: sage-color(grey, 700),
-  info: sage-color(primary, 300),
-  published: sage-color(sage, 300),
-  success: sage-color(sage, 300),
-  warning: sage-color(yellow, 600),
-  approaching: sage-color(yellow, 600),
-  reached: sage-color(orange, 400),
-  exceeded: sage-color(red, 500),
-  danger: sage-color(red, 500),
+  default: var(--pine-color-grey-700),
+  draft: var(--pine-color-grey-700),
+  info: var(--pine-color-primary),
+  published: var(--pine-color-success),
+  success: var(--pine-color-success),
+  warning: var(--pine-color-warning),
+  approaching: var(--pine-color-warning),
+  reached: var(--pine-color-mercury-800),
+  exceeded: var(--pine-color-danger),
+  danger: var(--pine-color-danger),
 );
 
 $-alert-border-colors: (
-  default: sage-color(grey, 300),
-  draft: sage-color(grey, 300),
-  info: sage-color(blue, 300),
-  published: sage-color(green, 300),
-  success: sage-color(green, 300),
-  warning: sage-color(yellow, 300),
-  approaching: sage-color(yellow, 300),
-  reached: sage-color(mercury, 300),
-  exceeded: sage-color(red, 300),
-  danger: sage-color(red, 300),
+  default: var(--pine-color-grey-300),
+  draft: var(--pine-color-grey-300),
+  info: var(--pine-color-blue-300),
+  published: var(--pine-color-green-300),
+  success: var(--pine-color-green-300),
+  warning: var(--pine-color-yellow-300),
+  approaching: var(--pine-color-yellow-300),
+  reached: var(--pine-color-mercury-300),
+  exceeded: var(--pine-color-red-300),
+  danger: var(--pine-color-red-300),
 );
 
 .sage-alert {
@@ -54,7 +54,7 @@ $-alert-border-colors: (
   gap: sage-spacing(sm);
   padding: sage-spacing();
   margin-block-end: sage-spacing();
-  border: 1px solid sage-color(grey, 300);
+  border: 1px solid var(--pine-color-grey-300);
   border-radius: sage-border(radius-large);
 
   .sage-frame > &,
@@ -119,7 +119,7 @@ $-alert-border-colors: (
 
 .sage-alert__title {
   @extend %t-sage-heading-5;
-  color: sage-color(grey, 950);
+  color: var(--pine-color-text-active);
 }
 
 .sage-alert__title--add-on {
@@ -164,16 +164,16 @@ $-alert-border-colors: (
     @extend %t-sage-body-med;
     @include sage-focus-outline($outline-offset-inline: 4px);
 
-    color: sage-color(grey, 900);
+    color: var(--pine-color-text);
     text-decoration: none;
 
     &:hover {
-      color: sage-color(grey, 950);
+      color: var(--pine-color-text-active);
       text-decoration: underline;
     }
 
     &:focus-visible {
-      @include sage-focus-outline--update-color(sage-color(purple, 300));
+      @include sage-focus-outline--update-color(var(--pine-color-purple-600));
     }
   }
 
@@ -191,16 +191,16 @@ $-alert-border-colors: (
   a:not([class*="sage-"]) {
     @include sage-focus-outline($outline-offset-inline: 4px);
 
-    color: sage-color(grey, 900);
+    color: var(--pine-color-text);
     text-decoration: underline;
 
     &:hover {
-      color: sage-color(grey, 950);
+      color: var(--pine-color-text-active);
       text-decoration: none;
     }
 
     &:focus-visible {
-      @include sage-focus-outline--update-color(sage-color(purple, 300));
+      @include sage-focus-outline--update-color(var(--pine-color-purple-600));
     }
   }
 

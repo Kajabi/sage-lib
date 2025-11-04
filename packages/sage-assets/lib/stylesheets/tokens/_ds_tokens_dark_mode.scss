@@ -33,20 +33,14 @@
     --pine-color-border-danger: var(--pine-color-red-500);
 
     // Primary Colors (semantic)
-    --pine-color-primary: var(--pine-color-blue-500);
-    --pine-color-primary-hover: var(--pine-color-blue-400);
-    --pine-color-primary-disabled: var(--pine-color-grey-700);
+    --pine-color-primary: var(--pine-color-white);
+    --pine-color-primary-hover: var(--pine-color-grey-100);
+    --pine-color-primary-disabled: var(--pine-color-grey-500);
 
     // Secondary Colors
-    --pine-color-secondary: var(--pine-color-grey-700);
-    --pine-color-secondary-hover: var(--pine-color-grey-600);
-    --pine-color-secondary-disabled: var(--pine-color-grey-800);
-
-    // Success Colors
-    --pine-color-success: var(--pine-color-green-400);
-    --pine-color-success-hover: var(--pine-color-green-300);
-    --pine-color-success-disabled: var(--pine-color-green-700);
-    --pine-color-text-success: var(--pine-color-green-300);
+    --pine-color-secondary: var(--pine-color-grey-500);
+    --pine-color-secondary-hover: var(--pine-color-grey-400);
+    --pine-color-secondary-disabled: var(--pine-color-grey-600);
 
     // Danger/Error Colors
     --pine-color-danger: var(--pine-color-red-500);
@@ -99,6 +93,9 @@
   --pine-color-background-container-disabled: var(--pine-color-grey-800);
 
   // Text Colors
+  --pine-color-text: var(--pine-color-grey-100);
+  --pine-color-text-hover: var(--pine-color-white);
+  --pine-color-text-active: var(--pine-color-white);
   --pine-color-text-primary: var(--pine-color-white);
   --pine-color-text-secondary: var(--pine-color-grey-300);
   --pine-color-text-label: var(--pine-color-white);
@@ -115,9 +112,9 @@
   --pine-color-border-danger: var(--pine-color-red-500);
 
   // Primary Colors
-  --pine-color-primary: var(--pine-color-blue-500);
-  --pine-color-primary-hover: var(--pine-color-blue-400);
-  --pine-color-primary-disabled: var(--pine-color-grey-700);
+  --pine-color-primary: var(--pine-color-grey-900);
+  --pine-color-primary-hover: var(--pine-color-grey-950);
+  --pine-color-primary-disabled: var(--pine-color-grey-500);
 
   // Secondary Colors
   --pine-color-secondary: var(--pine-color-grey-700);

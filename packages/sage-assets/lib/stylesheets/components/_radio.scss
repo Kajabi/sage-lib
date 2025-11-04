@@ -122,7 +122,7 @@ $-radio-focus-outline-color: currentColor;
   margin: 0;
   color: $-radio-color-default;
   outline: none;
-  background-color: var(--pine-color-white);
+  background-color: var(--pine-color-background-container);
   border: rem(1px) solid $-radio-color-default;
   border-radius: var(--pine-border-radius-full);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;

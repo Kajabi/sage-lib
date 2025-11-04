@@ -1,6 +1,33 @@
 # Sage "Assets" Package
 
-Details to come...
+The Sage Assets package contains all SCSS stylesheets, token definitions, and design system styling for the Sage Design System.
+
+## Token System
+
+Sage Assets uses a dual token system:
+
+- **ds-tokens** (`@kajabi-ui/styles`) - Primary source for CSS variables with dark mode support
+  - Provides semantic tokens (e.g., `--pine-color-primary`) for dark mode compatibility
+  - Imported via `tokens/_ds_tokens.scss`
+
+- **Style Dictionary** - Legacy system maintained for backward compatibility
+  - Used for SCSS hex value lookups via `sage-color-hex()` function
+  - Located in `/style-dictionary/tokens/`
+
+### Using Color Tokens
+
+```scss
+// For CSS properties (dark mode compatible)
+.my-component {
+  background-color: sage-color(primary, 300); // Returns: var(--pine-color-primary)
+  color: sage-color(white); // Returns: var(--pine-color-white)
+}
+
+// For SCSS color operations (requires hex values)
+$lightness: lightness(sage-color-hex(primary, 300)); // Returns: #2463eb
+```
+
+See `SCSS_COLOR_OPERATIONS_STRATEGY.md` for detailed guidance on when to use each function.
 
 ## Local Scripts
 

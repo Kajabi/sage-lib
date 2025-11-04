@@ -250,7 +250,7 @@
 ///
 /// @param {color} $focus-within-background-color Hex color to be used for the background-color
 ///
-@mixin sage-focus-outline--focus-within($focus-within-background-color: sage-color(primary, 100)) {
+@mixin sage-focus-outline--focus-within($focus-within-background-color: var(--pine-color-blue-150)) {
   &:focus-within:not(:disabled):not([aria-disabled="true"]) {
     background-color: $focus-within-background-color;
   }
@@ -299,7 +299,7 @@
 /// @param {number} $offset [4.5] unitless number for the initial offset for the starting point of the dash; typically matches a dash size
 /// @param {number} $border-radius [4] unitless number for the border radius of the shape
 ///
-@mixin sage-dashed-border($thickness: 1, $color: sage-color(grey, 500), $dash: 4.5, $gap: 4.5, $offset: 4.5, $border-radius: 4) {
+@mixin sage-dashed-border($thickness: 1, $color: var(--pine-color-grey-500), $dash: 4.5, $gap: 4.5, $offset: 4.5, $border-radius: 4) {
   $stripped-color-value: str-replace("#{$color}", "#", "%23");
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='#{$border-radius}' ry='#{$border-radius}' stroke='#{$stripped-color-value}' stroke-width='#{$thickness * 2}' stroke-dasharray='#{$dash}%2c#{$gap + $thickness * 4}' stroke-dashoffset='#{$offset}' stroke-linecap='square'/%3e%3c/svg%3e");
 }
@@ -662,7 +662,7 @@
 ///
 @mixin sage-panel() {
   padding: sage-spacing(panel);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
 }

@@ -82,7 +82,7 @@ $-empty-state-icon-compact-size: rem(56px);
 .sage-empty-state__title {
   @extend %t-sage-heading-3;
 
-  color: sage-color(grey, 900);
+  color: var(--pine-color-text);
   word-wrap: break-word;
 
   &:not(:only-child) {
@@ -99,5 +99,5 @@ $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state__text,
 .sage-empty-state__custom-content {
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-readonly);
 }

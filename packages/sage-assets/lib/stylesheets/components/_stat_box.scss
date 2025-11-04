@@ -12,7 +12,7 @@ $-stat-box-image-max-width: rem(48px);
   padding: rem(18px) sage-spacing(sm);
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
 
   .sage-card &,
   .sage-panel & {
@@ -80,7 +80,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title,
 .sage-stat-box__data--no-data {
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-readonly);
 }
 
 .sage-stat-box__title {
@@ -127,7 +127,7 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
   margin-inline-start: sage-spacing(xs);
-  color: sage-color(grey, 600);
+  color: var(--pine-color-text-placeholder);
 }
 
 .sage-stat-box__link {

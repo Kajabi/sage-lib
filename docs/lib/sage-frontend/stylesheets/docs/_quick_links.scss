@@ -4,7 +4,7 @@
   For Sage documentation use
 ================================================== */
 
-$-quick-links-color-text: sage-color(grey, 900);
+$-quick-links-color-text: var(--pine-color-text-active);
 $-quick-links-color-focus: sage-color(primary, 300);
 $-quick-links-color-background: sage-color(primary, 200);
 
@@ -13,7 +13,7 @@ $-quick-links-color-background: sage-color(primary, 200);
   inset-block-start: 0;
   overflow: hidden;
   padding: sage-spacing(2xs) sage-spacing();
-  background-color: #fff;
+  background-color: var(--pine-color-background-container);
   border-radius: sage-border(radius);
 }
 

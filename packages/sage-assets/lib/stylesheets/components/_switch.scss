@@ -44,7 +44,7 @@ $-switch-toggle-size: var(--pine-dimension-sm);
     border: var(--pine-border);
     border-radius: var(--pine-dimension-xs);
     box-shadow: var(--pine-box-shadow);
-    background-color: var(--pine-color-white);
+    background-color: var(--pine-color-background-container);
 
     .sage-card &,
     .sage-panel & {
