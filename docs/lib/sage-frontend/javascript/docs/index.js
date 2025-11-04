@@ -6,6 +6,7 @@ require('./meter')
 require('./button-group')
 require('./example')
 require('./scroll-to-active-nav-item')
+require('./dark-mode-toggle')
 
 import SageDocsTabs from './tabs';
 
