@@ -59,7 +59,7 @@ $sage-color-default-name: "grey 500";
   // ============================================
 
   // Primary colors → SEMANTIC TOKEN (dark mode compatible)
-  @if $base == 'primary' {
+  @if $base == "primary" {
     @if $value == 300 or $value == null {
       @return var(--pine-color-primary); // Semantic token - REQUIRED for dark mode
     }
@@ -82,7 +82,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Success/sage colors → SEMANTIC TOKEN
-  @if $base == 'sage' {
+  @if $base == "sage" {
     @if $value == 300 or $value == null {
       @return var(--pine-color-success); // Semantic token - dark mode compatible
     }
@@ -105,7 +105,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Red/danger colors → SEMANTIC TOKEN for error states
-  @if $base == 'red' {
+  @if $base == "red" {
     @if $value == 300 {
       @return var(--pine-color-danger); // Semantic token - dark mode compatible
     }
@@ -132,7 +132,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Yellow/warning colors → SEMANTIC TOKEN
-  @if $base == 'yellow' {
+  @if $base == "yellow" {
     @if $value == 300 or $value == 400 {
       @return var(--pine-color-warning); // Semantic token - dark mode compatible
     }
@@ -156,14 +156,14 @@ $sage-color-default-name: "grey 500";
   // ============================================
 
   // Orange → Mercury alias (maintain backward compatibility)
-  @if $base == 'orange' {
-    $base: 'mercury';
+  @if $base == "orange" {
+    $base: "mercury";
     // Keep value as-is, mercury has same scale
   }
 
   // Charcoal → Grey alias with mapping
-  @if $base == 'charcoal' {
-    $base: 'grey';
+  @if $base == "charcoal" {
+    $base: "grey";
     // Map charcoal scale to grey equivalents
     $charcoal-to-grey: (
       100: 600,
@@ -222,11 +222,11 @@ $sage-color-default-name: "grey 500";
   $value: if($value == null, $default-value, $value);
 
   // Handle aliases (same as sage-color)
-  @if $base == 'orange' {
-    $base: 'mercury';
+  @if $base == "orange" {
+    $base: "mercury";
   }
-  @if $base == 'charcoal' {
-    $base: 'grey';
+  @if $base == "charcoal" {
+    $base: "grey";
     $charcoal-to-grey: (
       100: 600,
       200: 700,
@@ -241,41 +241,49 @@ $sage-color-default-name: "grey 500";
 
   // Map semantic colors to their hex equivalents from Style Dictionary
   // For primary, use blue-600 (closest to primary-300)
-  @if $base == 'primary' {
+  @if $base == "primary" {
     @if $value == 300 or $value == null {
-      $base: 'blue';
+      $base: "blue";
       $value: 600;
-    } @else if $value == 400 {
-      $base: 'blue';
+    }
+    @else if $value == 400 {
+      $base: "blue";
       $value: 500;
-    } @else if $value == 100 {
-      $base: 'blue';
+    }
+    @else if $value == 100 {
+      $base: "blue";
       $value: 150;
-    } @else if $value == 200 {
-      $base: 'blue';
+    }
+    @else if $value == 200 {
+      $base: "blue";
       $value: 300;
-    } @else if $value == 500 {
-      $base: 'blue';
+    }
+    @else if $value == 500 {
+      $base: "blue";
       $value: 900;
     }
   }
 
   // Map sage to green
-  @if $base == 'sage' {
+  @if $base == "sage" {
     @if $value == 300 or $value == null {
-      $base: 'green';
+      $base: "green";
       $value: 500;
-    } @else if $value == 100 {
-      $base: 'green';
+    }
+    @else if $value == 100 {
+      $base: "green";
       $value: 150;
-    } @else if $value == 200 {
-      $base: 'green';
+    }
+    @else if $value == 200 {
+      $base: "green";
       $value: 300;
-    } @else if $value == 400 {
-      $base: 'green';
+    }
+    @else if $value == 400 {
+      $base: "green";
       $value: 800;
-    } @else if $value == 500 {
-      $base: 'green';
+    }
+    @else if $value == 500 {
+      $base: "green";
       $value: 950;
     }
   }
