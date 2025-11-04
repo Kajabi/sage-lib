@@ -166,7 +166,7 @@ $-table-avatar-width: var(--pine-dimension-lg);
   }
 
   .sage-table__sort-link--selected {
-    color: sage-color(grey, 600);
+    color: var(--pine-color-grey-600);
     text-decoration: underline;
 
     &::after {

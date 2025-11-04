@@ -19,7 +19,7 @@
   border-radius: sage-border(radius-medium);
 
   &:hover {
-    background-color: sage-color(grey, 150);
+    background-color: var(--pine-color-grey-150);
   }
 
   .sage-list--draggable-by-row & {
@@ -28,7 +28,7 @@
 }
 
 .sage-list__item--sortable-active {
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
 
   .sage-list--draggable-by-row & {
     cursor: grabbing;
@@ -36,7 +36,7 @@
 }
 
 .sage-list__item--sortable-drag {
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   box-shadow: sage-shadow(lg);
   // NOTE: !important is added and lint-ignored here so that it can override
   // inline opacity that the SortableJS utility we're using adds during sorting.
@@ -44,7 +44,7 @@
 }
 
 .sage-list__item--sortable-ghost {
-  background-color: sage-color(grey, 150);
+  background-color: var(--pine-color-grey-150);
 }
 
 .sage-list__item-content {

@@ -28,19 +28,19 @@
   @extend %t-sage-body-xsmall-med;
   @include line-clamp(1);
 
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
 }
 
 .sage-chart-summary__label {
   @extend %t-sage-body-small-med;
   @include line-clamp(2);
 
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 }
 
 .sage-chart-summary__value {
   @extend %t-sage-heading-5;
 
-  color: sage-color(grey, 950);
+  color: var(--pine-color-text-active);
   font-style: normal;
 }
