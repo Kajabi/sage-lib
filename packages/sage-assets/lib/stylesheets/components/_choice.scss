@@ -9,12 +9,12 @@ $-choice-el-radio: "before";
 $-choice-el-icon: "before";
 $-choice-el-arrow: "before";
 
-$-choice-color-default: map-get($sage-tab-colors, default);
-$-choice-color-active: map-get($sage-tab-colors, active);
-$-choice-color-disabled: map-get($sage-tab-colors, disabled);
+$-choice-color-default: sage-tab-color(default);
+$-choice-color-active: sage-tab-color(active);
+$-choice-color-disabled: sage-tab-color(disabled);
 $-choice-radio-size: $sage-radio-size;
-$-choice-radio-color-checked: map-get($sage-radio-colors, checked);
-$-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+$-choice-radio-color-checked: sage-radio-color(checked);
+$-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
 
 :root {
   --icon-top-offset: #{rem(6px)};
