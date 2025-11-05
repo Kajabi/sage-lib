@@ -95,11 +95,11 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   // Firefox allows setting the color of <options> within a <select>.
   // This prevents color from being inherited from <select>.
   option:not(:disabled) {
-    color: map-get($sage-text-colors, body);
+    color: sage-text-color(body);
   }
 
   .sage-select--value-selected & {
-    color: map-get($sage-field-colors, default);
+    color: sage-field-color(default);
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {

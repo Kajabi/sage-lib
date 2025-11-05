@@ -17,9 +17,9 @@ $-dropdown-panel-max-height: rem(400px);
 $-dropdown-panel-max-height-small: rem(185px);
 $-dropdown-panel-max-height-breakpoint: 775px;
 
-$-dropdown-trigger-label-color-label-background: map-get($sage-field-colors, label-background);
-$-dropdown-trigger-label-color-default: map-get($sage-field-colors, default);
-$-dropdown-trigger-label-color-disabled: map-get($sage-field-colors, disabled);
+$-dropdown-trigger-label-color-label-background: sage-field-color(label-background);
+$-dropdown-trigger-label-color-default: sage-field-color(default);
+$-dropdown-trigger-label-color-disabled: sage-field-color(disabled);
 $-dropdown-trigger-padding-label: map-get($sage-field-configs, padding-label);
 $-dropdown-trigger-padding-x: map-get($sage-field-configs, padding);
 $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);

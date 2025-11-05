@@ -6,15 +6,15 @@
 
 
 // Colors
-$-radio-color-checked: map-get($sage-radio-colors, checked);
-$-radio-color-checked-disabled: map-get($sage-radio-colors, checked-disabled);
-$-radio-color-checked-hover: map-get($sage-radio-colors, checked-hover);
-$-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
-$-radio-color-default: map-get($sage-radio-colors, default);
-$-radio-color-disabled: map-get($sage-radio-colors, disabled);
-$-radio-color-error: map-get($sage-radio-colors, error);
-$-radio-color-hover: map-get($sage-radio-colors, hover);
-$-radio-color-error-hover: map-get($sage-radio-colors, error-hover);
+$-radio-color-checked: sage-radio-color(checked);
+$-radio-color-checked-disabled: sage-radio-color(checked-disabled);
+$-radio-color-checked-hover: sage-radio-color(checked-hover);
+$-radio-color-checked-inner: sage-radio-color(checked-inner);
+$-radio-color-default: sage-radio-color(default);
+$-radio-color-disabled: sage-radio-color(disabled);
+$-radio-color-error: sage-radio-color(error);
+$-radio-color-hover: sage-radio-color(hover);
+$-radio-color-error-hover: sage-radio-color(error-hover);
 $-radio-color-text-disabled: var(--pine-color-text-disabled);
 $-radio-color-focus-outline: var(--pine-color-focus-ring);
 $-radio-color-focus-outline-error: var(--pine-color-danger);

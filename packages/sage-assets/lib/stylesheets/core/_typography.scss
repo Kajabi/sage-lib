@@ -93,7 +93,7 @@ body:not(.sage-excluded),
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  color: map-get($sage-text-colors, body);
+  color: sage-text-color(body);
   font-size: sage-font-size();
 }
 
@@ -125,7 +125,7 @@ body:not(.sage-excluded),
   > h5:not([class]),
   > h6:not([class]),
   > [class*="t-sage-heading-"] {
-    color: map-get($sage-text-colors, heading);
+    color: sage-text-color(heading);
 
     @include sage-block-spacing($-headings-margin-block-end);
   }
