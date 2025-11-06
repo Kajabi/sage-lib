@@ -93,7 +93,7 @@ body:not(.sage-excluded),
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  color: sage-text-color(body);
+  color: var(--pine-color-text-active);
   font-size: sage-font-size();
 }
 
@@ -125,7 +125,7 @@ body:not(.sage-excluded),
   > h5:not([class]),
   > h6:not([class]),
   > [class*="t-sage-heading-"] {
-    color: sage-text-color(heading);
+    color: var(--pine-color-text-active);
 
     @include sage-block-spacing($-headings-margin-block-end);
   }
@@ -248,6 +248,65 @@ body:not(.sage-excluded),
       color: sage-color($color-name, $-level);
     }
   }
+}
+
+// Semantic text color utility classes (dark mode compatible)
+// These use semantic tokens that adapt to dark mode, unlike core token classes above
+.t-sage--color-text-primary {
+  color: var(--pine-color-text-primary);
+}
+
+.t-sage--color-text-secondary {
+  color: var(--pine-color-text-secondary);
+}
+
+.t-sage--color-text-tertiary {
+  color: var(--pine-color-text-tertiary);
+}
+
+.t-sage--color-text-active {
+  color: var(--pine-color-text-active);
+}
+
+.t-sage--color-text-disabled {
+  color: var(--pine-color-text-disabled);
+}
+
+.t-sage--color-text-readonly {
+  color: var(--pine-color-text-readonly);
+}
+
+.t-sage--color-text-message {
+  color: var(--pine-color-text-message);
+}
+
+.t-sage--color-text-label {
+  color: var(--pine-color-text-label);
+}
+
+.t-sage--color-text-placeholder {
+  color: var(--pine-color-text-placeholder);
+}
+
+// Semantic action color utility classes (dark mode compatible)
+.t-sage--color-primary {
+  color: var(--pine-color-primary);
+}
+
+.t-sage--color-primary-hover {
+  color: var(--pine-color-primary-hover);
+}
+
+.t-sage--color-success {
+  color: var(--pine-color-success);
+}
+
+.t-sage--color-danger {
+  color: var(--pine-color-danger);
+}
+
+.t-sage--color-warning {
+  color: var(--pine-color-warning);
 }
 
 .t-sage--align-center {

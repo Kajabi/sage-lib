@@ -196,5 +196,11 @@ $sage-type-specs: (
   ///
   %t-sage-#{$spec-name} {
     @include sage-type-spec($spec-name);
+
+    // Apply heading color for heading placeholders
+    // Use sage-text-color() function to preserve CSS variables (not map-get)
+    @if str-index($spec-name, "heading") {
+      color: var(--pine-color-text-active);
+    }
   }
 }
