@@ -16,9 +16,11 @@
     --pine-color-background-container-disabled: var(--pine-color-grey-800);
 
     // Text Colors
+    --pine-color-text: var(--pine-color-grey-100);
+    --pine-color-text-hover: var(--pine-color-white);
+    --pine-color-text-active: var(--pine-color-white);
     --pine-color-text-primary: var(--pine-color-white);
     --pine-color-text-secondary: var(--pine-color-grey-300);
-    --pine-color-text-tertiary: var(--pine-color-grey-400);
     --pine-color-text-label: var(--pine-color-white);
     --pine-color-text-placeholder: var(--pine-color-grey-500);
     --pine-color-text-disabled: var(--pine-color-grey-600);
@@ -38,34 +40,34 @@
     --pine-color-primary-disabled: var(--pine-color-grey-500);
 
     // Secondary Colors
-    --pine-color-secondary: var(--pine-color-grey-500);
-    --pine-color-secondary-hover: var(--pine-color-grey-400);
+    --pine-color-secondary: var(--pine-color-grey-950);
+    --pine-color-secondary-hover: var(--pine-color-grey-900);
     --pine-color-secondary-disabled: var(--pine-color-grey-600);
 
     // Danger/Error Colors
-    --pine-color-danger: var(--pine-color-red-500);
-    --pine-color-danger-hover: var(--pine-color-red-400);
-    --pine-color-danger-disabled: var(--pine-color-red-800);
-    --pine-color-text-danger: var(--pine-color-red-300);
-    --pine-color-text-message-danger: var(--pine-color-red-400);
+    // --pine-color-danger: var(--pine-color-red-500);
+    // --pine-color-danger-hover: var(--pine-color-red-400);
+    // --pine-color-danger-disabled: var(--pine-color-red-800);
+    // --pine-color-text-danger: var(--pine-color-red-300);
+    // --pine-color-text-message-danger: var(--pine-color-red-400);
 
-    // Warning Colors
-    --pine-color-warning: var(--pine-color-yellow-400);
-    --pine-color-warning-hover: var(--pine-color-yellow-300);
-    --pine-color-warning-disabled: var(--pine-color-yellow-700);
-    --pine-color-text-warning: var(--pine-color-yellow-300);
+    // // Warning Colors
+    // --pine-color-warning: var(--pine-color-yellow-400);
+    // --pine-color-warning-hover: var(--pine-color-yellow-300);
+    // --pine-color-warning-disabled: var(--pine-color-yellow-700);
+    // --pine-color-text-warning: var(--pine-color-yellow-300);
 
-    // Info Colors
-    --pine-color-info: var(--pine-color-blue-400);
-    --pine-color-info-hover: var(--pine-color-blue-300);
-    --pine-color-info-disabled: var(--pine-color-blue-700);
-    --pine-color-text-info: var(--pine-color-blue-300);
+    // // Info Colors
+    // --pine-color-info: var(--pine-color-blue-400);
+    // --pine-color-info-hover: var(--pine-color-blue-300);
+    // --pine-color-info-disabled: var(--pine-color-blue-700);
+    // --pine-color-text-info: var(--pine-color-blue-300);
 
-    // Accent Colors
-    --pine-color-accent: var(--pine-color-purple-400);
-    --pine-color-accent-hover: var(--pine-color-purple-300);
-    --pine-color-accent-disabled: var(--pine-color-purple-700);
-    --pine-color-text-accent: var(--pine-color-purple-300);
+    // // Accent Colors
+    // --pine-color-accent: var(--pine-color-purple-400);
+    // --pine-color-accent-hover: var(--pine-color-purple-300);
+    // --pine-color-accent-disabled: var(--pine-color-purple-700);
+    // --pine-color-text-accent: var(--pine-color-purple-300);
 
     // Neutral Colors
     --pine-color-neutral: var(--pine-color-grey-400);
@@ -74,8 +76,8 @@
     --pine-color-text-neutral: var(--pine-color-grey-300);
 
     // Focus Ring
-    --pine-color-focus-ring: var(--pine-color-blue-400);
-    --pine-color-focus-ring-danger: var(--pine-color-red-400);
+    --pine-color-focus-ring: var(--pine-color-purple-300);
+    --pine-color-focus-ring-danger: var(--pine-color-red-300);
 
     // Text Primary/Secondary (for buttons on colored backgrounds)
     --pine-color-text-primary: var(--pine-color-white);
@@ -117,40 +119,40 @@
   --pine-color-primary-disabled: var(--pine-color-grey-500);
 
   // Secondary Colors
-  --pine-color-secondary: var(--pine-color-grey-700);
-  --pine-color-secondary-hover: var(--pine-color-grey-600);
-  --pine-color-secondary-disabled: var(--pine-color-grey-800);
+  --pine-color-secondary: var(--pine-color-grey-950);
+  --pine-color-secondary-hover: var(--pine-color-grey-900);
+  --pine-color-secondary-disabled: var(--pine-color-grey-600);
 
   // Success Colors
-  --pine-color-success: var(--pine-color-green-400);
-  --pine-color-success-hover: var(--pine-color-green-300);
-  --pine-color-success-disabled: var(--pine-color-green-700);
-  --pine-color-text-success: var(--pine-color-green-300);
+  // --pine-color-success: var(--pine-color-green-400);
+  // --pine-color-success-hover: var(--pine-color-green-300);
+  // --pine-color-success-disabled: var(--pine-color-green-700);
+  // --pine-color-text-success: var(--pine-color-green-300);
 
   // Danger Colors
-  --pine-color-danger: var(--pine-color-red-500);
-  --pine-color-danger-hover: var(--pine-color-red-400);
-  --pine-color-danger-disabled: var(--pine-color-red-800);
-  --pine-color-text-danger: var(--pine-color-red-300);
-  --pine-color-text-message-danger: var(--pine-color-red-400);
+  // --pine-color-danger: var(--pine-color-red-500);
+  // --pine-color-danger-hover: var(--pine-color-red-400);
+  // --pine-color-danger-disabled: var(--pine-color-red-800);
+  // --pine-color-text-danger: var(--pine-color-red-300);
+  // --pine-color-text-message-danger: var(--pine-color-red-400);
 
   // Warning Colors
-  --pine-color-warning: var(--pine-color-yellow-400);
-  --pine-color-warning-hover: var(--pine-color-yellow-300);
-  --pine-color-warning-disabled: var(--pine-color-yellow-700);
-  --pine-color-text-warning: var(--pine-color-yellow-300);
+  // --pine-color-warning: var(--pine-color-yellow-400);
+  // --pine-color-warning-hover: var(--pine-color-yellow-300);
+  // --pine-color-warning-disabled: var(--pine-color-yellow-700);
+  // --pine-color-text-warning: var(--pine-color-yellow-300);
 
   // Info Colors
-  --pine-color-info: var(--pine-color-blue-400);
-  --pine-color-info-hover: var(--pine-color-blue-300);
-  --pine-color-info-disabled: var(--pine-color-blue-700);
-  --pine-color-text-info: var(--pine-color-blue-300);
+  // --pine-color-info: var(--pine-color-blue-400);
+  // --pine-color-info-hover: var(--pine-color-blue-300);
+  // --pine-color-info-disabled: var(--pine-color-blue-700);
+  // --pine-color-text-info: var(--pine-color-blue-300);
 
   // Accent Colors
-  --pine-color-accent: var(--pine-color-purple-400);
-  --pine-color-accent-hover: var(--pine-color-purple-300);
-  --pine-color-accent-disabled: var(--pine-color-purple-700);
-  --pine-color-text-accent: var(--pine-color-purple-300);
+  // --pine-color-accent: var(--pine-color-purple-400);
+  // --pine-color-accent-hover: var(--pine-color-purple-300);
+  // --pine-color-accent-disabled: var(--pine-color-purple-700);
+  // --pine-color-text-accent: var(--pine-color-purple-300);
 
   // Neutral Colors
   --pine-color-neutral: var(--pine-color-grey-400);

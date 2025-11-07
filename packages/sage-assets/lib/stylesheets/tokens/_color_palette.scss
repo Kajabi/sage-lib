@@ -151,6 +151,55 @@ $sage-color-default-name: "grey 500";
     }
   }
 
+  // Grey/neutral colors → SEMANTIC TOKENS (for dark mode)
+  @if $base == "grey" {
+    // Map specific grey shades to semantic tokens
+    @if $value == 950 {
+      @return var(--pine-color-text-active); // Semantic token - dark mode compatible
+    }
+    @if $value == 900 {
+      @return var(--pine-color-text); // Semantic token - dark mode compatible
+    }
+    @if $value == 800 {
+      @return var(--pine-color-text-message); // Semantic token - dark mode compatible
+    }
+    @if $value == 700 {
+      @return var(--pine-color-text-readonly); // Semantic token - dark mode compatible
+    }
+    @if $value == 600 {
+      @return var(--pine-color-text-placeholder); // Semantic token - dark mode compatible
+    }
+    @if $value == 500 {
+      @return var(--pine-color-text-disabled); // Semantic token - dark mode compatible
+    }
+    @if $value == 400 {
+      @return var(--pine-color-border-hover); // Semantic token - dark mode compatible
+    }
+    @if $value == 300 {
+      @return var(--pine-color-border); // Semantic token - dark mode compatible
+    }
+    @if $value == 200 {
+      @return var(--pine-color-border-disabled); // Semantic token - dark mode compatible
+    }
+    @if $value == 150 {
+      @return var(--pine-color-background-container-disabled); // Semantic token - dark mode compatible
+    }
+    @if $value == 100 {
+      @return var(--pine-color-background-app); // Semantic token - dark mode compatible
+    }
+    @if $value == 50 {
+      @return var(--pine-color-background-container-hover); // Semantic token - dark mode compatible
+    }
+  }
+
+  // White → SEMANTIC TOKEN (for dark mode)
+  @if $base == "white" {
+    // Map white to background container semantic token
+    @if $value == 500 or $value == null {
+      @return var(--pine-color-background-container); // Semantic token - dark mode compatible
+    }
+  }
+
   // ============================================
   // PRIORITY 2: Aliases (orange → mercury, charcoal → grey)
   // ============================================

@@ -115,7 +115,7 @@ $-btn-base-styles: (
 
 $-btn-subtle-styles: (
   accent: (
-    default: var(--pine-color-primary),
+    default: var(--pine-color-text-primary),
     hover: var(--pine-color-primary),
     hover-background: var(--pine-color-blue-150),
     focus: var(--pine-color-primary),
@@ -123,20 +123,20 @@ $-btn-subtle-styles: (
     disabled: var(--pine-color-blue-300),
   ),
   primary: (
-    default: var(--pine-color-primary),
+    default: var(--pine-color-text-primary),
     hover: var(--pine-color-primary),
     hover-background: var(--pine-color-primary-disabled),
     focus: var(--pine-color-primary),
     focus-outline: var(--pine-color-purple-600),
-    disabled: var(--pine-color-grey-600),
+    disabled: var(--pine-color-text-placeholder),
   ),
   secondary: (
-    default: var(--pine-color-primary),
+    default: var(--pine-color-text-primary),
     hover: var(--pine-color-primary),
     hover-background: var(--pine-color-primary-disabled),
     focus: var(--pine-color-primary),
     focus-outline: var(--pine-color-purple-600),
-    disabled: var(--pine-color-grey-600),
+    disabled: var(--pine-color-text-placeholder),
   ),
   danger: (
     default: var(--pine-color-danger),
