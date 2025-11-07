@@ -328,6 +328,16 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     min-width: 100%;
   }
 
+  .sage-search ~ & {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--pine-color-background-container);
+    border: 1px solid var(--pine-color-border);
+  }
+
   @media (max-height: $-dropdown-panel-max-height-breakpoint) {
     max-height: $-dropdown-panel-max-height-small;
   }
