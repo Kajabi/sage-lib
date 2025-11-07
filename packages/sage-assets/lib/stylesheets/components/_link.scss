@@ -6,41 +6,41 @@
 
 $-link-color: var(--pine-color-primary);
 $-link-color-hover: var(--pine-color-primary-hover);
-$-link-subtext-color: var(--pine-color-grey-700);
-$-link-subtext-color-hover: var(--pine-color-grey-900);
+$-link-subtext-color: var(--pine-color-text-readonly);
+$-link-subtext-color-hover: var(--pine-color-text);
 
 $-link-base-styles: (
   primary:(
     default: (
-      color: var(--pine-color-primary),
+      color: var(--pine-color-text),
     ),
     hover: (
-      color: var(--pine-color-primary-hover),
+      color: var(--pine-color-text-hover),
     ),
     focus-visible: (
-      color: var(--pine-color-primary),
+      color: var(--pine-color-text),
     ),
   ),
   secondary:(
     default: (
-      color: var(--pine-color-grey-900),
+      color: var(--pine-color-text),
     ),
     hover: (
-      color: var(--pine-color-black),
+      color: var(--pine-color-text-hover),
     ),
     focus-visible: (
-      color: var(--pine-color-grey-900),
+      color: var(--pine-color-text),
     ),
   ),
   neutral:(
     default: (
-      color: var(--pine-color-white),
+      color: var(--pine-color-background-container),
     ),
     hover: (
-      color: var(--pine-color-grey-100),
+      color: var(--pine-color-background-app),
     ),
     focus-visible: (
-      color: var(--pine-color-white),
+      color: var(--pine-color-background-container),
     ),
   ),
   danger:(
@@ -173,7 +173,7 @@ $-link-base-styles: (
   pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
-    color: var(--pine-color-grey-600);
+    color: var(--pine-color-text-placeholder);
   }
 
   &:focus {
@@ -187,11 +187,11 @@ $-link-base-styles: (
     outline: 0;
 
     pds-icon {
-      color: var(--pine-color-grey-800);
+      color: var(--pine-color-text-message);
     }
 
     &::before {
-      color: var(--pine-color-grey-800);
+      color: var(--pine-color-text-message);
     }
   }
 
