@@ -50,16 +50,26 @@ $sage-color-default-name: "grey 500";
     yellow: 400
   );
 
+  // Normalize $base to a string for consistent comparisons
+  // This handles cases where $base comes as a symbol from map iterations
+  $base-str: #{$base};
+
   // Get the default value for the given base color
   $default-value: map-get($default-values, $base);
   $value: if($value == null, $default-value, $value);
+
+  // Normalize $value to a number for consistent comparisons
+  // This handles cases where $value comes as a string from map iterations
+  @if type-of($value) == string {
+    $value: number($value);
+  }
 
   // ============================================
   // PRIORITY 1: Semantic Tokens (REQUIRED for dark mode)
   // ============================================
 
   // Primary colors → SEMANTIC TOKEN (dark mode compatible)
-  @if $base == "primary" {
+  @if $base-str == "primary" {
     @if $value == 300 or $value == null {
       @return var(--pine-color-primary); // Semantic token - REQUIRED for dark mode
     }
@@ -82,7 +92,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Success/sage colors → SEMANTIC TOKEN
-  @if $base == "sage" {
+  @if $base-str == "sage" {
     @if $value == 300 or $value == null {
       @return var(--pine-color-success); // Semantic token - dark mode compatible
     }
@@ -105,7 +115,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Red/danger colors → SEMANTIC TOKEN for error states
-  @if $base == "red" {
+  @if $base-str == "red" {
     @if $value == 300 {
       @return var(--pine-color-danger); // Semantic token - dark mode compatible
     }
@@ -132,7 +142,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Yellow/warning colors → SEMANTIC TOKEN
-  @if $base == "yellow" {
+  @if $base-str == "yellow" {
     @if $value == 300 or $value == 400 {
       @return var(--pine-color-warning); // Semantic token - dark mode compatible
     }
@@ -152,7 +162,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // Grey/neutral colors → SEMANTIC TOKENS (for dark mode)
-  @if $base == "grey" {
+  @if $base-str == "grey" {
     // Map specific grey shades to semantic tokens
     @if $value == 950 {
       @return var(--pine-color-text-active); // Semantic token - dark mode compatible
@@ -193,7 +203,7 @@ $sage-color-default-name: "grey 500";
   }
 
   // White → SEMANTIC TOKEN (for dark mode)
-  @if $base == "white" {
+  @if $base-str == "white" {
     // Map white to background container semantic token
     @if $value == 500 or $value == null {
       @return var(--pine-color-background-container); // Semantic token - dark mode compatible
@@ -205,13 +215,15 @@ $sage-color-default-name: "grey 500";
   // ============================================
 
   // Orange → Mercury alias (maintain backward compatibility)
-  @if $base == "orange" {
+  @if $base-str == "orange" {
+    $base-str: "mercury";
     $base: "mercury";
     // Keep value as-is, mercury has same scale
   }
 
   // Charcoal → Grey alias with mapping
-  @if $base == "charcoal" {
+  @if $base-str == "charcoal" {
+    $base-str: "grey";
     $base: "grey";
     // Map charcoal scale to grey equivalents
     $charcoal-to-grey: (
@@ -231,7 +243,7 @@ $sage-color-default-name: "grey 500";
   // ============================================
 
   // Build CSS variable name from base and value
-  @return var(--pine-color-#{$base}-#{$value});
+  @return var(--pine-color-#{$base-str}-#{$value});
 }
 
 ///
