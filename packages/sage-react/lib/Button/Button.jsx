@@ -88,6 +88,7 @@ export const Button = React.forwardRef(({
       onClick={onClick}
       {...rest}
     >
+      {/* pds-icon web components require @pine-ds/core CSS for proper rendering */}
       {icon && (
         <pds-icon
           name={icon}
