@@ -62,7 +62,7 @@
   },
   "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578",
   "dependencies": {
-    "@kajabi-ui/styles": "^0.2.0",
+    "@kajabi-ui/styles": "^0.3.0-dev.0",
     "sass": "^1.54.3"
   }
 }
