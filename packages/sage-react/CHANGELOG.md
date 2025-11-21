@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.25-dev.0](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.0) (2025-11-21)
+
+
+### Bug Fixes
+
+* update heading values ([9df6d0c](https://github.com/Kajabi/sage-lib/commit/9df6d0ce5ba9eebfa584ab79195dd37255670972))
+
+
+
+
+
 ## [6.2.24](https://github.com/Kajabi/sage-lib/compare/v6.2.23...v6.2.24) (2025-09-19)
 
 **Note:** Version bump only for package @kajabi/sage-react

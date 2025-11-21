@@ -3,6 +3,97 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.25-dev.0](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.0) (2025-11-21)
+
+
+### Bug Fixes
+
+* color update ([4f5643f](https://github.com/Kajabi/sage-lib/commit/4f5643f045754d5a13e1ebbf97aa0dc406110635))
+* remove dark mode temp files ([41d0d7a](https://github.com/Kajabi/sage-lib/commit/41d0d7abfccfca8db85bb401fb92b70bb588878b))
+* resolve build error ([1088860](https://github.com/Kajabi/sage-lib/commit/10888607a7c4a1f0308048c2b26504ffa1465205))
+* token cleanup ([6ecad32](https://github.com/Kajabi/sage-lib/commit/6ecad32dae4d6026eec15e9a9500dcf106115c36))
+* update color token pairings ([6ac7bf0](https://github.com/Kajabi/sage-lib/commit/6ac7bf02617b317cc5c6754a5bbb3ce7d59e344b))
+* update ds tokens dark mode dev version ([3d2e460](https://github.com/Kajabi/sage-lib/commit/3d2e4602cd19f679904ce015770f5dd3676f077e))
+* update heading values ([9df6d0c](https://github.com/Kajabi/sage-lib/commit/9df6d0ce5ba9eebfa584ab79195dd37255670972))
+* update maps to preserve token values ([e09acfc](https://github.com/Kajabi/sage-lib/commit/e09acfc45592a863f27f2c28e21c1fc08bc16827))
+* update semantic token mapping from loop ([6ff56fc](https://github.com/Kajabi/sage-lib/commit/6ff56fc7b2f76fe9464fc2f02959c3ef79ffaf27))
+* update token values ([f3c3478](https://github.com/Kajabi/sage-lib/commit/f3c34789eb3d8517bd0954d73cc3f0e7e8c3e8fe))
+* update tokens and dark mode values ([22ab9d6](https://github.com/Kajabi/sage-lib/commit/22ab9d63cdb9cd23e3c6751f4fd87c58352b9e43))
+
+
+### Features
+
+* add ds-tokens and semantic tokens ([80670fa](https://github.com/Kajabi/sage-lib/commit/80670fae373ee5787867a83be41b43915e9e96af))
+* update core to semantic tokens ([f7278e5](https://github.com/Kajabi/sage-lib/commit/f7278e51f7af2cf10111ecb5cdb65477a2015cbc))
+* validate tokens ([c8330a7](https://github.com/Kajabi/sage-lib/commit/c8330a769059a865c37e9644d2a796a910219399))
+
+
+
+
+
+## [Unreleased]
+
+### ⚠️ BREAKING CHANGES
+
+#### Token System Migration to ds-tokens
+
+- **BREAKING:** `sage-color()` function now returns CSS variables (`var(--pine-color-*)`) instead of hex values
+  - **Impact:** Enables dark mode support but breaks SCSS color operations
+  - **Migration:** Use `sage-color-hex()` for SCSS operations like `lightness()`, `darken()`, `lighten()`, `mix()`, etc.
+  - **Example:**
+    ```scss
+    // ❌ BREAKING: This no longer works
+    $lightness: lightness(sage-color(primary, 300)); // Error: CSS variable cannot be used
+
+    // ✅ Use sage-color-hex() for SCSS operations
+    $lightness: lightness(sage-color-hex(primary, 300)); // Works!
+
+    // ✅ Use sage-color() for CSS properties (dark mode compatible)
+    background-color: sage-color(primary, 300); // Returns: var(--pine-color-primary)
+    ```
+
+#### Color Token Migration
+
+- All component color usages migrated from Style Dictionary tokens to Pine tokens (`--pine-color-*`)
+- Components now prioritize semantic tokens (e.g., `--pine-color-primary`, `--pine-color-success`) for dark mode compatibility
+- 330+ color token instances updated across all Sage components
+- Direct `sage-color()` calls in components replaced with Pine token CSS variables for better dark mode support
+
+### ✨ Added
+
+- **Dark Mode Support**
+  - Dark mode color tokens via `[data-theme="dark"]` attribute selector
+  - System preference support via `@media (prefers-color-scheme: dark)`
+  - All semantic color tokens automatically adapt to dark mode
+
+- **New Functions**
+  - `sage-color-hex($base, $value)` - Returns hex values for SCSS color operations
+    - Use when you need compile-time color values (e.g., `lightness()`, `darken()`, `rgba()`)
+    - Falls back to Style Dictionary for hex lookup
+
+- **Token Integration**
+  - Integration with `@kajabi-ui/styles` (ds-tokens) package
+  - Pine tokens imported via `packages/sage-assets/lib/stylesheets/tokens/_ds_tokens.scss`
+  - Bridge layer maintains backward compatibility with existing `sage-color()` calls
+
+### 🔄 Changed
+
+- **Token Resolution Priority**
+  1. Semantic tokens (e.g., `--pine-color-primary`) - REQUIRED for dark mode
+  2. Core tokens (e.g., `--pine-color-blue-600`) - For specific shades/tints
+  3. Style Dictionary fallback - For hex lookups via `sage-color-hex()`
+
+- **Component Color Usage**
+  - All components now use Pine token CSS variables directly
+  - Semantic tokens prioritized for primary, success, danger, warning colors
+  - Background, text, and border colors use semantic tokens where available
+
+### 📚 Documentation
+
+- See `SCSS_COLOR_OPERATIONS_STRATEGY.md` for guidance on when to use `sage-color()` vs `sage-color-hex()`
+- See `SEMANTIC_TOKEN_PRIORITY.md` for semantic token usage guidelines
+- See `SAGE_TO_PINE_TOKEN_MAPPING.md` for complete token mapping reference
+
 ## [6.2.24](https://github.com/Kajabi/sage-lib/compare/v6.2.23...v6.2.24) (2025-09-19)
 
 
