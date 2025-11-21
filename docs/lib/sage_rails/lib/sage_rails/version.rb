@@ -1,3 +1,3 @@
 module SageRails
-  VERSION = "6.2.25-dev.0"
+  VERSION = "6.2.26-dev.0"
 end
