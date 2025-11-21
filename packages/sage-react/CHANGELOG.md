@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.25-dev.1](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.1) (2025-11-21)
+
+
+### Bug Fixes
+
+* update heading values ([9df6d0c](https://github.com/Kajabi/sage-lib/commit/9df6d0ce5ba9eebfa584ab79195dd37255670972))
+
+
+
+
+
 ## [6.2.25-dev.0](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.0) (2025-11-21)
 
 

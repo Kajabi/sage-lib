@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.25-dev.1](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.1) (2025-11-21)
+
+
+### Bug Fixes
+
+* color update ([4f5643f](https://github.com/Kajabi/sage-lib/commit/4f5643f045754d5a13e1ebbf97aa0dc406110635))
+* remove dark mode temp files ([41d0d7a](https://github.com/Kajabi/sage-lib/commit/41d0d7abfccfca8db85bb401fb92b70bb588878b))
+* resolve build error ([1088860](https://github.com/Kajabi/sage-lib/commit/10888607a7c4a1f0308048c2b26504ffa1465205))
+* token cleanup ([6ecad32](https://github.com/Kajabi/sage-lib/commit/6ecad32dae4d6026eec15e9a9500dcf106115c36))
+* update color token pairings ([6ac7bf0](https://github.com/Kajabi/sage-lib/commit/6ac7bf02617b317cc5c6754a5bbb3ce7d59e344b))
+* update ds tokens dark mode dev version ([3d2e460](https://github.com/Kajabi/sage-lib/commit/3d2e4602cd19f679904ce015770f5dd3676f077e))
+* update heading values ([9df6d0c](https://github.com/Kajabi/sage-lib/commit/9df6d0ce5ba9eebfa584ab79195dd37255670972))
+* update maps to preserve token values ([e09acfc](https://github.com/Kajabi/sage-lib/commit/e09acfc45592a863f27f2c28e21c1fc08bc16827))
+* update semantic token mapping from loop ([6ff56fc](https://github.com/Kajabi/sage-lib/commit/6ff56fc7b2f76fe9464fc2f02959c3ef79ffaf27))
+* update token values ([f3c3478](https://github.com/Kajabi/sage-lib/commit/f3c34789eb3d8517bd0954d73cc3f0e7e8c3e8fe))
+* update tokens and dark mode values ([22ab9d6](https://github.com/Kajabi/sage-lib/commit/22ab9d63cdb9cd23e3c6751f4fd87c58352b9e43))
+
+
+### Features
+
+* add dark mode toggle ([c125c85](https://github.com/Kajabi/sage-lib/commit/c125c8545bd5b968b4f97df8bbd050a28a2b473a))
+* add ds-tokens and semantic tokens ([80670fa](https://github.com/Kajabi/sage-lib/commit/80670fae373ee5787867a83be41b43915e9e96af))
+* update core to semantic tokens ([f7278e5](https://github.com/Kajabi/sage-lib/commit/f7278e51f7af2cf10111ecb5cdb65477a2015cbc))
+* validate tokens ([c8330a7](https://github.com/Kajabi/sage-lib/commit/c8330a769059a865c37e9644d2a796a910219399))
+
+
+
+
+
 ## [6.2.24](https://github.com/Kajabi/sage-lib/compare/v6.2.23...v6.2.24) (2025-09-19)
 
 

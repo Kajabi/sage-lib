@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.25-dev.1](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25-dev.1) (2025-11-21)
+
+
+### Bug Fixes
+
+* resolve build error ([1088860](https://github.com/Kajabi/sage-lib/commit/10888607a7c4a1f0308048c2b26504ffa1465205))
+* update ds tokens dark mode dev version ([3d2e460](https://github.com/Kajabi/sage-lib/commit/3d2e4602cd19f679904ce015770f5dd3676f077e))
+
+
+### Features
+
+* add dark mode toggle ([c125c85](https://github.com/Kajabi/sage-lib/commit/c125c8545bd5b968b4f97df8bbd050a28a2b473a))
+* update core to semantic tokens ([f7278e5](https://github.com/Kajabi/sage-lib/commit/f7278e51f7af2cf10111ecb5cdb65477a2015cbc))
+
+
+
+
+
 ## [6.2.24](https://github.com/Kajabi/sage-lib/compare/v6.2.23...v6.2.24) (2025-09-19)
 
 **Note:** Version bump only for package @kajabi/sage
