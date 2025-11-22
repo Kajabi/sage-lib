@@ -19,9 +19,13 @@ export default {
   },
   argTypes: {
     ...selectArgs({
-      color: ProgressBar.COLORS,
       tooltipPosition: ProgressBar.TOOLTIP_POSITIONS,
-    })
+    }),
+    color: {
+      control: { type: 'select' },
+      options: Object.keys(ProgressBar.COLORS),
+      mapping: ProgressBar.COLORS,
+    }
   }
 };
 
