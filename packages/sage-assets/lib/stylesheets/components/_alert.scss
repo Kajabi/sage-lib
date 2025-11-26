@@ -24,7 +24,7 @@ $-alert-background-colors: (
 $-alert-icon-colors: (
   default: var(--pine-color-grey-700),
   draft: var(--pine-color-grey-700),
-  info: var(--pine-color-primary),
+  info: var(--pine-color-blue-700),
   published: var(--pine-color-success),
   success: var(--pine-color-success),
   warning: var(--pine-color-warning),
@@ -47,7 +47,21 @@ $-alert-border-colors: (
   danger: var(--pine-color-red-300),
 );
 
+$-alert-text-colors: (
+  default: --pine-color-grey-900,
+  draft: --pine-color-grey-900,
+  info: --pine-color-blue-900,
+  published: --pine-color-green-800,
+  success: --pine-color-green-800,
+  warning: --pine-color-yellow-900,
+  approaching: --pine-color-yellow-900,
+  reached: --pine-color-grey-900,
+  exceeded: --pine-color-red-900,
+  danger: --pine-color-red-900,
+);
+
 .sage-alert {
+  --sage-alert-color-text: var(--pine-color-grey-900);
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas: "icon copy";
@@ -92,6 +106,12 @@ $-alert-border-colors: (
   }
 }
 
+@each $name, $value in $-alert-text-colors {
+  .sage-alert--#{$name} {
+    --sage-alert-color-text: var(#{$value});
+  }
+}
+
 .sage-alert--small {
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "icon copy actions";
@@ -119,7 +139,10 @@ $-alert-border-colors: (
 
 .sage-alert__title {
   @extend %t-sage-heading-5;
-  color: var(--pine-color-grey-950);
+
+  .sage-alert & {
+    color: var(--sage-alert-color-text);
+  }
 }
 
 .sage-alert__title--add-on {
@@ -184,6 +207,7 @@ $-alert-border-colors: (
 
 .sage-alert__desc {
   @extend %t-sage-body;
+  color: var(--sage-alert-color-text);
 
   // Mimics sage-link "inline link" styling
   // Excludes elements styled by Sage
