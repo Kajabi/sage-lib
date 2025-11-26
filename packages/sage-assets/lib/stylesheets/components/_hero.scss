@@ -81,6 +81,10 @@ $-hero-play-icon-background-color: var(--pine-color-background-container);
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
+
+  .sage-hero--custom-background-color & {
+    color: var(--pine-color-grey-950); // don't flip color for custom background color
+  }
 }
 
 .sage-hero__body {
@@ -98,6 +102,10 @@ $-hero-play-icon-background-color: var(--pine-color-background-container);
     padding-block-end: 0;
     padding-inline-start: 0;
     padding-inline-end: 0;
+  }
+
+  .sage-hero--custom-background-color & {
+    color: var(--pine-color-grey-800);
   }
 }
 
