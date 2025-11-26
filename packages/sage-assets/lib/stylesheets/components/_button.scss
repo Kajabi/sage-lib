@@ -754,6 +754,10 @@ a.sage-btn {
     }
   }
 
+  .sage-alert &.sage-btn--primary {
+    color: var(--pine-color-primary);
+  }
+
   .sage-assistant & {
     @include sage-focus-outline--update-color(var(--pine-color-white));
 
