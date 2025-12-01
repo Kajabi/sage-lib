@@ -21,22 +21,13 @@
 /// instead of core tokens (--pine-color-blue-600, etc.) for theme-aware colors.
 ///
 
-// Import ds-tokens CSS (provides all CSS variables in :root)
-// Note: ds-tokens outputs CSS files, not SCSS
-//
-// IMPORTANT: This import is commented out to avoid build issues in applications
-// that use different build tools (e.g., Vite/PostCSS in kajabi-products).
-//
-// Applications should import ds-tokens CSS directly:
-// - Via CDN in HTML (recommended for kajabi-products):
-//   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kajabi-ui/styles@0.2.0/dist/kajabi_products/kajabi_products.css" />
-// - Or in their main SCSS file: @import "~@kajabi-ui/styles/dist/kajabi_products/kajabi_products.css";
-//
-// For Sage's own standalone build, uncomment this line if needed:
-// @import "~@kajabi-ui/styles/dist/kajabi_products/kajabi_products.css";
+// Import Pine tokens from kajabi-ui/styles (includes dark mode support)
+// This provides all CSS variables in :root AND [data-theme="dark"] selectors
+// Note: Using the pine theme which has built-in dark mode support
+@import "~@kajabi-ui/styles/dist/pine/pine.css";
 
-// Import dark mode color token overrides
-// This provides dark mode support via @media (prefers-color-scheme: dark)
-// and [data-theme="dark"] attribute selector
-@import "ds_tokens_dark_mode";
+// Note: The pine.css file includes both:
+// - :root { all light mode tokens }
+// - [data-theme="dark"] { all dark mode token overrides }
+// So no additional dark mode file is needed!
 

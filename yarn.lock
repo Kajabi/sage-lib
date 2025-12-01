@@ -1930,10 +1930,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@kajabi-ui/styles@^0.3.0-dev.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@kajabi-ui/styles/-/styles-0.3.0.tgz#30b00ad593442608b39613240594f6d95526de35"
-  integrity sha512-hQDNvRrRC2YfBBW0EaD5A6KeZcsEBMjEuGLRsL0dFQ6mQDOs4JmOSq1xQpzN87P7xDxq5rQQYNO/yNl/xx4ZQw==
+"@kajabi-ui/styles@*":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@kajabi-ui/styles/-/styles-1.0.0.tgz#0971f0b965537df145c8e9f0967944f305dbab80"
+  integrity sha512-CgcuEbyRve++gGia+FFvNHYiOOx4TYjdogJ/yhdjyIlWVemhwObaIMpe5Ji5M3IuFcrNlNxpVIhzndTiJDzUYw==
 
 "@koa/cors@^3.2.0":
   version "3.4.1"
