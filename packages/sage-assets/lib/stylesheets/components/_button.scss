@@ -163,12 +163,6 @@ $-alert-close-btn-background-colors: (
   danger: var(--pine-color-red-300),
 );
 
-[data-theme="dark"] {
-  .sage-btn--primary:hover {
-    background-color: var(--pine-color-white);
-  }
-}
-
 //
 // Custom variables
 //
@@ -877,4 +871,15 @@ a.sage-btn {
 .sage-btn-group--border-top {
   padding-block-start: var(--pine-dimension-lg);
   border-block-start: var(--pine-border);
+}
+
+//
+// Theme Overrides
+// NOTE: Theme-specific styles MUST be placed here (at the end of the file)
+// to ensure they override the generated button styles above.
+//
+[data-theme="dark"] {
+  .sage-btn--primary:hover {
+    background-color: var(--pine-color-white);
+  }
 }
