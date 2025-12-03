@@ -5,7 +5,7 @@
 ////
 
 ///
-/// Import ds-tokens for kajabi_products theme
+/// Import ds-tokens for Pine theme
 /// This provides all core and semantic tokens as CSS variables
 ///
 /// Usage in SCSS:
@@ -23,11 +23,4 @@
 
 // Import Pine tokens from kajabi-ui/styles (includes dark mode support)
 // This provides all CSS variables in :root AND [data-theme="dark"] selectors
-// Note: Using the pine theme which has built-in dark mode support
 @import "~@kajabi-ui/styles/dist/pine/pine.css";
-
-// Note: The pine.css file includes both:
-// - :root { all light mode tokens }
-// - [data-theme="dark"] { all dark mode token overrides }
-// So no additional dark mode file is needed!
-

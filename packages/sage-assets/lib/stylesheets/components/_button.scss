@@ -25,18 +25,18 @@ $-btn-disclosure-left-padding: rem(26px);
 $-btn-base-styles: (
   accent: (
     default: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-accent),
       border-color: var(--pine-color-accent),
       ring-color: var(--pine-color-focus-ring),
     ),
     hover: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-accent-hover),
       border-color: var(--pine-color-accent-hover),
     ),
     focus: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-accent),
       border-color: var(--pine-color-accent),
     ),
@@ -90,18 +90,18 @@ $-btn-base-styles: (
   ),
   danger: (
     default: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-danger),
       border-color: var(--pine-color-danger),
       ring-color: var(--pine-color-focus-ring-danger),
     ),
     hover: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-danger-hover),
       border-color: var(--pine-color-danger-hover),
     ),
     focus: (
-      color: var(--pine-color-text-primary),
+      color: var(--pine-color-white),
       background-color: var(--pine-color-danger),
       border-color: var(--pine-color-danger),
     ),
@@ -162,6 +162,12 @@ $-alert-close-btn-background-colors: (
   exceeded: var(--pine-color-red-300),
   danger: var(--pine-color-red-300),
 );
+
+[data-theme="dark"] {
+  .sage-btn--primary:hover {
+    background-color: var(--pine-color-white);
+  }
+}
 
 //
 // Custom variables
