@@ -6,7 +6,7 @@
 
 
 $-input-group-border-radius: map-get($sage-field-configs, border-radius);
-$-input-group-pw-field-button-color-text-hover: var(--pine-color-black);
+$-input-group-pw-field-button-color-text-hover: var(--pine-color-brand);
 
 
 .sage-input-group {
@@ -26,13 +26,13 @@ $-input-group-pw-field-button-color-text-hover: var(--pine-color-black);
   }
 
   .sage-input-group:focus-within & {
-    background-color: var(--pine-color-grey-200);
+    background-color: var(--pine-color-border-disabled);
     opacity: 1;
   }
 
   .sage-input-group--disabled & {
-    color: var(--pine-color-grey-500);
-    background-color: var(--pine-color-grey-150);
+    color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-container-disabled);
   }
 }
 
@@ -80,7 +80,7 @@ $-input-group-pw-field-button-color-text-hover: var(--pine-color-black);
   }
 
   .sage-input-group--disabled & {
-    color: var(--pine-color-grey-800);
-    background-color: var(--pine-color-grey-150);
+    color: var(--pine-color-text-secondary);
+    background-color: var(--pine-color-background-container-disabled);
   }
 }

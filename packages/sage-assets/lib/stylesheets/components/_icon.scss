@@ -88,7 +88,7 @@ $-icon-beside-type: (
   }
 
   .sage-input__icon .sage-icon-#{$icon-name} {
-    color: var(--pine-color-grey-700);
+    color: var(--pine-color-text-readonly);
     line-height: sage-line-height(body-xs);
   }
 

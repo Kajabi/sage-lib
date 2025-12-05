@@ -24,10 +24,10 @@ $-sage-card-background: transparent;
 }
 
 .sage-card--border-dashed {
-  border-color: var(--pine-color-white);
+  border-color: var(--pine-color-background-container);
   @include sage-dashed-border(
     $border-radius: sage-border(radius),
-    $color: var(--pine-color-grey-300),
+    $color: var(--pine-color-border),
   );
 }
 
@@ -60,11 +60,11 @@ $-sage-card-background: transparent;
 
   .sage-link.sage-card__link--primary {
     // Remove when Link component is updated with new styles
-    color: var(--pine-color-grey-900);
+    color: var(--pine-color-text);
     text-decoration: none;
 
     &:hover {
-      color: var(--pine-color-grey-950);
+      color: var(--pine-color-text-active);
     }
   }
 
@@ -104,14 +104,14 @@ $-sage-card-background: transparent;
     top: 50%;
     width: 100%;
     height: 1px;
-    background: var(--pine-color-grey-200);
+    background: var(--pine-color-border-disabled);
   }
   &::after {
     content: attr(data-divider-label);
     display: inline-block;
     position: relative;
     padding: 0 sage-spacing(sm);
-    color: var(--pine-color-grey-600);
+    color: var(--pine-color-text-placeholder);
     font-size: sage-font-size(body-xs);
     background-color: var(--pine-color-background-container);
   }

@@ -9,7 +9,7 @@
   height: rem(1px);
   width: 100%;
   margin: 0;
-  background: var(--sage-divider-background-color, var(--pine-color-grey-700));
+  background: var(--sage-divider-background-color, var(--pine-color-text-readonly));
   border: 0;
 
   &--vertical {

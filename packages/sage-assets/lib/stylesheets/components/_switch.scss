@@ -144,7 +144,7 @@ $-switch-toggle-size: var(--pine-dimension-sm);
     transform: translate3d(-100%, -50%, 0);
     height: $-switch-toggle-size;
     width: $-switch-toggle-size;
-    background: var(--pine-color-white);
+    background: var(--pine-color-background-container);
     border-radius: var(--pine-border-radius-full);
     box-shadow: var(--pine-box-shadow);
     transition: transform 0.2s ease-in-out;

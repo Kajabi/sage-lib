@@ -4,7 +4,7 @@
 /// @group sage/components/panel-figure
 ////
 $-panel-figure-padding: sage-spacing(lg);
-$-panel-figure-default-background-color: var(--pine-color-grey-150);
+$-panel-figure-default-background-color: var(--pine-color-background-container-disabled);
 
 :root {
   --sage-figure-aspect-ratio: 1.78; // 16 / 9

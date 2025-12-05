@@ -60,7 +60,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
   }
 
   &:hover {
-    @include sage-focus-outline--update-color(var(--pine-color-grey-500));
+    @include sage-focus-outline--update-color(var(--pine-color-text-disabled));
 
     color: $-choice-color-active;
   }
@@ -78,7 +78,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
     color: $-choice-color-active;
 
     &::after {
-      border-color: var(--pine-color-grey-900);
+      border-color: var(--pine-color-text);
       border-width: rem(4px);
     }
 
@@ -86,12 +86,12 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
 
   &[aria-disabled="true"],
   &:disabled {
-    background-color: var(--pine-color-grey-150);
+    background-color: var(--pine-color-background-container-disabled);
     cursor: default;
     pointer-events: none;
 
     &::before {
-      background-color: var(--pine-color-grey-200);
+      background-color: var(--pine-color-border-disabled);
     }
 
     &:hover::before {
@@ -127,7 +127,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
     @include sage-icon-base(caret-right, lg, pine);
 
     margin: 0 0 0 sage-spacing(sm);
-    color: var(--pine-color-grey-900);
+    color: var(--pine-color-text);
     transition: color map-get($sage-transitions, default);
   }
 
@@ -175,8 +175,8 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
   }
 
   &:hover::#{$-choice-el-radio} {
-    border-color: var(--pine-color-grey-500);
-    background-color: var(--pine-color-grey-100);
+    border-color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-app);
   }
 
   &:active,
@@ -232,7 +232,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
 
   .sage-choice[aria-disabled="true"] &,
   .sage-choice:disabled & {
-    color: var(--pine-color-grey-500);
+    color: var(--pine-color-text-disabled);
   }
 }
 

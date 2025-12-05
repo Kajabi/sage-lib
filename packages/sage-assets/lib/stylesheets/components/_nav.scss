@@ -5,7 +5,7 @@
 ////
 
 $-nav-color-text: var(--pine-color-text);
-$-nav-color-focus: var(--pine-color-grey-500);
+$-nav-color-focus: var(--pine-color-text-disabled);
 $-nav-color-background: var(--pine-color-background-container-hover);
 $-nav-color-background-hover: var(--pine-color-border-hover);
 $-nav-icon-size: rem(16px);
@@ -117,5 +117,5 @@ $-nav-subitem-border-width: rem(2px);
 .sage-nav__list--sub-with-icon {
   margin-inline-start: calc((#{sage-spacing(sm)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2) - (#{$-nav-icon-spacing} / 2));
   padding-inline-start: sage-spacing(sm);
-  border-inline-start: $-nav-subitem-border-width solid var(--pine-color-grey-300);
+  border-inline-start: $-nav-subitem-border-width solid var(--pine-color-border);
 }

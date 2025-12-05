@@ -28,14 +28,14 @@
   @extend %t-sage-body-xsmall-med;
   @include line-clamp(1);
 
-  color: var(--pine-color-grey-600);
+  color: var(--pine-color-text-placeholder);
 }
 
 .sage-chart-summary__label {
   @extend %t-sage-body-small-med;
   @include line-clamp(2);
 
-  color: var(--pine-color-grey-700);
+  color: var(--pine-color-text-readonly);
 }
 
 .sage-chart-summary__value {

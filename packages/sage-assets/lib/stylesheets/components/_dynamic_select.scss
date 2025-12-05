@@ -1,7 +1,7 @@
 $-dynamic-select-default-height: rem(45px);
 $-dynamic-select-default-padding: rem(4px) sage-spacing(sm) 0;
-$-dynamic-select-border-color: var(--pine-color-grey-400);
-$-dynamic-select-placeholder-color: var(--pine-color-grey-400);
+$-dynamic-select-border-color: var(--pine-color-border-hover);
+$-dynamic-select-placeholder-color: var(--pine-color-text-placeholder);
 $-dynamic-select-color-success: sage-field-color(success);
 $-dynamic-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-dynamic-select-selected-height: rem(54px);
