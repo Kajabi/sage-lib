@@ -55,6 +55,7 @@
         // Determine class name for $value == 50
         $classname: ".color-#{"" + $name}-#{$value}";
 
+        /* en-disable max-nesting-depth block-closing-brace-newline-after */
         // This should be numeric, not string
         @if ($value == 50) {
           $classname: ".color-#{"" + $name}-0#{$value}";
@@ -98,6 +99,7 @@
             text-transform: uppercase;
           }
         }
+        /* en-enable max-nesting-depth block-closing-brace-newline-after */
       }
     }
   }
