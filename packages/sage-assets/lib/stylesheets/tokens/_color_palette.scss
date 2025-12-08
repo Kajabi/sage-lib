@@ -244,7 +244,7 @@ $sage-color-default-name: "grey 500";
   // Charcoal → Grey alias with mapping
   @if $base-str == "charcoal" {
     $base-str: "grey";
-    $base: grey;
+    $base: "grey";
     // Map charcoal scale to grey equivalents
     $charcoal-to-grey: (
       100: 600,
@@ -307,7 +307,7 @@ $sage-color-default-name: "grey 500";
     $base: mercury;
   }
   @if $base == "charcoal" {
-    $base: grey;
+    $base: "grey";
     $charcoal-to-grey: (
       100: 600,
       200: 700,
@@ -324,23 +324,23 @@ $sage-color-default-name: "grey 500";
   // For primary, use blue-600 (closest to primary-300)
   @if $base == "primary" {
     @if $value == 300 or $value == null {
-      $base: blue;
+      $base: "blue";
       $value: 600;
     }
     @else if $value == 400 {
-      $base: blue;
+      $base: "blue";
       $value: 500;
     }
     @else if $value == 100 {
-      $base: blue;
+      $base: "blue";
       $value: 150;
     }
     @else if $value == 200 {
-      $base: blue;
+      $base: "blue";
       $value: 300;
     }
     @else if $value == 500 {
-      $base: blue;
+      $base: "blue";
       $value: 900;
     }
   }
@@ -348,23 +348,23 @@ $sage-color-default-name: "grey 500";
   // Map sage to green
   @if $base == "sage" {
     @if $value == 300 or $value == null {
-      $base: green;
+      $base: "green";
       $value: 500;
     }
     @else if $value == 100 {
-      $base: green;
+      $base: "green";
       $value: 150;
     }
     @else if $value == 200 {
-      $base: green;
+      $base: "green";
       $value: 300;
     }
     @else if $value == 400 {
-      $base: green;
+      $base: "green";
       $value: 800;
     }
     @else if $value == 500 {
-      $base: green;
+      $base: "green";
       $value: 950;
     }
   }
