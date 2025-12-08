@@ -8,11 +8,9 @@
 .sage-content {
   flex: 1;
   overflow: auto;
-  background-color: var(--pine-color-background-container);
-
-
   // Ladera Integration Note:
   // X-padding of 32px (`sage-spacing(lg)`) matches Ladera's `.content` wrapper padding value of `$spacing-outer`
   padding: sage-spacing() sage-spacing(lg);
+  background-color: var(--pine-color-background-container);
   scroll-behavior: smooth;
 }
