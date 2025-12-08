@@ -192,7 +192,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 
   &:hover {
-    background-color: var(--pine-color-background-container-disabled);
+    background-color: var(--pine-color-background-muted);
   }
 
   &:focus-within {

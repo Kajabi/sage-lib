@@ -410,7 +410,7 @@
   width: 100%;
   padding: var(--pine-dimension-sm);
   font: var(--pine-typography-body);
-  color: var(--pine-color-text-active);
+  color: var(--pine-color-text-strong);
   appearance: none;
   border: var(--pine-border);
   border-radius: sage-border(radius-medium);
@@ -423,7 +423,7 @@
   }
 
   &:hover:not(:disabled) {
-    color: var(--pine-color-text-active);
+    color: var(--pine-color-text-strong);
     border-color: var(--pine-color-border-hover);
 
     .sage-form-field--error & {

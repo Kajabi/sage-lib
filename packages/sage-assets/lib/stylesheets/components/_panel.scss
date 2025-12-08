@@ -98,7 +98,7 @@
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
-  color: var(--pine-color-text-active);
+  color: var(--pine-color-text-strong);
 
   + .sage-panel__subtext {
     margin-block-start: sage-spacing(xs);

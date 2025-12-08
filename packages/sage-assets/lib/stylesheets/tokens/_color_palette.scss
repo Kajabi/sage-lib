@@ -165,7 +165,7 @@ $sage-color-default-name: "grey 500";
   @if $base-str == "charcoal" {
     // Map charcoal values directly to semantic tokens (same as grey equivalents)
     @if $value == 500 {
-      @return var(--pine-color-text-active); // Semantic token - dark mode compatible (charcoal-500 → grey-950)
+      @return var(--pine-color-text-strong); // Semantic token - dark mode compatible (charcoal-500 → grey-950)
     }
     @if $value == 400 {
       @return var(--pine-color-text); // Semantic token - dark mode compatible (charcoal-400 → grey-900)
@@ -185,7 +185,7 @@ $sage-color-default-name: "grey 500";
   @if $base-str == "grey" {
     // Map specific grey shades to semantic tokens
     @if $value == 950 {
-      @return var(--pine-color-text-active); // Semantic token - dark mode compatible
+      @return var(--pine-color-text-strong); // Semantic token - dark mode compatible
     }
     @if $value == 900 {
       @return var(--pine-color-text); // Semantic token - dark mode compatible
@@ -212,7 +212,7 @@ $sage-color-default-name: "grey 500";
       @return var(--pine-color-border-disabled); // Semantic token - dark mode compatible
     }
     @if $value == 150 {
-      @return var(--pine-color-background-container-disabled); // Semantic token - dark mode compatible
+      @return var(--pine-color-background-muted); // Semantic token - dark mode compatible
     }
     @if $value == 100 {
       @return var(--pine-color-background-app); // Semantic token - dark mode compatible

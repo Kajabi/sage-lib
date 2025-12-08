@@ -93,7 +93,7 @@ body:not(.sage-excluded),
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  color: var(--pine-color-text-active);
+  color: var(--pine-color-text-strong);
   font-size: sage-font-size();
 }
 
@@ -125,7 +125,7 @@ body:not(.sage-excluded),
   > h5:not([class]),
   > h6:not([class]),
   > [class*="t-sage-heading-"] {
-    color: var(--pine-color-text-active);
+    color: var(--pine-color-text-strong);
 
     @include sage-block-spacing($-headings-margin-block-end);
   }
@@ -265,7 +265,7 @@ body:not(.sage-excluded),
 }
 
 .t-sage--color-text-active {
-  color: var(--pine-color-text-active);
+  color: var(--pine-color-text-strong);
 }
 
 .t-sage--color-text-disabled {

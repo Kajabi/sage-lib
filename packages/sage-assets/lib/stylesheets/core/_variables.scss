@@ -53,7 +53,7 @@ $sage-field-configs: (
 ///
 $sage-field-colors: (
   border: var(--pine-color-border),
-  default: var(--pine-color-text-active),
+  default: var(--pine-color-text-strong),
   disabled: var(--pine-color-text-disabled),
   disabled-background: var(--pine-color-primary-disabled),
   error: var(--pine-color-danger),
@@ -73,14 +73,14 @@ $sage-field-colors: (
 ///
 /// @example scss
 ///   color: sage-field-color(default);
-///   // Output: color: var(--pine-color-text-active);
+///   // Output: color: var(--pine-color-text-strong);
 ///
 @function sage-field-color($key) {
   @if $key == "border" {
     @return var(--pine-color-border);
   }
   @if $key == "default" {
-    @return var(--pine-color-text-active);
+    @return var(--pine-color-text-strong);
   }
   @if $key == "disabled" {
     @return var(--pine-color-text-disabled);
@@ -98,7 +98,7 @@ $sage-field-colors: (
     @return var(--pine-color-primary);
   }
   @warn "Unknown field color key: #{$key}. Valid keys: border, default, disabled, disabled-background, error, label-background, success";
-  @return var(--pine-color-text-active); // Fallback
+  @return var(--pine-color-text-strong); // Fallback
 }
 
 // $sage-field
@@ -214,7 +214,7 @@ $sage-tab-colors: (
 ///
 $sage-text-colors: (
   body: var(--pine-color-text),
-  heading: var(--pine-color-text-active),
+  heading: var(--pine-color-text-strong),
 );
 
 ///
@@ -236,7 +236,7 @@ $sage-text-colors: (
     @return var(--pine-color-text);
   }
   @if $key == "heading" {
-    @return var(--pine-color-text-active);
+    @return var(--pine-color-text-strong);
   }
   @warn "Unknown text color key: #{$key}. Valid keys: body, heading";
   @return var(--pine-color-text); // Fallback

@@ -40,7 +40,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
   }
 
   &.sage-catalog-item--loading {
-    background-color: var(--pine-color-background-container-disabled);
+    background-color: var(--pine-color-background-muted);
     cursor: wait;
   }
 

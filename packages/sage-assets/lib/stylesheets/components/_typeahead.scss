@@ -49,7 +49,7 @@ $-typeahead-item-width: rem(240px);
 
   &:hover,
   &:focus-within {
-    background-color: var(--pine-color-background-container-disabled);
+    background-color: var(--pine-color-background-muted);
   }
 }
 
@@ -101,7 +101,7 @@ $-typeahead-item-width: rem(240px);
     @include truncate;
 
     :hover & {
-      color: var(--pine-color-text-active);
+      color: var(--pine-color-text-strong);
     }
   }
 }
