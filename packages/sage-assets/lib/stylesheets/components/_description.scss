@@ -70,7 +70,7 @@ $-description-spacing: sage-spacing(sm);
   @extend %t-sage-body;
 
   grid-area: title;
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 }
 
 .sage-description__data {

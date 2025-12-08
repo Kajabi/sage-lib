@@ -80,7 +80,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title,
 .sage-stat-box__data--no-data {
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 }
 
 .sage-stat-box__title {
@@ -127,7 +127,7 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
   margin-inline-start: sage-spacing(xs);
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 }
 
 .sage-stat-box__link {

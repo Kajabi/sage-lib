@@ -6,7 +6,7 @@
 
 $-link-color: var(--pine-color-primary);
 $-link-color-hover: var(--pine-color-primary-hover);
-$-link-subtext-color: var(--pine-color-text-readonly);
+$-link-subtext-color: var(--pine-color-text-muted);
 $-link-subtext-color-hover: var(--pine-color-text);
 
 $-link-base-styles: (
@@ -173,7 +173,7 @@ $-link-base-styles: (
   pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
-    color: var(--pine-color-text-placeholder);
+    color: var(--pine-color-text-tertiary);
   }
 
   &:focus {

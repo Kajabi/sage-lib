@@ -128,7 +128,7 @@ $-btn-subtle-styles: (
     hover-background: var(--pine-color-primary-disabled),
     focus: var(--pine-color-primary),
     focus-outline: var(--pine-color-purple-600),
-    disabled: var(--pine-color-text-placeholder),
+    disabled: var(--pine-color-text-tertiary),
   ),
   secondary: (
     default: var(--pine-color-text),
@@ -136,7 +136,7 @@ $-btn-subtle-styles: (
     hover-background: var(--pine-color-primary-disabled),
     focus: var(--pine-color-primary),
     focus-outline: var(--pine-color-purple-600),
-    disabled: var(--pine-color-text-placeholder),
+    disabled: var(--pine-color-text-tertiary),
   ),
   danger: (
     default: var(--pine-color-danger),

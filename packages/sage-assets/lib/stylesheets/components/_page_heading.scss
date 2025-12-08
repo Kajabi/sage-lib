@@ -146,7 +146,7 @@ $-page-heading-image-height-mobile: rem(120px);
   justify-content: flex-end;
   align-items: center;
   margin-block-start: sage-spacing(sm);
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
   font-style: italic;
   @media (max-width: sage-breakpoint()) {
     justify-content: flex-start;

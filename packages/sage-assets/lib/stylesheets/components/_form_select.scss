@@ -60,7 +60,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   position: relative;
   z-index: sage-z-index(default, 1);
   height: $-select-height;
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
   pointer-events: none;
 }
 
@@ -70,7 +70,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
   transition: 0.2s color ease;
 }
 

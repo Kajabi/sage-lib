@@ -419,7 +419,7 @@
   transition-property: border, box-shadow, color;
 
   @include placeholder {
-    color: var(--pine-color-text-placeholder);
+    color: var(--pine-color-text-tertiary);
   }
 
   &:hover:not(:disabled) {
@@ -452,7 +452,7 @@
     resize: none;
 
     @include placeholder {
-      color: var(--pine-color-text-placeholder);
+      color: var(--pine-color-text-tertiary);
     }
 
     .sage-form-field--showplaceholder & ~ label {
@@ -461,7 +461,7 @@
   }
 
   &[readonly] {
-    color: var(--pine-color-text-readonly);
+    color: var(--pine-color-text-muted);
     background-color: var(--pine-color-background-container-disabled);
     cursor: not-allowed;
     resize: none;

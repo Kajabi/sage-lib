@@ -31,7 +31,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__body {
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 
   > p {
     @extend %t-sage-body;
@@ -39,7 +39,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__caption {
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 
   > p {
     @extend %t-sage-body-small;

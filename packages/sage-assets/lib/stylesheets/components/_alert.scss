@@ -22,8 +22,8 @@ $-alert-background-colors: (
 );
 
 $-alert-icon-colors: (
-  default: var(--pine-color-grey-700),
-  draft: var(--pine-color-grey-700),
+  default: var(--pine-color-text-muted),
+  draft: var(--pine-color-text-muted),
   info: var(--pine-color-blue-700),
   published: var(--pine-color-success),
   success: var(--pine-color-success),

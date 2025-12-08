@@ -107,7 +107,7 @@
 
 .sage-panel__subtext {
   grid-column: 1 / -1;
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 
   .sage-panel__header & {
     @extend %t-sage-body;

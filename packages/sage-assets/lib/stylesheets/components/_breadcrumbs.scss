@@ -33,7 +33,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-600);
   &:not(:last-child) {
     &::after {
       content: "/";
-      color: var(--pine-color-text-readonly);
+      color: var(--pine-color-text-muted);
     }
 
     .sage-breadcrumbs--progressbar &::after {

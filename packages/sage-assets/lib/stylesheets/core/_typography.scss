@@ -273,7 +273,7 @@ body:not(.sage-excluded),
 }
 
 .t-sage--color-text-readonly {
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 }
 
 .t-sage--color-text-message {
@@ -285,7 +285,7 @@ body:not(.sage-excluded),
 }
 
 .t-sage--color-text-placeholder {
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 }
 
 // Semantic action color utility classes (dark mode compatible)
@@ -344,7 +344,7 @@ body:not(.sage-excluded),
 }
 
 .t-sage--underline-dotted {
-  text-decoration-color: var(--pine-color-grey-600);
+  text-decoration-color: var(--pine-color-text-tertiary);
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 12%;

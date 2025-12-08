@@ -32,7 +32,7 @@ $-typeahead-item-width: rem(240px);
 .sage-typeahead__null-state {
   @extend %t-sage-body-small;
   padding: sage-spacing(sm);
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
   text-align: center;
 }
 

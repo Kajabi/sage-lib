@@ -15,7 +15,7 @@ $-table-max-width: none;
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: var(--pine-color-text-readonly);
+$-table-cell-font-color: var(--pine-color-text-muted);
 $-table-cell-font-color-strong: var(--pine-color-text);
 $-table-cell-type-spec: "%t-sage-body-med";
 $-table-cell-type-spec-strong: "%t-sage-body-semi";
@@ -166,7 +166,7 @@ $-table-avatar-width: var(--pine-dimension-lg);
   }
 
   .sage-table__sort-link--selected {
-    color: var(--pine-color-text-placeholder);
+    color: var(--pine-color-text-tertiary);
     text-decoration: underline;
 
     &::after {

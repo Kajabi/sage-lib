@@ -245,7 +245,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
   @extend %t-sage-body-xsmall;
 
   margin-block-start: sage-spacing(2xs);
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 }
 
 pds-icon {

@@ -29,7 +29,7 @@ $-upload-card-mobile-breakpoint: 609px;
   justify-content: flex-start;
   flex: 1 1;
   gap: sage-spacing();
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 
   .sage-upload-card--selected & {
     color: var(--pine-color-text-message);
@@ -100,7 +100,7 @@ $-upload-card-mobile-breakpoint: 609px;
 
 .sage-upload-card__icon {
   display: inline-flex;
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 
   .sage-upload-card:not(.sage-uploaded-card--selected) & {
     margin-block-end: sage-spacing(2xs);
@@ -143,5 +143,5 @@ $-upload-card-mobile-breakpoint: 609px;
   flex-direction: column;
   align-items: flex-start;
   gap: sage-spacing(sm);
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
 }

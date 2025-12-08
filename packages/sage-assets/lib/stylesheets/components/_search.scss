@@ -23,7 +23,7 @@ $-search-icon: "::before";
     z-index: sage-z-index(default, 2);
     margin-inline-start: sage-spacing(sm);
     margin-inline-end: -1 * sage-spacing(lg);
-    color: var(--pine-color-text-readonly);
+    color: var(--pine-color-text-muted);
     transition: map-get($sage-transitions, default);
     transition-property: color;
   }
@@ -33,7 +33,7 @@ $-search-icon: "::before";
 
     &:hover {
       background-color: var(--pine-color-background-app);
-      border-bottom-color: var(--pine-color-text-placeholder);
+      border-bottom-color: var(--pine-color-text-tertiary);
     }
 
     &:focus-within {
@@ -146,7 +146,7 @@ $-search-icon: "::before";
   @extend %t-sage-body;
 
   @include placeholder {
-    color: var(--pine-color-text-readonly);
+    color: var(--pine-color-text-muted);
   }
 
   &:focus {
@@ -155,7 +155,7 @@ $-search-icon: "::before";
 
   &:hover:not(:disabled) {
     background-color: var(--pine-color-background-app);
-    border-bottom-color: var(--pine-color-text-placeholder);
+    border-bottom-color: var(--pine-color-text-tertiary);
     box-shadow: none;
   }
 
