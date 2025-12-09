@@ -173,6 +173,16 @@ $badge-sentiments: (
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
+[data-theme="dark"] {
+  :is(.sage-badge--draft, .sage-badge--draft .sage-dot) .sage-badge__value-text {
+    color: var(--pine-color-grey-900) !important;
+  }
+
+  .sage-badge--draft .sage-dot::before {
+    background-color: var(--pine-color-grey-900) !important;
+  }
+}
+
 .sage-badge-group {
   display: flex;
   flex-flow: row wrap;

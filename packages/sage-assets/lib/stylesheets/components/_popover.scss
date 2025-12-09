@@ -59,6 +59,10 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     position: absolute;
   }
 
+  [data-theme="dark"] & {
+    border: var(--pine-border-width-thin) solid var(--pine-color-border);
+  }
+
   .sage-popover--is-expanded & {
     visibility: visible;
   }
