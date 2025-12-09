@@ -4,11 +4,11 @@ The Sage Assets package contains all SCSS stylesheets, token definitions, and de
 
 ## Token System
 
-Sage Assets uses a dual token system:
+Sage Assets uses Pine design tokens which are loaded **externally** (not bundled):
 
-- **ds-tokens** (`@kajabi-ui/styles`) - Primary source for CSS variables with dark mode support
+- **Pine Tokens** - Loaded by the consuming application (docs app, KP, etc.)
   - Provides semantic tokens (e.g., `--pine-color-primary`) for dark mode compatibility
-  - Imported via `tokens/_ds_tokens.scss`
+  - NOT bundled in sage-assets to avoid duplication when both Pine and Sage are used
 
 - **Style Dictionary** - Legacy system maintained for backward compatibility
   - Used for SCSS hex value lookups via `sage-color-hex()` function
