@@ -17,10 +17,10 @@ $-tooltip-arrow-inactive: $-tooltip-arrow-size solid transparent;
 $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
-$-tooltip-shadow: var(--pine-box-shadow-400);
-$-tooltip-padding: var(--pine-dimension-xs) var(--pine-dimension-150);
+$-tooltip-shadow: var(--pine-box-shadow);
+$-tooltip-padding: var(--pine-dimension-xs) calc(var(--pine-dimension-md) / 2);
 $-tooltip-zindex: sage-z_index(modal, 10);
-$-tooltip-maxwidth: rem(200px);
+$-tooltip-maxwidth: rem(320px);
 $-tooltip-large-maxwidth: rem(320px);
 
 
@@ -35,7 +35,7 @@ $-tooltip-large-maxwidth: rem(320px);
   white-space: normal;
   font: var(--pine-typography-body-medium);
   letter-spacing: var(--pine-letter-spacing);
-  border-radius: var(--pine-dimension-xs);
+  border-radius: calc(var(--pine-dimension-xs) * 1.25);
   background-color: $-tooltip-bg-color;
   box-shadow: $-tooltip-shadow;
 
