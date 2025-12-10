@@ -879,7 +879,16 @@ a.sage-btn {
 // to ensure they override the generated button styles above.
 //
 [data-theme="dark"] {
+  .sage-btn--primary:not(.sage-btn--subtle) {
+    border: var(--pine-border);
+  }
+
+  .sage-btn:disabled {
+    border-color: var(--pine-color-border-disabled);
+  }
+
   .sage-btn--primary:hover {
     background-color: var(--pine-color-white);
+    border: var(--pine-border)
   }
 }
