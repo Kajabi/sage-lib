@@ -484,6 +484,10 @@
     background-color: var(--pine-color-red-050);
     border-color: var(--pine-color-border-danger);
 
+    [data-theme="dark"] & {
+      background-color: var(--pine-color-red-950);
+    }
+
     ~ label {
       color: var(--pine-color-text);
     }
