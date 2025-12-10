@@ -754,7 +754,8 @@ a.sage-btn {
     }
   }
 
-  .sage-alert &.sage-btn--primary {
+  .sage-alert &.sage-btn--primary,
+  .sage-alert &.sage-btn--primary:hover {
     color: var(--pine-color-grey-900);
   }
 
@@ -881,6 +882,10 @@ a.sage-btn {
 [data-theme="dark"] {
   .sage-btn--primary:not(.sage-btn--subtle) {
     border: var(--pine-border);
+  }
+
+  .sage-alert .sage-btn--primary:not(.sage-btn--subtle) {
+    border: 0;
   }
 
   .sage-btn:disabled {
