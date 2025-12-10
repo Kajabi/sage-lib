@@ -314,7 +314,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   [data-theme="dark"] & {
     background: var(--pine-color-background-container);
-    border: 1px solid var(--pine-color-border);
+    border: var(--pine-border);
   }
 
   :not(.sage-dropdown--anchor-right) > .sage-dropdown__panel & {
@@ -340,7 +340,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   @media (prefers-color-scheme: dark) {
     background: var(--pine-color-background-container);
-    border: 1px solid var(--pine-color-border);
+    border: var(--pine-border);
   }
 
   @media (max-height: $-dropdown-panel-max-height-breakpoint) {

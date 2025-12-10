@@ -29,7 +29,7 @@ $-search-icon: "::before";
   }
 
   .sage-search:not(.sage-search--contained) & {
-    border-block-end: 1px solid var(--pine-color-border);
+    border-block-end: var(--pine-border-width-thin) solid var(--pine-color-border);
 
     &:hover {
       background-color: var(--pine-color-background-app);

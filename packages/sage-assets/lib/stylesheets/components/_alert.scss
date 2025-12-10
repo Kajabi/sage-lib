@@ -68,7 +68,7 @@ $-alert-text-colors: (
   gap: sage-spacing(sm);
   padding: sage-spacing();
   margin-block-end: sage-spacing();
-  border: 1px solid var(--pine-color-grey-300);
+  border: var(--pine-border);
   border-radius: sage-border(radius-large);
 
   .sage-frame > &,
