@@ -139,10 +139,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
     color: var(--pine-color-text-disabled);
     background-color: var(--pine-color-background-container-disabled);
 
-    ~ .sage-select__arrow {
-      color: var(--pine-color-text-primary-disabled);
-    }
-
     @include placeholder {
       color: var(--pine-color-text-primary-disabled);
     }
