@@ -1930,11 +1930,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@kajabi-ui/styles@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@kajabi-ui/styles/-/styles-1.0.2.tgz#1e4a2e5ca42767d59a372464e4324cd62cd61405"
-  integrity sha512-B0XUvimew7l8660iXbAJoXWXdU77lNQRpC8dMikydnp4uaD4JGn2UlF8a/X97df6VRjrr+P/K2G1UdYLUlljZg==
-
 "@koa/cors@^3.2.0":
   version "3.4.1"
   resolved "https://registry.npmjs.org/@koa/cors/-/cors-3.4.1.tgz"
