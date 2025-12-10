@@ -25,13 +25,13 @@ $-alert-icon-colors: (
   default: var(--pine-color-grey-700),
   draft: var(--pine-color-grey-700),
   info: var(--pine-color-blue-700),
-  published: var(--pine-color-success),
-  success: var(--pine-color-success),
-  warning: var(--pine-color-warning),
-  approaching: var(--pine-color-warning),
-  reached: var(--pine-color-mercury-800),
-  exceeded: var(--pine-color-danger),
-  danger: var(--pine-color-danger),
+  published: var(--pine-color-green-700),
+  success: var(--pine-color-green-700),
+  warning: var(--pine-color-yellow-700),
+  approaching: var(--pine-color-yellow-700),
+  reached: var(--pine-color-mercury-700),
+  exceeded: var(--pine-color-red-700),
+  danger: var(--pine-color-red-700),
 );
 
 $-alert-border-colors: (
@@ -48,16 +48,16 @@ $-alert-border-colors: (
 );
 
 $-alert-text-colors: (
-  default: --pine-color-grey-900,
-  draft: --pine-color-grey-900,
-  info: --pine-color-blue-900,
-  published: --pine-color-green-800,
-  success: --pine-color-green-800,
-  warning: --pine-color-yellow-900,
-  approaching: --pine-color-yellow-900,
-  reached: --pine-color-grey-900,
-  exceeded: --pine-color-red-900,
-  danger: --pine-color-red-900,
+  default: --pine-color-grey-950,
+  draft: --pine-color-grey-950,
+  info: --pine-color-blue-950,
+  published: --pine-color-green-950,
+  success: --pine-color-green-950,
+  warning: --pine-color-yellow-950,
+  approaching: --pine-color-yellow-950,
+  reached: --pine-color-grey-950,
+  exceeded: --pine-color-red-950,
+  danger: --pine-color-red-950,
 );
 
 .sage-alert {
