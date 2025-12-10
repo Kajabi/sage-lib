@@ -163,6 +163,12 @@ $-link-base-styles: (
   }
 }
 
+[data-theme="dark"] {
+  .sage-link--secondary {
+    color: var(--pine-color-grey-900);
+  }
+}
+
 .sage-link--help,
 .sage-link--help-icon-only {
   position: relative;
