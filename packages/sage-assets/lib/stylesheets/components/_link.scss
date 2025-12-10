@@ -164,7 +164,7 @@ $-link-base-styles: (
 }
 
 [data-theme="dark"] {
-  .sage-link--secondary {
+  .sage-alert .sage-link--secondary {
     color: var(--pine-color-grey-900);
   }
 }
