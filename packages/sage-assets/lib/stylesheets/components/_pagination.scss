@@ -9,7 +9,7 @@ $-pagination-size: rem(40px);
 $-pagination-padding-arrows: rem(10px) rem(12px);
 $-pagination-radius: sage-border(radius-round);
 $-pagination-text-color: var(--pine-color-text);
-$-pagination-text-color-disabled: var(--pine-color-text-tertiary);
+$-pagination-text-color-disabled: var(--pine-color-grey-600);
 $-pagination-bg-color-current: var(--pine-color-background-muted);
 $-pagination-bg-color-hover: var(--pine-color-border-disabled);
 $-pagination-focus-ring-color: var(--pine-color-purple-600);
@@ -106,6 +106,9 @@ $-pagination-focus-ring-color: var(--pine-color-purple-600);
   [dir="rtl"] & {
     transform: rotate(180deg);
   }
+  [data-theme="dark"] & {
+    filter: invert(1);
+  }
 }
 
 .sage-pagination__item:last-of-type .sage-pagination__page::before {
@@ -116,6 +119,10 @@ $-pagination-focus-ring-color: var(--pine-color-purple-600);
 
   [dir="rtl"] & {
     transform: rotate(180deg);
+  }
+
+  [data-theme="dark"] & {
+    filter: invert(1);
   }
 }
 
