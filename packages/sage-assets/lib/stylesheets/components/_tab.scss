@@ -5,9 +5,9 @@
 ////
 
 
-$-tab-color-default: map-get($sage-tab-colors, default);
-$-tab-color-active: map-get($sage-tab-colors, active);
-$-tab-color-disabled: map-get($sage-tab-colors, disabled);
+$-tab-color-default: sage-tab-color(default);
+$-tab-color-active: sage-tab-color(active);
+$-tab-color-disabled: sage-tab-color(disabled);
 
 
 // stylelint-disable max-nesting-depth
@@ -28,7 +28,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--filter & {
     padding: calc(var(--pine-dimension-2xs) * 1.5) calc(var(--pine-dimension-xs) * 1.75); // 4px * 1.5 = 6px, 8px * 1.75 = 14px
-    background-color: var(--pine-color-background-container-disabled);
+    background-color: var(--pine-color-background-muted);
     border-radius: calc(var(--pine-dimension-2xl) * 2.0833); // 48px * 2.0833 = 100px
     @extend %t-sage-body-small-semi;
 

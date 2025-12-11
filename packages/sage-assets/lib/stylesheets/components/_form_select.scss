@@ -60,7 +60,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   position: relative;
   z-index: sage-z-index(default, 1);
   height: $-select-height;
-  color: var(--pine-color-text-readonly);
+  color: var(--pine-color-text-muted);
   pointer-events: none;
 }
 
@@ -70,7 +70,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
   transition: 0.2s color ease;
 }
 
@@ -95,11 +95,11 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   // Firefox allows setting the color of <options> within a <select>.
   // This prevents color from being inherited from <select>.
   option:not(:disabled) {
-    color: map-get($sage-text-colors, body);
+    color: sage-text-color(body);
   }
 
   .sage-select--value-selected & {
-    color: map-get($sage-field-colors, default);
+    color: sage-field-color(default);
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
@@ -138,10 +138,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - 36px);
   &:disabled {
     color: var(--pine-color-text-disabled);
     background-color: var(--pine-color-background-container-disabled);
-
-    ~ .sage-select__arrow {
-      color: var(--pine-color-text-primary-disabled);
-    }
 
     @include placeholder {
       color: var(--pine-color-text-primary-disabled);

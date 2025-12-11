@@ -232,7 +232,7 @@ $-sage-frame-wrap: none;
 
 @each $-key, $-val in $-sage-frame-borders {
   .sage-frame--border-#{$-key} {
-    background-color: sage-color(white);
+    background-color: var(--pine-color-background-container);
     border: #{$-val};
   }
 }

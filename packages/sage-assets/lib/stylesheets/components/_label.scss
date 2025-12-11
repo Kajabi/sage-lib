@@ -77,7 +77,7 @@ $-label-statuses: (
 
   #{$-color-modifier}.sage-label--subtle .sage-label__value {
     color: sage-color-combo($-color-name, subtle, foreground);
-    background-color: sage-color(white);
+    background-color: var(--pine-color-background-container);
     // Box shadow instead of border so that size and inner spacing is not affected
     box-shadow: $-label-inset-border sage-color-combo($-color-name, subtle, background);
   }

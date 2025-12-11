@@ -76,7 +76,7 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__intro {
   grid-area: intro;
   margin-block-start: rem(12px);
-  color: sage-color(grey, 800);
+  color: var(--pine-color-text-message);
 }
 
 .sage-page-heading__image {
@@ -84,7 +84,7 @@ $-page-heading-image-height-mobile: rem(120px);
   grid-area: image;
   overflow: hidden;
   min-height: $-page-heading-image-height-min;
-  background: sage-color(grey, 100);
+  background: var(--pine-color-background-app);
   border-radius: sage-border(radius);
   border: sage-border();
 
@@ -146,7 +146,7 @@ $-page-heading-image-height-mobile: rem(120px);
   justify-content: flex-end;
   align-items: center;
   margin-block-start: sage-spacing(sm);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-muted);
   font-style: italic;
   @media (max-width: sage-breakpoint()) {
     justify-content: flex-start;

@@ -5,11 +5,11 @@
 ////
 
 
-$-parsley-color-error: map-get($sage-field-colors, error);
-$-parsley-color-border: map-get($sage-field-colors, border);
+$-parsley-color-error: sage-field-color(error);
+$-parsley-color-border: sage-field-color(border);
 $-parsley-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-parsley-border-width: map-get($sage-field-configs, border-width);
-$-parsley-color-success: map-get($sage-field-colors, success);
+$-parsley-color-success: sage-field-color(success);
 
 .sage-input .parsley-errors-list,
 .sage-textarea .parsley-errors-list,

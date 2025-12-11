@@ -64,7 +64,7 @@ h6,
 [class*="t-sage-heading-"] {
   margin-block-start: 0;
   margin-block-end: 0;
-  color: sage-color(grey, 950);
+  color: var(--pine-color-text-strong);
   font-family: var(--sage-font-family-heading);
 }
 
@@ -209,7 +209,7 @@ caption {
   caption-side: bottom;
   padding-block-start: 0.75rem;
   padding-block-end: 0.75rem;
-  color: #6c757d;
+  color: var(--pine-color-text-muted);
   text-align: start;
 }
 

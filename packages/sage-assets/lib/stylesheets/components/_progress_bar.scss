@@ -34,7 +34,7 @@ $-progress-bar-height: var(--pine-dimension-xs);
   height: $-progress-bar-height;
   width: 100%;
   border-radius: var(--pine-dimension-2xs);
-  background-color: var(--sage-progress-bar-background-color, var(--pine-color-background-container-disabled));
+  background-color: var(--sage-progress-bar-background-color, var(--pine-color-background-muted));
 
   .sage-modal__header & {
     border-radius: 0;

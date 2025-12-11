@@ -19,7 +19,7 @@ $-transaction-card-price-max-width: rem(100px);
 
   position: relative;
   width: 100%;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   box-shadow: sage-shadow(100);
 
   > * {
@@ -63,11 +63,11 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__amount--sage {
-  color: sage-color(sage, 300);
+  color: var(--pine-color-success);
 }
 
 .sage-transaction-card__amount--red {
-  color: sage-color(red, 500);
+  color: var(--pine-color-danger);
 }
 
 .sage-transaction-card__label {
@@ -88,15 +88,15 @@ $-transaction-card-price-max-width: rem(100px);
   @extend %t-sage-body-small;
 
   max-width: $-transaction-card-state-max-width;
-  color: sage-color(grey, 900);
+  color: var(--pine-color-text);
 }
 
 .sage-transaction-card__state--red {
-  color: sage-color(red, 500);
+  color: var(--pine-color-danger);
 }
 
 .sage-transaction-card__state--sage {
-  color: sage-color(sage, 300);
+  color: var(--pine-color-success);
 }
 
 .sage-transaction-card__time {

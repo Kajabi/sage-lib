@@ -24,10 +24,10 @@ $-modal-inner-size: sage-container(md);
   overflow-y: scroll;
   z-index: sage-z-index(negative);
   padding: sage-spacing(md);
-  background-color: rgba(sage-color(grey, 950), 0.4);
+  background-color: rgba(sage-color-hex(grey, 950), 0.4);
   background-image: linear-gradient(
-    rgba(sage-color(grey, 700), 0.35) 0%,
-    rgba(sage-color(grey, 950), 0.4) 100%
+    rgba(sage-color-hex(grey, 700), 0.35) 0%,
+    rgba(sage-color-hex(grey, 950), 0.4) 100%
   );
   transition: opacity 0.1s ease-out;
   pointer-events: none;
@@ -59,8 +59,8 @@ $-modal-inner-size: sage-container(md);
   &.sage-modal--no-blur {
     backdrop-filter: none;
     background-image: linear-gradient(
-      rgba(sage-color(grey, 800), 0.5) 0%,
-      rgba(sage-color(grey, 950), 0.5) 100%
+      rgba(sage-color-hex(grey, 800), 0.5) 0%,
+      rgba(sage-color-hex(grey, 950), 0.5) 100%
     );
   }
 
@@ -83,7 +83,7 @@ $-modal-inner-size: sage-container(md);
   max-width: $-modal-inner-size + (2 * $-modal-padding-x);
   margin: 0;
   border-radius: sage-border(radius-large);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   box-shadow: sage-shadow(modal);
   transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
@@ -213,7 +213,7 @@ $-modal-inner-size: sage-container(md);
   display: grid;
   align-items: baseline;
   margin: $-modal-padding-y $-modal-padding-x;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
 
   .sage-modal--fullscreen & {
     position: fixed;
@@ -222,7 +222,7 @@ $-modal-inner-size: sage-container(md);
     inset-inline-end: 0;
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
-    background-color: sage-color(white);
+    background-color: var(--pine-color-background-container);
   }
 }
 
@@ -348,7 +348,7 @@ $-modal-inner-size: sage-container(md);
 
 @media (prefers-reduced-motion) {
   .sage-modal {
-    background-color: rgba(sage-color(grey, 950), 0.85);
+    background-color: rgba(sage-color-hex(grey, 950), 0.85);
     backdrop-filter: none;
   }
 

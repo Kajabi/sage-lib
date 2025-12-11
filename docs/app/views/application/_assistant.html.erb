@@ -13,5 +13,18 @@
         name: "search"
       }
     } %>
+    <%= sage_component SageButton, {
+      value: "Toggle dark mode",
+      attributes: {
+        "data-js-dark-mode-toggle": true,
+        title: "Toggle dark mode",
+        "aria-label": "Toggle dark mode"
+      },
+      subtle: true,
+      icon: {
+        name: "flash",
+        style: "only"
+      }
+    } %>
   <% end %>
 <% end %>

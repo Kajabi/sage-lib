@@ -50,11 +50,339 @@ $sage-color-default-name: "grey 500";
     yellow: 400
   );
 
+  // Normalize $base to a string for consistent comparisons
+  // This handles cases where $base comes as a symbol from map iterations
+  $base-str: #{$base};
+
   // Get the default value for the given base color
   $default-value: map-get($default-values, $base);
-
-  // If no value is provided, use the default value
   $value: if($value == null, $default-value, $value);
+
+  // Normalize $value to a number for consistent comparisons
+  // This handles cases where $value comes as a string from map iterations
+  @if type-of($value) == string {
+    $value: number($value);
+  }
+
+  // ============================================
+  // PRIORITY 1: Semantic Tokens (REQUIRED for dark mode)
+  // ============================================
+
+  // Primary colors → SEMANTIC TOKEN (dark mode compatible)
+  @if $base-str == "primary" {
+    @if $value == 300 or $value == null {
+      @return var(--pine-color-primary); // Semantic token - REQUIRED for dark mode
+    }
+    @if $value == 400 {
+      @return var(--pine-color-primary-hover); // Semantic token - dark mode compatible
+    }
+    // Light backgrounds (core tokens OK for specific tints)
+    @if $value == 100 {
+      @return var(--pine-color-blue-150);
+    }
+    @if $value == 200 {
+      @return var(--pine-color-blue-300);
+    }
+    // Dark shades (core tokens OK)
+    @if $value == 500 {
+      @return var(--pine-color-blue-900);
+    }
+    // Default primary-300 behavior
+    @return var(--pine-color-primary);
+  }
+
+  // Success/sage colors → SEMANTIC TOKEN
+  @if $base-str == "sage" {
+    @if $value == 300 or $value == null {
+      @return var(--pine-color-success); // Semantic token - dark mode compatible
+    }
+    // Light backgrounds
+    @if $value == 100 {
+      @return var(--pine-color-green-150);
+    }
+    @if $value == 200 {
+      @return var(--pine-color-green-300);
+    }
+    // Dark shades
+    @if $value == 400 {
+      @return var(--pine-color-green-800);
+    }
+    @if $value == 500 {
+      @return var(--pine-color-green-950);
+    }
+    // Default to success semantic
+    @return var(--pine-color-success);
+  }
+
+  // Red/danger colors → SEMANTIC TOKEN for error states
+  @if $base-str == "red" {
+    @if $value == 300 {
+      @return var(--pine-color-danger); // Semantic token - dark mode compatible
+    }
+    @if $value == 500 or $value == 600 {
+      @return var(--pine-color-danger); // Use semantic for error states
+    }
+    // Light backgrounds
+    @if $value == 100 {
+      @return var(--pine-color-red-100);
+    }
+    @if $value == 150 {
+      @return var(--pine-color-red-150);
+    }
+    @if $value == 200 {
+      @return var(--pine-color-red-200);
+    }
+    // Dark shades
+    @if $value == 400 {
+      @return var(--pine-color-red-800);
+    }
+    @if $value == 800 {
+      @return var(--pine-color-red-950);
+    }
+  }
+
+  // Yellow/warning colors → SEMANTIC TOKEN
+  @if $base-str == "yellow" {
+    @if $value == 300 or $value == 400 {
+      @return var(--pine-color-warning); // Semantic token - dark mode compatible
+    }
+    @if $value == 600 {
+      @return var(--pine-color-warning); // Use semantic for warning states
+    }
+    // Light backgrounds
+    @if $value == 100 {
+      @return var(--pine-color-yellow-100);
+    }
+    @if $value == 150 {
+      @return var(--pine-color-yellow-150);
+    }
+    @if $value == 200 {
+      @return var(--pine-color-yellow-200);
+    }
+  }
+
+  // Charcoal → SEMANTIC TOKENS (mapped to grey equivalents for dark mode)
+  @if $base-str == "charcoal" {
+    // Map charcoal values directly to semantic tokens (same as grey equivalents)
+    @if $value == 500 {
+      @return var(--pine-color-text-strong); // Semantic token - dark mode compatible (charcoal-500 → grey-950)
+    }
+    @if $value == 400 {
+      @return var(--pine-color-text); // Semantic token - dark mode compatible (charcoal-400 → grey-900)
+    }
+    @if $value == 300 {
+      @return var(--pine-color-text-message); // Semantic token - dark mode compatible (charcoal-300 → grey-800)
+    }
+    @if $value == 200 {
+      @return var(--pine-color-text-muted); // Semantic token - dark mode compatible (charcoal-200 → grey-700)
+    }
+    @if $value == 100 {
+      @return var(--pine-color-text-tertiary); // Semantic token - dark mode compatible (charcoal-100 → grey-600)
+    }
+  }
+
+  // Grey/neutral colors → SEMANTIC TOKENS (for dark mode)
+  @if $base-str == "grey" {
+    // Map specific grey shades to semantic tokens
+    @if $value == 950 {
+      @return var(--pine-color-text-strong); // Semantic token - dark mode compatible
+    }
+    @if $value == 900 {
+      @return var(--pine-color-text); // Semantic token - dark mode compatible
+    }
+    @if $value == 800 {
+      @return var(--pine-color-text-message); // Semantic token - dark mode compatible
+    }
+    @if $value == 700 {
+      @return var(--pine-color-text-muted); // Semantic token - dark mode compatible
+    }
+    @if $value == 600 {
+      @return var(--pine-color-text-tertiary); // Semantic token - dark mode compatible
+    }
+    @if $value == 500 {
+      @return var(--pine-color-text-disabled); // Semantic token - dark mode compatible
+    }
+    @if $value == 400 {
+      @return var(--pine-color-border-hover); // Semantic token - dark mode compatible
+    }
+    @if $value == 300 {
+      @return var(--pine-color-border); // Semantic token - dark mode compatible
+    }
+    @if $value == 200 {
+      @return var(--pine-color-border-disabled); // Semantic token - dark mode compatible
+    }
+    @if $value == 150 {
+      @return var(--pine-color-background-muted); // Semantic token - dark mode compatible
+    }
+    @if $value == 100 {
+      @return var(--pine-color-background-app); // Semantic token - dark mode compatible
+    }
+    @if $value == 50 {
+      @return var(--pine-color-background-container-hover); // Semantic token - dark mode compatible
+    }
+  }
+
+  // White → SEMANTIC TOKEN (for dark mode)
+  @if $base-str == "white" {
+    // Map white to background container semantic token
+    @if $value == 500 or $value == null {
+      @return var(--pine-color-background-container); // Semantic token - dark mode compatible
+    }
+  }
+
+  // ============================================
+  // PRIORITY 2: Aliases (orange → mercury, charcoal → grey)
+  // ============================================
+
+  // Orange → Mercury alias (maintain backward compatibility)
+  @if $base-str == "orange" {
+    $base-str: "mercury";
+    $base: mercury;
+    // Keep value as-is, mercury has same scale
+  }
+
+  // Charcoal → Grey alias with mapping
+  @if $base-str == "charcoal" {
+    $base-str: "grey";
+    $base: "grey";
+    // Map charcoal scale to grey equivalents
+    $charcoal-to-grey: (
+      100: 600,
+      200: 700,
+      300: 800,
+      400: 900,
+      500: 950
+    );
+    @if map-has-key($charcoal-to-grey, $value) {
+      $value: map-get($charcoal-to-grey, $value);
+    }
+  }
+
+  // ============================================
+  // PRIORITY 3: Core Color Tokens (fallback)
+  // ============================================
+
+  // Build CSS variable name from base and value
+  @return var(--pine-color-#{$base-str}-#{$value});
+}
+
+///
+/// Sage color hex utility (for SCSS operations)
+///
+/// Returns actual hex color values for use in SCSS functions like lightness(), darken(), etc.
+/// This is needed because CSS variables cannot be used in SCSS color operations.
+///
+/// Use this function when you need to perform SCSS operations on colors.
+/// For direct CSS property use, use sage-color() instead (for dark mode support).
+///
+/// @param {string} $base the color token to retrieve
+/// @param {number} $value [300] the tint or shade to retrieve
+///
+/// @return {color} Hex color value
+///
+@function sage-color-hex($base, $value: null) {
+  // Use the old Style Dictionary lookup for hex values
+  // This is needed for SCSS operations like lightness(), darken(), etc.
+  $default-values: (
+    black: 500,
+    blue: 600,
+    charcoal: 300,
+    grey: 300,
+    green: 600,
+    mercury: 500,
+    orange: 300,
+    primary: 300,
+    purple: 600,
+    red: 500,
+    sage: 300,
+    white: 500,
+    yellow: 400
+  );
+
+  $default-value: map-get($default-values, $base);
+  $value: if($value == null, $default-value, $value);
+
+  // Handle aliases (same as sage-color)
+  @if $base == "orange" {
+    $base: mercury;
+  }
+  @if $base == "charcoal" {
+    $base: "grey";
+    $charcoal-to-grey: (
+      100: 600,
+      200: 700,
+      300: 800,
+      400: 900,
+      500: 950
+    );
+    @if map-has-key($charcoal-to-grey, $value) {
+      $value: map-get($charcoal-to-grey, $value);
+    }
+  }
+
+  // Map semantic colors to their hex equivalents from Style Dictionary
+  // For primary, use blue-600 (closest to primary-300)
+  @if $base == "primary" {
+    @if $value == 300 or $value == null {
+      $base: "blue";
+      $value: 600;
+    }
+    @else if $value == 400 {
+      $base: "blue";
+      $value: 500;
+    }
+    @else if $value == 100 {
+      $base: "blue";
+      $value: 150;
+    }
+    @else if $value == 200 {
+      $base: "blue";
+      $value: 300;
+    }
+    @else if $value == 500 {
+      $base: "blue";
+      $value: 900;
+    }
+  }
+
+  // Map sage to green
+  @if $base == "sage" {
+    @if $value == 300 or $value == null {
+      $base: "green";
+      $value: 500;
+    }
+    @else if $value == 100 {
+      $base: "green";
+      $value: 150;
+    }
+    @else if $value == 200 {
+      $base: "green";
+      $value: 300;
+    }
+    @else if $value == 400 {
+      $base: "green";
+      $value: 800;
+    }
+    @else if $value == 500 {
+      $base: "green";
+      $value: 950;
+    }
+  }
+
+  // Use old Style Dictionary lookup
+  // First verify the color exists in the map
+  $color-map: map-get($sd-sage-color, $base);
+  @if $color-map == null {
+    @warn "Color base '#{$base}' not found in Style Dictionary. Default color returned.";
+    @return $sage-color-default;
+  }
+
+  // Verify the value exists
+  $value-map: map-get($color-map, $value);
+  @if $value-map == null {
+    @warn "Color value '#{$base}-#{$value}' not found in Style Dictionary. Default color returned.";
+    @return $sage-color-default;
+  }
 
   $color: sd-sage-color($base, $value, hex);
 
@@ -62,8 +390,6 @@ $sage-color-default-name: "grey 500";
     @return $color;
   }
 
-  @warn "Could not retrieve color: #{$base} #{$value}. Got `#{$color}` from `sd-sage-color()`. Default color #{$sage-color-default-name} (`#{$sage-color-default}`) returned instead.";
-
+  @warn "Could not retrieve hex color: #{$base} #{$value}. Default color returned.";
   @return $sage-color-default;
-
 }

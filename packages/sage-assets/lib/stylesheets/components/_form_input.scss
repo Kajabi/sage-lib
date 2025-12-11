@@ -82,7 +82,7 @@ $-input-text-height: var(--pine-font-size-body);
 }
 
 .sage-input__affix-value {
-  color: var(--pine-color-text-placeholder);
+  color: var(--pine-color-text-tertiary);
 }
 
 .sage-input__affix--prefix {
@@ -160,7 +160,7 @@ $-input-text-height: var(--pine-font-size-body);
   }
 
   .sage-form-field--error & i {
-    color: var(--pine-color-danger);
+    color: var(--pine-color-text-message-danger);
   }
 }
 

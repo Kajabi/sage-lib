@@ -6,7 +6,7 @@
 
 
 $-menubtn-toggle-size: rem(24px);
-$-menubtn-toggle-line-color: sage-color(grey, 150);
+$-menubtn-toggle-line-color: var(--pine-color-background-muted);
 $-menubtn-toggle-line-height: rem(2px);
 $-menubtn-toggle-radius: rem(2px);
 $-menubtn-focus-outline-size: sage-spacing(xs);
@@ -55,21 +55,21 @@ $-menubtn-focus-outline-color: currentColor;
 
     &:focus::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: sage-color(grey, 600);
+      border-color: var(--pine-color-text-tertiary);
       opacity: 1;
     }
 
     &:active {
-      color: sage-color(grey, 500);
+      color: var(--pine-color-text-disabled);
     }
 
     &:active::after {
-      border-color: sage-color(grey, 700);
+      border-color: var(--pine-color-text-muted);
     }
 
     &[aria-expanded="true"]::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: sage-color(sage);
+      border-color: var(--pine-color-success);
       opacity: 1;
     }
   }
