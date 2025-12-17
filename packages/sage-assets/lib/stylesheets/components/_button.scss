@@ -296,13 +296,13 @@ $-btn-loading-min-height: rem(36px);
       margin-inline-end: var(--pine-dimension-xs);
     }
 
-    + & {
-      margin-inline-start: var(--pine-dimension-none);
-    }
-
     &.sage-btn--tag::before {
       font-size: var(--pine-font-size-body-md);
     }
+  }
+
+  .sage-badge & + & {
+    margin-inline-start: var(--pine-dimension-none);
   }
 
   .sage-badge & {
