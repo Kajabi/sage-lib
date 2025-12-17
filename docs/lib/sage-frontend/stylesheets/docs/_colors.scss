@@ -43,12 +43,12 @@
 }
 
 // build individual color blocks
+// Use sd-sage-color() directly for hex values (works with published npm version)
 /* stylelint-disable max-nesting-depth */
 @each $name, $color in $sage-colors {
   @each $value, $map in $color {
-    // Use sage-color-hex() for actual hex values (needed for color documentation display)
-    // This ensures colors are displayed correctly regardless of dark/light mode
-    $hex: sage-color-hex($name, $value);
+    // Get hex value directly from Style Dictionary
+    $hex: sd-sage-color($name, $value, hex);
 
     // Determine class name for $value == 50
     $classname: ".color-#{"" + $name}-#{$value}";
@@ -65,10 +65,10 @@
 
       // Simple lightness-based contrast: white text on dark, black text on light
       @if (lightness($hex) < 55%) {
-        color: sage-color-hex(white);
+        color: #fff;
       }
       @else {
-        color: sage-color-hex(grey, 950);
+        color: sd-sage-color(grey, 950, hex);
       }
 
       &::after {
@@ -88,10 +88,10 @@
 
 .color-white-100 {
   border-radius: sage-border(radius);
-  border: 1px solid sage-color-hex(grey, 300);
-  box-shadow: inset 0 0 0.0625rem sage-color-hex(grey, 300);
+  border: 1px solid sd-sage-color(grey, 300, hex);
+  box-shadow: inset 0 0 0.0625rem sd-sage-color(grey, 300, hex);
 }
 
 .color-black-100 {
-  color: sage-color-hex(white);
+  color: #fff;
 }
