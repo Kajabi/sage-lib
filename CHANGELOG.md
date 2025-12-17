@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.2.26](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.26) (2025-12-17)
+
+**Note:** Version bump only for package root
+
+
+
+
+
 ## [6.2.25](https://github.com/Kajabi/sage-lib/compare/v6.2.24...v6.2.25) (2025-11-19)
 
 **Note:** Version bump only for package root
