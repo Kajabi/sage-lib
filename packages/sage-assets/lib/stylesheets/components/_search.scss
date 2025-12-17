@@ -15,7 +15,7 @@ $-search-icon: "::before";
   display: flex;
   align-items: center;
   position: relative;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
 
   &#{$-search-icon} {
     @include sage-icon-base(search-small, sm, pine);
@@ -23,21 +23,21 @@ $-search-icon: "::before";
     z-index: sage-z-index(default, 2);
     margin-inline-start: sage-spacing(sm);
     margin-inline-end: -1 * sage-spacing(lg);
-    color: sage-color(grey, 700);
+    color: var(--pine-color-text-muted);
     transition: map-get($sage-transitions, default);
     transition-property: color;
   }
 
   .sage-search:not(.sage-search--contained) & {
-    border-block-end: 1px solid sage-color(grey, 300);
+    border-block-end: var(--pine-border-width-thin) solid var(--pine-color-border);
 
     &:hover {
-      background-color: sage-color(grey, 100);
-      border-bottom-color: sage-color(grey, 600);
+      background-color: var(--pine-color-background-app);
+      border-bottom-color: var(--pine-color-text-tertiary);
     }
 
     &:focus-within {
-      border-color: sage-color(grey, 100);
+      border-color: var(--pine-color-background-app);
     }
   }
 
@@ -146,7 +146,7 @@ $-search-icon: "::before";
   @extend %t-sage-body;
 
   @include placeholder {
-    color: sage-color(grey, 700);
+    color: var(--pine-color-text-muted);
   }
 
   &:focus {
@@ -154,8 +154,8 @@ $-search-icon: "::before";
   }
 
   &:hover:not(:disabled) {
-    background-color: sage-color(grey, 100);
-    border-bottom-color: sage-color(grey, 600);
+    background-color: var(--pine-color-background-app);
+    border-bottom-color: var(--pine-color-text-tertiary);
     box-shadow: none;
   }
 
@@ -165,7 +165,7 @@ $-search-icon: "::before";
 
   .sage-search--contained & {
     &:hover:not(:disabled) {
-      background-color: sage-color(white);
+      background-color: var(--pine-color-background-container);
     }
     &:disabled {
       padding-inline-start: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
@@ -212,7 +212,7 @@ $-search-icon: "::before";
 
     ~ .sage-search__label {
       @include sage-form-field-floating-label();
-      color: sage-color(primary, 300);
+      color: var(--pine-color-primary);
     }
 
     /* stylelint-disable max-nesting-depth */

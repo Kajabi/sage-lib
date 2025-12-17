@@ -177,7 +177,7 @@ $-loader-lower-opacity: 0.4;
   position: relative;
   margin: 0 auto;
   padding: calc(var(--pine-dimension-xs) * 1.875) calc(var(--pine-dimension-xs) * 2.5); // 8px * 1.875 = 15px, 8px * 2.5 = 20px
-  background-color: var(--pine-color-background-container-disabled);
+  background-color: var(--pine-color-background-muted);
   will-change: transform;
   border-radius: var(--pine-dimension-sm);
   box-shadow: var(--pine-box-shadow);

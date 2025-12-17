@@ -15,7 +15,7 @@
   height: rem(88px);
   width: calc(100% - #{sage-sidebar()});
   padding: sage-spacing(md) sage-spacing(xl);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   border-block-end: sage-border();
 }
 

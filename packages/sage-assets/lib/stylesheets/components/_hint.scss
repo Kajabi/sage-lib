@@ -5,8 +5,8 @@
 ////
 
 // Colors
-$-hint-text-color: sage-color(grey, 900);
-$-hint-background-color: sage-color(grey, 200);
+$-hint-text-color: var(--pine-color-text);
+$-hint-background-color: var(--pine-color-background-inset);
 
 .sage-hint {
   display: flex;

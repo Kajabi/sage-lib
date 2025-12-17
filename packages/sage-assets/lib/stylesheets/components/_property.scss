@@ -6,19 +6,18 @@
 
 
 .sage-property {
-  @extend %t-sage-body-small;
-
   display: inline-flex;
   align-items: center;
-  color: sage-color(grey, 800);
+  color: var(--pine-color-text-message);
+  font: var(--pine-typography-body-medium);
 
   .sage-property-group &:not(:last-child) {
-    margin-inline-end: sage-spacing(md);
+    margin-inline-end: var(--pine-dimension-md);
   }
 }
 
 .sage-property__icon {
-  margin-inline-end: sage-spacing(xs);
+  margin-inline-end: var(--pine-dimension-xs);
 
   &::before {
     vertical-align: top;
@@ -27,7 +26,6 @@
 
 .sage-property__value {
   @include truncate();
-  font-weight: sage-font-weight(medium);
 }
 
 .sage-property-group {

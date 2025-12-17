@@ -19,7 +19,7 @@
     height: 0;
     margin-inline-end: -1 * sage-spacing(panel);
     margin-inline-start: -1 * sage-spacing(panel);
-    border-block-start: 1px solid sage-color(grey, 300);
+    border-block-start: 1px solid var(--pine-color-border);
   }
 
   .sage-search {

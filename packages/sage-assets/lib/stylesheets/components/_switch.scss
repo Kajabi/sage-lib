@@ -24,9 +24,10 @@ $-switch-label-left-spacing: var(--pine-dimension-150);
 $-switch-border-radius: var(--pine-dimension-sm);
 $-switch-height: var(--pine-dimension-250);
 $-switch-width: var(--pine-dimension-450);
+$-switch-transition-timing: 0.15s ease-out;
 
 // Toggle
-$-switch-toggle-size: var(--pine-dimension-sm);
+$-switch-toggle-size: calc(var(--pine-dimension-250) - 4px);
 
 
 .sage-switch {
@@ -44,7 +45,7 @@ $-switch-toggle-size: var(--pine-dimension-sm);
     border: var(--pine-border);
     border-radius: var(--pine-dimension-xs);
     box-shadow: var(--pine-box-shadow);
-    background-color: var(--pine-color-white);
+    background-color: var(--pine-color-background-container);
 
     .sage-card &,
     .sage-panel & {
@@ -94,7 +95,8 @@ $-switch-toggle-size: var(--pine-dimension-sm);
   background: $-switch-color-default;
   border: 0;
   border-radius: $-switch-border-radius;
-  transition: background 0.3s ease-out;
+  transition: $-switch-transition-timing;
+  transition-property: background, border, color;
 
   &:focus {
     outline: none !important; /* stylelint-disable-line declaration-no-important */
@@ -144,10 +146,10 @@ $-switch-toggle-size: var(--pine-dimension-sm);
     transform: translate3d(-100%, -50%, 0);
     height: $-switch-toggle-size;
     width: $-switch-toggle-size;
-    background: var(--pine-color-white);
+    background: var(--pine-color-secondary);
     border-radius: var(--pine-border-radius-full);
     box-shadow: var(--pine-box-shadow);
-    transition: transform 0.2s ease-in-out;
+    transition: transform $-switch-transition-timing;
   }
 
   .sage-switch--error &,

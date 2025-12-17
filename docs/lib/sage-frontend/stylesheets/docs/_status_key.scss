@@ -22,29 +22,29 @@
     width: $status-key-icon-size;
     height: $status-key-icon-size;
     margin: 0 auto;
-    border: 2px solid sage-color(grey);
+    border: 2px solid var(--pine-color-grey-300);
     border-radius: $status-key-icon-size;
 
     &--done {
-      border-color: sage-color(sage);
-      background: sage-color(sage);
+      border-color: var(--pine-color-success);
+      background: var(--pine-color-success);
     }
 
     &--doing {
-      border-color: sage-color(orange);
+      border-color: var(--pine-color-mercury-300);
     }
 
     &--todo {
-      border-color: sage-color(primary, 300);
+      border-color: var(--pine-color-primary);
     }
 
     &--no {
-      background: sage-color(grey);
+      background: var(--pine-color-grey-300);
     }
 
     &--stop {
-      border-color: sage-color(red, 500);
-      background: sage-color(red, 500);
+      border-color: var(--pine-color-danger);
+      background: var(--pine-color-danger);
     }
   }
 
@@ -52,7 +52,7 @@
     margin-inline-start: sage-spacing(xs);
     font-size: sage-font-size(body-sm);
     font-weight: sage-font-weight(semibold);
-    color: sage-color(grey, 700);
+    color: var(--pine-color-text-muted);
   }
 
   @media screen and (min-width: sage-breakpoint(lg-min)) {

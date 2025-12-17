@@ -43,9 +43,12 @@
 }
 
 // build individual color blocks
+// Use sd-sage-color() directly for hex values (works with published npm version)
+/* stylelint-disable max-nesting-depth */
 @each $name, $color in $sage-colors {
   @each $value, $map in $color {
-    $hex: sage-color($name, $value);
+    // Get hex value directly from Style Dictionary
+    $hex: sd-sage-color($name, $value, hex);
 
     // Determine class name for $value == 50
     $classname: ".color-#{"" + $name}-#{$value}";
@@ -60,41 +63,12 @@
       font-size: sage-font-size(body);
       background: $hex;
 
-      @if ($name == grey and $value > 400) {
-        color: sage-color(white);
-      }
-      @else if ($name == white or $name == grey) {
-        color: sage-color(grey, 950);
-      }
-      @else if ($name == black or $name == charcoal) {
-        color: sage-color(white);
-      }
-      @else if ($name == blue and $value > 400) {
-        color: sage-color(blue, 200);
-      }
-      @else if ($name == blue) {
-        color: sage-color(blue, 950);
-      }
-      @else if ($name == mercury and $value > 200) {
-        color: sage-color(white);
-      }
-      @else if ($name == mercury) {
-        color: sage-color(mercury, 500);
-      }
-      @else if ($name == green and $value > 200) {
-        color: sage-color(white);
-      }
-      @else if ($name == green) {
-        color: sage-color(green, 600);
-      }
-      @else if ($name == yellow and $value > 300) {
-        color: sage-color(white);
-      }
-      @else if (lightness($hex) < 65) {
-        color: sage-color($name, 100);
+      // Simple lightness-based contrast: white text on dark, black text on light
+      @if (lightness($hex) < 55%) {
+        color: #fff;
       }
       @else {
-        color: sage-color($name, 400);
+        color: sd-sage-color(grey, 950, hex);
       }
 
       &::after {
@@ -106,6 +80,7 @@
     }
   }
 }
+/* stylelint-enable max-nesting-depth */
 
 [class*="color-"]:only-child {
   border-radius: sage-border(radius);
@@ -113,10 +88,10 @@
 
 .color-white-100 {
   border-radius: sage-border(radius);
-  border: 1px solid sage-color(grey, 800);
-  box-shadow: inset 0 0 0.0625rem sage-color(grey, 800);
+  border: 1px solid sd-sage-color(grey, 300, hex);
+  box-shadow: inset 0 0 0.0625rem sd-sage-color(grey, 300, hex);
 }
 
 .color-black-100 {
-  color: sage-color(white);
+  color: #fff;
 }

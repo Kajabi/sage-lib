@@ -1,13 +1,13 @@
 $-dynamic-select-default-height: rem(45px);
 $-dynamic-select-default-padding: rem(4px) sage-spacing(sm) 0;
-$-dynamic-select-border-color: sage-color(grey, 400);
-$-dynamic-select-placeholder-color: sage-color(grey, 400);
-$-dynamic-select-color-success: map-get($sage-field-colors, success);
+$-dynamic-select-border-color: var(--pine-color-border-hover);
+$-dynamic-select-placeholder-color: var(--pine-color-text-tertiary);
+$-dynamic-select-color-success: sage-field-color(success);
 $-dynamic-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-dynamic-select-selected-height: rem(54px);
 $-dynamic-select-selected-padding: rem(12px) sage-spacing(sm) 0;
-$-dynamic-select-selected-tag-color: sage-color(primary, 200);
-$-dynamic-select-selected-tag-background-color: sage-color(primary, 100);
+$-dynamic-select-selected-tag-color: var(--pine-color-blue-300);
+$-dynamic-select-selected-tag-background-color: var(--pine-color-blue-150);
 $-dynamic-select-selected-tag-border-radius: sage-border(radius-x-large);
 $-dynamic-select-selected-tag-padding: 0 sage-spacing(xs);
 $-dynamic-select-selected-tag-height: rem(30px);

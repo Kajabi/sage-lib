@@ -9,12 +9,12 @@ $-choice-el-radio: "before";
 $-choice-el-icon: "before";
 $-choice-el-arrow: "before";
 
-$-choice-color-default: map-get($sage-tab-colors, default);
-$-choice-color-active: map-get($sage-tab-colors, active);
-$-choice-color-disabled: map-get($sage-tab-colors, disabled);
+$-choice-color-default: sage-tab-color(default);
+$-choice-color-active: sage-tab-color(active);
+$-choice-color-disabled: sage-tab-color(disabled);
 $-choice-radio-size: $sage-radio-size;
-$-choice-radio-color-checked: map-get($sage-radio-colors, checked);
-$-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+$-choice-radio-color-checked: sage-radio-color(checked);
+$-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
 
 :root {
   --icon-top-offset: #{rem(6px)};
@@ -41,7 +41,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   padding: sage-spacing();
   text-decoration: none;
   color: $-choice-color-default;
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   border: sage-border();
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
@@ -60,7 +60,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:hover {
-    @include sage-focus-outline--update-color(sage-color(grey, 500));
+    @include sage-focus-outline--update-color(var(--pine-color-text-disabled));
 
     color: $-choice-color-active;
   }
@@ -70,7 +70,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:focus-visible {
-    border-color: sage-color(purple, 300);
+    border-color: var(--pine-color-purple-600);
     outline: none;
   }
 
@@ -78,7 +78,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(grey, 900);
+      border-color: var(--pine-color-text);
       border-width: rem(4px);
     }
 
@@ -86,12 +86,12 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
   &[aria-disabled="true"],
   &:disabled {
-    background-color: sage-color(grey, 150);
+    background-color: var(--pine-color-background-container-disabled);
     cursor: default;
     pointer-events: none;
 
     &::before {
-      background-color: sage-color(grey, 200);
+      background-color: var(--pine-color-border-disabled);
     }
 
     &:hover::before {
@@ -127,14 +127,14 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     @include sage-icon-base(caret-right, lg, pine);
 
     margin: 0 0 0 sage-spacing(sm);
-    color: sage-color(grey, 900);
+    color: var(--pine-color-text);
     transition: color map-get($sage-transitions, default);
   }
 
   &:active,
   &.sage-choice--active {
     &::#{$-choice-el-arrow} {
-      color: sage-color(primary, 500);
+      color: var(--pine-color-blue-900);
     }
   }
 }
@@ -175,8 +175,8 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:hover::#{$-choice-el-radio} {
-    border-color: sage-color(grey, 500);
-    background-color: sage-color(grey, 100);
+    border-color: var(--pine-color-text-disabled);
+    background-color: var(--pine-color-background-app);
   }
 
   &:active,
@@ -224,28 +224,28 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice__link-text {
   font-style: normal;
-  color: sage-color(primary, 500);
+  color: var(--pine-color-text-info);
 
   .sage-choice:hover & {
-    color: sage-color(primary, 400);
+    color: var(--pine-color-primary-hover);
   }
 
   .sage-choice[aria-disabled="true"] &,
   .sage-choice:disabled & {
-    color: sage-color(grey, 500);
+    color: var(--pine-color-text-disabled);
   }
 }
 
 .sage-choice__text {
   font-style: normal;
-  color: sage-color(grey, 900);
+  color: var(--pine-color-text);
 }
 
 .sage-choice__subtext {
   @extend %t-sage-body-xsmall;
 
   margin-block-start: sage-spacing(2xs);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-text-muted);
 }
 
 pds-icon {

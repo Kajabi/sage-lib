@@ -6,12 +6,12 @@
 
 
 $-meter-bar-height: rem(4px);
-$-meter-color-bg: sage-color(grey, 200);
-$-meter-bar-low: rgba(sage-color(red, 950), 0.9);
-$-meter-bar-med: rgba(sage-color(orange), 0.9);
-$-meter-bar-success: rgba(sage-color(sage, 200), 0.9);
-$-meter-bar-max: rgba(sage-color(sage, 300), 0.9);
-$-meter-bar-divider-color: sage-color(white);
+$-meter-color-bg: var(--pine-color-border-disabled);
+$-meter-bar-low: rgba(sage-color-hex(red, 950), 0.9);
+$-meter-bar-med: rgba(sage-color-hex(mercury, 500), 0.9);
+$-meter-bar-success: rgba(sage-color-hex(green, 300), 0.9);
+$-meter-bar-max: rgba(sage-color-hex(green, 500), 0.9);
+$-meter-bar-divider-color: var(--pine-color-background-container);
 
 
 //

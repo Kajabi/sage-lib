@@ -8,7 +8,7 @@ $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
 $-hero-margin-y: rem(24px);
 $-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
-$-hero-play-icon-background-color: sage-color(white);
+$-hero-play-icon-background-color: var(--pine-color-background-container);
 
 .sage-hero {
   display: grid;
@@ -18,7 +18,7 @@ $-hero-play-icon-background-color: sage-color(white);
     "content";
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(sm);
-  background-color: sage-color(white);
+  background-color: var(--pine-color-background-container);
   border: sage-border();
   border-start-start-radius: sage-border(radius-large);
   border-start-end-radius: sage-border(radius-large);
@@ -81,6 +81,10 @@ $-hero-play-icon-background-color: sage-color(white);
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
+
+  .sage-hero--custom-background-color & {
+    color: var(--pine-color-grey-950); // don't flip color for custom background color
+  }
 }
 
 .sage-hero__body {
@@ -91,13 +95,17 @@ $-hero-play-icon-background-color: sage-color(white);
   padding-inline-end: sage-spacing(md);
   margin-block-end: $-hero-margin-y;
   font-weight: sage-font-weight(medium);
-  color: sage-color(grey, 800);
+  color: var(--pine-color-text-message);
 
   @media (min-width: sage-breakpoint(lg-max)) {
     padding-block-start: 0;
     padding-block-end: 0;
     padding-inline-start: 0;
     padding-inline-end: 0;
+  }
+
+  .sage-hero--custom-background-color & {
+    color: var(--pine-color-grey-900);
   }
 }
 
@@ -134,7 +142,7 @@ $-hero-play-icon-background-color: sage-color(white);
   @include sage-focus-ring;
 
   &:focus {
-    @include sage-focus-outline--update-color(sage-color(purple, 300));
+    @include sage-focus-outline--update-color(var(--pine-color-purple-600));
   }
 }
 
@@ -170,7 +178,7 @@ $-hero-play-icon-background-color: sage-color(white);
       align-items: center;
       width: $-hero-icon-size;
       font-size: $-hero-icon-size;
-      color: sage-color(grey, 950);
+      color: var(--pine-color-text-strong);
     }
 
     &::after {

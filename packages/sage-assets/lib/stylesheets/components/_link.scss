@@ -4,55 +4,55 @@
 /// @group sage
 ////
 
-$-link-color: sage-color(primary, 300);
-$-link-color-hover: sage-color(primary, 400);
-$-link-subtext-color: sage-color(grey, 700);
-$-link-subtext-color-hover: sage-color(grey, 900);
+$-link-color: var(--pine-color-primary);
+$-link-color-hover: var(--pine-color-primary-hover);
+$-link-subtext-color: var(--pine-color-text-muted);
+$-link-subtext-color-hover: var(--pine-color-text);
 
 $-link-base-styles: (
   primary:(
     default: (
-      color: sage-color(primary, 300),
+      color: var(--pine-color-text),
     ),
     hover: (
-      color: sage-color(primary, 400),
+      color: var(--pine-color-text-hover),
     ),
     focus-visible: (
-      color: sage-color(primary, 300),
+      color: var(--pine-color-text),
     ),
   ),
   secondary:(
     default: (
-      color: sage-color(grey, 900),
+      color: var(--pine-color-text),
     ),
     hover: (
-      color: sage-color(black),
+      color: var(--pine-color-text-hover),
     ),
     focus-visible: (
-      color: sage-color(grey, 900),
+      color: var(--pine-color-text),
     ),
   ),
   neutral:(
     default: (
-      color: sage-color(white),
+      color: var(--pine-color-text-inverse-emphasis),
     ),
     hover: (
-      color: sage-color(grey, 100),
+      color: var(--pine-color-text-inverse),
     ),
     focus-visible: (
-      color: sage-color(white),
+      color: var(--pine-color-text-inverse-emphasis),
     ),
   ),
   danger:(
     default: (
-      color: sage-color(red, 500),
+      color: var(--pine-color-danger),
     ),
     hover: (
-      color: sage-color(red, 800),
+      color: var(--pine-color-red-950),
     ),
     focus-visible: (
-      color: sage-color(red, 500),
-      focus-outline: sage-color(red, 300),
+      color: var(--pine-color-danger),
+      focus-outline: var(--pine-color-red-300),
     ),
   )
 );
@@ -70,14 +70,14 @@ $-link-base-styles: (
   @include sage-focus-outline($outline-offset-inline: 4px);
 
   &:hover {
-    color: sage-color(primary, 400);
+    color: var(--pine-color-primary-hover);
     cursor: pointer;
   }
 
   &:focus-visible {
-    color: sage-color(primary, 300);
+    color: var(--pine-color-primary);
 
-    @include sage-focus-outline--update-color(sage-color(purple, 300));
+    @include sage-focus-outline--update-color(var(--pine-color-purple-600));
   }
 
   .sage-card--interactive & {
@@ -163,6 +163,12 @@ $-link-base-styles: (
   }
 }
 
+[data-theme="dark"] {
+  .sage-alert .sage-link--secondary {
+    color: var(--pine-color-grey-900);
+  }
+}
+
 .sage-link--help,
 .sage-link--help-icon-only {
   position: relative;
@@ -173,7 +179,7 @@ $-link-base-styles: (
   pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
-    color: sage-color(grey, 600);
+    color: var(--pine-color-text-tertiary);
   }
 
   &:focus {
@@ -187,11 +193,11 @@ $-link-base-styles: (
     outline: 0;
 
     pds-icon {
-      color: sage-color(grey, 800);
+      color: var(--pine-color-text-message);
     }
 
     &::before {
-      color: sage-color(grey, 800);
+      color: var(--pine-color-text-message);
     }
   }
 
@@ -218,7 +224,7 @@ $-link-base-styles: (
     $outline-offset-block: 4px,
     $outline-border-radius: sage-border(radius-round),
   );
-  @include sage-focus-outline--update-color(sage-color(purple, 300));
+  @include sage-focus-outline--update-color(var(--pine-color-purple-600));
 }
 
 .sage-link--remove-underline {

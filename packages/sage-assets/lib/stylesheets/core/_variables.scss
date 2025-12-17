@@ -15,7 +15,7 @@ $sage-greet-font-path: "#{$sage-font-cdn-root}/greet";
 ///
 $sage-active-underline-configs: (
   height: rem(3px),
-  color: sage-color(mercury, 500),
+  color: var(--pine-color-brand),
 );
 
 ///
@@ -49,21 +49,63 @@ $sage-field-configs: (
 
 ///
 /// Field coloring
+/// @deprecated Use sage-field-color() function instead to preserve CSS variables for dark mode
 ///
 $sage-field-colors: (
-  border: sage-color(grey, 300),
-  default: sage-color(grey, 800),
-  disabled: sage-color(grey, 500),
-  disabled-background: sage-color(grey, 150),
-  error: sage-color(red, 500),
-  label-background: sage-color(white),
-  success: sage-color(primary, 300),
+  border: var(--pine-color-border),
+  default: var(--pine-color-text-strong),
+  disabled: var(--pine-color-text-disabled),
+  disabled-background: var(--pine-color-primary-disabled),
+  error: var(--pine-color-danger),
+  label-background: var(--pine-color-background-container),
+  success: var(--pine-color-primary),
 );
+
+///
+/// Get field color CSS variable (preserves semantic tokens for dark mode)
+///
+/// This function bypasses SCSS map resolution, which would convert CSS variables
+/// to hex values during compilation. By returning CSS variables directly, we preserve
+/// semantic tokens that can change at runtime for dark mode support.
+///
+/// @param {string} $key - Color key (border, default, disabled, disabled-background, error, label-background, success)
+/// @return {string} CSS variable string
+///
+/// @example scss
+///   color: sage-field-color(default);
+///   // Output: color: var(--pine-color-text-strong);
+///
+@function sage-field-color($key) {
+  @if $key == "border" {
+    @return var(--pine-color-border);
+  }
+  @if $key == "default" {
+    @return var(--pine-color-text-strong);
+  }
+  @if $key == "disabled" {
+    @return var(--pine-color-text-disabled);
+  }
+  @if $key == "disabled-background" {
+    @return var(--pine-color-primary-disabled);
+  }
+  @if $key == "error" {
+    @return var(--pine-color-danger);
+  }
+  @if $key == "label-background" {
+    @return var(--pine-color-background-container);
+  }
+  @if $key == "success" {
+    @return var(--pine-color-primary);
+  }
+  @warn "Unknown field color key: #{$key}. Valid keys: border, default, disabled, disabled-background, error, label-background, success";
+  @return var(--pine-color-text-strong); // Fallback
+}
 
 // $sage-field
 
 ///
 /// Radio button colors
+/// @deprecated Use sage-radio-color() function instead to preserve CSS variables for dark mode
 ///
 $sage-radio-colors: (
   checked: var(--pine-color-accent),
@@ -78,26 +120,127 @@ $sage-radio-colors: (
 );
 
 ///
+/// Get radio color CSS variable (preserves semantic tokens for dark mode)
+///
+/// This function bypasses SCSS map resolution, which would convert CSS variables
+/// to hex values during compilation. By returning CSS variables directly, we preserve
+/// semantic tokens that can change at runtime for dark mode support.
+///
+/// @param {string} $key - Color key (checked, checked-disabled, checked-hover, checked-inner, default, disabled, error, error-hover, hover)
+/// @return {string} CSS variable string
+///
+/// @example scss
+///   background-color: sage-radio-color(checked);
+///   // Output: background-color: var(--pine-color-accent);
+///
+@function sage-radio-color($key) {
+  @if $key == "checked" {
+    @return var(--pine-color-accent);
+  }
+  @if $key == "checked-disabled" {
+    @return var(--pine-color-accent-disabled);
+  }
+  @if $key == "checked-hover" {
+    @return var(--pine-color-accent-hover);
+  }
+  @if $key == "checked-inner" {
+    @return var(--pine-color-white);
+  }
+  @if $key == "default" {
+    @return var(--pine-color-border);
+  }
+  @if $key == "disabled" {
+    @return var(--pine-color-border-disabled);
+  }
+  @if $key == "error" {
+    @return var(--pine-color-danger);
+  }
+  @if $key == "error-hover" {
+    @return var(--pine-color-border-danger-hover);
+  }
+  @if $key == "hover" {
+    @return var(--pine-color-neutral);
+  }
+  @warn "Unknown radio color key: #{$key}. Valid keys: checked, checked-disabled, checked-hover, checked-inner, default, disabled, error, error-hover, hover";
+  @return var(--pine-color-border); // Fallback
+}
+
+///
 /// Radio button size
 ///
 $sage-radio-size: rem(16px);
 
 ///
 /// Tab colors shared by components such as tabs and choices
+/// @deprecated Use sage-tab-color() function instead to preserve CSS variables for dark mode
 ///
 $sage-tab-colors: (
-  default: sage-color(grey, 800),
-  active: sage-color(grey, 900),
-  disabled: sage-color(grey, 600),
+  default: var(--pine-color-text),
+  active: var(--pine-color-text-hover),
+  disabled: var(--pine-color-text-disabled),
 );
 
 ///
+/// Get tab color CSS variable (preserves semantic tokens for dark mode)
+///
+/// This function bypasses SCSS map resolution, which would convert CSS variables
+/// to hex values during compilation. By returning CSS variables directly, we preserve
+/// semantic tokens that can change at runtime for dark mode support.
+///
+/// @param {string} $key - Color key (default, active, disabled)
+/// @return {string} CSS variable string
+///
+/// @example scss
+///   color: sage-tab-color(active);
+///   // Output: color: var(--pine-color-text-hover);
+///
+@function sage-tab-color($key) {
+  @if $key == "default" {
+    @return var(--pine-color-text);
+  }
+  @if $key == "active" {
+    @return var(--pine-color-text-hover);
+  }
+  @if $key == "disabled" {
+    @return var(--pine-color-text-disabled);
+  }
+  @warn "Unknown tab color key: #{$key}. Valid keys: default, active, disabled";
+  @return var(--pine-color-text); // Fallback
+}
+
+///
 /// Standard text colors
+/// @deprecated Use sage-text-color() function instead to preserve CSS variables for dark mode
 ///
 $sage-text-colors: (
-  body: sage-color(grey, 900),
-  heading: sage-color(grey, 950),
+  body: var(--pine-color-text),
+  heading: var(--pine-color-text-strong),
 );
+
+///
+/// Get text color CSS variable (preserves semantic tokens for dark mode)
+///
+/// This function bypasses SCSS map resolution, which would convert CSS variables
+/// to hex values during compilation. By returning CSS variables directly, we preserve
+/// semantic tokens that can change at runtime for dark mode support.
+///
+/// @param {string} $key - Color key (body, heading)
+/// @return {string} CSS variable string
+///
+/// @example scss
+///   color: sage-text-color(body);
+///   // Output: color: var(--pine-color-text);
+///
+@function sage-text-color($key) {
+  @if $key == "body" {
+    @return var(--pine-color-text);
+  }
+  @if $key == "heading" {
+    @return var(--pine-color-text-strong);
+  }
+  @warn "Unknown text color key: #{$key}. Valid keys: body, heading";
+  @return var(--pine-color-text); // Fallback
+}
 
 ///
 /// Toolbar border styles
