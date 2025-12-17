@@ -60,7 +60,7 @@ $-typeahead-item-width: rem(240px);
     $outline-offset-inline: -4px,
     $outline-animation-speed: 0.05s
   );
-  @include sage-focus-outline--update-color(var(--pine-color-purple-600));
+  @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
 
   display: grid;
   position: unset; // Undo position defined in sage-focus-outline()

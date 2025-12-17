@@ -34,13 +34,13 @@ $-link-base-styles: (
   ),
   neutral:(
     default: (
-      color: var(--pine-color-background-container),
+      color: var(--pine-color-text-inverse-emphasis),
     ),
     hover: (
-      color: var(--pine-color-background-app),
+      color: var(--pine-color-text-inverse),
     ),
     focus-visible: (
-      color: var(--pine-color-background-container),
+      color: var(--pine-color-text-inverse-emphasis),
     ),
   ),
   danger:(

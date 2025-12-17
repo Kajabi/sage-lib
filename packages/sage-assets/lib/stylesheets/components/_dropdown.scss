@@ -338,7 +338,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     border-start-end-radius: 0;
   }
 
-  @media (prefers-color-scheme: dark) {
+  [data-theme="dark"] & {
     background: var(--pine-color-background-container);
     border: var(--pine-border);
   }

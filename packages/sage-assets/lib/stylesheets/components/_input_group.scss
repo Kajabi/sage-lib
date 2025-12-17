@@ -80,7 +80,7 @@ $-input-group-pw-field-button-color-text-hover: var(--pine-color-brand);
   }
 
   .sage-input-group--disabled & {
-    color: var(--pine-color-text-secondary);
+    color: var(--pine-color-text-disabled);
     background-color: var(--pine-color-background-container-disabled);
   }
 }
