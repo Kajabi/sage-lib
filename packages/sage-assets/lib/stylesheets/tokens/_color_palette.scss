@@ -299,15 +299,21 @@ $sage-color-default-name: "grey 500";
     yellow: 400
   );
 
+  // Normalize $base to a string for consistent comparisons
+  // This handles cases where $base comes as a symbol from map iterations
+  $base-str: #{$base};
+
   $default-value: map-get($default-values, $base);
   $value: if($value == null, $default-value, $value);
 
   // Handle aliases (same as sage-color)
-  @if $base == "orange" {
+  @if $base-str == "orange" {
     $base: mercury;
+    $base-str: "mercury";
   }
-  @if $base == "charcoal" {
-    $base: "grey";
+  @if $base-str == "charcoal" {
+    $base: grey;
+    $base-str: "grey";
     $charcoal-to-grey: (
       100: 600,
       200: 700,
@@ -322,49 +328,59 @@ $sage-color-default-name: "grey 500";
 
   // Map semantic colors to their hex equivalents from Style Dictionary
   // For primary, use blue-600 (closest to primary-300)
-  @if $base == "primary" {
+  @if $base-str == "primary" {
     @if $value == 300 or $value == null {
-      $base: "blue";
+      $base: blue;
+      $base-str: "blue";
       $value: 600;
     }
     @else if $value == 400 {
-      $base: "blue";
+      $base: blue;
+      $base-str: "blue";
       $value: 500;
     }
     @else if $value == 100 {
-      $base: "blue";
+      $base: blue;
+      $base-str: "blue";
       $value: 150;
     }
     @else if $value == 200 {
-      $base: "blue";
+      $base: blue;
+      $base-str: "blue";
       $value: 300;
     }
     @else if $value == 500 {
-      $base: "blue";
+      $base: blue;
+      $base-str: "blue";
       $value: 900;
     }
   }
 
   // Map sage to green
-  @if $base == "sage" {
+  @if $base-str == "sage" {
     @if $value == 300 or $value == null {
-      $base: "green";
+      $base: green;
+      $base-str: "green";
       $value: 500;
     }
     @else if $value == 100 {
-      $base: "green";
+      $base: green;
+      $base-str: "green";
       $value: 150;
     }
     @else if $value == 200 {
-      $base: "green";
+      $base: green;
+      $base-str: "green";
       $value: 300;
     }
     @else if $value == 400 {
-      $base: "green";
+      $base: green;
+      $base-str: "green";
       $value: 800;
     }
     @else if $value == 500 {
-      $base: "green";
+      $base: green;
+      $base-str: "green";
       $value: 950;
     }
   }
