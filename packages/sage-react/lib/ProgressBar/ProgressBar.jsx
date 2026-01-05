@@ -81,7 +81,7 @@ ProgressBar.defaultProps = {
   animate: true,
   backgroundColor: null,
   className: null,
-  color: ProgressBar.COLORS.MERCURY_500,
+  color: ProgressBar.COLORS.GREY_500,
   disableTooltip: false,
   displayPercent: false,
   label: null,
