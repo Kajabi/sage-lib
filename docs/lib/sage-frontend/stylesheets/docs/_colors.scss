@@ -53,6 +53,7 @@
     // Determine class name for $value == 50
     $classname: ".color-#{"" + $name}-#{$value}";
 
+    /* stylelint-disable block-closing-brace-newline-after */
     // This should be numeric, not string
     @if ($value == 50) {
       $classname: ".color-#{"" + $name}-0#{$value}";
@@ -78,6 +79,7 @@
         text-transform: uppercase;
       }
     }
+    /* stylelint-enable block-closing-brace-newline-after */
   }
 }
 /* stylelint-enable max-nesting-depth */

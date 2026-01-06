@@ -30,7 +30,7 @@ $-avatar-ring-colors: (
   ),
   orange: (
     main: var(--pine-color-brand),
-    bg: var(--pine-color-mercury-150)
+    bg: var(--pine-color-grey-150)
   ),
   red: (
     main: var(--pine-color-danger),
@@ -64,7 +64,7 @@ $-avatar-group-item-sizes: (
   width: $-avatar-min-size;
   height: $-avatar-min-size;
   border-radius: var(--pine-border-radius-full);
-  background-color: var(--pine-color-mercury-050);
+  background-color: var(--pine-color-grey-050);
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
