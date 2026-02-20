@@ -6,7 +6,7 @@
 
 $-breadcrumb-current-color: var(--pine-color-text);
 $-breadcrumb-interactive-color: var(--pine-color-text);
-$-breadcrumb-outline-color: var(--pine-color-purple-600);
+$-breadcrumb-outline-color: var(--pine-color-focus-ring);
 
 .sage-breadcrumbs {
   display: flex;
@@ -77,6 +77,7 @@ $-breadcrumb-outline-color: var(--pine-color-purple-600);
   .sage-breadcrumbs--progressbar & {
     position: relative;
     padding-block-end: sage-spacing(2xs);
+    @include sage-focus-ring($-breadcrumb-outline-color);
 
     &:active {
       color: $-breadcrumb-interactive-color;
