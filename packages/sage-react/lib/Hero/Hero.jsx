@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { HERO_SIZES } from './configs';
+import { HERO_SHADOWS, HERO_SIZES } from './configs';
 import { SageClassnames } from '../configs';
 
 export const Hero = ({
@@ -17,6 +17,7 @@ export const Hero = ({
   image,
   imageStart,
   heroSize,
+  shadow,
   title,
   titleTag,
   ...rest
@@ -30,6 +31,7 @@ export const Hero = ({
       'sage-hero--contained': contained,
       'sage-hero--image-start': imageStart,
       'sage-hero--custom-background-color': customBackgroundColor,
+      [`sage-hero--shadow-${shadow}`]: shadow,
     },
   );
 
@@ -80,6 +82,7 @@ export const Hero = ({
   );
 };
 
+Hero.SHADOWS = HERO_SHADOWS;
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
@@ -97,6 +100,7 @@ Hero.defaultProps = {
   },
   imageStart: false,
   heroSize: Hero.Sizes.LARGE,
+  shadow: null,
   title: null,
   titleTag: 'h2',
 };
@@ -151,6 +155,10 @@ Hero.propTypes = {
    * Sets the size of the Hero's width.
    */
   heroSize: PropTypes.oneOf(Hero.Sizes),
+  /**
+   * Sets the box-shadow on the Hero. Aligned with Pine pds-box shadow values.
+   */
+  shadow: PropTypes.oneOf(Object.values(Hero.SHADOWS)),
   /**
    * The title to be rendered within the Hero.
    */
