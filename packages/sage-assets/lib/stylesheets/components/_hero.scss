@@ -70,7 +70,7 @@ $-hero-play-icon-background-color: var(--pine-color-background-container);
 // Keep in sync with `packages/sage-react/lib/Hero/configs.js`
 $-sage-hero-shadows: (
   none: 0,
-  050: sage-shadow(050),
+  "050": sage-shadow("050"),
   100: sage-shadow(100),
   150: sage-shadow(150),
   200: sage-shadow(200),
