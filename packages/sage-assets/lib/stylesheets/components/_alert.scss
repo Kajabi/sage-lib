@@ -196,7 +196,7 @@ $-alert-text-colors: (
     }
 
     &:focus-visible {
-      @include sage-focus-outline--update-color(var(--pine-color-purple-600));
+      @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
     }
   }
 
@@ -224,7 +224,7 @@ $-alert-text-colors: (
     }
 
     &:focus-visible {
-      @include sage-focus-outline--update-color(var(--pine-color-purple-600));
+      @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
     }
   }
 
