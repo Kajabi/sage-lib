@@ -70,7 +70,7 @@ $-choice-radio-color-checked-inner: sage-radio-color(checked-inner);
   }
 
   &:focus-visible {
-    border-color: var(--pine-color-purple-600);
+    border-color: var(--pine-color-focus-ring);
     outline: none;
   }
 
