@@ -9,6 +9,7 @@ class SageHero < SageComponent
     description: [:optional, NilClass, String],
     image: [:optional, NilClass, String],
     image_start: [:optional, NilClass, TrueClass],
+    shadow: [:optional, NilClass, SageSchemas::HERO_SHADOW],
     size: [:optional, NilClass, SageSchemas::HERO_SIZE],
     title: [:optional, NilClass, String],
     title_tag: [:optional, NilClass, String],

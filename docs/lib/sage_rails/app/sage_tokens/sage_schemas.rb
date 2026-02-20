@@ -20,6 +20,8 @@ module SageSchemas
 
   HERO_SIZE = Set.new(SageTokens::HERO_SIZES)
 
+  HERO_SHADOW = Set.new(SageTokens::HERO_SHADOWS)
+
   STATUSES = Set.new(SageTokens::STATUSES)
 
   SPACER = {
