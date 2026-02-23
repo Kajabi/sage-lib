@@ -97,6 +97,8 @@ module SageTokens
 
   HERO_SIZES = ["small", "large"]
 
+  HERO_SHADOWS = ["none", "050", "100", "150", "200", "300", "400", "500"]
+
   ICONS = [
     "access-key",
     "add",

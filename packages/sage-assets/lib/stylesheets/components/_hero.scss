@@ -66,6 +66,25 @@ $-hero-play-icon-background-color: var(--pine-color-background-container);
   }
 }
 
+// Shadow options — aligned with Pine pds-box shadow values
+// Keep in sync with `packages/sage-react/lib/Hero/configs.js`
+$-sage-hero-shadows: (
+  none: 0,
+  "050": sage-shadow("050"),
+  100: sage-shadow(100),
+  150: sage-shadow(150),
+  200: sage-shadow(200),
+  300: sage-shadow(300),
+  400: sage-shadow(400),
+  500: sage-shadow(500),
+);
+
+@each $-key, $-val in $-sage-hero-shadows {
+  .sage-hero--shadow-#{$-key} {
+    box-shadow: #{$-val};
+  }
+}
+
 .sage-hero__title {
   @extend %t-sage-heading-3;
   grid-area: title;

@@ -22,6 +22,7 @@
     <%= "sage-hero--contained" if component.contained %>
     <%= "sage-hero--custom-background-color" if component.custom_background_color %>
     <%= "sage-hero--image-start" if component.image_start %>
+    <%= "sage-hero--shadow-#{component.shadow}" if component.shadow.present? %>
     <%= component.generated_css_classes %>
   "
   data-js-hero

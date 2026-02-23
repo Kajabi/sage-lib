@@ -138,6 +138,24 @@ When the image is set to start, the image will be placed at the start of the Her
   </Story>
 </Canvas>
 
+## Shadow
+When the Hero has a shadow, a box-shadow will be applied to the Hero container.
+<Canvas>
+  <Story name="Shadow">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      shadow="100"
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi-layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
 ## CTA Attribute
 When the Hero has a CTA attribute, the CTA will be applied to the Hero image.
 
