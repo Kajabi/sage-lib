@@ -142,7 +142,7 @@ $-hero-play-icon-background-color: var(--pine-color-background-container);
   @include sage-focus-ring;
 
   &:focus {
-    @include sage-focus-outline--update-color(var(--pine-color-purple-600));
+    @include sage-focus-outline--update-color(var(--pine-color-focus-ring));
   }
 }
 
