@@ -142,6 +142,28 @@
   <% end %>
 <% end %>
 
+<%= sage_component SageDivider, {} %>
+
+<h2>Shadow</h2>
+<p>When the Hero has a shadow, a box-shadow will be applied to the Hero container.</p>
+
+<%= sage_component SageHero, {
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
+  size: "small",
+  borderless: true,
+  shadow: "100",
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
+
 <%# This is the modal triggered from various examples in this documentation %>
 <%= sage_component SageModal, { id: "cool-modal"} do %>
   <%= sage_component SageModalContent, {
