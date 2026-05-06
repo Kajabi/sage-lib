@@ -10,4 +10,12 @@ updates:
     schedule:
       interval: "daily"
     allow:
-    - dependency-name: "@pine-ds/icons"
+      - dependency-name: "@pine-ds/icons"
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - '*'
