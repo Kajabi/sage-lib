@@ -6,4 +6,12 @@ pre-commit:
 commit-msg:
   commands:
     lint-commit:
-      run: npx commitlint --edit
+      # Use the locally-installed commitlint (pinned by yarn.lock) instead of
+      # `npx commitlint`, which fetches the latest from the npm registry. The
+      # current latest (@commitlint/cli@20.x) throws `TypeError: format is not
+      # a function` on Node 22 regardless of message content, blocking every
+      # commit.
+      #
+      # Lerna's hoisted layout doesn't create node_modules/.bin/commitlint at
+      # the repo root, so the CLI is invoked directly via node + its cli.js.
+      run: node node_modules/@commitlint/cli/cli.js --edit
