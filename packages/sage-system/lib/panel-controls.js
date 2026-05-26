@@ -301,6 +301,7 @@ Sage.panelControls = (() => {
 
     const elBulkActionsContainer = target.closest(`.${CLASSES.BULK_ACTIONS}`);
     const elToggleContainer = target.closest(`.${CLASSES.BULK_ACTIONS_TOGGLE}`);
+    if (!elBulkActionsContainer || !elToggleContainer) return null;
 
     // Ensure checkbox has no partial selection on
     elToggleContainer.classList.remove(CLASSES.CHECKBOX_PARTIAL_SELECTION);
@@ -308,7 +309,7 @@ Sage.panelControls = (() => {
 
     // Ensure --checked modifier is off
     elBulkActionsContainer.classList.remove(CLASSES.BULK_ACTIONS_CHECKED);
-    
+
     // If checked add --checked modifier
     if (target.checked) {
       elBulkActionsContainer.classList.add(CLASSES.BULK_ACTIONS_CHECKED);
@@ -367,6 +368,7 @@ Sage.panelControls = (() => {
 
   const handleExpandCollapseClick = (ev) =>  {
     const elExpandCollapseContainer = ev.target.closest(`.${CLASSES.EXPAND_COLLAPSE}`);
+    if (!elExpandCollapseContainer) return;
 
     // Toggle to new button including changing focus
     // First set which event should be triggered
@@ -375,11 +377,13 @@ Sage.panelControls = (() => {
     if (elExpandCollapseContainer.dataset[ATTRS.EXPAND_COLLAPSE_STATUS.JS] === DATA_EXPAND_COLLAPSE_STATUSES.EXPAND) {
       eventType = EVENTS.EXPAND_COLLAPSE.EXPAND;
       elExpandCollapseContainer.dataset[ATTRS.EXPAND_COLLAPSE_STATUS.JS] = DATA_EXPAND_COLLAPSE_STATUSES.COLLAPSE;
-      elRoot.querySelector(`.${CLASSES.COLLAPSE_BTN}`).focus();
+      const collapseBtn = elRoot && elRoot.querySelector(`.${CLASSES.COLLAPSE_BTN}`);
+      if (collapseBtn) collapseBtn.focus();
     } else {
       eventType = EVENTS.EXPAND_COLLAPSE.COLLAPSE;
       elExpandCollapseContainer.dataset[ATTRS.EXPAND_COLLAPSE_STATUS.JS] = DATA_EXPAND_COLLAPSE_STATUSES.EXPAND;
-      elRoot.querySelector(`.${CLASSES.EXPAND_BTN}`).focus();
+      const expandBtn = elRoot && elRoot.querySelector(`.${CLASSES.EXPAND_BTN}`);
+      if (expandBtn) expandBtn.focus();
     }
 
     dispatchEvent(eventType, {});

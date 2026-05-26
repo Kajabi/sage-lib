@@ -48,17 +48,22 @@ Sage.accordion = (function () {
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
-    el.closest('.sage-expandable-card').classList.toggle('sage-expandable-card--expanded')
+    const expandableCard = el.closest('.sage-expandable-card');
+    if (expandableCard) {
+      expandableCard.classList.toggle('sage-expandable-card--expanded');
+    }
   }
 
   // In a single panel accordion, this closes all panels that are not the current target
   function resetAccordion(el){
-    let accordion = el.closest(SELECTOR_ACCORDION);
-    let accordionItems = accordion.querySelectorAll(SELECTOR_ACCORDION_EXPANDABLE_CARD);
+    const accordion = el.closest(SELECTOR_ACCORDION);
+    if (!accordion) return;
+    const accordionItems = accordion.querySelectorAll(SELECTOR_ACCORDION_EXPANDABLE_CARD);
 
     accordionItems.forEach((item) => {
       if (item !== el.parentElement) {
-        item.querySelector(SELECTOR_ACCORDION_HEADER).setAttribute('aria-expanded', false);
+        const header = item.querySelector(SELECTOR_ACCORDION_HEADER);
+        if (header) header.setAttribute('aria-expanded', false);
         item.classList.remove('sage-expandable-card--expanded');
       }
     });
@@ -66,7 +71,8 @@ Sage.accordion = (function () {
 
   function init(el) {
     const header = el;
-    const body = el.closest('.sage-expandable-card').querySelector(`[${JS_ACCORDION_ROOT}="${JS_ACCORDION_BODY}"]`);
+    const expandableCard = el.closest('.sage-expandable-card');
+    const body = expandableCard && expandableCard.querySelector(`[${JS_ACCORDION_ROOT}="${JS_ACCORDION_BODY}"]`);
 
     // Ensure there's a corresponding body
     if (!body) {

@@ -7,9 +7,11 @@ Sage.inputgroup = (function() {
   const inputBoxShadowWidth = 1;
 
   function togglePasswordDisplay(evt) {
-    const parentEle = evt.target.parentElement,
-          field = parentEle.querySelector(".sage-input__field"),
-          activeClassName = "sage-input-group--visible";
+    const parentEle = evt.target.parentElement;
+    if (!parentEle) return;
+    const field = parentEle.querySelector(".sage-input__field");
+    if (!field) return;
+    const activeClassName = "sage-input-group--visible";
 
     if (field.type === "password") {
       field.type = "text";
@@ -27,7 +29,9 @@ Sage.inputgroup = (function() {
 
     inputGroupBtns.forEach(function(btn) {
       const parentGroup = btn.closest(".sage-input-group");
+      if (!parentGroup) return;
       const field = parentGroup.querySelector(".sage-input__field");
+      if (!field) return;
       const parentDir = btn.closest('html[dir="rtl"]');
 
       if (parentDir) {
@@ -47,8 +51,10 @@ Sage.inputgroup = (function() {
 
       inputGroupsWithErrors.forEach(function (group) {
         const parentGroup = group.closest(".sage-input-group");
+        if (!parentGroup) return;
         const label = parentGroup.querySelector(".sage-input__label");
         const btn = parentGroup.querySelector(".sage-input-group__button");
+        if (!label || !btn) return;
         const labelStyles = window.getComputedStyle(label);
         btn.style.top = `${parseInt(labelStyles.lineHeight) + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth}px`;
       });
