@@ -199,33 +199,54 @@ By default the gauntlet output stays in the conversation between the
 developer running it and the agent — the assumption is that's the same
 person as the PR author, so a verbal-only result is enough.
 
-**Opt in to posting** when any of the following is true:
+**Prerequisite (same as labeling):** resolve the current branch's open
+PR before posting. If no PR exists yet (common pre-`gh pr create`), **do
+not** run `gh pr review` or `gh pr comment` — keep findings in the
+conversation and post after the PR is opened (or when the user re-runs
+the gauntlet on the open PR).
 
-- The gauntlet is being run against **someone else's PR** (the original
-  author needs to see the findings).
-- The user explicitly asks: "post the gauntlet findings to the PR,"
-  "leave a review on the PR," "comment on the PR with the findings,"
-  or similar.
-- The findings include at least one BLOCKER or SHOULD FIX and the PR
-  is open for review (so the post is actionable, not just informational
-  noise).
+```bash
+PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>/dev/null || true)
+```
 
-**Do not post by default** when:
+If `PR_NUM` is empty, skip posting entirely.
 
-- The gauntlet ran against the developer's own PR pre-push (they're
-  going to read the conversation output anyway).
-- All sections are empty / "What's Good" only (label is enough signal).
-- The user explicitly opted out ("don't post," "just tell me here").
+**Posting decision — apply in order (first match wins):**
+
+1. **Do not post** — User explicitly opted out ("don't post," "just tell
+   me here," or similar).
+2. **Do not post** — No open PR for the current branch (`PR_NUM` empty).
+3. **Post** — User explicitly opted in ("post the findings to the PR,"
+   "leave a review on the PR," "comment on the PR with the findings," or
+   similar) and `PR_NUM` is set.
+4. **Do not post** — Findings are praise-only: no BLOCKER and no SHOULD
+   FIX items (label is enough signal).
+5. **Post** — Gauntlet ran on **someone else's PR** (compare
+   `gh pr view --repo Kajabi/sage-lib --json author -q .author.login` to
+   `gh api user -q .login`) **and** findings include at least one
+   BLOCKER or SHOULD FIX.
+6. **Do not post** — All other cases (including the author's own PR,
+   including own open PRs with BLOCKER/SHOULD FIX — they already have
+   the conversation output).
+
+This ordering resolves conflicts (e.g. someone else's PR with praise-only
+findings → step 4, no post; author's own PR with blockers → step 6, no
+post unless step 3).
 
 **Format:** post the full structured output as a single `gh pr review`
 comment so sequential numbering, severity headers, and per-finding
 file:line refs are preserved. Inline per-line comments would fragment
 the output and lose cross-finding ordering.
 
-**Command:**
+**Command:** write the body to a temp file so shell metacharacters in
+findings (quotes, `$`, backticks) cannot break the command. Use
+`--body-file` for both primary and fallback paths.
 
 ```bash
-gh pr review <PR#> --repo Kajabi/sage-lib --comment --body "$(cat <<'EOF'
+BODY_FILE=$(mktemp)
+trap 'rm -f "$BODY_FILE"' EXIT
+
+cat > "$BODY_FILE" <<'EOF'
 ## Sage Gauntlet Results
 
 **Reviewers launched:** [list]
@@ -245,22 +266,26 @@ gh pr review <PR#> --repo Kajabi/sage-lib --comment --body "$(cat <<'EOF'
 …
 
 ---
-_Posted by \`sage-run-gauntlet\`. The \`ran-gauntlet\` label has also
-been applied. Findings ordered by severity; numbering is sequential
-across sections._
+_Posted by `sage-run-gauntlet`. The `ran-gauntlet` label has also been
+applied. Findings ordered by severity; numbering is sequential across
+sections._
 EOF
-)"
+
+gh pr review "$PR_NUM" --repo Kajabi/sage-lib --comment --body-file "$BODY_FILE" \
+  || gh pr comment "$PR_NUM" --repo Kajabi/sage-lib --body-file "$BODY_FILE"
 ```
 
 The footer line is required — it tells human reviewers the comment was
 machine-generated and signals where to look for the criteria (the
-`ran-gauntlet` label).
+`ran-gauntlet` label). Do not claim the label was applied in the footer
+unless `gh pr edit … --add-label ran-gauntlet` actually ran (or will run
+immediately after posting on the same PR).
 
 **Permissions:** `gh pr review --comment` requires you to be a
 collaborator on the repo or to have read+pull-request-write scopes on
-your `gh auth`. If it fails with a 403 / 404, fall back to
-`gh pr comment <PR#> --body "…"` which creates a normal PR conversation
-comment instead of a formal review.
+your `gh auth`. If it fails with a 403 / 404, the `||` fallback runs
+`gh pr comment` with the same `--repo` and `--body-file` (normal PR
+conversation comment instead of a formal review).
 
 ### Present results and offer options
 
