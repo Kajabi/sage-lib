@@ -30,7 +30,7 @@ Sage.popover = (function() {
 
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
-    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel");
+    if (!elChild) return;
 
     if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
@@ -47,6 +47,7 @@ Sage.popover = (function() {
 
   function handleKeydown(evt) {
     const elParent = evt.target.closest(`[${SELECTOR_PARENT}]`);
+    if (!elParent) return;
 
     // Enter key
     if (evt.keyCode === 13 && !isExpanded(elParent)) {
@@ -74,7 +75,7 @@ Sage.popover = (function() {
     elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'false');
     elParent.classList.remove(CLASS_ACTIVE);
     elParent.removeEventListener('keydown', focusTrap);
-    SELECTOR_LAST_FOCUSED.focus();
+    if (SELECTOR_LAST_FOCUSED) SELECTOR_LAST_FOCUSED.focus();
   }
 
   function focusTrap(evt) {
