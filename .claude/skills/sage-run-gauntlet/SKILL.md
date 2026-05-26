@@ -193,6 +193,75 @@ gauntlet step was performed on this branch," not "N agents executed."
 If no PR exists yet (common when running the gauntlet before PR creation),
 add the label at PR creation time or immediately after the PR is opened.
 
+### Post results to the PR (optional)
+
+By default the gauntlet output stays in the conversation between the
+developer running it and the agent — the assumption is that's the same
+person as the PR author, so a verbal-only result is enough.
+
+**Opt in to posting** when any of the following is true:
+
+- The gauntlet is being run against **someone else's PR** (the original
+  author needs to see the findings).
+- The user explicitly asks: "post the gauntlet findings to the PR,"
+  "leave a review on the PR," "comment on the PR with the findings,"
+  or similar.
+- The findings include at least one BLOCKER or SHOULD FIX and the PR
+  is open for review (so the post is actionable, not just informational
+  noise).
+
+**Do not post by default** when:
+
+- The gauntlet ran against the developer's own PR pre-push (they're
+  going to read the conversation output anyway).
+- All sections are empty / "What's Good" only (label is enough signal).
+- The user explicitly opted out ("don't post," "just tell me here").
+
+**Format:** post the full structured output as a single `gh pr review`
+comment so sequential numbering, severity headers, and per-finding
+file:line refs are preserved. Inline per-line comments would fragment
+the output and lose cross-finding ordering.
+
+**Command:**
+
+```bash
+gh pr review <PR#> --repo Kajabi/sage-lib --comment --body "$(cat <<'EOF'
+## Sage Gauntlet Results
+
+**Reviewers launched:** [list]
+**Files Reviewed:** [list]
+**Overall Assessment:** APPROVED | NEEDS CHANGES | BLOCKER
+
+### BLOCKERS ([count])
+…
+
+### SHOULD FIX ([count])
+…
+
+### CONSIDER ([count])
+…
+
+### What's Good
+…
+
+---
+_Posted by \`sage-run-gauntlet\`. The \`ran-gauntlet\` label has also
+been applied. Findings ordered by severity; numbering is sequential
+across sections._
+EOF
+)"
+```
+
+The footer line is required — it tells human reviewers the comment was
+machine-generated and signals where to look for the criteria (the
+`ran-gauntlet` label).
+
+**Permissions:** `gh pr review --comment` requires you to be a
+collaborator on the repo or to have read+pull-request-write scopes on
+your `gh auth`. If it fails with a 403 / 404, fall back to
+`gh pr comment <PR#> --body "…"` which creates a normal PR conversation
+comment instead of a formal review.
+
 ### Present results and offer options
 
 1. **Fix blockers** — Address BLOCKER issues, optionally re-run gauntlet
