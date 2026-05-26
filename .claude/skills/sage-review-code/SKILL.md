@@ -106,6 +106,52 @@ actionable feedback.
 - **Missing scope** — Multi-package commits without a scope are allowed but
   make changelogs noisier; prefer one commit per package.
 
+## Sage-system specifics
+
+`packages/sage-system/lib/*.js` is a separate package from `sage-react`:
+it's vanilla-JS IIFE-style modules exposing imperative DOM helpers
+(`Sage.popover`, `Sage.accordion`, etc.). When reviewing changes here,
+**do not apply the React-component criteria above** (no propTypes,
+forwardRef, classnames, hooks, story / spec coverage requirements).
+Instead:
+
+### sage-system BLOCKER
+
+- Same as React-side: breaking change to a public `Sage.*` API
+  (removing or renaming an exported function / property, changing a
+  return shape) without a `BREAKING CHANGE:` footer
+- Unsafe DOM mutation introduced (`innerHTML` with user input,
+  `dangerouslySetInnerHTML`-equivalent assignment, `setAttribute`
+  with `on*` from user input)
+
+### sage-system SHOULD FIX
+
+- **Defensive-pattern inconsistency** — Sage-system uses early-return
+  null-guards for DOM lookups (`closest(…)`, `querySelector(…)`,
+  `parentNode`, `children[0]`). Established prior art lives in
+  `dropdown.js` (`positionElement`'s null `dropdownElement` / `panel`
+  early-returns) and `tooltip.js` (chain of null-checks before
+  `removeChild`). Any new DOM-lookup site should follow the same shape.
+- **Partial audit-cleanup** — If a PR's stated scope is "audit-driven
+  cleanup," check the same file the PR is fixing for **other** sites
+  matching the same risky pattern. Audits often miss adjacent
+  occurrences inside the same function.
+- **Silent early-return with no observability** — `if (!el) return;` is
+  the convention, but consider whether a dev-only `console.warn` or
+  shared `Sage.util.warnIfMissing(el, label)` would help future audits.
+  CONSIDER, not BLOCKER.
+
+### sage-system "not applicable" rules
+
+- No spec / test coverage expected — `packages/sage-system/lib/` has
+  zero `*.spec.*` files by repo convention. Do not flag "missing spec
+  for new behavior" here.
+- No Storybook story expected for `sage-system` changes — stories are
+  a `sage-react` convention; `sage-system` documentation lives in
+  `sage-rails` consumer docs instead.
+- Commit scope is `fix(sage-system):` / `chore(sage-system):` /
+  `refactor(sage-system):` (NOT `sage-react`).
+
 ## Severity Definitions
 
 | Level | Meaning | Action |

@@ -55,10 +55,19 @@ Classify changed files:
 - **Story files only** (`*.story.jsx`) → code-reviewer (story patterns + arg
   coverage); skip design/a11y unless other files also changed
 - **Spec files only** (`*.spec.jsx`) → code-reviewer only
+- **Vanilla-JS `sage-system` files**
+  (`packages/sage-system/lib/**/*.js`) → code-reviewer only. `sage-system`
+  is imperative IIFE-style DOM helpers (`Sage.popover`, `Sage.accordion`,
+  etc.), not React components — a11y-reviewer is skipped because there's
+  no rendered markup in the source, and design-reviewer is skipped because
+  there are no SCSS / className changes. By repo convention `sage-system`
+  has no spec/test files, so the code reviewer should not flag "missing
+  spec coverage" for additions there.
 - **Token files** (`style-dictionary/tokens/**/*.json`) → design-reviewer +
   existence-reviewer
 - **Docs / changelogs / config** (`docs/`, `CHANGELOG.md`, `*.yml`,
-  `package.json`, `lerna.json`) → skip the gauntlet, review manually
+  `package.json`, `lerna.json`, `.claude/**/*.md`) → skip the gauntlet,
+  review manually
 
 Additionally, check whether the diff introduces any **new files**
 (`git diff develop...HEAD --diff-filter=A --name-only`) in:
