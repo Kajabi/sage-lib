@@ -19,8 +19,9 @@ particularly costly because it cascades to every consuming app.
 
 ## Scope — What to Check
 
-Only inspect **newly introduced** artifacts. Renames, deletions, and edits
-to existing files are out of scope.
+Inspect **newly introduced** artifacts and **new token keys** added inside
+existing token JSON files. Renames, deletions, and edits that only change
+values of existing keys are out of scope.
 
 | Artifact type | Conventional directory | New-file signal |
 |---|---|---|
@@ -29,7 +30,7 @@ to existing files are out of scope.
 | Config / constants | `packages/sage-react/lib/<Name>/configs.js` | New `configs.js` exporting maps like `BADGE_COLORS` |
 | SCSS component partial | `packages/sage-assets/lib/stylesheets/components/_*.scss` | New `_<name>.scss` partial |
 | SCSS mixin | `packages/sage-assets/lib/stylesheets/mixins/_*.scss` | New `_<name>.scss` mixin partial |
-| Design token | `style-dictionary/tokens/**/*.json` | New token entry or new token file |
+| Design token | `style-dictionary/tokens/**/*.json` | New token **file** (`--diff-filter=A`) or **new keys** added in a modified JSON file (inspect the diff hunk) |
 | Icon | `packages/sage-assets/lib/icons/`, icon name additions in `_icons.scss` | New icon symbol |
 
 **Out of scope:** spec files, story files, generated files (`packages/*/dist/`,
@@ -38,22 +39,27 @@ to existing files are out of scope.
 ## Review Process
 
 1. **Identify new files** — `git diff develop...HEAD --diff-filter=A --name-only`
-2. **Filter** to the directories above; ignore specs, stories, and
+2. **Identify new token keys** — for any modified (non-added) file under
+   `style-dictionary/tokens/**/*.json` from
+   `git diff develop...HEAD --name-only`, read
+   `git diff develop...HEAD -- <file>` and extract **added** token names/keys
+   from the hunk (ignore value-only edits to keys that already existed).
+3. **Filter** new files to the directories above; ignore specs, stories, and
    generated files.
-3. **Extract concrete names** from each new file:
+4. **Extract concrete names** from each new file and each new token key:
    - Component name (from `export const X = …` or directory name)
    - Constant names exported from `configs.js`
    - Mixin name (`@mixin <name>`) from SCSS partials
    - Token name from style-dictionary JSON
-4. **Grep for similar names** in the same conventional directory:
+5. **Grep for similar names** in the same conventional directory:
    - Exact name minus generic suffix (e.g. `IconButton` → search for
      `Button`, `Icon`)
    - Semantic synonyms (`Pill` → check `Badge`, `Label`, `Chip`)
    - Concept overlap (`StatusIndicator` → check `Badge`, `Dot`,
      `StatusLabel`)
-5. **For each candidate**, read 10–20 lines of the existing file to confirm
+6. **For each candidate**, read 10–20 lines of the existing file to confirm
    it does something related (avoid false positives from name collisions).
-6. **Output** the candidates as "should this extend X?" prompts with
+7. **Output** the candidates as "should this extend X?" prompts with
    severity.
 
 ## Severity Guidance

@@ -20,9 +20,12 @@ actionable feedback.
 1. **Identify changes** — `git diff develop...HEAD --name-only`
 2. **Run automated checks:**
    ```bash
-   yarn lint                                    # all packages
-   yarn jest <changed component dir>            # focused tests
+   yarn lint                                      # all packages (from repo root)
+   yarn test:prod:react                           # full sage-react Jest suite (from repo root)
+   # Optional focused run when only one component changed:
+   cd packages/sage-react && yarn test -- <ComponentNameOrSpecPath>
    ```
+   There is no root `yarn jest` script — tests live in `packages/sage-react`.
    Any failures are automatic BLOCKERs.
 3. **Check pattern compliance** per area (see Review Criteria below).
 4. **Output structured review** using the Output Format below.
@@ -42,8 +45,9 @@ actionable feedback.
   renaming a public prop, removing an exported member from `configs.js`, or
   changing default behavior without a `BREAKING CHANGE:` block in the commit
   body. Conventional Commits + Lerna drive changelogs from these.
-- **Failing tests / lint** — `yarn jest` or `yarn lint` failures count as
-  BLOCKER; fix or annotate before merging.
+- **Failing tests / lint** — `yarn test:prod:react`, `yarn lint`, or
+  `packages/sage-react` `yarn test` failures count as BLOCKER; fix or
+  annotate before merging.
 - **Hooks-rules violations** — `react-hooks/rules-of-hooks` is configured
   as `error` in sage-react's ESLint; never call hooks conditionally or
   inside loops.

@@ -48,28 +48,39 @@ If working with staged changes pre-PR, fall back to
 Classify changed files:
 
 - **React component files** (`packages/sage-react/lib/**/*.{jsx,tsx,js,ts}`,
-  excluding `*.story.jsx` and `*.spec.jsx`) → code-reviewer + a11y-reviewer
+  excluding `*.story.jsx` and `*.spec.jsx`) → code-reviewer + a11y-reviewer;
+  also add **design-reviewer** when the diff touches `className`,
+  `classnames(`, or BEM-style `sage-*` class strings in those files
 - **SCSS / asset files** (`packages/sage-assets/lib/stylesheets/**/*.scss`) →
   design-reviewer; add a11y-reviewer if the file is in
   `stylesheets/components/`
 - **Story files only** (`*.story.jsx`) → code-reviewer (story patterns + arg
   coverage); skip design/a11y unless other files also changed
 - **Spec files only** (`*.spec.jsx`) → code-reviewer only
-- **Token files** (`style-dictionary/tokens/**/*.json`) → design-reviewer +
-  existence-reviewer
+- **Token files** (`style-dictionary/tokens/**/*.json`) → design-reviewer only
+  (existence-reviewer runs only when new artifacts are introduced — see below)
 - **Docs / changelogs / config** (`docs/`, `CHANGELOG.md`, `*.yml`,
   `package.json`, `lerna.json`) → skip the gauntlet, review manually
 
-Additionally, check whether the diff introduces any **new files**
-(`git diff develop...HEAD --diff-filter=A --name-only`) in:
+Additionally, launch `sage-existence-reviewer` when **any** of the following
+apply:
+
+**New files** (`git diff develop...HEAD --diff-filter=A --name-only`) under:
 
 - `packages/sage-react/lib/` — new component directories or root files
 - `packages/sage-assets/lib/stylesheets/components/` — new component partials
 - `packages/sage-assets/lib/stylesheets/mixins/` — new mixins
+- `packages/sage-assets/lib/icons/` — new icon assets
+- `packages/sage-assets/lib/stylesheets/_icons.scss` — new icon registry entries
 - `style-dictionary/tokens/` — new token files
 
-If yes, also launch `sage-existence-reviewer`. If the only new files are
-specs, stories, or changelog entries, skip the existence reviewer.
+**New token keys** in existing token JSON — any modified file under
+`style-dictionary/tokens/**/*.json` where the diff adds token entries (not
+just value edits to existing keys).
+
+Skip existence-reviewer when the only new files are specs, stories, or
+changelog entries, and when token JSON changes are edits to existing keys
+only.
 
 ### Step 3: Launch Reviewers in Parallel
 
@@ -93,11 +104,10 @@ Agent(subagent_type: "sage-a11y-reviewer"):
    Follow the sage-a11y-review skill format."
 
 Agent(subagent_type: "sage-existence-reviewer"):
-  "Run an existence/duplication review on new files introduced by this
-   branch. Run git diff develop...HEAD --diff-filter=A --name-only to find
-   them, then grep packages/sage-react/lib/ and packages/sage-assets/lib/
-   for similar existing implementations. Flag SHOULD FIX or CONSIDER only —
-   never BLOCKER. Follow the sage-existence-review skill format."
+  "Run an existence/duplication review on new artifacts introduced by this
+   branch (new files via --diff-filter=A, new token keys in modified token
+   JSON, new icons). Follow sage-existence-review for scope and grep targets.
+   Flag SHOULD FIX or CONSIDER only — never BLOCKER."
 ```
 
 ### Step 4: Consolidate Reviews
