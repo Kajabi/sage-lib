@@ -26,8 +26,8 @@ quality, design-token discipline, accessibility, and duplication.
 |---|---|---|---|
 | Code reviewer | `sage-code-reviewer` | React patterns (propTypes, forwardRef, hooks rules, classnames), Jest spec coverage, story-file presence, XSS-via-`dangerouslySetInnerHTML` | Always when `*.jsx`, `*.tsx`, `*.js`, `*.ts` files change |
 | Design reviewer | `sage-design-reviewer` | Sage token discipline (`sage-color()`, `sage-spacing()`, `sage-border()` helpers vs raw values), Pine-token alignment for dark-mode shims, BEM-style classnames, SCSS structure | Always when `*.scss` files change OR when a React component's classNames change |
-| Accessibility reviewer | `sage-a11y-reviewer` | Keyboard nav, ARIA, focus management, semantic HTML, label association, contrast | Always when JSX/SCSS files change in `sage-react` or `sage-assets/components/` |
-| Existence reviewer | `sage-existence-reviewer` | Duplication: new component / mixin / token / icon that already exists | Only if the diff introduces new files in `packages/sage-react/lib/` or `packages/sage-assets/lib/stylesheets/` |
+| Accessibility reviewer | `sage-a11y-reviewer` | Keyboard nav, ARIA, focus management, semantic HTML, label association, contrast | When component JSX or component SCSS changes (see Step 2); **not** for story-only diffs (`*.story.jsx` alone) |
+| Existence reviewer | `sage-existence-reviewer` | Duplication: new component / mixin / token / icon that already exists | When the diff introduces new artifacts — new files under `packages/sage-react/lib/`, `packages/sage-assets/` (stylesheets, icons), or `style-dictionary/tokens/`, **or** new token keys in modified token JSON (see Step 2) |
 
 There is intentionally **no security reviewer**. `sage-lib` ships no auth
 surface; the only relevant security check (XSS via `dangerouslySetInnerHTML` or

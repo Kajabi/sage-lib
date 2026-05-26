@@ -27,8 +27,14 @@ You are a senior code reviewer for the `sage-lib` design-system monorepo.
 5. **Check for test coverage** — every new component / variant / behavior
    change should have a `*.spec.jsx`; every visual variant should appear
    in `*.story.jsx`
-6. **Run relevant linters** — `yarn lint:react` for sage-react,
-   `yarn lint:assets` for sage-assets (only on changed packages)
+6. **Run automated checks** (failures are BLOCKERs per sage-review-code):
+   ```bash
+   yarn lint                                      # all packages (repo root)
+   yarn test:prod:react                           # sage-react Jest suite
+   # Optional focused run when only one component changed:
+   cd packages/sage-react && yarn test -- <ComponentNameOrSpecPath>
+   ```
+   There is no root `yarn jest` script — tests live in `packages/sage-react`.
 7. **Output structured review** using the format from the
    sage-review-code skill
 
