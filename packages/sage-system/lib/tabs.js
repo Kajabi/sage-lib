@@ -82,7 +82,9 @@ Sage.tabs = (function() {
     let { tabsId, paneId } = evt.detail;
 
     let elTabsParent = document.querySelector(`[${SELECTOR_TABS}="${tabsId}"]`);
+    if (!elTabsParent) return;
     let elTab = elTabsParent.querySelector(`[${SELECTOR_TAB_ITEM}="${paneId}"]`);
+    if (!elTab) return;
     let tabsArray = Sage.util.nodelistToArray(elTabsParent.querySelectorAll(`[${SELECTOR_TAB_ITEM}]`));
 
     tabsArray.forEach((el) => {
@@ -100,7 +102,7 @@ Sage.tabs = (function() {
 
     let elPane = document.querySelector(`[${SELECTOR_TAB_PANE}="${paneId}"]`);
     // Ensure there is a matching pane
-    if (!elPane) {
+    if (!elPane || !elPane.parentElement) {
       return;
     }
 
@@ -115,6 +117,7 @@ Sage.tabs = (function() {
     evType = evType || EVENT_SELECT;
 
     let tabComponent = document.querySelector(`[${SELECTOR_TABS}="${tabsId}"]`);
+    if (!tabComponent) return;
 
     dispatchChangeEvent(tabComponent, evType, eventDetail)
   }
