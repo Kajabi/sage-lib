@@ -12,6 +12,7 @@ Sage.select = (function() {
 
   function handleChange(evt) {
     const elSelectParent = evt.target.closest(elSelectClass);
+    if (!elSelectParent) return;
     updateValueSelectedState(evt.target.value, elSelectParent);
   }
 
@@ -36,6 +37,7 @@ Sage.select = (function() {
 
   function init(el) {
     var elSelect = el.querySelector('select');
+    if (!elSelect) return;
 
     disableSelectPromptOptions(elSelect);
     updateValueSelectedState(elSelect.value, el);
