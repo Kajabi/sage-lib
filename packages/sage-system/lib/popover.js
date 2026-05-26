@@ -30,9 +30,9 @@ Sage.popover = (function() {
 
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
-    if (!elChild) return;
 
     if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
+      if (!elChild) return;
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
         closePopoverPanel(elParent);
       } else {
