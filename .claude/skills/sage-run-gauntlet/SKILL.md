@@ -177,10 +177,25 @@ show per-section counts.
 
 ## After the Gauntlet
 
-Resolve the current branch's open PR once (used for labeling and posting):
+Resolve the current branch's open PR once (used for labeling and posting).
+**Do not** treat `gh` failures the same as "no PR" — only an empty result with
+a "no pull requests found" style message means defer; auth/network errors must
+surface in the conversation and stop before label/post commands.
 
 ```bash
-PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>/dev/null || true)
+PR_VIEW_ERR=$(mktemp)
+PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>"$PR_VIEW_ERR")
+PR_VIEW_EXIT=$?
+if [ "$PR_VIEW_EXIT" -ne 0 ]; then
+  if grep -qiE 'no pull requests found|could not find pull request' "$PR_VIEW_ERR"; then
+    PR_NUM=""
+  else
+    cat "$PR_VIEW_ERR" >&2
+    rm -f "$PR_VIEW_ERR"
+    exit 1
+  fi
+fi
+rm -f "$PR_VIEW_ERR"
 ```
 
 Always pass `--repo Kajabi/sage-lib` on `gh` PR commands so fork / non-default
@@ -192,8 +207,11 @@ Always add the `ran-gauntlet` label to the PR to signal to human reviewers
 that automated multi-agent review has already run on this branch:
 
 ```bash
+LABEL_APPLIED=0
 if [ -n "$PR_NUM" ]; then
-  gh pr edit "$PR_NUM" --repo Kajabi/sage-lib --add-label ran-gauntlet
+  if gh pr edit "$PR_NUM" --repo Kajabi/sage-lib --add-label ran-gauntlet; then
+    LABEL_APPLIED=1
+  fi
 fi
 ```
 
@@ -201,8 +219,9 @@ Apply the label unconditionally when a PR exists — including when the gauntlet
 to manual review for docs-only or config-only diffs. The signal is "the
 gauntlet step was performed on this branch," not "N agents executed."
 
-If no PR exists yet (`PR_NUM` empty; common before `gh pr create`), defer
-labeling until PR creation or immediately after the PR is opened.
+If no PR exists yet (`PR_NUM` empty after the "no pull requests found" path;
+common before `gh pr create`), defer labeling until PR creation or immediately
+after the PR is opened.
 
 ### Post results to the PR (optional)
 
@@ -223,61 +242,48 @@ open PR).
 3. **Post** — User explicitly opted in ("post the findings to the PR,"
    "leave a review on the PR," "comment on the PR with the findings," or
    similar) and `PR_NUM` is set.
-4. **Do not post** — Findings are praise-only: no BLOCKER and no SHOULD
-   FIX items (label is enough signal).
-5. **Post** — Gauntlet ran on **someone else's PR** (compare
+4. **Post** — Gauntlet ran on **someone else's PR** (compare
    `gh pr view --repo Kajabi/sage-lib --json author -q .author.login` to
-   `gh api user -q .login`) **and** findings include at least one
-   BLOCKER or SHOULD FIX.
+   `gh api user -q .login`) **and** findings include at least one BLOCKER,
+   SHOULD FIX, or CONSIDER item (so the author sees actionable feedback).
+5. **Do not post** — Praise-only: no BLOCKER, SHOULD FIX, or CONSIDER
+   items (only "What's Good" / empty severity sections; label is enough).
 6. **Do not post** — All other cases (including the author's own PR,
-   including own open PRs with BLOCKER/SHOULD FIX — they already have
-   the conversation output).
+   including own open PRs with findings — they already have the
+   conversation output).
 
-This ordering resolves conflicts (e.g. someone else's PR with praise-only
-findings → step 4, no post; author's own PR with blockers → step 6, no
-post unless step 3).
+This ordering resolves conflicts (e.g. someone else's PR with CONSIDER-only
+→ step 4, post; praise-only on any PR → step 5, no post; author's own PR
+with blockers → step 6, no post unless step 3).
 
 **Format:** post the full structured output as a single `gh pr review`
 comment so sequential numbering, severity headers, and per-finding
 file:line refs are preserved. Inline per-line comments would fragment
 the output and lose cross-finding ordering.
 
-**Command:** write the body to a temp file so shell metacharacters in
-findings (quotes, `$`, backticks) cannot break the command. Use
-`--body-file` for both primary and fallback paths.
+**Command:** write the consolidated report from **Output Format** (above)
+verbatim into a temp file — same headings (`**Reviewers:**`, `---`, full
+per-finding `File` / `Issue` / `Fix` fields). Do **not** post the abbreviated
+placeholder version. Then append **one** footer line matching `LABEL_APPLIED`:
+
+- `LABEL_APPLIED=1`: `_Posted by sage-run-gauntlet. The ran-gauntlet label has been applied. Findings ordered by severity; numbering is sequential across sections._`
+- `LABEL_APPLIED=0`: `_Posted by sage-run-gauntlet. Findings ordered by severity; numbering is sequential across sections._`
+
+Use `--body-file` so shell metacharacters in findings cannot break the command.
 
 ```bash
 BODY_FILE=$(mktemp)
 trap 'rm -f "$BODY_FILE"' EXIT
 
-cat > "$BODY_FILE" <<'EOF'
-## Sage Gauntlet Results
-
-**Reviewers launched:** [list]
-**Files Reviewed:** [list]
-**Overall Assessment:** APPROVED | NEEDS CHANGES | BLOCKER
-
-### BLOCKERS ([count])
-…
-
-### SHOULD FIX ([count])
-…
-
-### CONSIDER ([count])
-…
-
-### What's Good
-…
-
----
-_Posted by `sage-run-gauntlet`. The `ran-gauntlet` label has also been
-applied. Findings ordered by severity; numbering is sequential across
-sections._
-EOF
+# 1. Write the full consolidated gauntlet report (Output Format) into BODY_FILE.
+# 2. Append the footer line for LABEL_APPLIED (see above).
 
 if ! gh pr review "$PR_NUM" --repo Kajabi/sage-lib --comment --body-file "$BODY_FILE" 2>gauntlet_review_err.log; then
-  if grep -qE '403|404|HTTP 403|HTTP 404|forbidden|not found|Resource not accessible|pull request write' gauntlet_review_err.log; then
-    gh pr comment "$PR_NUM" --repo Kajabi/sage-lib --body-file "$BODY_FILE"
+  if grep -qiE 'HTTP 403|HTTP 404|403 Forbidden|404 Not Found|Resource not accessible by integration|pull request write|does not have permission to' gauntlet_review_err.log; then
+    if ! gh pr comment "$PR_NUM" --repo Kajabi/sage-lib --body-file "$BODY_FILE" 2>gauntlet_comment_err.log; then
+      cat gauntlet_comment_err.log >&2
+      exit 1
+    fi
   else
     cat gauntlet_review_err.log >&2
     exit 1
@@ -285,17 +291,15 @@ if ! gh pr review "$PR_NUM" --repo Kajabi/sage-lib --comment --body-file "$BODY_
 fi
 ```
 
-The footer line is required — it tells human reviewers the comment was
-machine-generated and signals where to look for the criteria (the
-`ran-gauntlet` label). Do not claim the label was applied in the footer
-unless `gh pr edit "$PR_NUM" --repo Kajabi/sage-lib --add-label ran-gauntlet`
-actually ran (or will run immediately after posting on the same PR).
+The footer is required so human reviewers know the comment was
+machine-generated. Never claim the label was applied when `LABEL_APPLIED=0`.
 
 **Permissions:** `gh pr review --comment` requires you to be a
 collaborator on the repo or to have read+pull-request-write scopes on
 your `gh auth`. Fall back to `gh pr comment` **only** when stderr matches
-403/404 or permission errors (see `grep` above). On any other failure,
-surface the error in the conversation and **do not** post a second comment.
+the permission `grep` patterns above. On any other review failure, or if the
+fallback comment command fails, surface the error in the conversation and
+**do not** assume posting succeeded.
 
 ### Present results and offer options
 
