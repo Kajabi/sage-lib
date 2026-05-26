@@ -177,21 +177,32 @@ show per-section counts.
 
 ## After the Gauntlet
 
+Resolve the current branch's open PR once (used for labeling and posting):
+
+```bash
+PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>/dev/null || true)
+```
+
+Always pass `--repo Kajabi/sage-lib` on `gh` PR commands so fork / non-default
+remote contexts target the upstream repo, not a fork with the same numeric id.
+
 ### Apply the `ran-gauntlet` label (required)
 
 Always add the `ran-gauntlet` label to the PR to signal to human reviewers
 that automated multi-agent review has already run on this branch:
 
 ```bash
-gh pr edit <PR#> --add-label ran-gauntlet
+if [ -n "$PR_NUM" ]; then
+  gh pr edit "$PR_NUM" --repo Kajabi/sage-lib --add-label ran-gauntlet
+fi
 ```
 
-Apply the label unconditionally — including when the gauntlet short-circuits
+Apply the label unconditionally when a PR exists — including when the gauntlet short-circuits
 to manual review for docs-only or config-only diffs. The signal is "the
 gauntlet step was performed on this branch," not "N agents executed."
 
-If no PR exists yet (common when running the gauntlet before PR creation),
-add the label at PR creation time or immediately after the PR is opened.
+If no PR exists yet (`PR_NUM` empty; common before `gh pr create`), defer
+labeling until PR creation or immediately after the PR is opened.
 
 ### Post results to the PR (optional)
 
@@ -199,17 +210,10 @@ By default the gauntlet output stays in the conversation between the
 developer running it and the agent — the assumption is that's the same
 person as the PR author, so a verbal-only result is enough.
 
-**Prerequisite (same as labeling):** resolve the current branch's open
-PR before posting. If no PR exists yet (common pre-`gh pr create`), **do
-not** run `gh pr review` or `gh pr comment` — keep findings in the
-conversation and post after the PR is opened (or when the user re-runs
-the gauntlet on the open PR).
-
-```bash
-PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>/dev/null || true)
-```
-
-If `PR_NUM` is empty, skip posting entirely.
+**Prerequisite:** use the `PR_NUM` resolved above. If empty, **do not** run
+`gh pr review` or `gh pr comment` — keep findings in the conversation and
+post after the PR is opened (or when the user re-runs the gauntlet on the
+open PR).
 
 **Posting decision — apply in order (first match wins):**
 
@@ -271,21 +275,27 @@ applied. Findings ordered by severity; numbering is sequential across
 sections._
 EOF
 
-gh pr review "$PR_NUM" --repo Kajabi/sage-lib --comment --body-file "$BODY_FILE" \
-  || gh pr comment "$PR_NUM" --repo Kajabi/sage-lib --body-file "$BODY_FILE"
+if ! gh pr review "$PR_NUM" --repo Kajabi/sage-lib --comment --body-file "$BODY_FILE" 2>gauntlet_review_err.log; then
+  if grep -qE '403|404|HTTP 403|HTTP 404|forbidden|not found|Resource not accessible|pull request write' gauntlet_review_err.log; then
+    gh pr comment "$PR_NUM" --repo Kajabi/sage-lib --body-file "$BODY_FILE"
+  else
+    cat gauntlet_review_err.log >&2
+    exit 1
+  fi
+fi
 ```
 
 The footer line is required — it tells human reviewers the comment was
 machine-generated and signals where to look for the criteria (the
 `ran-gauntlet` label). Do not claim the label was applied in the footer
-unless `gh pr edit … --add-label ran-gauntlet` actually ran (or will run
-immediately after posting on the same PR).
+unless `gh pr edit "$PR_NUM" --repo Kajabi/sage-lib --add-label ran-gauntlet`
+actually ran (or will run immediately after posting on the same PR).
 
 **Permissions:** `gh pr review --comment` requires you to be a
 collaborator on the repo or to have read+pull-request-write scopes on
-your `gh auth`. If it fails with a 403 / 404, the `||` fallback runs
-`gh pr comment` with the same `--repo` and `--body-file` (normal PR
-conversation comment instead of a formal review).
+your `gh auth`. Fall back to `gh pr comment` **only** when stderr matches
+403/404 or permission errors (see `grep` above). On any other failure,
+surface the error in the conversation and **do not** post a second comment.
 
 ### Present results and offer options
 
