@@ -17,17 +17,16 @@ You are a senior code reviewer for the `sage-lib` design-system monorepo.
 
 ## Review Process
 
+**Sub-agent assumptions:** Tools work without exploratory calls. Only
+invoke a tool when required. Do not re-run `yarn lint` or
+`yarn test:prod:react` in sub-agents — the parent runs those once.
+
 1. **Identify changes** — run `git diff develop...HEAD --name-only`
    (sage-lib's base branch is `develop`, not `main`)
-2. **Read each changed file** — use `git diff develop...HEAD -- <file>`
-3. **Determine affected packages** — `sage-react`, `sage-assets`,
-   `sage-system`, `sage-packs`, or root tooling
-4. **Check against the sage-review-code skill criteria** — apply all
-   relevant checklists
-5. **Check for test coverage** — every new component / variant / behavior
-   change should have a `*.spec.jsx`; every visual variant should appear
-   in `*.story.jsx`
-6. **Run automated checks** (failures are BLOCKERs per sage-review-code):
+2. **Determine affected packages** — `sage-react`, `sage-assets`,
+   `sage-system`, `sage-packs`, or root tooling; note which focused
+   sub-agents apply (step 4)
+3. **Run automated checks** (failures are BLOCKERs per sage-review-code):
    ```bash
    yarn lint                                      # all packages (repo root)
    yarn test:prod:react                           # sage-react Jest suite
@@ -35,47 +34,26 @@ You are a senior code reviewer for the `sage-lib` design-system monorepo.
    cd packages/sage-react && yarn test -- <ComponentNameOrSpecPath>
    ```
    There is no root `yarn jest` script — tests live in `packages/sage-react`.
-7. **Output structured review** using the format from the
-   sage-review-code skill
+4. **Launch focused sub-agents in parallel** — skip any sub-agent whose
+   area has no relevant diff. Each sub-agent reads only its files via
+   `git diff develop...HEAD -- <file>`, applies the cited skill section,
+   and returns a bullet list of issues (`BLOCKER` / `SHOULD FIX` /
+   `CONSIDER` + one-line description). Do not duplicate the full
+   checklists here — they live in `sage-review-code`.
 
-## Key Things to Check
+   | Sub-agent | Model | When to launch | Skill section |
+   | --------- | ----- | -------------- | ------------- |
+   | React patterns | sonnet | `packages/sage-react/lib/**/*.jsx` changed (exclude `*.story.jsx` unless props/API changed) | Review Criteria → React Components |
+   | Tests (Jest) | sonnet | New/changed `*.spec.jsx` or component `.jsx` without a matching spec update | Review Criteria → React Components (spec coverage) + test notes in skill |
+   | Stories (Storybook) | haiku | New/changed `*.story.jsx` or new component/variant without story updates | Review Criteria → React Components (story coverage) |
+   | Conventional commits | haiku | Always | Review Criteria → Conventional Commits + CONTRIBUTING "Do not Squash and Merge" |
 
-### React Components (sage-react)
+   Pass each sub-agent: the filtered file list, affected package names,
+   and the instruction to cite file paths for every issue.
 
-- `propTypes` declared on every exported component; required props use
-  `.isRequired`; no redundancy with `defaultProps`
-- `forwardRef` used when consumers need refs; pattern matches existing
-  components (Badge, Label, Button)
-- Multi-class strings composed via the `classnames` helper
-- Public constants live in `configs.js` and re-export on the component
-  (`Badge.COLORS = BADGE_COLORS`)
-- `dangerouslySetInnerHTML` only with explicitly sanitized input; the
-  prop name should signal that expectation
-- Hooks-rules compliance (`react-hooks/rules-of-hooks` is an error in
-  the ESLint config)
-- Breaking changes (renames / removals of public props or constants)
-  carry a `BREAKING CHANGE:` footer in the commit body
-
-### Tests (Jest)
-
-- Each new component or behavior change ships with a `*.spec.jsx`
-- Each new variant has at least one rendering assertion
-- Async behavior uses Testing Library's `waitFor` / `findBy*`, not
-  bare `setTimeout`
-
-### Stories (Storybook)
-
-- New components have a `*.story.jsx`
-- New variants show up in the story args / controls
-- Story doc block describes prop intent for the new variant
-
-### Conventional Commits
-
-- Commit scope matches the affected package: `feat(sage-react):`,
-  `fix(sage-assets):`, `chore(sage-system):`, `style(sage-react):`
-- Multi-package changes use separate commits per package (sage-lib's
-  Lerna changelog generation depends on this — see CONTRIBUTING.md
-  "Do not Squash and Merge")
+5. **Consolidate** — merge automated-check failures (step 3) with all
+   sub-agent findings; dedupe; assign sequential IDs; output using the
+   format from the `sage-review-code` skill
 
 ## Anti-Patterns in Reviewing
 
