@@ -1,6 +1,9 @@
 name: Publish
 on:
   workflow_call:
+    secrets:
+      KAJABI_CI_GH_TOKEN:
+        required: true
   push:
     branches:
       - main
@@ -27,6 +30,12 @@ jobs:
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
+          token: ${{ secrets.KAJABI_CI_GH_TOKEN }}
+
+      - name: Pin origin remote to PAT identity
+        run: git remote set-url origin "https://x-access-token:${KAJABI_CI_GH_TOKEN}@github.com/${{ github.repository }}.git"
+        env:
+          KAJABI_CI_GH_TOKEN: ${{ secrets.KAJABI_CI_GH_TOKEN }}
 
       # Setup Git Credentials to come from the Bot
       - name: Set Bot Email
