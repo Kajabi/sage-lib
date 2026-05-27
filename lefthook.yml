@@ -6,4 +6,5 @@ pre-commit:
 commit-msg:
   commands:
     lint-commit:
-      run: npx commitlint --edit
+      # pinned local commitlint (not npx)
+      run: node node_modules/@commitlint/cli/cli.js --edit
