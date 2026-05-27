@@ -1,4 +1,4 @@
-FROM ruby:3.1.2-alpine
+FROM ruby:3.1.7-alpine3.21
 
 ARG RAILS_ENV="production"
 ARG NONROOT_UID="1000"
