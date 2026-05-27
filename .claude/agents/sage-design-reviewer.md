@@ -2,7 +2,7 @@
 name: sage-design-reviewer
 description: Design-token + SCSS reviewer for sage-lib. Checks sage helper usage (`sage-color`, `sage-spacing`, `sage-border`), Pine-token alignment for dark-mode work, BEM classname discipline, and Storybook story coverage for new variants.
 tools: Read, Grep, Glob, Bash
-model: opus
+model: sonnet
 skills: sage-design-review
 ---
 

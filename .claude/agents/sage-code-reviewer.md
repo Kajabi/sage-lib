@@ -2,7 +2,7 @@
 name: sage-code-reviewer
 description: Code review expert for the sage-lib design-system monorepo. Reviews React component changes against sage's existing patterns (propTypes + forwardRef, classnames, configs.js, story + spec files) and Jest test coverage. Provides structured feedback by severity.
 tools: Read, Grep, Glob, Bash
-model: opus
+model: sonnet
 skills: sage-review-code
 ---
 

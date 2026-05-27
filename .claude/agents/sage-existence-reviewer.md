@@ -2,7 +2,7 @@
 name: sage-existence-reviewer
 description: Existence/duplication reviewer for sage-lib. Given a diff, flags new React components, SCSS partials, mixins, and design tokens that appear to duplicate something already in the library. Advisory only — never raises BLOCKER.
 tools: Read, Grep, Glob, Bash
-model: opus
+model: sonnet
 skills: sage-existence-review
 ---
 

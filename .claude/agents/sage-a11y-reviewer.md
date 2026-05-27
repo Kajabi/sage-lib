@@ -2,7 +2,7 @@
 name: sage-a11y-reviewer
 description: Accessibility reviewer for sage-lib React components and SCSS. Sage components are leaf nodes of every consuming app's UI tree — a11y bugs multiply across the product, so this reviewer runs separately from design to keep findings undiluted.
 tools: Read, Grep, Glob, Bash
-model: opus
+model: sonnet
 skills: sage-a11y-review
 ---
 
