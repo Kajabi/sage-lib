@@ -31,7 +31,7 @@ Sage.popover = (function() {
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
 
-    if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
+    if (evt.target.hasAttribute(SELECTOR_TRIGGER) || (evt.target.parentNode && evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER))) {
       if (!elChild) return;
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
         closePopoverPanel(elParent);
@@ -64,7 +64,8 @@ Sage.popover = (function() {
   }
 
   function openPopoverPanel(elParent) {
-    elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'true');
+    const trigger = elParent.querySelector(`[${SELECTOR_TRIGGER}]`);
+    if (trigger) trigger.setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'true');
     elParent.classList.add(CLASS_ACTIVE);
     let focusableEls = elParent.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
     SELECTOR_LAST_FOCUSED = document.activeElement;
@@ -72,7 +73,8 @@ Sage.popover = (function() {
   }
 
   function closePopoverPanel(elParent) {
-    elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'false');
+    const trigger = elParent.querySelector(`[${SELECTOR_TRIGGER}]`);
+    if (trigger) trigger.setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'false');
     elParent.classList.remove(CLASS_ACTIVE);
     elParent.removeEventListener('keydown', focusTrap);
     if (SELECTOR_LAST_FOCUSED) SELECTOR_LAST_FOCUSED.focus();
