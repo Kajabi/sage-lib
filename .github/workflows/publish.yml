@@ -4,6 +4,10 @@ on:
     secrets:
       KAJABI_CI_GH_TOKEN:
         required: true
+  # Allows manually triggering a publish from the Actions tab or `gh workflow run`.
+  # Dispatching against `main` runs the Lerna Publish path; against `develop`, the
+  # canary path — both gate on github.ref, which dispatch sets to the chosen branch.
+  workflow_dispatch:
   push:
     branches:
       - main
