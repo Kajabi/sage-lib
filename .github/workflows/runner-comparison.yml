@@ -1,14 +1,9 @@
-# Runner Comparison Workflow for sage-lib
-# Runs identical jobs on GitHub and Depot runners to benchmark performance
+# A/B benchmark: GitHub-hosted vs Depot-hosted runners for the
+# lint/test/build pipeline. Linear: PE-3158.
 #
-# Usage:
-#   1. Add this file to .github/workflows/runner-comparison.yml
-#   2. Ensure DD_API_KEY secret is set in repo settings
-#   3. Trigger manually via workflow_dispatch or on PR
-#
-# After Depot account setup:
-#   - Connect Kajabi org to Depot at https://depot.dev
-#   - The depot-ubuntu-24.04 runner will automatically work
+# The shared per-runner steps live in
+# .github/actions/runner-benchmark/action.yml — this file just orchestrates
+# the two callers and the comparison summary.
 
 name: Runner Comparison (GitHub vs Depot)
 
@@ -24,14 +19,20 @@ on:
           - '18'
           - '20'
           - '22'
-  # Scoped to this file so we get an automatic A/B run on the spike PR
-  # without firing on every other PR after merge.
+  # Scoped to this workflow + its composite action so the spike PR gets an
+  # automatic A/B run but the workflow doesn't fire on every future PR.
   pull_request:
     paths:
       - '.github/workflows/runner-comparison.yml'
+      - '.github/actions/runner-benchmark/**'
 
 env:
   NODE_VERSION: ${{ inputs.node_version || '22' }}
+  # Per-minute rates verified 2026-06-04:
+  #   GitHub Linux 2-core x64: https://docs.github.com/en/billing/reference/actions-runner-pricing
+  #   Depot ubuntu-24.04 (2 vCPU): https://depot.dev/pricing
+  GH_RATE_PER_MIN: '0.006'
+  DEPOT_RATE_PER_MIN: '0.004'
 
 jobs:
   # ============================================
@@ -40,233 +41,155 @@ jobs:
   github-runner:
     name: GitHub Runner (ubuntu-24.04)
     runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      DD_API_KEY: ${{ secrets.DD_API_KEY }}
+      RUNNER_TAG: github
+      SUMMARY_LABEL: GitHub Runner Results
     outputs:
       duration_ms: ${{ steps.timer.outputs.duration_ms }}
-      install_time_ms: ${{ steps.install_time.outputs.duration_ms }}
+      install_time_ms: ${{ steps.bench.outputs.install_time_ms }}
+      cost_usd: ${{ steps.timer.outputs.cost_usd }}
     steps:
       - name: Record Start Time
         id: start
-        run: echo "time=$(date +%s%3N)" >> $GITHUB_OUTPUT
+        run: echo "time=$(date +%s%3N)" >> "$GITHUB_OUTPUT"
 
       - name: Clone Repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Run benchmark
+        id: bench
+        uses: ./.github/actions/runner-benchmark
         with:
           node-version: ${{ env.NODE_VERSION }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Set NPM Config
-        run: npm config set '//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}'
-
-      - name: Install Yarn
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider npm install -g yarn
-          else
-            npm install -g yarn
-          fi
-
-      - name: Record Install Start
-        id: install_start
-        run: echo "time=$(date +%s%3N)" >> $GITHUB_OUTPUT
-
-      - name: Yarn Install
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn install
-          else
-            yarn install
-          fi
-
-      - name: Record Install Time
-        id: install_time
-        run: |
-          end=$(date +%s%3N)
-          duration=$((end - ${{ steps.install_start.outputs.time }}))
-          echo "duration_ms=$duration" >> $GITHUB_OUTPUT
-
-      - name: Yarn Lint
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn lint
-          else
-            yarn lint
-          fi
-
-      - name: Yarn Test
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn test
-          else
-            yarn test
-          fi
-
-      - name: Yarn Build
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn build
-          else
-            yarn build
-          fi
-
-      - name: Calculate Total Duration
+      - name: Calculate Total Duration & Cost
         id: timer
+        env:
+          START_TIME: ${{ steps.start.outputs.time }}
+          INSTALL_TIME_MS: ${{ steps.bench.outputs.install_time_ms }}
+          RATE_PER_MIN: ${{ env.GH_RATE_PER_MIN }}
         run: |
           end=$(date +%s%3N)
-          duration=$((end - ${{ steps.start.outputs.time }}))
-          echo "duration_ms=$duration" >> $GITHUB_OUTPUT
-          echo "### GitHub Runner Results" >> $GITHUB_STEP_SUMMARY
-          echo "- Total Duration: ${duration}ms ($((duration / 1000))s)" >> $GITHUB_STEP_SUMMARY
-          echo "- Install Time: ${{ steps.install_time.outputs.duration_ms }}ms" >> $GITHUB_STEP_SUMMARY
+          duration=$((end - START_TIME))
+          cost=$(awk "BEGIN{printf \"%.6f\", $duration/60000*$RATE_PER_MIN}")
+          {
+            echo "duration_ms=$duration"
+            echo "cost_usd=$cost"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "### $SUMMARY_LABEL"
+            echo "- Total Duration: ${duration}ms ($((duration / 1000))s)"
+            echo "- Install Time: ${INSTALL_TIME_MS}ms"
+            echo "- Estimated Cost: \$${cost}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Send Metrics to Datadog
-        if: ${{ vars.DD_API_KEY != '' || secrets.DD_API_KEY != '' }}
+        if: env.DD_API_KEY != ''
         env:
-          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+          DURATION_MS: ${{ steps.timer.outputs.duration_ms }}
+          INSTALL_TIME_MS: ${{ steps.bench.outputs.install_time_ms }}
+          COST_USD: ${{ steps.timer.outputs.cost_usd }}
+          REPO: ${{ github.repository }}
         run: |
-          curl -s -X POST "https://api.datadoghq.com/api/v2/series" \
+          ts=$(date +%s)
+          payload=$(jq -n \
+            --argjson ts "$ts" \
+            --argjson dur "$DURATION_MS" \
+            --argjson install "$INSTALL_TIME_MS" \
+            --argjson cost "$COST_USD" \
+            --arg runner "$RUNNER_TAG" \
+            --arg repo "$REPO" \
+            --arg node "$NODE_VERSION" \
+            '{series: [
+              {metric: "ci.runner.duration_ms",       type: 0, points: [{timestamp: $ts, value: $dur}],     tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison", "node_version:\($node)"]},
+              {metric: "ci.runner.install_time_ms",   type: 0, points: [{timestamp: $ts, value: $install}], tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison", "node_version:\($node)"]},
+              {metric: "ci.runner.estimated_cost_usd",type: 0, points: [{timestamp: $ts, value: $cost}],    tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison"]}
+            ]}')
+          curl -sf -X POST "https://api.datadoghq.com/api/v2/series" \
             -H "DD-API-KEY: $DD_API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{
-              "series": [
-                {
-                  "metric": "ci.runner.duration_ms",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": ${{ steps.timer.outputs.duration_ms }}}],
-                  "tags": ["runner:github", "repo:${{ github.repository }}", "workflow:runner-comparison", "node_version:${{ env.NODE_VERSION }}"]
-                },
-                {
-                  "metric": "ci.runner.install_time_ms",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": ${{ steps.install_time.outputs.duration_ms }}}],
-                  "tags": ["runner:github", "repo:${{ github.repository }}", "workflow:runner-comparison", "node_version:${{ env.NODE_VERSION }}"]
-                },
-                {
-                  "metric": "ci.runner.estimated_cost_usd",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": '$(echo "scale=6; ${{ steps.timer.outputs.duration_ms }} / 60000 * 0.006" | bc)'}],
-                  "tags": ["runner:github", "repo:${{ github.repository }}", "workflow:runner-comparison"]
-                }
-              ]
-            }'
+            -d "$payload"
 
   # ============================================
-  # Depot runner
+  # Depot-hosted runner
   # ============================================
   depot-runner:
     name: Depot Runner (depot-ubuntu-24.04)
     runs-on: depot-ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      DD_API_KEY: ${{ secrets.DD_API_KEY }}
+      RUNNER_TAG: depot
+      SUMMARY_LABEL: Depot Runner Results
     outputs:
       duration_ms: ${{ steps.timer.outputs.duration_ms }}
-      install_time_ms: ${{ steps.install_time.outputs.duration_ms }}
+      install_time_ms: ${{ steps.bench.outputs.install_time_ms }}
+      cost_usd: ${{ steps.timer.outputs.cost_usd }}
     steps:
       - name: Record Start Time
         id: start
-        run: echo "time=$(date +%s%3N)" >> $GITHUB_OUTPUT
+        run: echo "time=$(date +%s%3N)" >> "$GITHUB_OUTPUT"
 
       - name: Clone Repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Run benchmark
+        id: bench
+        uses: ./.github/actions/runner-benchmark
         with:
           node-version: ${{ env.NODE_VERSION }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Set NPM Config
-        run: npm config set '//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}'
-
-      - name: Install Yarn
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider npm install -g yarn
-          else
-            npm install -g yarn
-          fi
-
-      - name: Record Install Start
-        id: install_start
-        run: echo "time=$(date +%s%3N)" >> $GITHUB_OUTPUT
-
-      - name: Yarn Install
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn install
-          else
-            yarn install
-          fi
-
-      - name: Record Install Time
-        id: install_time
-        run: |
-          end=$(date +%s%3N)
-          duration=$((end - ${{ steps.install_start.outputs.time }}))
-          echo "duration_ms=$duration" >> $GITHUB_OUTPUT
-
-      - name: Yarn Lint
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn lint
-          else
-            yarn lint
-          fi
-
-      - name: Yarn Test
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn test
-          else
-            yarn test
-          fi
-
-      - name: Yarn Build
-        run: |
-          if (( $NODE_VERSION >= 18 )); then
-            NODE_OPTIONS=--openssl-legacy-provider yarn build
-          else
-            yarn build
-          fi
-
-      - name: Calculate Total Duration
+      - name: Calculate Total Duration & Cost
         id: timer
+        env:
+          START_TIME: ${{ steps.start.outputs.time }}
+          INSTALL_TIME_MS: ${{ steps.bench.outputs.install_time_ms }}
+          RATE_PER_MIN: ${{ env.DEPOT_RATE_PER_MIN }}
         run: |
           end=$(date +%s%3N)
-          duration=$((end - ${{ steps.start.outputs.time }}))
-          echo "duration_ms=$duration" >> $GITHUB_OUTPUT
-          echo "### Depot Runner Results" >> $GITHUB_STEP_SUMMARY
-          echo "- Total Duration: ${duration}ms ($((duration / 1000))s)" >> $GITHUB_STEP_SUMMARY
-          echo "- Install Time: ${{ steps.install_time.outputs.duration_ms }}ms" >> $GITHUB_STEP_SUMMARY
+          duration=$((end - START_TIME))
+          cost=$(awk "BEGIN{printf \"%.6f\", $duration/60000*$RATE_PER_MIN}")
+          {
+            echo "duration_ms=$duration"
+            echo "cost_usd=$cost"
+          } >> "$GITHUB_OUTPUT"
+          {
+            echo "### $SUMMARY_LABEL"
+            echo "- Total Duration: ${duration}ms ($((duration / 1000))s)"
+            echo "- Install Time: ${INSTALL_TIME_MS}ms"
+            echo "- Estimated Cost: \$${cost}"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Send Metrics to Datadog
-        if: ${{ vars.DD_API_KEY != '' || secrets.DD_API_KEY != '' }}
+        if: env.DD_API_KEY != ''
         env:
-          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+          DURATION_MS: ${{ steps.timer.outputs.duration_ms }}
+          INSTALL_TIME_MS: ${{ steps.bench.outputs.install_time_ms }}
+          COST_USD: ${{ steps.timer.outputs.cost_usd }}
+          REPO: ${{ github.repository }}
         run: |
-          curl -s -X POST "https://api.datadoghq.com/api/v2/series" \
+          ts=$(date +%s)
+          payload=$(jq -n \
+            --argjson ts "$ts" \
+            --argjson dur "$DURATION_MS" \
+            --argjson install "$INSTALL_TIME_MS" \
+            --argjson cost "$COST_USD" \
+            --arg runner "$RUNNER_TAG" \
+            --arg repo "$REPO" \
+            --arg node "$NODE_VERSION" \
+            '{series: [
+              {metric: "ci.runner.duration_ms",       type: 0, points: [{timestamp: $ts, value: $dur}],     tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison", "node_version:\($node)"]},
+              {metric: "ci.runner.install_time_ms",   type: 0, points: [{timestamp: $ts, value: $install}], tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison", "node_version:\($node)"]},
+              {metric: "ci.runner.estimated_cost_usd",type: 0, points: [{timestamp: $ts, value: $cost}],    tags: ["runner:\($runner)", "repo:\($repo)", "workflow:runner-comparison"]}
+            ]}')
+          curl -sf -X POST "https://api.datadoghq.com/api/v2/series" \
             -H "DD-API-KEY: $DD_API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{
-              "series": [
-                {
-                  "metric": "ci.runner.duration_ms",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": ${{ steps.timer.outputs.duration_ms }}}],
-                  "tags": ["runner:depot", "repo:${{ github.repository }}", "workflow:runner-comparison", "node_version:${{ env.NODE_VERSION }}"]
-                },
-                {
-                  "metric": "ci.runner.install_time_ms",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": ${{ steps.install_time.outputs.duration_ms }}}],
-                  "tags": ["runner:depot", "repo:${{ github.repository }}", "workflow:runner-comparison", "node_version:${{ env.NODE_VERSION }}"]
-                },
-                {
-                  "metric": "ci.runner.estimated_cost_usd",
-                  "type": 0,
-                  "points": [{"timestamp": '$(date +%s)', "value": '$(echo "scale=6; ${{ steps.timer.outputs.duration_ms }} / 60000 * 0.004" | bc)'}],
-                  "tags": ["runner:depot", "repo:${{ github.repository }}", "workflow:runner-comparison"]
-                }
-              ]
-            }'
+            -d "$payload"
 
   # ============================================
   # Compare results
@@ -275,6 +198,9 @@ jobs:
     name: Compare Results
     needs: [github-runner, depot-runner]
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      DD_API_KEY: ${{ secrets.DD_API_KEY }}
     steps:
       - name: Generate Comparison Report
         env:
@@ -282,70 +208,69 @@ jobs:
           DEPOT_DURATION: ${{ needs.depot-runner.outputs.duration_ms }}
           GH_INSTALL: ${{ needs.github-runner.outputs.install_time_ms }}
           DEPOT_INSTALL: ${{ needs.depot-runner.outputs.install_time_ms }}
+          GH_COST: ${{ needs.github-runner.outputs.cost_usd }}
+          DEPOT_COST: ${{ needs.depot-runner.outputs.cost_usd }}
         run: |
-          # Calculate improvements
           duration_diff=$((GH_DURATION - DEPOT_DURATION))
-          if [ $GH_DURATION -gt 0 ]; then
+          if [ "$GH_DURATION" -gt 0 ]; then
             duration_pct=$((duration_diff * 100 / GH_DURATION))
           else
             duration_pct=0
           fi
 
           install_diff=$((GH_INSTALL - DEPOT_INSTALL))
-          if [ $GH_INSTALL -gt 0 ]; then
+          if [ "$GH_INSTALL" -gt 0 ]; then
             install_pct=$((install_diff * 100 / GH_INSTALL))
           else
             install_pct=0
           fi
 
-          # Calculate costs
-          gh_cost=$(echo "scale=4; $GH_DURATION / 60000 * 0.006" | bc)
-          depot_cost=$(echo "scale=4; $DEPOT_DURATION / 60000 * 0.004" | bc)
-          cost_savings=$(echo "scale=4; $gh_cost - $depot_cost" | bc)
+          cost_savings=$(awk "BEGIN{printf \"%.6f\", $GH_COST - $DEPOT_COST}")
+          gh_secs=$(awk "BEGIN{printf \"%.1f\", $GH_DURATION/1000}")
+          depot_secs=$(awk "BEGIN{printf \"%.1f\", $DEPOT_DURATION/1000}")
 
-          # Generate summary
-          echo "## Runner Comparison Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Duration" >> $GITHUB_STEP_SUMMARY
-          echo "| Runner | Total | Install | Cost |" >> $GITHUB_STEP_SUMMARY
-          echo "|--------|-------|---------|------|" >> $GITHUB_STEP_SUMMARY
-          echo "| GitHub | ${GH_DURATION}ms ($(echo "scale=1; $GH_DURATION/1000" | bc)s) | ${GH_INSTALL}ms | \$${gh_cost} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Depot | ${DEPOT_DURATION}ms ($(echo "scale=1; $DEPOT_DURATION/1000" | bc)s) | ${DEPOT_INSTALL}ms | \$${depot_cost} |" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Improvement" >> $GITHUB_STEP_SUMMARY
-          if [ $duration_diff -gt 0 ]; then
-            echo "- **Duration**: Depot is **${duration_pct}% faster** (${duration_diff}ms saved)" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- **Duration**: GitHub is **$((-duration_pct))% faster** ($((-duration_diff))ms)" >> $GITHUB_STEP_SUMMARY
-          fi
-          if [ $install_diff -gt 0 ]; then
-            echo "- **Install**: Depot is **${install_pct}% faster** (${install_diff}ms saved)" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- **Install**: GitHub is **$((-install_pct))% faster** ($((-install_diff))ms)" >> $GITHUB_STEP_SUMMARY
-          fi
-          echo "- **Cost Savings**: \$${cost_savings} per run" >> $GITHUB_STEP_SUMMARY
+          {
+            echo "## Runner Comparison Results"
+            echo ""
+            echo "### Duration"
+            echo "| Runner | Total | Install | Cost |"
+            echo "|--------|-------|---------|------|"
+            echo "| GitHub | ${GH_DURATION}ms (${gh_secs}s) | ${GH_INSTALL}ms | \$${GH_COST} |"
+            echo "| Depot  | ${DEPOT_DURATION}ms (${depot_secs}s) | ${DEPOT_INSTALL}ms | \$${DEPOT_COST} |"
+            echo ""
+            echo "### Improvement"
+            if [ "$duration_diff" -gt 0 ]; then
+              echo "- **Duration**: Depot is **${duration_pct}% faster** (${duration_diff}ms saved)"
+            else
+              echo "- **Duration**: GitHub is **$((-duration_pct))% faster** ($((-duration_diff))ms)"
+            fi
+            if [ "$install_diff" -gt 0 ]; then
+              echo "- **Install**: Depot is **${install_pct}% faster** (${install_diff}ms saved)"
+            else
+              echo "- **Install**: GitHub is **$((-install_pct))% faster** ($((-install_diff))ms)"
+            fi
+            echo "- **Cost Savings**: \$${cost_savings} per run"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Send Comparison Metrics to Datadog
-        if: ${{ vars.DD_API_KEY != '' || secrets.DD_API_KEY != '' }}
+        if: env.DD_API_KEY != ''
         env:
-          DD_API_KEY: ${{ secrets.DD_API_KEY }}
           GH_DURATION: ${{ needs.github-runner.outputs.duration_ms }}
           DEPOT_DURATION: ${{ needs.depot-runner.outputs.duration_ms }}
+          REPO: ${{ github.repository }}
         run: |
-          if [ $GH_DURATION -gt 0 ]; then
+          if [ "$GH_DURATION" -gt 0 ]; then
             improvement_pct=$(( (GH_DURATION - DEPOT_DURATION) * 100 / GH_DURATION ))
           else
             improvement_pct=0
           fi
-
-          curl -s -X POST "https://api.datadoghq.com/api/v2/series" \
+          ts=$(date +%s)
+          payload=$(jq -n \
+            --argjson ts "$ts" \
+            --argjson pct "$improvement_pct" \
+            --arg repo "$REPO" \
+            '{series: [{metric: "ci.runner.depot_improvement_pct", type: 0, points: [{timestamp: $ts, value: $pct}], tags: ["repo:\($repo)", "workflow:runner-comparison"]}]}')
+          curl -sf -X POST "https://api.datadoghq.com/api/v2/series" \
             -H "DD-API-KEY: $DD_API_KEY" \
             -H "Content-Type: application/json" \
-            -d '{
-              "series": [{
-                "metric": "ci.runner.depot_improvement_pct",
-                "type": 0,
-                "points": [{"timestamp": '$(date +%s)', "value": '$improvement_pct'}],
-                "tags": ["repo:${{ github.repository }}", "workflow:runner-comparison"]
-              }]
-            }'
+            -d "$payload"

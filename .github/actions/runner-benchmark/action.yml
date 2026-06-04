@@ -1,0 +1,103 @@
+# Shared lint/test/build steps used by runner-comparison.yml so the
+# GitHub-hosted and Depot-hosted jobs stay byte-identical.
+#
+# Inputs cover everything the steps need; the only difference between
+# callers is the runs-on label and the cost rate (handled in the
+# calling workflow).
+
+name: 'Runner Benchmark Steps'
+description: 'Cold yarn install + lint/test/build, capturing install time'
+
+inputs:
+  node-version:
+    description: 'Node major version (18/20/22)'
+    required: true
+  access-token:
+    description: 'GitHub Packages token (passed as a secret from the caller)'
+    required: true
+
+outputs:
+  install_time_ms:
+    description: 'Wall-clock time for `yarn install` in milliseconds'
+    value: ${{ steps.install_time.outputs.duration_ms }}
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Set NPM Config
+      shell: bash
+      run: npm config set "//npm.pkg.github.com/:_authToken=${{ inputs.access-token }}"
+
+    - name: Install Yarn
+      shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        if (( NODE_VERSION >= 18 )); then
+          NODE_OPTIONS=--openssl-legacy-provider npm install -g yarn
+        else
+          npm install -g yarn
+        fi
+
+    - name: Record Install Start
+      id: install_start
+      shell: bash
+      run: echo "time=$(date +%s%3N)" >> "$GITHUB_OUTPUT"
+
+    - name: Yarn Install
+      shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        if (( NODE_VERSION >= 18 )); then
+          NODE_OPTIONS=--openssl-legacy-provider yarn install
+        else
+          yarn install
+        fi
+
+    - name: Record Install Time
+      id: install_time
+      shell: bash
+      env:
+        INSTALL_START: ${{ steps.install_start.outputs.time }}
+      run: |
+        end=$(date +%s%3N)
+        echo "duration_ms=$((end - INSTALL_START))" >> "$GITHUB_OUTPUT"
+
+    - name: Yarn Lint
+      shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        if (( NODE_VERSION >= 18 )); then
+          NODE_OPTIONS=--openssl-legacy-provider yarn lint
+        else
+          yarn lint
+        fi
+
+    - name: Yarn Test
+      shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        if (( NODE_VERSION >= 18 )); then
+          NODE_OPTIONS=--openssl-legacy-provider yarn test
+        else
+          yarn test
+        fi
+
+    - name: Yarn Build
+      shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+      run: |
+        if (( NODE_VERSION >= 18 )); then
+          NODE_OPTIONS=--openssl-legacy-provider yarn build
+        else
+          yarn build
+        fi
