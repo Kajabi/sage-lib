@@ -1,3 +1,4 @@
+import { Sage } from './defineSage';
 import { tns } from "tiny-slider/src/tiny-slider";
 
 Sage.carousel = (function() {

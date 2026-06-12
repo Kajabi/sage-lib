@@ -1,3 +1,4 @@
+import { Sage } from './defineSage';
 import { generateId } from './utils/index';
 
 Sage.accordion = (function () {

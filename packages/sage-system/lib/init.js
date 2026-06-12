@@ -1,3 +1,4 @@
+import { Sage } from './defineSage';
 import * as arrive from 'arrive/src/arrive.js';
 
 Sage.init = function(elementNamesToInitLegacy) {

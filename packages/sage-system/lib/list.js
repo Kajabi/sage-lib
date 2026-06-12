@@ -1,3 +1,4 @@
+import { Sage } from './defineSage';
 // NOTE: Uses SortableJS
 // https://github.com/SortableJS/Sortable
 import Sortable from 'sortablejs/modular/sortable.core.esm.js';
