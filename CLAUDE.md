@@ -8,10 +8,11 @@ Sage is Kajabi's design system, shipped as a **Lerna + Yarn Workspaces monorepo*
 `yarn install` at the root bootstraps every package. Branch off `develop` (the default branch
 for PRs); `main` is the release branch.
 
-Tooling is pinned via asdf (`.tool-versions`): Node 22.7.0, Ruby 2.7.7 (Ruby is only needed
-for the `docs` gem). Note the React package targets legacy toolchains — React 16, Webpack 4,
-Jest 26 — and several scripts need `NODE_OPTIONS=--openssl-legacy-provider` (already baked into
-the relevant scripts).
+Tooling is pinned via asdf (`.tool-versions`): Node 22.7.0, Ruby 3.3.9 (Ruby is only needed
+for the `docs` gem, which runs Rails 7.2). Note the `sage-react` package still targets a legacy
+toolchain — React 16, Webpack 4, Jest 26 — and several scripts need
+`NODE_OPTIONS=--openssl-legacy-provider` (already baked into the relevant scripts). The `docs`
+app, by contrast, runs Webpack 5 via shakapacker. CI builds on Node 20 and 22.
 
 ## Packages
 
@@ -21,7 +22,7 @@ the relevant scripts).
 | `@kajabi/sage-assets` | `packages/sage-assets` | SCSS source (the actual styling) + Sassdoc site. |
 | `@kajabi/sage-system` | `packages/sage-system` | Vanilla JS behaviors for the Rails (non-React) components. |
 | `@kajabi/sage-packs` | `packages/sage-packs` | Bundles assets/system/react for consumption by Rails apps. |
-| `@kajabi/sage` (gem) | `docs` | Rails app: the public documentation site **and** the `sage_rails` gem (server-rendered components). |
+| `@kajabi/sage` (gem) | `docs` | Rails 7.2 app (Ruby 3.3.9): the public documentation site **and** the `sage_rails` gem (server-rendered components). |
 
 Packages are versioned together by Lerna (`lerna.json` holds the shared version); releases are
 automated from Conventional Commits.
