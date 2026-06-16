@@ -21,6 +21,7 @@ RUN apk add \
   libxml2-dev \
   libxslt-dev \
   tzdata \
+  yaml-dev \
   # Install node and yarn
   && curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" \
   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
