@@ -21,6 +21,7 @@ RUN apk add \
   libxml2-dev \
   libxslt-dev \
   tzdata \
+  yaml-dev \
   # Install node and yarn
   && curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" \
   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
@@ -53,8 +54,9 @@ RUN echo "-----> Using .npmrc from config"
 RUN npm config set @kajabi:registry https://npm.pkg.github.com
 RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
-RUN bundle exec rails assets:precompile
 RUN yarn install --check-files
+
+RUN bundle exec rails assets:precompile
 
 EXPOSE 3000
 
