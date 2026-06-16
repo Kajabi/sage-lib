@@ -1,0 +1,84 @@
+# Note: You must restart bin/shakapacker-dev-server for changes to take effect
+
+default: &default
+  source_path: lib/sage-frontend
+  source_entry_path: packs
+  public_root_path: public
+  public_output_path: packs
+  cache_path: tmp/cache/shakapacker
+  webpack_compile_output: true
+
+  # Additional paths webpack should look up modules
+  # ['app/assets', 'engine/foo/app/assets']
+  additional_paths: []
+
+  # Reload manifest.json on all requests so we reload latest compiled packs
+  cache_manifest: false
+
+  # Extract and emit a css file
+  css_extract_ignore_order_warnings: false
+
+  static_assets_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+    - .tiff
+    - .ico
+    - .svg
+    - .eot
+    - .otf
+    - .ttf
+    - .woff
+    - .woff2
+
+  extensions:
+    - .mjs
+    - .js
+    - .sass
+    - .scss
+    - .css
+    - .module.sass
+    - .module.scss
+    - .module.css
+    - .png
+    - .svg
+    - .gif
+    - .jpeg
+    - .jpg
+
+development:
+  <<: *default
+  compile: true
+
+  # Reference: https://webpack.js.org/configuration/dev-server/
+  dev_server:
+    hmr: false
+    host: 0.0.0.0
+    port: 4035
+    server: http
+    client:
+      overlay: true
+    static:
+      watch:
+        ignored: "**/node_modules/**"
+
+qa:
+  <<: *default
+  compile: true
+  public_output_path: packs-test
+
+test:
+  <<: *default
+  compile: true
+  public_output_path: packs-test
+
+staging:
+  <<: *default
+  compile: false
+  cache_manifest: true
+
+production:
+  <<: *default
+  compile: false
+  cache_manifest: true
