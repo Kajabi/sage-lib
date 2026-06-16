@@ -54,8 +54,9 @@ RUN echo "-----> Using .npmrc from config"
 RUN npm config set @kajabi:registry https://npm.pkg.github.com
 RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
-RUN bundle exec rails assets:precompile
 RUN yarn install --check-files
+
+RUN bundle exec rails assets:precompile
 
 EXPOSE 3000
 
