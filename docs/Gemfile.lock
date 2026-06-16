@@ -286,7 +286,11 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
-  arm64-darwin-24
+  aarch64-linux
+  aarch64-linux-musl
+  ruby
+  x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   bump (~> 0.9.0)
