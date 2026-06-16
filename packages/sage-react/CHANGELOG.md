@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
+
+
+### Features
+
+* **hero:** add shadow prop ([#2170](https://github.com/Kajabi/sage-lib/issues/2170)) ([69188d2](https://github.com/Kajabi/sage-lib/commit/69188d2698ff09a7cf82c00de3496b67a9373a6b))
+
+
+
+
+
 ## [6.2.31](https://github.com/Kajabi/sage-lib/compare/v6.2.30...v6.2.31) (2026-05-28)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
+
+
+### Bug Fixes
+
+* **docs:** add yaml-dev to Alpine image for psych native build ([7edab12](https://github.com/Kajabi/sage-lib/commit/7edab12dd6a24e1f01a97dc84238056cb0b23b00))
+* **docs:** bump nokogiri and restore darwin platforms for local dev ([847baba](https://github.com/Kajabi/sage-lib/commit/847baba2d06a4d9fdea80ebeb4116ea436e5ad7c))
+* **docs:** fully replace rails_12factor behavior and fix lockfile platforms ([7677d49](https://github.com/Kajabi/sage-lib/commit/7677d49002e672e518ceba572e54434119446317))
+* **docs:** run yarn install before assets:precompile in Dockerfile ([9567b29](https://github.com/Kajabi/sage-lib/commit/9567b29a9a57efc7075496a3527a61316811da15))
+
+
+### Features
+
+* **hero:** add shadow prop ([#2170](https://github.com/Kajabi/sage-lib/issues/2170)) ([69188d2](https://github.com/Kajabi/sage-lib/commit/69188d2698ff09a7cf82c00de3496b67a9373a6b))
+
+
+
+
+
 ## [6.2.31](https://github.com/Kajabi/sage-lib/compare/v6.2.30...v6.2.31) (2026-05-28)
 
 **Note:** Version bump only for package @kajabi/sage
