@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  mount Lockup::Engine, at: "/lockup"
-
   root to: redirect("pages/index")
   get 'pages/breakout/:type/:title', to: 'pages#breakout', as: 'pages_breakout'
 

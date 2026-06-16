@@ -1,9 +1,9 @@
-FROM ruby:2.7.7-alpine
+FROM ruby:3.3.9-alpine
 
 ARG RAILS_ENV="production"
 ARG NONROOT_UID="1000"
 ARG NONROOT_GID="1000"
-ARG BUNDLER_VERSION="2.3.14"
+ARG BUNDLER_VERSION="2.4.22"
 ARG NODE_VERSION="22.7.0"
 ARG YARN_VERSION="1.22.18"
 ARG ARCH="x64"
@@ -21,6 +21,7 @@ RUN apk add \
   libxml2-dev \
   libxslt-dev \
   tzdata \
+  yaml-dev \
   # Install node and yarn
   && curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" \
   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
@@ -53,8 +54,9 @@ RUN echo "-----> Using .npmrc from config"
 RUN npm config set @kajabi:registry https://npm.pkg.github.com
 RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
-RUN bundle exec rails assets:precompile
 RUN yarn install --check-files
+
+RUN bundle exec rails assets:precompile
 
 EXPOSE 3000
 
