@@ -19,9 +19,11 @@ Rails.application.configure do
   # `config/secrets.yml.key`.
   config.read_encrypted_secrets = true
 
-  # Disable serving static files from the `/public` folder by default since
-  # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  # Serve static files (including compiled Shakapacker packs under public/packs)
+  # from Puma. The container runs Puma directly with no front-end proxy, and
+  # rails_12factor (rails_serve_static_assets) previously forced this on
+  # unconditionally -- keep that exact behavior now that the gem is gone.
+  config.public_file_server.enabled = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -81,11 +83,13 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
+  # rails_12factor (rails_stdout_logging) previously forced logging to STDOUT
+  # unconditionally, which the container/K8s environment relies on for log
+  # collection. Preserve that exact behavior now that the gem is gone.
+  $stdout.sync = true
+  logger           = ActiveSupport::Logger.new($stdout)
+  logger.formatter = config.log_formatter
+  config.logger    = ActiveSupport::TaggedLogging.new(logger)
 
   # Do not dump schema after migrations.
   # config.active_record.dump_schema_after_migration = false
