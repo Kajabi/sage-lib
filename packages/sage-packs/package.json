@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-packs",
-  "version": "6.3.0",
+  "version": "6.3.1",
   "description": "Sage Packs",
   "keywords": [
     "sage",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@kajabi/sage-assets": "^6.3.0",
     "@kajabi/sage-react": "^6.3.0",
-    "@kajabi/sage-system": "^6.3.0"
+    "@kajabi/sage-system": "^6.3.1"
   },
   "devDependencies": {
     "eslint": "^7.17.0",

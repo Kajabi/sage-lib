@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.1](https://github.com/Kajabi/sage-lib/compare/v6.3.0...v6.3.1) (2026-06-18)
+
+
+### Bug Fixes
+
+* **sage-system:** make Sage global init order-independent ([db9caa2](https://github.com/Kajabi/sage-lib/commit/db9caa24ba0dc0b75413b799c1156cdd49b91516))
+
+
+
+
+
 # [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
 
 
