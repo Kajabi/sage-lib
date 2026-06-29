@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.1](https://github.com/Kajabi/sage-lib/compare/v6.3.0...v6.3.1) (2026-06-18)
+
+
+### Bug Fixes
+
+* **sage-system:** make Sage global init order-independent ([db9caa2](https://github.com/Kajabi/sage-lib/commit/db9caa24ba0dc0b75413b799c1156cdd49b91516))
+
+
+
+
+
+# [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
+
+
+### Bug Fixes
+
+* **popover:** null-guard handlers to prevent unhandled TypeErrors ([7b289b4](https://github.com/Kajabi/sage-lib/commit/7b289b44049f04ddd0843707eb96f0c80a04c974))
+* **popover:** null-guard remaining deref sites in handleClick/open/close ([fb35905](https://github.com/Kajabi/sage-lib/commit/fb359054a926aa5a08c4402473612671adcec6bc))
+* **popover:** scope handleClick null-guard to the trigger branch only ([10c34ad](https://github.com/Kajabi/sage-lib/commit/10c34ad9c908084b97d3de008abb6516f2cab049))
+* **sage-system:** null-guard DOM lookups across init/event handlers ([49811fc](https://github.com/Kajabi/sage-lib/commit/49811fc5b13080cbd44fb01fb01f5b532005c02e))
+
+
+
+
+
 ## [6.2.31](https://github.com/Kajabi/sage-lib/compare/v6.2.30...v6.2.31) (2026-05-28)
 
 

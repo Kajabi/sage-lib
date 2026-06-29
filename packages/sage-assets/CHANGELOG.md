@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
+
+
+### Bug Fixes
+
+* **avatar:** use semantic token ([#2171](https://github.com/Kajabi/sage-lib/issues/2171)) ([2a0d304](https://github.com/Kajabi/sage-lib/commit/2a0d3044ee030af505b04dd7e1647cea2b3881a2))
+
+
+### Features
+
+* **hero:** add shadow prop ([#2170](https://github.com/Kajabi/sage-lib/issues/2170)) ([69188d2](https://github.com/Kajabi/sage-lib/commit/69188d2698ff09a7cf82c00de3496b67a9373a6b))
+* **typography:** update --sage-font-family-heading to use Inter ([#2177](https://github.com/Kajabi/sage-lib/issues/2177)) ([62d2c83](https://github.com/Kajabi/sage-lib/commit/62d2c834cd34d70b1a27f7a1a6090e891f7ef821))
+
+
+
+
+
 ## [6.2.31](https://github.com/Kajabi/sage-lib/compare/v6.2.30...v6.2.31) (2026-05-28)
 
 **Note:** Version bump only for package @kajabi/sage-assets

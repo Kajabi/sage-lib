@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.1](https://github.com/Kajabi/sage-lib/compare/v6.3.0...v6.3.1) (2026-06-18)
+
+
+### Bug Fixes
+
+* **sage-system:** make Sage global init order-independent ([db9caa2](https://github.com/Kajabi/sage-lib/commit/db9caa24ba0dc0b75413b799c1156cdd49b91516))
+
+
+
+
+
+# [6.3.0](https://github.com/Kajabi/sage-lib/compare/v6.2.31...v6.3.0) (2026-06-16)
+
+
+### Bug Fixes
+
+* **avatar:** use semantic token ([#2171](https://github.com/Kajabi/sage-lib/issues/2171)) ([2a0d304](https://github.com/Kajabi/sage-lib/commit/2a0d3044ee030af505b04dd7e1647cea2b3881a2))
+* **docs:** add yaml-dev to Alpine image for psych native build ([7edab12](https://github.com/Kajabi/sage-lib/commit/7edab12dd6a24e1f01a97dc84238056cb0b23b00))
+* **docs:** bump nokogiri and restore darwin platforms for local dev ([847baba](https://github.com/Kajabi/sage-lib/commit/847baba2d06a4d9fdea80ebeb4116ea436e5ad7c))
+* **docs:** fully replace rails_12factor behavior and fix lockfile platforms ([7677d49](https://github.com/Kajabi/sage-lib/commit/7677d49002e672e518ceba572e54434119446317))
+* **docs:** run yarn install before assets:precompile in Dockerfile ([9567b29](https://github.com/Kajabi/sage-lib/commit/9567b29a9a57efc7075496a3527a61316811da15))
+* **popover:** null-guard handlers to prevent unhandled TypeErrors ([7b289b4](https://github.com/Kajabi/sage-lib/commit/7b289b44049f04ddd0843707eb96f0c80a04c974))
+* **popover:** null-guard remaining deref sites in handleClick/open/close ([fb35905](https://github.com/Kajabi/sage-lib/commit/fb359054a926aa5a08c4402473612671adcec6bc))
+* **popover:** scope handleClick null-guard to the trigger branch only ([10c34ad](https://github.com/Kajabi/sage-lib/commit/10c34ad9c908084b97d3de008abb6516f2cab049))
+* **release:** pin origin remote to PAT to bypass branch protection ([dc53ff4](https://github.com/Kajabi/sage-lib/commit/dc53ff4b5163696a4debe86c9beebf43c6caa12d))
+* **release:** use main's GITHUB_TOKEN publish auth in back-merge ([4cf1309](https://github.com/Kajabi/sage-lib/commit/4cf1309d6175bb8fd9ba9acb291551254fb2bdd2))
+* **sage-system:** null-guard DOM lookups across init/event handlers ([49811fc](https://github.com/Kajabi/sage-lib/commit/49811fc5b13080cbd44fb01fb01f5b532005c02e))
+
+
+### Features
+
+* **hero:** add shadow prop ([#2170](https://github.com/Kajabi/sage-lib/issues/2170)) ([69188d2](https://github.com/Kajabi/sage-lib/commit/69188d2698ff09a7cf82c00de3496b67a9373a6b))
+* **typography:** update --sage-font-family-heading to use Inter ([#2177](https://github.com/Kajabi/sage-lib/issues/2177)) ([62d2c83](https://github.com/Kajabi/sage-lib/commit/62d2c834cd34d70b1a27f7a1a6090e891f7ef821))
+
+
+
+
+
 ## [6.2.31](https://github.com/Kajabi/sage-lib/compare/v6.2.30...v6.2.31) (2026-05-28)
 
 
