@@ -12,6 +12,7 @@ export const Alert = ({
   color,
   description,
   dismissable,
+  dismissLabel,
   icon,
   onDismiss,
   small,
@@ -86,7 +87,7 @@ export const Alert = ({
             subtle={true}
             value="Close"
             onClick={handleDismiss}
-            aria-label="Close Alert"
+            aria-label={dismissLabel}
           />
         </div>
       )}
@@ -102,6 +103,8 @@ Alert.defaultProps = {
   className: '',
   description: null,
   dismissable: false,
+  // i18n pass-through: English default; converges on Pine id `pds-alert.dismiss`.
+  dismissLabel: 'Close Alert',
   icon: null,
   onDismiss: null,
   small: false,
@@ -115,6 +118,7 @@ Alert.propTypes = {
   color: PropTypes.oneOf(Object.values(ALERT_COLORS)).isRequired,
   description: PropTypes.string,
   dismissable: PropTypes.bool,
+  dismissLabel: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   onDismiss: PropTypes.func,
   small: PropTypes.bool,
