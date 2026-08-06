@@ -85,7 +85,7 @@ export const Alert = ({
             icon={SageTokens.ICONS.REMOVE}
             iconOnly={true}
             subtle={true}
-            value="Close"
+            value={dismissLabel}
             onClick={handleDismiss}
             aria-label={dismissLabel}
           />
@@ -104,7 +104,7 @@ Alert.defaultProps = {
   description: null,
   dismissable: false,
   // i18n pass-through: English default; converges on Pine id `pds-alert.dismiss`.
-  dismissLabel: 'Close Alert',
+  dismissLabel: 'Dismiss alert',
   icon: null,
   onDismiss: null,
   small: false,

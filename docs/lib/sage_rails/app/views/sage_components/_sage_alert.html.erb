@@ -56,7 +56,7 @@
   <% if component.dismissable %>
     <div class="sage-alert__close">
       <%= sage_component SageButton, {
-        value: "Close",
+        value: component.dismiss_label || "Dismiss alert",
         icon: {
           style: "only",
           name: "remove"
