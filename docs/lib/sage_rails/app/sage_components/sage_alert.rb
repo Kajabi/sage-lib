@@ -3,6 +3,7 @@ class SageAlert < SageComponent
     color: [:optional, NilClass, Set.new(["default", "danger", "draft", "info", "locked", "success", "published", "warning", "reached", "exceeded", "approaching"])],
     desc: [:optional, NilClass, String],
     dismissable: [:optional, NilClass, TrueClass],
+    dismiss_label: [:optional, NilClass, String],
     icon_name: [:optional, NilClass, String],
     primary_action: [:optional, NilClass, {
       value: String,
