@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.3](https://github.com/Kajabi/sage-lib/compare/v6.3.2...v6.3.3) (2026-08-07)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
 ## [6.3.2](https://github.com/Kajabi/sage-lib/compare/v6.3.1...v6.3.2) (2026-08-07)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.3](https://github.com/Kajabi/sage-lib/compare/v6.3.2...v6.3.3) (2026-08-07)
+
+
+### Bug Fixes
+
+* **sage-system:** make Sage global init order-independent ([6e6128d](https://github.com/Kajabi/sage-lib/commit/6e6128d7dec53363fbf76833ff2cafddb78b7dbd))
+
+
+### Features
+
+* **alert:** add dismissLabel prop for i18n pass-through (pilot) ([#2211](https://github.com/Kajabi/sage-lib/issues/2211)) ([8b6a9ba](https://github.com/Kajabi/sage-lib/commit/8b6a9babeb48a46040179d795c7b96890727dfc4))
+* **ci:** migrate CI workflows to Depot runners (PE-3158) ([#2210](https://github.com/Kajabi/sage-lib/issues/2210)) ([21b0346](https://github.com/Kajabi/sage-lib/commit/21b034637d01914df84bed35b6cd278cec02113d))
+
+
+
+
+
 ## [6.3.2](https://github.com/Kajabi/sage-lib/compare/v6.3.1...v6.3.2) (2026-08-07)
 
 **Note:** Version bump only for package root
