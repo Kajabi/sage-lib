@@ -4097,10 +4097,10 @@
     "@parcel/watcher-win32-ia32" "2.5.6"
     "@parcel/watcher-win32-x64" "2.5.6"
 
-"@pine-ds/icons@^9.12.0":
-  version "9.17.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-9.17.0.tgz#66b0e6d975aecd1836e5181d2f999973968a61b7"
-  integrity sha512-yUTGnc460kWBF8hZjjMftSpQK+zI3RwHk+t1G0FK9qdXYlOri1iqlWvCrrINCtkjo49M79wAwy+IxS57X60JRw==
+"@pine-ds/icons@^10.0.0":
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-10.2.0.tgz#d4f2e045892a2795404d70069bd589c314eec42c"
+  integrity sha512-spHfSHgW/j9hzgWtrGmkzVfuhltO8Yz5JacciY+lDUAwZ33+hLjaWrD6lNEJsd2cxcxxUjyUGS0BcYpLRLH0BA==
   dependencies:
     "@stencil/core" "4.38.3"
 

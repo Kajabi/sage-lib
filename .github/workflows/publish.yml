@@ -16,7 +16,7 @@ jobs:
 
   publish:
     needs: [lint-test-build]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     # GITHUB_TOKEN needs write access to push lerna's release commit + tag to main.
     permissions:
       contents: write

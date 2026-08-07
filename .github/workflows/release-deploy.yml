@@ -22,7 +22,7 @@ jobs:
 
   setup:
     needs: [lint-test-build]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     outputs:
       postfix: ${{ env.postfix }}
       gitsha: ${{ steps.gitsha.outputs.value }}
@@ -74,7 +74,7 @@ jobs:
 
   login:
     needs: [setup]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -105,7 +105,7 @@ jobs:
 
   deploy-docs-site:
     needs: [setup, login]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -151,7 +151,7 @@ jobs:
   # over the folder
   deploy-storybook-site:
     needs: [setup, login]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -198,7 +198,7 @@ jobs:
 
   deploy-sassdocs-site:
     needs: [setup, login]
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
