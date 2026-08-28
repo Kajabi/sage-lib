@@ -35,7 +35,7 @@ jobs:
         run: git config --global --add safe.directory /__w/sage-lib/sage-lib
 
       - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
@@ -48,7 +48,7 @@ jobs:
         run: git config user.name "Kajabi Automation Bot"
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v4
         with:
           version: v0.9.1
 
@@ -77,7 +77,7 @@ jobs:
     runs-on: depot-ubuntu-24.04
     steps:
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
@@ -99,7 +99,7 @@ jobs:
         run: echo "DOCKER_BRANCH_NAME=$(echo $BRANCH_NAME | sed "s/[^[:alnum:]\-\.\_]/-/g")-$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - run: git checkout HEAD
 
@@ -108,13 +108,13 @@ jobs:
     runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
@@ -131,7 +131,7 @@ jobs:
 
       # Docs Site
       - name: Build and push docs site
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v7
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_DOCS }}
@@ -154,7 +154,7 @@ jobs:
     runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
@@ -166,7 +166,7 @@ jobs:
         run: 'NODE_OPTIONS=--openssl-legacy-provider yarn build'
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
@@ -183,7 +183,7 @@ jobs:
 
       # Storybook Site
       - name: Build and push storybook
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v7
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_STORYBOOK }}
@@ -201,13 +201,13 @@ jobs:
     runs-on: depot-ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
@@ -224,7 +224,7 @@ jobs:
 
       # Sassdocs Site
       - name: Build and push sassdocs
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v7
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_SASSDOCS }}

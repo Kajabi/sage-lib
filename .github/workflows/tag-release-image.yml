@@ -23,7 +23,7 @@ jobs:
           if_false: 'release-${{ github.event.inputs.environment }}'
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
@@ -34,16 +34,16 @@ jobs:
 
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v4
         with:
           version: v0.9.1
 
       - name: Login to Amazon ECR
         id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v1
+        uses: aws-actions/amazon-ecr-login@v2
 
       - name: Retag Documentation image on ECR
-        uses: akhilerm/tag-push-action@v2.0.0
+        uses: akhilerm/tag-push-action@v2.3.0
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_DOCS }}
@@ -56,7 +56,7 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY_SAGE_DOCS }}:${{ steps.release_tag_suffix.outputs.value }}
 
       - name: Retag Sassdocs image on ECR
-        uses: akhilerm/tag-push-action@v2.0.0
+        uses: akhilerm/tag-push-action@v2.3.0
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_SASSDOCS }}
@@ -69,7 +69,7 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY_SAGE_SASSDOCS }}:${{ steps.release_tag_suffix.outputs.value }}
 
       - name: Retag Storybook image on ECR
-        uses: akhilerm/tag-push-action@v2.0.0
+        uses: akhilerm/tag-push-action@v2.3.0
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_STORYBOOK }}
