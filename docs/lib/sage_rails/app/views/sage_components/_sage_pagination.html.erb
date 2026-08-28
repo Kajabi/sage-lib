@@ -6,7 +6,7 @@
     <%= component.generated_css_classes %>
   "
   role="pagination"
-  aria-label="Pagination Navigation"
+  aria-label="<%= t("sage.pagination.nav_label", default: "Pagination Navigation") %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% unless component.hide_counter %>
@@ -21,12 +21,12 @@
     <% if component.items.first_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.pagination_text("Back") %>
+          <%= component.pagination_text(t("sage.pagination.previous", default: "Back")) %>
         </a>
       </li>
     <% else %>
       <li class="sage-pagination__item">
-        <%= link_to_previous_page component.items, component.pagination_text("Back"), class: "sage-pagination__page", params: component.additional_params %>
+        <%= link_to_previous_page component.items, component.pagination_text(t("sage.pagination.previous", default: "Back")), class: "sage-pagination__page", params: component.additional_params %>
       </li>
     <% end -%>
 
@@ -45,12 +45,12 @@
     <% if component.items.last_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.pagination_text("Next") %>
+          <%= component.pagination_text(t("sage.pagination.next", default: "Next")) %>
         </a>
       </li>
     <% else %>
       <li class="sage-pagination__item">
-        <%= link_to_next_page component.items, component.pagination_text("Next"), class: "sage-pagination__page", params: component.additional_params %>
+        <%= link_to_next_page component.items, component.pagination_text(t("sage.pagination.next", default: "Next")), class: "sage-pagination__page", params: component.additional_params %>
       </li>
     <% end -%>
   </ul>

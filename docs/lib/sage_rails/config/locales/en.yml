@@ -1,0 +1,6 @@
+en:
+  sage:
+    pagination:
+      nav_label: Pagination Navigation
+      next: Next
+      previous: Back
