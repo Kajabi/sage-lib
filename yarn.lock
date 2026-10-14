@@ -4098,9 +4098,9 @@
     "@parcel/watcher-win32-x64" "2.5.6"
 
 "@pine-ds/icons@^10.0.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-10.2.0.tgz#d4f2e045892a2795404d70069bd589c314eec42c"
-  integrity sha512-spHfSHgW/j9hzgWtrGmkzVfuhltO8Yz5JacciY+lDUAwZ33+hLjaWrD6lNEJsd2cxcxxUjyUGS0BcYpLRLH0BA==
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-10.6.0.tgz#21e628f14d05a61bc901f7adb26605653019c51a"
+  integrity sha512-w2WMqprfbn0ay+1xCeOhwDTLXudoSrtMvyoPxda3apUIUOWSorgi9Jg0kmCVYARkJN64UGlqgAFuBxO7lHl41g==
   dependencies:
     "@stencil/core" "4.38.3"
 
