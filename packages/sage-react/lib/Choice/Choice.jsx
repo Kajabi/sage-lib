@@ -51,6 +51,7 @@ export const Choice = ({
   const isLabel = hasRadioConfigs;
   const isLink = ('href' in rest);
   const isButton = !isLink && !isLabel;
+  const hasLabel = !!(text || subtext || children || linkText);
   let TagName = children ? 'div' : 'button';
   if (isLabel) TagName = 'label';
   if (isLink) TagName = 'a';
@@ -89,7 +90,7 @@ export const Choice = ({
         <pds-icon
           name={isArrowType ? 'caret-right' : icon}
           class={!isArrowType ? SageClassnames.SPACERS.XS_RIGHT : ''}
-          aria-hidden="true"
+          aria-hidden={hasLabel ? 'true' : undefined}
         />
       )}
       <div className={contentClassNames}>
