@@ -194,7 +194,7 @@ surface in the conversation and stop before label/post commands.
 
 ```bash
 PR_VIEW_ERR=$(mktemp)
-PR_NUM=$(gh pr view --repo Kajabi/sage-lib --json number -q .number 2>"$PR_VIEW_ERR")
+PR_NUM=$(gh pr view "$(git branch --show-current)" --repo Kajabi/sage-lib --json number -q .number 2>"$PR_VIEW_ERR")
 PR_VIEW_EXIT=$?
 if [ "$PR_VIEW_EXIT" -ne 0 ]; then
   if grep -qiE 'no pull requests found|could not find pull request' "$PR_VIEW_ERR"; then
@@ -210,6 +210,8 @@ rm -f "$PR_VIEW_ERR"
 
 Always pass `--repo Kajabi/sage-lib` on `gh` PR commands so fork / non-default
 remote contexts target the upstream repo, not a fork with the same numeric id.
+With `--repo`, `gh pr view` requires an explicit branch, number or URL, so pass
+the current branch (as above) or `$PR_NUM`.
 
 ### Apply the `ran-gauntlet` label (required)
 
@@ -253,7 +255,7 @@ open PR).
    "leave a review on the PR," "comment on the PR with the findings," or
    similar) and `PR_NUM` is set.
 4. **Post** — Gauntlet ran on **someone else's PR** (compare
-   `gh pr view --repo Kajabi/sage-lib --json author -q .author.login` to
+   `gh pr view "$PR_NUM" --repo Kajabi/sage-lib --json author -q .author.login` to
    `gh api user -q .login`) **and** findings include at least one BLOCKER,
    SHOULD FIX, or CONSIDER item (so the author sees actionable feedback).
 5. **Do not post** — Praise-only: no BLOCKER, SHOULD FIX, or CONSIDER
