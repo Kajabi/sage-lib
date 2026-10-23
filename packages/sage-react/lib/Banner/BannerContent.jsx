@@ -42,7 +42,13 @@ export const BannerContent = ({
     default: 'flag',
   };
 
+  const iconLabels = {
+    warning: 'Warning',
+    danger: 'Danger',
+  };
+
   const iconName = iconMap[type] || iconMap.default;
+  const iconLabel = iconLabels[type];
 
   return (
     <div
@@ -50,7 +56,12 @@ export const BannerContent = ({
       {...rest}
       id={id}
     >
-      <pds-icon name={iconName} class="sage-banner__icon" aria-hidden="true" />
+      <pds-icon
+        name={iconName}
+        class="sage-banner__icon"
+        aria-label={iconLabel}
+        aria-hidden={iconLabel ? undefined : 'true'}
+      />
       {text && (
         <p className="sage-banner__text">{text}</p>
       )}
