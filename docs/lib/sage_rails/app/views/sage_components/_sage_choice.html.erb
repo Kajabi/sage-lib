@@ -3,6 +3,7 @@ css_active_class = "sage-choice--active"
 is_label = component.radio_configs.present?
 is_link = component.attributes&.has_key?(:href)
 is_button = !is_link and !is_label
+has_label = component.text.present? || component.content.present? || component.link_text.present?
 html_tag = component.content.present? ? "div" : "button"
 if is_link
   html_tag = "a"
@@ -62,9 +63,9 @@ end
     </div>
   <% end %>
   <% if component.type == "icon" && component.icon.present? %>
-    <pds-icon name="<%= "#{component.icon}" %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>" aria-hidden="true"></pds-icon>
+    <pds-icon name="<%= "#{component.icon}" %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>" <%= "aria-hidden=true" if has_label %>></pds-icon>
   <% elsif component.type == "arrow" %>
-    <pds-icon name="<%= "caret-right" %>" aria-hidden="true"></pds-icon>
+    <pds-icon name="<%= "caret-right" %>" <%= "aria-hidden=true" if has_label %>></pds-icon>
   <% end %>
   <div class="
     sage-choice__content
