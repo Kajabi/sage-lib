@@ -25,7 +25,7 @@ is_progressbar = component.is_progressbar.present? && component.is_progressbar
             <%= "aria-disabled=true" if item[:disabled]  %>
           >
             <% if i == 0 && has_back_icon %>
-              <pds-icon name="arrow-left" class="sage-breadcrumbs__icon"></pds-icon>
+              <pds-icon name="arrow-left" class="sage-breadcrumbs__icon" aria-hidden="true"></pds-icon>
             <% end %>
             <%= item[:text] %>
           </a>
@@ -35,6 +35,7 @@ is_progressbar = component.is_progressbar.present? && component.is_progressbar
               color="<%= SageTokens::COLOR_PALETTE[:GREY_700] %>"
               name="right-small"
               size="24px"
+              aria-hidden="true"
             ></pds-icon>
           <% end %>
         </li>
@@ -44,7 +45,7 @@ is_progressbar = component.is_progressbar.present? && component.is_progressbar
   <p class="sage-breadcrumbs__item">
     <a href="<%= component.items[0][:url] %>" class="sage-breadcrumbs__link" aria-current="page">
       <% if has_back_icon %>
-        <pds-icon name="arrow-left" class="sage-breadcrumbs__icon"></pds-icon>
+        <pds-icon name="arrow-left" class="sage-breadcrumbs__icon" aria-hidden="true"></pds-icon>
       <% end %>
       <%= component.items[0][:text] %>
     </a>

@@ -38,7 +38,7 @@ end
       <% end if component.attributes&.is_a?(Hash) %>
     >
       <% if component.icon.present? %>
-        <pds-icon class="<%= "sage-dropdown__item-control--icon-#{component.icon}"%> <%= SageClassnames::SPACERS::XS_RIGHT %>" name="<%= component.icon %>"></pds-icon>
+        <pds-icon class="<%= "sage-dropdown__item-control--icon-#{component.icon}"%> <%= SageClassnames::SPACERS::XS_RIGHT %>" name="<%= component.icon %>" aria-hidden="true"></pds-icon>
       <% end %>
       <% if component.content.present? %>
         <%= component.content %>

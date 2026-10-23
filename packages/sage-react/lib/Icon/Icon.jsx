@@ -58,7 +58,7 @@ export const Icon = ({
   };
 
   const renderIcon = () => (
-    <pds-icon name={icon} class={`t-sage--color-${color} ${classNames}`} size={sizeMapping[size]} {...rest} />
+    <pds-icon name={icon} class={`t-sage--color-${color} ${classNames}`} size={sizeMapping[size]} {...attributes} {...rest} />
   );
 
   const setBackgroundDimensions = () => {
