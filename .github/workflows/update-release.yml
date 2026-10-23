@@ -14,14 +14,14 @@ jobs:
     steps:
       # Checkout the repository
       - name: "Checkout this repo to find Sage version"
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@v7"
         with:
           fetch-depth: "0"
 
       # Find Sage version from package.json in docs/
       - name: "Find Sage version from docs -> package.json version"
         id: "extract_version"
-        uses: "Saionaro/extract-package-version@v1.1.1"
+        uses: "Saionaro/extract-package-version@v1.4.0"
         with:
           path: 'docs/'
 
