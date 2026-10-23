@@ -63,7 +63,7 @@
     <div class="sage-select__info">
       <div class="sage-select__message">
         <% if component.has_error %>
-          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>" aria-hidden="true"></pds-icon>
         <% end %>
         <%= component.message %>
       </div>

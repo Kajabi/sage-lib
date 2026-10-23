@@ -27,6 +27,7 @@
       <pds-icon
         name="<%= component.icon %>"
         class="<%= SageClassnames::SPACERS::XS_RIGHT %> <%= "sage-label--icon--custom-color" if component.icon && component.custom_icon_color %>"
+        aria-hidden="true"
       ></pds-icon>
     <% end %>
     <span class="sage-label__value-text">
@@ -44,6 +45,7 @@
     <pds-icon
       name="down-small"
       class="sage-label__decor-icon"
+      aria-hidden="true"
     ></pds-icon>
   <% end %>
 </span>

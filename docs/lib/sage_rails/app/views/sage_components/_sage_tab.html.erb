@@ -25,7 +25,7 @@ html_tag = is_button ? "button" : "a"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon.present? %>
-    <pds-icon name="<%= component.icon %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+    <pds-icon name="<%= component.icon %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>" <%= "aria-hidden=true" if component.text.present? %>></pds-icon>
   <% end %>
   <% if component.text.present? %>
     <%= component.text.html_safe %>
