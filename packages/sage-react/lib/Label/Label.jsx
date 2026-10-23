@@ -65,6 +65,7 @@ export const Label = React.forwardRef(({
           <pds-icon
             name={icon}
             class={`${SageClassnames.SPACERS.XS_RIGHT} ${icon && customIconColor ? 'sage-label--icon--custom-color' : ''}`}
+            aria-hidden="true"
           />
         )}
         <span className="sage-label__value-text">
@@ -73,7 +74,7 @@ export const Label = React.forwardRef(({
       </TagName>
       {interactiveType === LABEL_INTERACTIVE_TYPES.SECONDARY_BUTTON && secondaryButton}
       {(interactiveType === LABEL_INTERACTIVE_TYPES.DROPDOWN) && (
-        <pds-icon class="sage-label__decor-icon" name="down-small" />
+        <pds-icon class="sage-label__decor-icon" name="down-small" aria-hidden="true" />
       )}
     </span>
   );

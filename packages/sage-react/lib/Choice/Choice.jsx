@@ -89,6 +89,7 @@ export const Choice = ({
         <pds-icon
           name={isArrowType ? 'caret-right' : icon}
           class={!isArrowType ? SageClassnames.SPACERS.XS_RIGHT : ''}
+          aria-hidden="true"
         />
       )}
       <div className={contentClassNames}>

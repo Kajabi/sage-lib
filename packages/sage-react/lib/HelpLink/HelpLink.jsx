@@ -15,7 +15,7 @@ export const HelpLink = ({
     tag={linkTag}
     {...rest}
   >
-    <pds-icon name="question-circle" size="20px" />
+    <pds-icon name="question-circle" size="20px" aria-hidden={children ? 'true' : undefined} />
     {!labelIsVisible ? (
       <span className="visually-hidden">
         {children}
