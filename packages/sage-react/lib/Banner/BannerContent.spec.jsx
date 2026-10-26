@@ -90,4 +90,17 @@ describe('Sage BannerContent', () => {
     expect(dismissButton).toBeTruthy();
     expect(dismissButton).toHaveTextContent('Dismiss');
   });
+
+  it('labels the icon with the status for warning and danger banners', () => {
+    render(<BannerContent type={BannerContent.TYPES.DANGER} text="Payment failed" />);
+
+    expect(screen.getByLabelText('Danger')).not.toHaveAttribute('aria-hidden');
+  });
+
+  it('hides the icon from assistive tech for default banners', () => {
+    render(<BannerContent text="Heads up" />);
+
+    expect(document.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+    expect(document.querySelector('pds-icon')).not.toHaveAttribute('aria-label');
+  });
 });

@@ -7,6 +7,7 @@
 <% else %>
   <% icon_name = 'info-circle-filled' %>
 <% end %>
+<% icon_label = { 'warning' => 'Warning', 'danger' => 'Danger' }[component.type] %>
 
 <% if component.banner_context.present? %>
   <div class="
@@ -27,7 +28,16 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.type.present? || "default" %>
-    <pds-icon name="<%= icon_name %>" size="16px" class="sage-banner__icon"></pds-icon>
+    <pds-icon
+      name="<%= icon_name %>"
+      size="16px"
+      class="sage-banner__icon"
+      <% if icon_label %>
+        aria-label="<%= icon_label %>"
+      <% else %>
+        aria-hidden="true"
+      <% end %>
+    ></pds-icon>
   <% end %>
   <% if component.text.present? %>
     <p class="sage-banner__text">

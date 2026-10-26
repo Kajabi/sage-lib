@@ -19,8 +19,9 @@ describe('Sage Icon', () => {
       icon: Icon.ICONS.ARCHIVE,
     };
 
-    render(<Icon {...props} />);
-    expect(screen.queryByRole('img')).toBeFalsy();
+    const { container } = render(<Icon {...props} />);
+    expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+    expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-label');
   });
 
   it('renders wrapper when cardColor present', () => {
@@ -33,16 +34,15 @@ describe('Sage Icon', () => {
     screen.findByText('sage-icon-background');
   });
 
-  // TODO: Revisit as we look at Sage React Icon with Pine
-  // it('has aria-label when label prop passed', () => {
-  //   const props = {
-  //     icon: Icon.ICONS.INFO_CIRCLE,
-  //     label: 'information',
-  //   };
+  it('has aria-label when label prop passed', () => {
+    const props = {
+      icon: Icon.ICONS.INFO_CIRCLE,
+      label: 'information',
+    };
 
-  //   render(<Icon {...props} />);
-  //   expect(screen.getByLabelText('information'));
-  // });
+    render(<Icon {...props} />);
+    expect(screen.getByLabelText('information')).not.toHaveAttribute('aria-hidden');
+  });
 
   it('sets style icon background height and width to be equal when circular true', () => {
     const props = {

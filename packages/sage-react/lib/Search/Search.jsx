@@ -46,6 +46,7 @@ export const Search = React.forwardRef(({
           class={SageClassnames.SPACERS.SM_LEFT}
           color={SageTokens.COLOR_PALETTE.GREY_700}
           style={{ zIndex: '2' }}
+          aria-hidden="true"
         />
         <input
           ref={ref}
