@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.4](https://github.com/Kajabi/sage-lib/compare/v6.3.3...v6.3.4) (2026-10-26)
+
+
+### Bug Fixes
+
+* **icons:** keep pds-icon names out of accessible names ([#2223](https://github.com/Kajabi/sage-lib/issues/2223)) ([bd0468a](https://github.com/Kajabi/sage-lib/commit/bd0468a87b3ab61420f266a9c86580f2bbcb13d1))
+
+
+
+
+
 ## [6.3.3](https://github.com/Kajabi/sage-lib/compare/v6.3.2...v6.3.3) (2026-08-07)
 
 **Note:** Version bump only for package @kajabi/sage-react
