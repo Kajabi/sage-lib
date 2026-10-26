@@ -17,7 +17,7 @@ export const CopyText = ({ children, className, semibold, ...rest }) => {
       <span className={classNames} {...rest}>
         {children}
       </span>
-      <pds-icon name="copy" class={SageClassnames.SPACERS.SM_LEFT} />
+      <pds-icon name="copy" class={SageClassnames.SPACERS.SM_LEFT} aria-hidden="true" />
     </>
   );
 };

@@ -93,6 +93,7 @@ export const Button = React.forwardRef(({
         <pds-icon
           name={icon}
           class={setIconClassName(iconOnly, iconPosition)}
+          aria-hidden="true"
         />
       )}
       <span className={generatedClassNames}>
@@ -102,6 +103,7 @@ export const Button = React.forwardRef(({
         <pds-icon
           name="caret-down"
           class={SageClassnames.SPACERS.XS_LEFT}
+          aria-hidden="true"
         />
       )}
       {!hasCustomContent && (
