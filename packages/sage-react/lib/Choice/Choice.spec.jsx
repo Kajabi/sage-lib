@@ -1,7 +1,7 @@
 require('../test/testHelper');
 
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { SageTokens } from '../configs';
 import { Choice } from './Choice';
 
@@ -14,9 +14,33 @@ describe('Sage Choice', () => {
     expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
   });
 
-  it('leaves the icon exposed when it is the only content', () => {
+  it('names an icon-only choice by its aria-label and hides the icon', () => {
+    const { container } = render(
+      <Choice type={Choice.TYPES.ICON} icon={SageTokens.ICONS.PEN} aria-label="Edit" />
+    );
+
+    expect(screen.getByRole('tab', { name: 'Edit' })).toBeInTheDocument();
+    expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('names an arrow choice by its aria-labelledby and hides the arrow', () => {
+    const { container } = render(
+      <>
+        <span id="next-step">Next step</span>
+        <Choice type={Choice.TYPES.ARROW} aria-labelledby="next-step" />
+      </>
+    );
+
+    expect(screen.getByRole('tab', { name: 'Next step' })).toBeInTheDocument();
+    expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('leaves the icon exposed and warns when an icon-only choice has no name', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     const { container } = render(<Choice type={Choice.TYPES.ICON} icon={SageTokens.ICONS.PEN} />);
 
     expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-hidden');
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only Choice needs `aria-label`'));
+    errorSpy.mockRestore();
   });
 });

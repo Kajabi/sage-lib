@@ -2,7 +2,7 @@
 css_classes = ["sage-link"]
 html_attributes = component.html_attributes || {}
 label = component.content
-has_label = component.label.present? || component.content.present?
+has_label = component.label.present? || component.content.present? || component.named_by_aria?(html_attributes)
 
 if component.label
   label = if component.truncate

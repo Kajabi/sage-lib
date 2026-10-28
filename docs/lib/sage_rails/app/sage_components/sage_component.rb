@@ -98,6 +98,21 @@ class SageComponent
     @test_id ||= nil
   end
 
+  # True when the caller named the element with aria-label or aria-labelledby in
+  # any of these attribute hashes, as flat keys or link_to's nested `aria:` hash.
+  # pds-icon hides an icon that has no label of its own, so an icon-only
+  # control can't take its name from the icon.
+  def named_by_aria?(*attribute_hashes)
+    attribute_hashes.any? do |attrs|
+      next false unless attrs.is_a?(Hash)
+
+      flat = attrs.transform_keys(&:to_s)
+      nested = flat["aria"].is_a?(Hash) ? flat["aria"].transform_keys(&:to_s) : {}
+      flat["aria-label"].present? || flat["aria-labelledby"].present? ||
+        nested["label"].present? || nested["labelledby"].present?
+    end
+  end
+
   def test_id=(id_string)
     @test_id = id_string
     if id_string

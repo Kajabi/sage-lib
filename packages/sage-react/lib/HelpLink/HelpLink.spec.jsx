@@ -12,9 +12,19 @@ describe('Sage HelpLink', () => {
     expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
   });
 
-  it('leaves the icon exposed when there is no text', () => {
+  it('names a textless help link by its aria-label and hides the icon', () => {
+    const { container } = render(<HelpLink href="/help" aria-label="Help with payouts">{null}</HelpLink>);
+
+    expect(screen.getByRole('link', { name: 'Help with payouts' })).toBeInTheDocument();
+    expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('leaves the icon exposed and warns when there is no text and no name', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     const { container } = render(<HelpLink href="/help">{null}</HelpLink>);
 
     expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-hidden');
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only HelpLink needs `aria-label`'));
+    errorSpy.mockRestore();
   });
 });

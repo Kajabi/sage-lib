@@ -3,7 +3,8 @@ css_active_class = "sage-choice--active"
 is_label = component.radio_configs.present?
 is_link = component.attributes&.has_key?(:href)
 is_button = !is_link and !is_label
-has_label = component.text.present? || component.content.present? || component.link_text.present?
+has_label = component.text.present? || component.content.present? || component.link_text.present? ||
+  component.named_by_aria?(component.attributes, component.html_attributes)
 html_tag = component.content.present? ? "div" : "button"
 if is_link
   html_tag = "a"
