@@ -1,11 +1,18 @@
 require('../test/testHelper');
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render, screen } from '@testing-library/react';
 import { SageTokens } from '../configs';
 import { Choice } from './Choice';
 
 describe('Sage Choice', () => {
+  // prop-types logs each message once per module, so a warning test would
+  // pass or fail depending on what rendered before it.
+  beforeEach(() => {
+    PropTypes.checkPropTypes.resetWarningCache();
+  });
+
   it('hides the icon from assistive tech when the choice has text', () => {
     const { container } = render(
       <Choice type={Choice.TYPES.ICON} icon={SageTokens.ICONS.PEN} text="Edit" />

@@ -1,10 +1,17 @@
 require('../test/testHelper');
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render, screen } from '@testing-library/react';
 import { HelpLink } from './HelpLink';
 
 describe('Sage HelpLink', () => {
+  // prop-types logs each message once per module, so a warning test would
+  // pass or fail depending on what rendered before it.
+  beforeEach(() => {
+    PropTypes.checkPropTypes.resetWarningCache();
+  });
+
   it('names the link by its text and hides the icon from assistive tech', () => {
     const { container } = render(<HelpLink href="/help" />);
 

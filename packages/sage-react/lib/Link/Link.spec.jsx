@@ -1,11 +1,18 @@
 require('../test/testHelper');
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render, screen } from '@testing-library/react';
 import { SageTokens } from '../configs';
 import { Link } from './Link';
 
 describe('Sage Link', () => {
+  // prop-types logs each message once per module, so a warning test would
+  // pass or fail depending on what rendered before it.
+  beforeEach(() => {
+    PropTypes.checkPropTypes.resetWarningCache();
+  });
+
   it('hides the icon from assistive tech when the link has text', () => {
     const { container } = render(<Link href="/settings" icon={SageTokens.ICONS.PEN}>Edit</Link>);
 
@@ -33,6 +40,23 @@ describe('Sage Link', () => {
 
     expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-hidden');
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only Link needs `aria-label`'));
+    errorSpy.mockRestore();
+  });
+
+  it('treats a blank aria-label as no name', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const { container } = render(<Link href="/settings" icon={SageTokens.ICONS.PEN} aria-label="  " />);
+
+    expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-hidden');
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only Link needs `aria-label`'));
+    errorSpy.mockRestore();
+  });
+
+  it('warns when aria-label is not a string', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    render(<Link href="/settings" icon={SageTokens.ICONS.PEN} aria-label={42} />);
+
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('expected `string`'));
     errorSpy.mockRestore();
   });
 });
