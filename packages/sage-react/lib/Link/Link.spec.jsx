@@ -12,6 +12,14 @@ describe('Sage Link', () => {
     expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
   });
 
+  it('does not warn when a link with an icon has text', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    render(<Link href="/settings" icon={SageTokens.ICONS.PEN}>Edit</Link>);
+
+    expect(errorSpy).not.toHaveBeenCalled();
+    errorSpy.mockRestore();
+  });
+
   it('names an icon-only link by its aria-label and hides the icon', () => {
     const { container } = render(<Link href="/settings" icon={SageTokens.ICONS.PEN} aria-label="Edit settings" />);
 
