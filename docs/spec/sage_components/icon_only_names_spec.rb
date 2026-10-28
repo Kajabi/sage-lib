@@ -86,6 +86,24 @@ RSpec.describe "Icon-only Sage components" do
       doc = render_component(SageTab, base)
       expect(icon(doc)["aria-hidden"]).to be_nil
     end
+
+    # Tab prints its attributes itself, so a nested aria hash never becomes an
+    # aria-label; hiding the icon would leave the tab with no name at all.
+    it "doesn't treat a nested aria hash as a name" do
+      doc = render_component(SageTab, base.merge(attributes: { aria: { label: "Edit" } }))
+      expect(doc.at_css("button")["aria-label"]).to be_nil
+      expect(icon(doc)["aria-hidden"]).to be_nil
+    end
+
+    it "keeps an apostrophe in an attributes name intact" do
+      doc = render_component(SageTab, base.merge(attributes: { "aria-label": "Don't save" }))
+      expect(doc.at_css("button")["aria-label"]).to eq("Don't save")
+    end
+
+    it "keeps double quotes in an html_attributes name intact" do
+      doc = render_component(SageTab, base.merge(html_attributes: { "aria-label": 'Say "hi"' }))
+      expect(doc.at_css("button")["aria-label"]).to eq('Say "hi"')
+    end
   end
 
   describe SageChoice do
@@ -104,6 +122,17 @@ RSpec.describe "Icon-only Sage components" do
     it "leaves the icon alone when an icon-only choice has no name" do
       doc = render_component(SageChoice, { type: "icon", icon: "pen" })
       expect(icon(doc)["aria-hidden"]).to be_nil
+    end
+
+    it "doesn't treat a nested aria hash as a name" do
+      doc = render_component(SageChoice, { type: "icon", icon: "pen", attributes: { aria: { label: "Edit" } } })
+      expect(doc.at_css("button")["aria-label"]).to be_nil
+      expect(icon(doc)["aria-hidden"]).to be_nil
+    end
+
+    it "keeps an apostrophe in an attributes name intact" do
+      doc = render_component(SageChoice, { type: "icon", icon: "pen", attributes: { "aria-label": "Don't save" } })
+      expect(doc.at_css("button")["aria-label"]).to eq("Don't save")
     end
   end
 end

@@ -18,7 +18,7 @@ nav_link_icon_class = component.icon ? "sage-nav__link--with-icon" : ""
 
 # Ensure attributes are a Hash
 attributes = component.attributes.present? ? component.attributes : {}
-has_label = component.text.present? || component.named_by_aria?(attributes)
+has_label = component.text.present? || component.named_by_aria?(attributes, nested: true)
 
 %>
 <%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class} #{nav_link_icon_class}", **attributes do %>

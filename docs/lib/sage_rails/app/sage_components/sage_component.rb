@@ -74,7 +74,7 @@ class SageComponent
   def component_attributes=(component_attributes_hash)
     @component_attributes = component_attributes_hash
     component_attributes_hash.each do |key, value|
-      generated_component_attributes << " #{key}=\"#{value.to_s}\""
+      generated_component_attributes << " #{key}=\"#{ERB::Util.html_escape(value.to_s)}\""
     end
   end
 
@@ -90,7 +90,7 @@ class SageComponent
   def html_attributes=(html_attributes_hash)
     @html_attributes = html_attributes_hash
     html_attributes_hash.each do |key, value|
-      generated_html_attributes << " #{key}=\"#{value.to_s}\""
+      generated_html_attributes << " #{key}=\"#{ERB::Util.html_escape(value.to_s)}\""
     end
   end
 
@@ -99,17 +99,20 @@ class SageComponent
   end
 
   # True when the caller named the element with aria-label or aria-labelledby in
-  # any of these attribute hashes, as flat keys or link_to's nested `aria:` hash.
-  # pds-icon hides an icon that has no label of its own, so an icon-only
-  # control can't take its name from the icon.
-  def named_by_aria?(*attribute_hashes)
+  # any of these attribute hashes. pds-icon hides an icon that has no label of
+  # its own, so an icon-only control can't take its name from the icon.
+  #
+  # Pass `nested: true` only where the hash goes through link_to, which expands
+  # an `aria: { label: }` hash. Templates that print attributes themselves
+  # would render that hash as a single bogus `aria` attribute.
+  def named_by_aria?(*attribute_hashes, nested: false)
     attribute_hashes.any? do |attrs|
       next false unless attrs.is_a?(Hash)
 
       flat = attrs.transform_keys(&:to_s)
-      nested = flat["aria"].is_a?(Hash) ? flat["aria"].transform_keys(&:to_s) : {}
+      aria = nested && flat["aria"].is_a?(Hash) ? flat["aria"].transform_keys(&:to_s) : {}
       flat["aria-label"].present? || flat["aria-labelledby"].present? ||
-        nested["label"].present? || nested["labelledby"].present?
+        aria["label"].present? || aria["labelledby"].present?
     end
   end
 

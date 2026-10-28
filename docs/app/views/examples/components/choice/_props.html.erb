@@ -57,7 +57,7 @@
 </tr>
 <tr>
   <td><%= md('`radio_configs`') %></td>
-  <td><%= md('If provided, this adjusts a choice to include a radio `input` that is visually hidden and toggles on when the choice is selected.') %></td>
+  <td><%= md('If provided, this adjusts a choice to include a radio `input` that is visually hidden and toggles on when the choice is selected. Keyboard focus lands on that input, which takes its name from the choice\'s `text` through the surrounding label. An `aria-label` in `attributes` names the label, not the input, so give a radio choice visible `text`. (In React, `radioConfigs` is spread onto the input, so `radioConfigs["aria-label"]` names it.)') %></td>
   <td><%= md('{ name: String, id: String, value: String }') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
