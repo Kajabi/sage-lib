@@ -54,6 +54,9 @@ describe('Sage Link', () => {
 
   it('warns when aria-label is not a string', () => {
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    // The invalid value is the point: `aria-label` owns the string check, so the
+    // test has to hand it a non-string to prove that check still runs.
+    // eslint-disable-next-line jsx-a11y/aria-proptypes
     render(<Link href="/settings" icon={SageTokens.ICONS.PEN} aria-label={42} />);
 
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('expected `string`'));
