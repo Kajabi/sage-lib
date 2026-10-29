@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '../Link';
+import { hasAriaName, iconOnlyNamePropType } from '../helpers/accessibleName';
 
 export const HelpLink = ({
   className,
@@ -15,7 +16,7 @@ export const HelpLink = ({
     tag={linkTag}
     {...rest}
   >
-    <pds-icon name="question-circle" size="20px" aria-hidden={children ? 'true' : undefined} />
+    <pds-icon name="question-circle" size="20px" aria-hidden={children || hasAriaName(rest) ? 'true' : undefined} />
     {!labelIsVisible ? (
       <span className="visually-hidden">
         {children}
@@ -25,6 +26,7 @@ export const HelpLink = ({
 );
 
 HelpLink.defaultProps = {
+  'aria-label': null,
   children: (
     <>
       Learn more
@@ -36,6 +38,7 @@ HelpLink.defaultProps = {
 };
 
 HelpLink.propTypes = {
+  'aria-label': iconOnlyNamePropType((props) => !props.children),
   children: PropTypes.node,
   className: PropTypes.string,
   labelIsVisible: PropTypes.bool,

@@ -46,6 +46,14 @@ LinkIconLeft.args = {
   iconPosition: 'left',
 };
 
+// An icon-only link has no text, so it is named with aria-label.
+export const LinkIconOnly = Template.bind({});
+LinkIconOnly.args = {
+  'aria-label': 'Add to favorites',
+  href: '#',
+  icon: 'star',
+};
+
 export const LinkIconRight = Template.bind({});
 LinkIconRight.args = {
   children: 'Standard link',

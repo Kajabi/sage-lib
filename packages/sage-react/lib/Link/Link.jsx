@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames, SageTokens } from '../configs';
 import { Tooltip } from '../Tooltip';
+import { hasAriaName, iconOnlyNamePropType } from '../helpers/accessibleName';
 import { LINK_COLORS, LINK_ICON_POSITIONS } from './configs';
 
 const tagPropTypes = PropTypes.oneOfType([
@@ -37,6 +38,7 @@ export const Link = ({
   );
 
   const SelfTag = tag || 'a';
+  const isNamed = !!children || hasAriaName(rest);
 
   return (
     <>
@@ -47,7 +49,7 @@ export const Link = ({
             {...rest}
           >
             {icon && (
-              <pds-icon name={icon} class="sage-link__icon" aria-hidden={children ? 'true' : undefined} />
+              <pds-icon name={icon} class="sage-link__icon" aria-hidden={isNamed ? 'true' : undefined} />
             )}
             {truncate ? (
               <span className="t-sage--truncate">
@@ -62,7 +64,7 @@ export const Link = ({
           {...rest}
         >
           {icon && (
-            <pds-icon name={icon} class="sage-link__icon" aria-hidden={children ? 'true' : undefined} />
+            <pds-icon name={icon} class="sage-link__icon" aria-hidden={isNamed ? 'true' : undefined} />
           )}
           {truncate ? (
             <span className="t-sage--truncate">
@@ -80,6 +82,7 @@ Link.COLORS = LINK_COLORS;
 Link.ICON_POSITIONS = LINK_ICON_POSITIONS;
 
 Link.defaultProps = {
+  'aria-label': null,
   className: null,
   children: null,
   icon: null,
@@ -96,6 +99,7 @@ Link.defaultProps = {
 Link.tagPropTypes = tagPropTypes;
 
 Link.propTypes = {
+  'aria-label': iconOnlyNamePropType((props) => !!props.icon && !props.children),
   className: PropTypes.string,
   children: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
