@@ -5,8 +5,20 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`help_link`') %></td>
+  <td><%= md('When set to `true`, renders the link as a help affordance (a question-circle icon). Paired with `show_label: false` it is icon-only; `label` still names it, rendered as visually hidden text rather than removed.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`html_attributes`') %></td>
+  <td><%= md('Passes attributes straight onto the rendered `<a>`. A link with only an icon has no text to name it, so pass a name instead: `html_attributes: { "aria-label": "Edit settings" }`.') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`{}`') %></td>
+</tr>
+<tr>
   <td><%= md('`label`') %></td>
-  <td><%= md('Sets the text for the link. Overrides any content passed in. A link with only an icon has no text to name it, so pass a name instead: `html_attributes: { "aria-label": "Edit settings" }`. A `help_link` without `show_label` renders `label` as visually hidden text, so give it a `label` to name it.') %></td>
+  <td><%= md('Sets the text for the link. Overrides any content passed in.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
