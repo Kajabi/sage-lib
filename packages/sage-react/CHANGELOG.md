@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.3.5](https://github.com/Kajabi/sage-lib/compare/v6.3.4...v6.3.5) (2026-10-29)
+
+
+### Bug Fixes
+
+* **icons:** name icon-only links, tabs and choices without the icon ([#2225](https://github.com/Kajabi/sage-lib/issues/2225)) ([#2226](https://github.com/Kajabi/sage-lib/issues/2226)) ([0262946](https://github.com/Kajabi/sage-lib/commit/02629468ecaf1064048a72a545124511720ee2c1))
+
+
+
+
+
 ## [6.3.4](https://github.com/Kajabi/sage-lib/compare/v6.3.3...v6.3.4) (2026-10-26)
 
 
