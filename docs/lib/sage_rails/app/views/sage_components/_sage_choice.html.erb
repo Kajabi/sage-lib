@@ -3,7 +3,8 @@ css_active_class = "sage-choice--active"
 is_label = component.radio_configs.present?
 is_link = component.attributes&.has_key?(:href)
 is_button = !is_link and !is_label
-has_label = component.text.present? || component.content.present? || component.link_text.present?
+has_label = component.text.present? || component.content.present? || component.link_text.present? ||
+  component.named_by_aria?(component.attributes, component.html_attributes)
 html_tag = component.content.present? ? "div" : "button"
 if is_link
   html_tag = "a"
@@ -15,7 +16,7 @@ end
 <<%= html_tag %>
   <%= "type=button" if is_button and !component.content.present? %>
   <% component.attributes.each do |key, value| %>
-    <%= "#{key}='#{value}'".html_safe %>
+    <%= "#{key}='#{ERB::Util.html_escape(value)}'".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
   <% if component.disabled %>
     <%= is_button && html_tag != "div" ? "disabled" : "aria-disabled=true" %>

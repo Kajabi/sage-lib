@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames } from '../configs';
+import { hasAriaName, iconOnlyNamePropType } from '../helpers/accessibleName';
 import { ICON_ALIGNMENTS, TYPES } from './configs';
 
 export const Choice = ({
@@ -51,7 +52,8 @@ export const Choice = ({
   const isLabel = hasRadioConfigs;
   const isLink = ('href' in rest);
   const isButton = !isLink && !isLabel;
-  const hasLabel = !!(text || subtext || children || linkText);
+  const hasLabel = !!(text || subtext || children || linkText)
+    || hasAriaName({ radioConfigs, ...rest });
   let TagName = children ? 'div' : 'button';
   if (isLabel) TagName = 'label';
   if (isLink) TagName = 'a';
@@ -119,6 +121,7 @@ Choice.TYPES = TYPES;
 Choice.ICON_ALIGNMENTS = ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
+  'aria-label': null,
   alignCenter: false,
   children: null,
   className: '',
@@ -137,6 +140,10 @@ Choice.defaultProps = {
 };
 
 Choice.propTypes = {
+  'aria-label': iconOnlyNamePropType((props) => (
+    (props.type === TYPES.ICON || props.type === TYPES.ARROW)
+    && !(props.text || props.subtext || props.children || props.linkText)
+  )),
   alignCenter: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
