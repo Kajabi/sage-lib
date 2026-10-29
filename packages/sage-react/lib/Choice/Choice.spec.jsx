@@ -50,4 +50,33 @@ describe('Sage Choice', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only Choice needs `aria-label`'));
     errorSpy.mockRestore();
   });
+
+  it('names an icon-only radio choice by radioConfigs\' own aria-label and hides the icon', () => {
+    const { container } = render(
+      <Choice
+        type={Choice.TYPES.ICON}
+        icon={SageTokens.ICONS.PEN}
+        radioConfigs={{ name: 'opt', id: 'opt-1', onChange: () => {}, value: 'opt-1', 'aria-label': 'Edit' }}
+      />
+    );
+
+    expect(screen.getByRole('radio', { name: 'Edit' })).toBeInTheDocument();
+    expect(container.querySelector('pds-icon')).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('does not take a radio choice\'s name from the Choice\'s own aria-label, and warns', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const { container } = render(
+      <Choice
+        type={Choice.TYPES.ICON}
+        icon={SageTokens.ICONS.PEN}
+        aria-label="Edit"
+        radioConfigs={{ name: 'opt', id: 'opt-1', onChange: () => {}, value: 'opt-1' }}
+      />
+    );
+
+    expect(container.querySelector('pds-icon')).not.toHaveAttribute('aria-hidden');
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('an icon-only Choice needs `aria-label`'));
+    errorSpy.mockRestore();
+  });
 });
