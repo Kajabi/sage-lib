@@ -11,9 +11,12 @@ import PropTypes from 'prop-types';
 
 const isNonBlank = (value) => typeof value === 'string' && value.trim() !== '';
 
-export const hasAriaName = (props) => (
-  isNonBlank(props['aria-label']) || isNonBlank(props['aria-labelledby'])
-);
+// Choice's radio configs: the real accessible-name source is the hidden native input
+// (radioConfigs is spread directly onto it), not the outer label/wrapper's own aria-label.
+export const hasAriaName = (props) => {
+  const source = props.radioConfigs || props;
+  return isNonBlank(source['aria-label']) || isNonBlank(source['aria-labelledby']);
+};
 
 // PropTypes check for icon-only controls: `isIconOnly(props)` says whether the
 // control would render an icon and nothing else that names it. It also keeps

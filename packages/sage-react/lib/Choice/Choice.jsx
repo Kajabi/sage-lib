@@ -52,7 +52,8 @@ export const Choice = ({
   const isLabel = hasRadioConfigs;
   const isLink = ('href' in rest);
   const isButton = !isLink && !isLabel;
-  const hasLabel = !!(text || subtext || children || linkText) || hasAriaName(rest);
+  const hasLabel = !!(text || subtext || children || linkText)
+    || hasAriaName({ radioConfigs, ...rest });
   let TagName = children ? 'div' : 'button';
   if (isLabel) TagName = 'label';
   if (isLink) TagName = 'a';
