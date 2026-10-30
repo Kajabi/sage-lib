@@ -30,7 +30,7 @@ jobs:
         run: git config --global --add safe.directory /__w/sage-lib/sage-lib
 
       - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
@@ -48,7 +48,7 @@ jobs:
         run: git config user.name "Kajabi Automation Bot"
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v4
         with:
           version: v0.9.1
 
@@ -58,7 +58,7 @@ jobs:
           ruby-version: '3.3.9'
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
